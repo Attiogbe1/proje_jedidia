@@ -1,16 +1,273 @@
 \phantomsection
 \addcontentsline{toc}{section}{Introduction}
 \section*{Introduction}
+Afin de mener à bien la conception et le développement d’une application mobile de gestion des événements interactifs, il est essentiel de réaliser une collecte d’informations sur les travaux existants et les solutions déjà mises en place dans ce domaine. Ce chapitre sera consacré, dans un premier temps, à une clarification conceptuelle des notions clés liées aux événements interactifs et à leur gestion. Ensuite, une étude des applications existantes sera menée afin d’identifier leurs fonctionnalités, leurs forces et leurs limites. Cette analyse permettra de mieux cerner les défis actuels et de poser les bases pour le développement d’une solution optimisée et adaptée aux besoins des utilisateurs.
+ \section{Clarification conceptuelle}
+\subsection{ Application mobile}
+\subsubsection{Definition}
+Les applications mobiles, sont des logiciels développés spécifiquement pour les systèmes d’exploitation mobiles. Elles sont, ensuite, accessibles au téléchargement depuis les plateformes de distribution (App Store et Google Play Store). On utilise des langages de programmation et des outils adaptés à chaque plateforme ou des approches multiplateformes permettant de cibler plusieurs systèmes avec une base de code unique.
 
-L’évolution de la technologie et les besoins de plus en plus croissants des entreprises ont conduit à l’augmentation pressante et la sophistication des attaques informatiques. Pour faire face à ces attaques, la sécurité informatique offre des outils pratiques et des mesures permettant de rendre les systèmes informatiques plus résiliente face à ces menaces. Il est donc crucial d’éclairer sur le sujet puisque bien qu’ils touchent désormais tous les secteurs d’activité, peu d'utilisateurs sont conscients de ce que c’est et de l’importance des recommandations prodiguées par les équipes IT de leur organisation en matière de sécurité informatique.
-Nous allons, dans le chapitre qui va suivre, aborder la question et terminer par quelques bonnes pratiques fondamentales à maintenir afin de protéger les systèmes informatiques.
+L’application s’exécute sur le dispositif mobile et peut utiliser ses ressources, telles que le GPS, la caméra, et les capteurs de mouvement, afin d’offrir des fonctionnalités interactives et personnalisées. Elles communiquent souvent avec des serveurs distants via internet pour récupérer des données, mettre à jour leur contenu, ou exécuter des tâches qui nécessitent de la puissance de calcul supplémentaire ou un accès à des bases de données volumineuses \cite{definition-application-mobile}.
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[scale=0.3]{images/application.png}
+   \caption{Une application mobile}
+   \label{fig:mon_img}
+\end{figure}
 
 
-\section*{}
+\subsubsection{ Les différents types d'applications mobiles}
+Techniquement parlant, il existe trois types d’applications mobiles que tout utilisateur peut rencontrer :
+\begin{figure}[H]
+   \centering
+   \includegraphics[scale=0.5]{images/78.jpg}
+   \caption{ Les différents types d’application mobile}
+   \label{fig:mon_img}
+\end{figure}
+
+
+\subsubsection*{Applications Natives}
+Une application est dite \textbf{native} lorsqu’elle est développée spécifiquement pour un système d’exploitation donné, tel qu’iOS ou Android. Ce type d’application utilise des technologies adaptées au système d’exploitation cible. 
+
+Pour Android, on utilise principalement \textbf{Java}, \textbf{Kotlin}, ainsi que \textbf{C} et \textbf{C++}. L’environnement de développement privilégié est \textbf{Android Studio}. Du côté d’iOS, les technologies employées incluent \textbf{Objective-C} et \textbf{Swift}, avec \textbf{XCode} comme IDE exclusif aux Mac.  
+
+Les applications natives offrent plusieurs avantages. Elles sont plus rapides et réactives, garantissant une meilleure expérience utilisateur. Elles permettent également d’envoyer des notifications push, un atout essentiel pour l’engagement des utilisateurs. De plus, elles peuvent fonctionner sans connexion Internet et accéder aux fonctionnalités matérielles du smartphone, telles que l’appareil photo, le GPS et le microphone. Cependant, leur développement présente certaines contraintes, notamment un coût plus élevé et un temps de développement plus long. Lorsqu’il est nécessaire de cibler plusieurs plateformes, il peut être judicieux de commencer par une seule pour optimiser les ressources \cite{definition-application-mobile}.  
+
+\subsubsection*{Applications Hybrides}
+L’application hybride constitue une alternative qui permet d’exécuter le même code sur plusieurs systèmes d’exploitation, évitant ainsi de devoir coder séparément pour iOS et Android. Son développement repose sur des frameworks comme \textbf{React Native}, \textbf{Ionic} ou \textbf{Cordova}, qui permettent d’utiliser des technologies web telles que \gls{CSS}, \gls{HTML} et \textbf{JavaScript}.  
+
+Les applications hybrides offrent un gain de temps significatif, car un seul code source est utilisé pour toutes les plateformes, ce qui réduit les coûts et simplifie la gestion des mises à jour. Elles permettent également d’accéder aux fonctionnalités du smartphone, comme l’appareil photo et le GPS. Toutefois, elles présentent aussi des inconvénients. L’expérience utilisateur peut être moins fluide que celle d’une application native et les performances sont souvent inférieures, notamment pour les applications nécessitant un traitement intensif. De plus, chaque système d’exploitation ayant ses propres particularités, l’adaptation peut s’avérer plus complexe \cite{definition-application-mobile}.  
+
+\subsubsection*{Progressive Web Apps (\gls{PWA})}
+Une autre alternative aux applications classiques est la \gls{PWA}, qui fonctionne comme une application mobile tout en étant accessible depuis un navigateur, sans nécessiter de téléchargement sur un store. Développées avec des technologies telles que \gls{HTML}, \textbf{React} et \gls{CSS}, les PWA présentent plusieurs avantages.  
+
+Elles sont universellement accessibles, consomment peu d’espace de stockage et permettent une navigation rapide. Certaines fonctionnalités restent disponibles hors ligne, et les mises à jour se font automatiquement. De grandes entreprises comme \textbf{Spotify}, \textbf{Twitter}, \textbf{AliExpress} et \textbf{Uber} ont adopté cette approche pour offrir une expérience utilisateur fluide et rapide\cite{definition-application-mobile}.  
+
+Cependant, les \gls{PWA} ont aussi leurs limites. Elles sont moins bien intégrées aux systèmes iOS et ne prennent pas en charge certaines fonctionnalités comme les notifications push. De plus, elles sont souvent plus énergivores, ce qui peut être un inconvénient pour les utilisateurs mobiles.  
+
+
+\begin{table}[h]
+   \centering
+   \renewcommand{\arraystretch}{1.5}
+   \setlength{\tabcolsep}{5pt}
+   \begin{tabular}{|p{2.5cm}|p{3cm}|p{3cm}|p{3.5cm}|p{4.5cm}|}
+       \hline
+       \textbf{Type d’application mobile} & \textbf{Langage de programmation iOS} & \textbf{Langage de programmation Android} & \textbf{Avantages} & \textbf{Inconvénients} \\
+       \hline
+       \textbf{Native} & Swift, Objective-C & Java, Kotlin & Performance optimale, accès complet aux fonctionnalités du téléphone & Coûts de développement plus élevés, nécessite des développements séparés pour chaque plate-forme \\
+       \hline
+       \textbf{Hybride} & JavaScript, \gls{HTML}, \gls{CSS} (via des frameworks comme React Native ou Cordova) & JavaScript, \gls{HTML}, \gls{CSS} (via des frameworks comme React Native ou Cordova) & Coûts et temps de développement réduits, une seule base de code pour plusieurs plates-formes & Performance inférieure par rapport aux applications natives, accès limité aux fonctionnalités du téléphone \\
+       \hline
+       \textbf{Progressive Web App (\gls{PWA})} & JavaScript, \gls{HTML}, \gls{CSS}  & JavaScript, \gls{HTML}, \gls{CSS} & Accessible depuis un navigateur, pas besoin de téléchargement, coûts de développement réduits & Expérience utilisateur souvent inférieure aux applications natives, dépendance à la qualité de la connexion internet, accès limité aux fonctionnalités du téléphone \\
+       \hline
+   \end{tabular}
+   \caption{Un résumé des différents genres d’application}
+   \label{tab:types_app}
+\end{table}
+
+\subsection{L'applications de gestion d’événements}
+\subsubsection{Definition}
+Les applications de gestion d’événements sont des outils mobiles conçus pour améliorer l’expérience des participants et faciliter l’organisation. Elles permettent d’accéder aux programmes, aux informations sur les intervenants et aux plans des lieux, tout en offrant des fonctionnalités interactives comme la messagerie et les sondages en direct. Pour les organisateurs, elles simplifient la logistique, recueillent des retours et optimisent l’engagement des participants, contribuant ainsi à la réussite de l’événement.
+
+\subsubsection{Principales caractéristiques de l'application événementielle}
+
+
+Les applications d’événements sont essentielles pour optimiser l’organisation et l’expérience des participants. Elles offrent plusieurs fonctionnalités clés :
+
+\textbf{Agenda interactif} : Consultation du programme, rappels et personnalisation.
+
+\textbf{Mise en réseau} : Messagerie, échange de contacts et planification de réunions.
+
+\textbf{Sondages et Q\&R en direct} : Interaction en temps réel avec les intervenants.
+
+\textbf{Notifications} : Mises à jour instantanées sur le déroulement de l’événement.
+
+\textbf{Analyse et retours} : Collecte de données sur l’engagement et la satisfaction.
+
+
+Ces outils améliorent l’interactivité et fournissent aux organisateurs des insights précieux pour optimiser leurs événements.
+
+\subsubsection{Gestion d'événements} 
+La gestion d'événements désigne l'ensemble des activités et processus permettant de planifier, organiser, exécuter et évaluer un événement. Cela inclut la coordination des ressources, la gestion des participants, l'organisation logistique et la supervision des activités tout au long de l'événement. L'objectif principal de la gestion d'événements est de garantir le bon déroulement de l'événement, en répondant aux attentes des participants et en optimisant les ressources disponibles. Cela englobe également l'utilisation d'outils technologiques, comme les applications d'événements, pour améliorer l'efficacité, faciliter la communication et recueillir des retours pour des améliorations futures.
+\section{Les types d'événements professionnels}
+Dans le domaine éducatif et de la formation, les événements interactifs se déclinent
+sous plusieurs formes, adaptées aux objectifs pédagogiques et à la nature de l'apprentissage.
+Ces événements visent tous à favoriser une participation active des étudiants, à dynamiser les 
+cours et à améliorer la rétention des informations.
+
+
+
+\subsection{Les événements de réseautage}
+Les types d'événements de réseautage sont une partie 
+importante du quotidien de nombreuses entreprises.
+Ils offrent l'occasion de rencontrer un ensemble 
+de personnes de divers secteurs d'activités et d'échanger 
+des idées pour renforcer les relations professionnelles.
+Ces événements sont également un moyen efficace d'élargir 
+son réseau pour créer des liens et de découvrir de nouvelles 
+opportunités de travail en équipe\cite{evenementsprofessionnel}.
+\subsection{Les ateliers et formations}
+
+Les ateliers et formations sont des événements interactifs 
+conçus pour enseigner de nouvelles compétences ou améliorer
+les compétences existantes.
+Ces cours mettent l'accent sur le bien-être et le développement
+des salariés face aux enjeux spécifiques au sein de l'entreprise.
+Ils sont parfaits pour les entreprises qui cherchent à développer 
+le savoir-faire de leurs salariés.
+Les organisateurs jouent un rôle clé dans la gestion de ces types 
+événements, assurant une communication efficace et répondant aux 
+exigences de chaque collaborateurs.
+En effet, la fonction des ateliers et formations va au-delà de 
+l'apprentissage, contribuant également à renforcer la cohésion 
+et l'engagement envers les collaborateurs de l'entreprise \cite{evenementsprofessionnel}.
+\subsection{ Congrès}
+Ce type d’événement est assez similaire
+à la conférence. La différence majeure 
+est que le congrès a une dimension
+internationale. Il réunit souvent 
+des experts ou personnalités de plusieurs 
+pays du monde afin de débattre autour d’une 
+question ou d’une thématique \cite{evenement}.
+\subsection{ Les conférences}
+
+Ce sont des types d'événements de grande envergure 
+qui rassemblent un grand nombre de collaborateurs 
+pour discuter et débattre de sujets spécifiques.
+Elles sont idéales pour présenter des informations,
+partager des idées, créer des réseaux professionnels
+et favoriser la communication entre les salariés. 
+Parmi les différents types d'événements, les conférences 
+jouent une fonction importante dans le métier de l' organisateur.
+La mise en place d'un tel événement offre une opportunité unique
+de développer des compétences en matière de team building et d'organisation.\cite{evenementsprofessionnel}
+\subsection{ Les Séminaires}
+
+Le séminaire est un événement plus petit et 
+plus intime qui se concentre sur un sujet précis. 
+Les derniers séminaires ont souvent été organisés 
+pour former les salariés sur les nouvelles réglementations et lois du travail.
+Ils sont un choix idéal pour discuter de nouvelles idées ou 
+résoudre des problèmes spécifiques.
+Les organisateurs doivent prendre en compte le lieu et l'ambiance pour assurer le succès de l'événement \cite{evenementsprofessionnel}.
+\subsection{Les salons et foires}
+
+Les salons et foires attirent une multitude de clients, de prospects 
+et de partenaires, offrant une occasion unique de présenter votre entreprise et vos produits.
+Le choix du lieu de l'emplacement est crucial pour maximiser la visibilité de votre entreprise 
+et atteindre votre public cible.
+Le lancement de produit est souvent organisé lors de salons et foires, permettant aux entreprises 
+de présenter leur dernier produit ou service \cite{evenementsprofessionnel}.
+
+\section{Solutions existantes et leurs limites}
+Plusieurs solutions existent déjà dans le but de rémédier au problème de la gestions des evenements professionnels interactifs. En voici une liste
+non exhaustive:
+\subsection{Kahoot}
+\subsubsection{Définition}
+Kahoot est une plateforme d’apprentissage numérique innovante qui permet aux éducateurs et aux apprenants de créer, partager et jouer à des jeux éducatifs interactifs et amusants. Conçu pour être intuitif et facile à utiliser, Kahoot offre aux enseignants et aux étudiants la possibilité de créer des jeux à choix multiples – appelés « kahoots » – qui peuvent être joués en classe ou à distance. Les utilisateurs n’ont besoin que d’une connexion Internet et d’un appareil compatible pour se lancer. Alors que l’éducation se numérise à un rythme accéléré, Kahoot est utilisé par des millions de personnes à travers le monde. Des données récentes montrent que plus de 50\% des écoles aux États-Unis l’ont intégré dans leurs programmes. En France, de nombreux établissements scolaires ont également adopté Kahoot pour favoriser l’engagement et stimuler l’apprentissage.
+\subsubsection{Limites}
+\begin{itemize}
+   \item \textbf{Version Gratuite}: Limitée à 40 joueurs pour les sessions en direct et asynchrones, avec des fonctionnalités réduites comme l'absence de rapports détaillés et de questions à réponses multiples .
+   \item \textbf{Publicités} :La version gratuite inclut des publicités, ce qui peut être distrayant.
+   \item \textbf{Types de Questions} : La version gratuite est limitée à deux types de questions.
+  \end{itemize}
+\subsection{Slido}
+\subsubsection{Définition}
+Slido est une plateforme permet de créer des sondages, des questions en direct, et des QCM interactifs. Il est particulièrement utile pour les événements en direct et les réunions, offrant une intégration avec PowerPoint et Google Slides.
+\subsubsection{Limites}
+\begin{itemize}
+   \item \textbf{Nombre de participants} : Bien que \textit{Slido} ne divulgue pas de limite stricte pour les participants, son efficacité peut diminuer avec un grand nombre d'utilisateurs.
+   \item \textbf{Fonctionnalités avancées} : Certaines fonctionnalités avancées, comme l'intégration avec d'autres outils, peuvent nécessiter un abonnement payant.
+\end{itemize}
+\begin{figure}[H]
+   \centering
+   \begin{minipage}{0.45\textwidth}
+       \centering
+       \includegraphics[scale=0.4]{images/5.jpg}
+       \caption{Tableau de bord de gestion des événements Slido}
+       \label{fig:image1}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.45\textwidth}
+       \centering
+       \includegraphics[scale=0.4]{images/1.jpg}
+       \caption{Écran d'accueil des participants sur Slido avec un champ de code et le dernier événement}
+       \label{fig:image2}
+   \end{minipage}
+\end{figure}
+\subsection{Poll For All}
+Poll For All est un outil simple pour créer des sondages en ligne. Il est facile à utiliser et permet de partager des résultats en temps réel.
+
+\subsubsection{Limites}
+\begin{itemize}
+   \item \textbf{Fonctionnalités limitées} Il ne propose pas autant de fonctionnalités interactives que d'autres plateformes comme \textbf{Kahoot} ou \textbf{Slido}.
+   \item \textbf{Pas de Gamifications} Il manque de fonctionnalités ludiques pour engager les participants.
+\end{itemize}
+
+\begin{figure}[H]
+   \centering
+   \begin{minipage}{0.45\textwidth}
+       \centering
+       \includegraphics[scale=0.4]{images/6.jpg}
+       \caption{Page d'accueil de  Poll For All}
+       \label{fig:image1}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.45\textwidth}
+       \centering
+       \includegraphics[scale=0.4]{images/0.jpg}
+       \caption{Écran d'accueil des participants sur Poll For All avec un champ  d'option}
+       \label{fig:image2}
+   \end{minipage}
+\end{figure}
+\section{Notre solution}
+Notre solution est de  concevoire une application mobile innovante pour faciliter la gestion des événements interactifs, qu’il s’agisse de formations, de conférences ou de cours. L’objectif est d’offrir une expérience dynamique où les participants peuvent poser des questions, répondre à des sondages, participer à des quiz et interagir en temps réel avec les organisateurs.  
+
+Ce qui distingue notre application des autres, c’est avant tout sa simplicité d’utilisation et son accessibilité. Elle permet aux utilisateurs de consulter les les événements même sans connexion Internet, garantissant ainsi une continuité d’apprentissage et d’échange en toute circonstance. De plus, les organisateurs disposent d’un tableau de bord complet pour suivre les interactions, analyser la participation et adapter leurs événements en fonction des retours des utilisateurs.  
+
+Un autre atout majeur de notre solution est son automatisation. Contrairement aux outils classiques qui nécessitent souvent une gestion manuelle, notre application fonctionne de manière fluide et autonome. Tout est optimisé pour que les utilisateurs puissent se concentrer sur l’essentiel : apprendre, échanger et s’impliquer pleinement dans les événements.  
+
+En résumé, notre application apporte une réelle valeur ajoutée en rendant les événements plus interactifs, plus engageants et plus accessibles. Que ce soit pour un usage professionnel ou éducatif, elle permet d’améliorer l’expérience des participants tout en simplifiant la gestion pour les organisateurs.
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|m{4cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
+        \hline
+        \textbf{Fonctionnalités} & \textbf{Kahoot} & \textbf{Slido} & \textbf{Poll For All} & \textbf{Notre solution} \\
+        \hline
+        \textbf{Type d’interaction} & Jeux éducatifs interactifs & Sondages, Q\&A, QCM interactifs & Sondages en ligne & Interactions complètes (Q\&A, sondages, quiz, feedback, gestion des rôles) \\
+        \hline
+        \textbf{Limite de participants} & 40 joueurs en version gratuite & Peut être limité selon la version & Pas de limite claire, mais fonctionnalités basiques & Optimisé pour tout type d’événement sans restriction \\
+        \hline
+        \textbf{Mode hors ligne} & Non & Non & Non & Oui, accès aux supports et interactions possibles sans connexion \\
+        \hline
+        \textbf{Automatisation} & Non & Partielle (nécessite une gestion manuelle) & Non & Oui, gestion autonome des interactions, analyse des données en temps réel \\
+        \hline
+        \textbf{Personnalisation} & Limitée aux types de jeux proposés & Disponible en version payante & Très limitée & Interface et fonctionnalités adaptables aux besoins des organisateurs \\
+        \hline
+        \textbf{Accessibilité} & Connexion Internet requise & Connexion Internet requise & Connexion Internet requise & Fonctionne en ligne et hors ligne \\
+        \hline
+        \textbf{Analyse et statistiques} & Rapports limités en version gratuite & Statistiques avancées en version payante & Analyse très basique & Outils intégrés pour suivre l’engagement et améliorer les événements \\
+        \hline
+        \textbf{Expérience utilisateur} & Ludique mais limité aux quiz & Bonne, mais payante pour des fonctionnalités avancées & Interface très simple, peu interactive & Expérience fluide, intuitive et complète pour tous les utilisateurs \\
+        \hline
+    \end{tabular}
+    \caption{Différences entre les solutions existantes et notre solution}
+    \label{tab:comparaison}
+\end{table}
+
+
+
+
 
 
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
-Ce chapitre nous a permis de poser les bases théoriques nécessaires à la compréhension des sujets clés de ce mémoire. En explorant les fonctionnalités de Kathará, nous avons mis en lumière son rôle crucial dans la simulation d’infrastructures virtuelles vulnérables, qui constitue la fondation technique de notre projet. Le cadre MITRE ATT\&CK s'est révélé un outil précieux pour la cartographie et l'analyse des cybermenaces, facilitant l'identification des vecteurs d'attaque pertinents pour les vulnérabilités que nous explorons.
-Ainsi, nous pourrons aborder sereinement l'implémentation pratique avec une compréhension claire des enjeux et des concepts à appliquer.
+
+Ce chapitre a permis de mieux comprendre les solutions existantes et leurs limites, mettant ainsi en évidence la nécessité de notre application pour une gestion interactive et optimisée des événements professionnels. Nous avons pu identifier les fonctionnalités essentielles à intégrer pour offrir une expérience plus fluide et complète aux utilisateurs.  
+Le chapitre suivant sera consacré à la présentation détaillée de notre solution, en abordant son analyse, sa conception ainsi que les choix techniques adoptés pour sa mise en œuvre.  
+Ainsi, nous pourrons aborder sereinement l'implémentation pratique 
+avec une compréhension claire des enjeux et des concepts à appliquer.
 
