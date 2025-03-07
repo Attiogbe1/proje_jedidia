@@ -1,15 +1,14 @@
-%--------------A VOTRE ATTENTION-------------%
-% Les étudiants en master qui disposent de plus de 3 chapitres dans leurs travaux peuvent en complèter
-% Les Membres doivent figurer dans la dernière version finale du mémoire après soutenance pour dépôt de mémoire
 
 \documentclass{ifri}
 \usepackage{titletoc}
 \setlength{\glsdescwidth}{0.65\textwidth}
+
+
 % \usepackage{lscape}
 
 \typeMemoire{Diplôme de - Licence}
 \optionFormation{Génie Logiciel}
-\etudiant{Charlot DEDJINOU }
+\etudiant{ATTIOGBE Kuechi  Emile}
 \titreDuMemoire{\textbf{}} %Implémention pour une meilleure sécurité dans les réseau LAN sous IPv6 // Proposition: Identification des vulnérabilités dans un reseau LAN IPv6 et mesures pour une meilleure sécurité.
 
 \dateSoutenance{-}
@@ -98,13 +97,12 @@
 \newpage
 
 % Les sigles et acronymes
-\setglossarystyle{altlist}
+setglossarystyle{altlist}
+%\printnoidxglossary[title=Liste des acronymes, toctitle=Liste des acronymes, type=\acronymtype]
 \printglossary[title=Liste des acronymes, toctitle=Liste des acronymes, type=\acronymtype]
 \newpage
 
-% Le glossaire proprement dit
-%\setglossarystyle{super}
-%\printglossary[type=main]
+
 
 
 \pagenumbering{arabic}
@@ -132,10 +130,11 @@
 % 
 \lhead[]{} \rhead[]{} \chead[]{}
 
-%%biblio
 \addcontentsline{toc}{chapter}{Bibliographie}
 \bibliographystyle{abbrv}
 \bibliography{biblio}
+
+
 
 
 %\include{annexe}

@@ -1,8 +1,23 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{definition-application-mobile}
 A.~App.
 \newblock Qu’est-ce qu’une application mobile ?
+
+\bibitem{bility}
+D.~de~Firebase.
+
+\bibitem{ionos}
+D.~de~Flutter.
+
+\bibitem{webTech}
+D.~de~IDE.
+
+\bibitem{yieldstudio}
+D.~de~Laravel.
+
+\bibitem{denierCri}
+D.~de~Supabase.
 
 \bibitem{evenement}
 Houefa.
@@ -15,5 +30,11 @@ IMMAGINA.
 \bibitem{World-Bank}
 UNICEF.
 \newblock Dispositif de suivi des résultats éducatifs en afrique francophone.
+
+\bibitem{wikipedia}
+wikipedia.
+
+\bibitem{wrike}
+wrike.
 
 \end{thebibliography}

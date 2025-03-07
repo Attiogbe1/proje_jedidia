@@ -3,6 +3,82 @@
 
 
 \section*{Introduction}
-Ce chapitre présente la mise en œuvre pratique de notre laboratoire de test dédié à l'exploitation des vulnérabilités Spring4Shell et target="\_blank". Nous détaillerons l'architecture technique, les configurations nécessaires et les mécanismes de sécurité mis en place pour garantir un environnement d'apprentissage isolé et contrôlé. L'utilisation de Kathará comme solution de virtualisation nous permettra de déployer une infrastructure modulaire et facilement reproductible et déployable, essentielle pour l'étude approfondie des vecteurs d'attaque ciblés.
+Dans le cadre du développement de notre application mobile de gestion des événements interactifs, il est essentiel de bien définir les étapes préliminaires du projet afin de garantir une solution qui répond parfaitement aux besoins et attentes des utilisateurs. Ce chapitre sera consacré à l'analyse détaillée de ces besoins, à la conception de la plate-forme, ainsi qu'à l'explication des choix technologiques effectués pour la mise en œuvre de l'application
+
+\section{Choix techniques}
+Dans cette section, nous décrirons la méthodologie de gestion de notre projet, les technologies que nous avons choisies, ainsi que les outils utilisés pour développer notre application.
+\subsection{Méthodologie de gestion du projet}
+Dans le monde actuel de la gestion de projet, les chefs de projet et les leaders avant-gardistes
+n’adhèrent pas à une seule méthodologie, ils connaissent bien bon nombre d’entre elles, et
+ils apprennent à harmoniser diverses pratiques afin de s’adapter à ce que le projet exige.
+Ainsi, pour ce projet, nous avons utilisé la méthode \gls{PERT}
+\subsubsection{Méthode de \gls{PERT} \cite{wrike}}
+La \gls{PERT} est un outil de planification de projet utilisé pour calculer de manière réaliste le temps nécessaire pour terminer un projet. Les diagrammes de \gls{PERT} sont utilisés pour planifier les tâches au sein d'un projet, ce qui facilite la programmation des livrables et la coordination avec les membres de l'équipe.
+\subsection{L’architecture du projet \cite{wikipedia}}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{images/Model.png}
+    \caption{  Architecture \gls{ MVC} \cite{wikipedia} }
+    \label{fig:mon_img}
+ \end{figure}
+L’architecture d’un logiciel décrit la manière dont seront agencés les différents éléments
+ d’une application et comment ils interagissent entre eux. Cette étape est donc l’une des pre
+mières étapes du développement logiciel et intervient lors de la phase de conception.
+C’est celle que nous allons utiliser dans le développment de cette application.\gls{ MVC} est un motif d'architecture logicielle destiné aux interfaces graphiques
+permet de bien organiser son code source. Il va nous aider à savoir quels fichiers créer, mais
+surtout à définir leur rôle. Le but de \gls{ MVC} est justement de séparer la logique du code en
+trois parties que l’on retrouve dans des fichiers distincts.
+ Le motif est composé de trois types de modules ayant trois responsabilités différentes :
+
+     \textbf{Modèle } :Élément qui contient les données ainsi que de la logique en rapport avec les données : validation, lecture et enregistrement4. Il peut, dans sa forme la plus simple, contenir uniquement une simple valeur, ou une structure de données plus complexe5. Le modèle représente l'univers dans lequel s'inscrit l'application3. Par exemple pour une application de banque, le modèle représente des comptes, des clients, ainsi que les opérations telles que dépôt et retraits, et vérifie que les retraits ne dépassent pas la limite de crédit. ;
+
+     \textbf{Vue } : Partie visible d'une interface graphique4. La vue se sert du modèle, et peut être un diagramme, un formulaire, des boutons, etc4. Une vue contient des éléments visuels ainsi que la logique nécessaire pour afficher les données provenant du modèle4. Dans une application de bureau classique, la vue obtient les données nécessaires à la présentation du modèle en posant des questions. Elle peut également mettre à jour le modèle en envoyant des messages appropriés5. Dans une application web une vue contient des balises \gls{HTML};
+
+    \textbf{Contrôleur} : Module qui traite les actions de l'utilisateur, modifie les données du modèle et de la vue.
+    \subsection{    La technologie adaptée à notre projet }
+Comme pour la création de sites web, il est essentiel de bien définir les besoins avant de choisir une technologie adaptée. Pour notre application mobile, nous avons opté pour \textbf{ Flutter} afin de concevoir l’interface utilisateur et \textbf{ Laravel  } , \textbf{ Supabase } et \textbf{ Firebase  } pour gérer le back-end. Ce choix repose sur leur efficacité, leur flexibilité et leur adéquation avec nos objectifs.
+\subsubsection{ Flutter \cite{ionos}}
+Flutter est un framework de développement d’applications multiplateforme, conçu par Google, dont la première version a été publiée sous forme de projet open source à la fin de l’année 2018. Flutter met à disposition une grande variété de bibliothèques d’éléments d’IU standard pour Android et iOS.
+Nous avons opté ce choix parce que Flutter permet de développer des applications Android et iOS sans nécessiter de code distinct pour chaque système. Il garantit une expérience fluide et native sur tous les appareils. Avant leur publication, ces applications sont compilées pour chaque plateforme, éliminant ainsi le besoin d’un module runtime ou d’un navigateur. Grâce à cette base de code unique, Flutter peut également servir à créer des applications web et des logiciels natifs pour Windows, Linux et macOS.
+Le Flutter SDK se base sur le langage de programmation Dart qui est  également développé par Google
+\subsubsection{ Laravel \cite{yieldstudio}}
+Créé en 2011 par \textbf{Taylor Otwell}, Laravel est un  framework \gls{PHP} conçu pour offrir une structure organisée et efficace au développement web. Il facilite la création d’applications, qu’elles soient simples ou complexes, en fournissant des outils intégrés dès l’installation.  
+Grâce à sa flexibilité, Laravel permet de développer divers types de projets, tels que des sites web dynamiques, des logiciels d’entreprise (\gls{CRM}, \gls{CMS }), des plateformes e-commerce  ou encore des réseaux sociaux. Il est particulièrement adapté aux applications nécessitant un backend robuste, incluant la gestion des utilisateurs et des commandes.  
+Laravel est ainsi un choix idéal pour les développeurs recherchant un environnement structuré, performant et évolutif.
+
+
+
+\subsubsection{ Supabase \cite{denierCri}}
+Supabase est une plateforme open source permettant de développer des applications web et mobiles en s’appuyant sur une infrastructure complète et clé en main. Elle repose sur PostgreSQL comme base de données, offrant une gestion simplifiée via une interface intuitive et une exposition automatique sous forme d'API, éliminant ainsi le besoin d’un backend dédié.  
+Ses fonctionnalités incluent un système d’authentification intégré, compatible avec de nombreux fournisseurs (Google, GitHub, Azure, etc.), des fonctions serverless, ainsi que des outils puissants pour la gestion du temps réel et des bases de données vectorielles adaptées à l’intelligence artificielle.  
+Avec une approche axée sur la rapidité et la simplicité, Supabase se positionne comme une alternative open source à Firebase, idéale pour accélérer le développement d’applications modernes.
+
+\subsubsection{ Firebase \cite{bility}}
+Firebase est une plateforme de développement mobile et web proposée par Google. Elle offre un large éventail de services et d’outils pour les développeurs, y compris des bases de données en temps réel, des analyses, des notifications push, des authentifications et des outils de gestion de projet.
+
+\subsection{\gls{ IDE} ou environnement de développement \cite{webTech}}
+Un \gls{ IDE} ou environnement de développement intégré en français, est un logiciel qui fournit un ensemble d’outils et de fonctionnalités pour faciliter le développement de logiciels. Il regroupe plusieurs outils nécessaires à la programmation en un seul endroit, améliorant ainsi l’efficacité et la productivité des développeurs. 
+
+Comme environnement de développment, nous avons utilisé dans le cadre de ce projet,Android Studio et le IDE Vusual Studio Code  pour écrire le code Flutter et Dart.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/studio-idx.png}
+        \caption{IDE Android Studio  }
+        \label{fig:img1}
+    \end{minipage}
+    \hfill
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/visualstudio.jpg}
+        \caption{IDE Vusual Studio Code}
+        \label{fig:img2}
+    \end{minipage}
+\end{figure}
+
+
 
 \section*{}

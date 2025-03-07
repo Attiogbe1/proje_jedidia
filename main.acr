@@ -1,9 +1,33 @@
 \glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
 \begin{theglossary}\glossaryheader
-\glsgroupheading{A}\relax \glsresetentrylist %
-\glossentry{acroglo}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
-		\glsseeformat[Glossaire:]{acroglog}{Z}}}%
-\glossentry{acro}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{1}}}%
+\glsgroupheading{C}\relax \glsresetentrylist %
+\glossentry{CMS }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{16}}}%
+\glossentry{CRM}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{16}}}%
+\glossentry{CSS}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{5\delimN 6}}}\glsgroupskip
+\glsgroupheading{H}\relax \glsresetentrylist %
+\glossentry{HTML}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{5\delimN 6}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{16}}}\glsgroupskip
+\glsgroupheading{I}\relax \glsresetentrylist %
+\glossentry{ IDE}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{17}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{22}}}\glsgroupskip
+\glsgroupheading{M}\relax \glsresetentrylist %
+\glossentry{ MVC}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{vi}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{15}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{PERT}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{22}}}%
+\glossentry{PHP}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{16}}}%
+\glossentry{PWA}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{5\delimN 6}}}\glsgroupskip
+\glsgroupheading{T}\relax \glsresetentrylist %
+\glossentry{TIC}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{2}}}%
 \end{theglossary}\glossarypostamble

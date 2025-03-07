@@ -225,7 +225,7 @@ frame=leftline
 %différente pagination pour les figures
 %\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 %différente pagination la table des matières
-%\renewcommand{\glsaddall}{\arabic{chapter}.\arabic{glossary}}
+\renewcommand{\glsaddall}{\arabic{chapter}.\arabic{glossary}}
 
 \newcommand\dedicace{\chapter*{Dédicace}\addcontentsline{toc}{chapter}{Dédicace}}
 \newcommand\remerciements{\chapter*{Remerciements}\addcontentsline{toc}{chapter}{Remerciements}}
@@ -234,7 +234,7 @@ frame=leftline
 \newcommand\resume{\chapter*{}\addcontentsline{toc}{chapter}{Résumé}}
 \newcommand\annexe{\chapter*{}\addcontentsline{toc}{chapter}{Annexes}}
 
-%\renewcommand\glsaddall{\chapter*{Glossaire}\addcontentsline{toc}{chapter}{Glossaire}}
+%renewcommand\glsaddall{\chapter*{Glossaire}\addcontentsline{toc}{chapter}{Glossaire}}
 
 %\newcommand\resume{\subsubsection*{}\addcontentsline{toc}{chapter}{Résumé / Abstract}}
 
@@ -431,7 +431,8 @@ frame=leftline
 %Générer les index
 \makeindex
 %Activate glossary commands
-\makeglossaries
+ \makeglossaries
+ %\makenoidxglossaries
 
 \author{}
 \date{}
