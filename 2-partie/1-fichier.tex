@@ -78,7 +78,85 @@ Comme environnement de développment, nous avons utilisé dans le cadre de ce pr
         \label{fig:img2}
     \end{minipage}
 \end{figure}
+\section{ Conception}
+\subsection{Modélisation}
+Afin demodéliser les fonctionnalités de notre plateforme, nous avons porté notre choix sur le langage
+\gls{UML},un langage de modélisation visuelle standard destiné à être utilisé pour spécifier, visualiser et
+documenter des modèles de systèmes logiciels,y compris leur structure et leur conception demanière
+à répondre à toutes ses exigences.
+\subsubsection{Analyse des besoins}
+L’analyse des besoins est la première étape à franchir dans la conception de notre application mobile. Cette
+analyse définira de façon succincte les différentes fonctionnalités de notre application.
+Ainsi, l’application sera utilisé par tout personne qui le désire après que cette personne crée un
+compte et se connecte. Néanmoins, les utilisateurs sont classés par catégories suivant les actions
+qu’ils peuvent effectuer sur l’application. On distingue donc :
 
+\begin{itemize}
+    \item \textbf{Les participants} 
 
+    Les participants peuvent :
+    \begin{itemize}
+        \item[--] Assister à des sessions et interagir avec le contenu.
+        \item[--] Donner du feedback sur les événements ou sessions auxquels ils ont participé.
+    \end{itemize}
+
+    \item \textbf{Les formateurs} 
+
+    Les formateurs ont les privilèges suivants :
+    \begin{itemize}
+        \item[--] Créer des événements et des sessions.
+        \item[--] Demander et analyser des feedbacks des participants.
+        \item[--] Suivre l’engagement des participants.
+    \end{itemize}
+
+    \item \textbf{Les administrateurs} 
+
+    Les administrateurs ont un rôle de gestion globale. Ils peuvent :
+    \begin{itemize}
+        \item[--] Gérer les utilisateurs inscrits sur l'application mobile.
+        \item[--] Configurer les paramètres de l’application.
+        \item[--] Consulter les statistiques d’utilisation.
+   
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Identification des acteurs}
+
+En se basant sur la structure définie dans le diagramme de classes, nous identifions les acteurs suivants :
+\begin{itemize}
+    \item \textbf{Participants} : Utilisateurs pouvant assister aux sessions et fournir du feedback.
+    \item \textbf{Organisateurs} : Utilisateurs responsables de la création et de la gestion des événements.
+    \item \textbf{Administrateurs} : Gestionnaires ayant un contrôle sur les utilisateurs et les paramètres de la plateforme.
+\end{itemize}
+\subsubsection{Le diagramme de cas d’utilisation}
+ Le diagramme de cas d’utilisation est un diagramme UML qui résume la façon dont les utilisateurs
+ interagissent avec un système. Il permet de recueillir, d’analyser et d’organiser les besoins et de 
+ recenser les grandes fonctionnalités d’un système. Grâce au diagramme de cas d’utilisation, nous aurons  une vue globale du comportement fonctionnel du système. 
+Trois acteurs interagissent 
+dans le système : les personnes sourdes, les personnes non sourdes, les administrateurs. La figure \ref{fig:mon_img-des-cas-utilisateur} illustre le
+diagramme de cas d’utilisation.
+ \begin{figure}[H]
+   
+    \includegraphics[scale=0.5]{images/Diagram-cas-utilisateurs-fin12.png}
+    \caption{ Diagramme de cas d’utilisation}
+    \label{fig:mon_img-des-cas-utilisateur}
+ \end{figure}
+
+ \subsubsection{Le diagramme des classes}
+ Dans notre application, nous avons plusieurs classes. D’abord, les utilisateurs, qui ont des informations comme leur nom, email et mot de passe. Ils peuvent être des administrateurs, des organisateurs ou des participants. Les administrateurs ont la possibilité de gérer les utilisateurs, de configurer les paramètres et de consulter les statistiques. Les organisateurs, quant à eux, peuvent créer des événements et des sessions, demander du feedback, analyser les performances et suivre l’engagement des participants. Enfin, les participants peuvent assister aux sessions et donner du feedback sur les événements auxquels ils participent.
+
+Les événements sont caractérisés par un titre, une description, une date de début et une date de fin. Chaque événement peut contenir plusieurs sessions, qui, elles aussi, ont un titre, une description et des dates de début et de fin. Les organisateurs peuvent ajouter des participants à ces sessions et publier les résultats.
+
+Lors des sessions, des interactions peuvent avoir lieu. Ces interactions sont définies par un type et un contenu et peuvent recevoir des réponses de la part des participants. Une réponse est associée à un participant et à une interaction, et son contenu peut être validé.
+
+Les participants ont également la possibilité de donner leur feedback sur un événement. Chaque feedback est associé à une note et un commentaire. Des commentaires peuvent être ajoutés pour enrichir ces feedbacks.
+
+La figure ci-dessus illustre le diagramme de classe représentant ces différentes entités et leurs relations.
+\begin{figure}[H]
+   
+    \includegraphics[scale=0.5]{images/Diagram-classes-fins1.png}
+    \caption{ Diagramme des classes}
+    \label{fig:mon_img-des-classes}
+ \end{figure}
 
 \section*{}
