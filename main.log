@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  11 MAR 2025 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  11 MAR 2025 11:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1870,9 +1870,9 @@ Overfull \hbox (31.23087pt too wide) in paragraph at lines 186--187
 [][] 
  []
 
-)
 
-[21 <./images/Diagramme-seq-inscription.png> <./images/diagramme-seq-connexion.png>]
+
+[21 <./images/Diagramme-seq-inscription.png> <./images/diagramme-seq-connexion.png>])
 
 [22]
 Chapitre 3.
@@ -1947,7 +1947,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{glo:UML} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (37 pages, 1743548 bytes).
+Output written on main.pdf (37 pages, 1744034 bytes).
 PDF statistics:
  709 PDF objects out of 1000 (max. 8388607)
  131 named destinations out of 1000 (max. 500000)
