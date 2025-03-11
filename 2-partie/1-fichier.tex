@@ -158,5 +158,39 @@ La figure ci-dessus illustre le diagramme de classe représentant ces différent
     \caption{ Diagramme des classes}
     \label{fig:mon_img-des-classes}
  \end{figure}
+\subsubsection{Les diagramme de séquence}
+Les diagrammes de séquence sont la représentation graphique des interactions entre les acteurs et le
+système selon un ordre chronologique dans la formulation \gls{UML}.
+Ici, nous allons illustrer les diagrammes de séquence de   dans notre système.
+\begin{itemize}
+    \item \textbf{Diagramme  deséquence pour l’inscription et la connexion}
+    Le diagramme illustre le processus d'inscription d'un utilisateur sur 
+    notre application. Celui-ci commence par renseigner ses informations 
+    personnelles (email, mot de passe, etc.). Une fois cette étape complétée,
+     un code de validation lui est envoyé par email. Il doit ensuite saisir 
+     ce code pour confirmer la création de son compte. 
+     La figure \ref{fig:mon_img-des-seq-inscription} présente le diagramme
+      de séquence correspondant à cette procédure.
+
+    \begin{figure}[H]
+    \center
+   \includegraphics[scale=0.8]{images/Diagramme-seq-inscription.png}
+    \caption{ Diagramme de séquence pour l'incription}
+    \label{fig:mon_img-des-seq-inscription}
+ \end{figure}
+Pour se connecter, l'utilisateur saisit ses identifiants. Si ces derniers 
+ sont corrects, un token d'authentification lui est attribué, lui permettant 
+ d'accéder aux services de l'application sans avoir à s'identifier à chaque
+  requête. La figure \ref{fig:mon_img-des-seq-connexion} illustre ce processus sous forme de diagramme de séquence.
+  \begin{figure}[H]
+  \includegraphics[scale=0.6]{images/diagramme-seq-connexion.png}
+  \caption{ Diagramme de séquence pour la connexion}
+  \label{fig:mon_img-des-seq-connexion}
+\end{figure}
+\end{itemize}
+
+
 
 \section*{}
+
+
