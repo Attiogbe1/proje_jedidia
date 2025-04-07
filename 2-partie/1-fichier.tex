@@ -189,15 +189,46 @@ Pour se connecter, l'utilisateur saisit ses identifiants. Si ces derniers
 \end{figure}
 
 \item \textbf{Diagramme  de séquence pour la création d'un évernement}
+
 Pour créer un événement, l'organisateur doit d'abord s'authentifier sur la plateforme. 
 Une fois connecté, il accède à l'option Créer événement, où il renseigne les détails essentiels tels que le nom, la date, le lieu et la description. 
 Ce processus peut être étendu par l'ajout de sessions associées à l’événement. 
-La figure correspondante illustre ce déroulement sous forme de diagramme de séquence.
+La figure  \ref{fig:mon_img-des-seq-creation d'évernement} illustre ce déroulement sous forme de diagramme de séquence.
+   
+\begin{figure}[H]
+    \includegraphics[scale=0.6]{images/diagramme_sequence_creation_event.png}
+    \caption{ Diagramme de séquence pour la création d'un événement}
+    \label{fig:mon_img-des-seq-creation d'évernement}
+  \end{figure}
+
+
+\item \textbf{Diagramme  de séquence pour la participation d'un évernement}
+
+Pour participer à un événement, l'utilisateur doit d'abord être connecté à la plateforme.  
+Une fois authentifié, il peut envoyer une demande de participation en précisant l’identifiant de l’événement ciblé.  
+L’API réceptionne cette requête et commence par vérifier si l’utilisateur est bien connecté.  
+
+Si la vérification est positive, l’API consulte la base de données afin de s’assurer que l’événement existe effectivement.  
+Une fois l’événement retrouvé, l’API procède à l’enregistrement de la participation de l’utilisateur en l’ajoutant à la liste des participants.  
+L’utilisateur reçoit alors une confirmation indiquant que sa participation a été prise en compte.  
+
+En revanche, si l’utilisateur n’est pas connecté, la plateforme le redirige automatiquement vers l’écran de connexion.  
+La figure \ref{fig:mon_img-des-seq-participation d'évernement}  illustre ce déroulement sous forme de diagramme de séquence.
+
+\begin{figure}[H]
+    \includegraphics[scale=0.6]{images/diagramme_sequence_participer_event.png}
+    \caption{ Diagramme de séquence pour la création d'un événement}
+    \label{fig:mon_img-des-seq-participation d'évernement}
+  \end{figure}
 
 \end{itemize}
 
 
 
-\section*{}
+
+\section*{Conclusion}
+
+Ce chapitre a été consacré à la présentation détaillée des choix techniques effectués ainsi qu’à la description des différentes étapes de conception de notre projet. Nous y avons exposé notre démarche méthodologique et notre approche de modélisation. Dans le chapitre suivant, nous présenterons les résultats obtenus à l’issue de ce travail de conception.
+
 
 
