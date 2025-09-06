@@ -16,25 +16,25 @@ The style file: abbrv.bst
 Reallocating 'name_of_file' (item size: 1) to 7 items.
 Database file #1: biblio.bib
 Warning--entry type for "evenement" isn't style-file defined
---line 18 of file biblio.bib
+--line 35 of file biblio.bib
 Warning--entry type for "evenementsprofessionnel" isn't style-file defined
---line 28 of file biblio.bib
+--line 55 of file biblio.bib
 Warning--entry type for "definition-application-mobile" isn't style-file defined
---line 102 of file biblio.bib
+--line 203 of file biblio.bib
 Warning--entry type for "wrike" isn't style-file defined
---line 134 of file biblio.bib
+--line 267 of file biblio.bib
 Warning--entry type for "wikipedia" isn't style-file defined
---line 142 of file biblio.bib
+--line 283 of file biblio.bib
 Warning--entry type for "ionos" isn't style-file defined
---line 149 of file biblio.bib
+--line 297 of file biblio.bib
 Warning--entry type for "yieldstudio" isn't style-file defined
---line 157 of file biblio.bib
+--line 313 of file biblio.bib
 Warning--entry type for "denierCri" isn't style-file defined
---line 164 of file biblio.bib
+--line 327 of file biblio.bib
 Warning--entry type for "bility" isn't style-file defined
---line 170 of file biblio.bib
+--line 339 of file biblio.bib
 Warning--entry type for "webTech" isn't style-file defined
---line 179 of file biblio.bib
+--line 357 of file biblio.bib
 Warning--empty journal in World-Bank
 Warning--empty year in World-Bank
 You've used 11 entries,

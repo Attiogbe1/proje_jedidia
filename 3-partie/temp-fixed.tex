@@ -1,6 +1,17 @@
 \phantomsection
 \addcontentsline{toc}{section}{Introduction}
 
+% Définition de la commande ui pour les interfaces
+\newcommand{\ui}[4]{%
+  \begin{minipage}[t]{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/#2}%
+    \caption{#1}%
+    \parbox{\linewidth}{\small #3}%
+    \parbox{\linewidth}{\footnotesize\textit{#4}}%
+  \end{minipage}%
+}
+
 \section*{Introduction}
 Dans ce chapitre, nous présentons d'abord les interfaces majeures de l'application
 Inter\,Actif et de la documentation de l'API. Ces interfaces constituent
@@ -14,26 +25,25 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
 % LIGNE 1 : Accueil et Connexion
 \begin{figure}[htbp]
   \centering
-  \ui{ Page d'accueil}{page_acceul.jpg}%
+  \ui{Accueil}{page_acceul.jpg}%
      {Écran d'entrée présentant les fonctionnalités clés (sondages, quiz, chat) et deux parcours : Organisateur ou Rejoindre.}%
-     {}
-    {}
+     {Orienter immédiatement l'utilisateur vers l'action adaptée.}
   \hfill
-  \ui{Page de connexion}{page_connexion.jpg}%
+  \ui{Connexion sécurisée}{page_connexion.jpg}%
      {Formulaire e‑mail et mot de passe avec liens « S'inscrire » et « Mot de passe oublié ».}%
-     {}
+     {Authentifier l'utilisateur pour un accès personnalisé.}
 \end{figure}
 
 % LIGNE 2 : Inscription et Réinitialisation
 \begin{figure}[htbp]
   \centering
-  \ui{Page d'inscription}{page_inscription.jpg}%
+  \ui{Inscription sécurisée}{page_inscription.jpg}%
      {Création de compte : nom complet, e‑mail, mot de passe (avec indicateur de robustesse) et confirmation.}%
-     {}
+     {Enrôler de nouveaux utilisateurs en garantissant des mots de passe forts.}
   \hfill
   \ui{Réinitialisation du mot de passe}{page_mise_ajour.jpg}%
      {Saisie de l'adresse e‑mail pour recevoir un lien de réinitialisation.}%
-     {}
+     {Rétablir l'accès en cas d'oubli de mot de passe.}
 \end{figure}
 
 % LIGNE 3 : Tableau de bord et Mes événements
@@ -41,11 +51,11 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
   \centering
   \ui{Tableau de bord}{page_dashboard.jpg}%
      {Carte de bienvenue personnalisée et statistiques (événements, participants, en cours/à venir) avec action « Nouvel événement ».}%
-     {.}
+     {Donner une vue d'ensemble et un accès rapide aux actions clés.}
   \hfill
   \ui{Mes événements}{page_evernement.jpg}%
-     {Liste des événements avec recherche, filtres (\emph{Tous}, \emph{Actifs}, \emph{À venir}) et bouton d'ajout .}  %
-     {}
+     {Liste des événements avec recherche, filtres (\emph{Tous}, \emph{Actifs}, \emph{À venir}) et bouton d'ajout.}%
+     {Retrouver, filtrer et créer des événements aisément.}
 \end{figure}
 
 % LIGNE 4 : Détail d'un événement et Création d'un événement
@@ -53,23 +63,23 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
   \centering
   \ui{Détail d'un événement}{page_dtail_event.jpg}%
      {Récapitulatif (nom, date/heure, code d'accès, description) et sections \emph{Sondage}, \emph{Quiz}, \emph{Chat} avec compteurs et actions.}%
-     {}
+     {Centraliser la gestion des modules d'interaction.}
   \hfill
   \ui{Création d'un événement}{page_creation_event.jpg}%
      {Formulaire par étapes : informations générales, date/heure (début et fin optionnelle), lieu et participation.}%
-     {}
+     {Saisir toutes les métadonnées nécessaires à la planification.}
 \end{figure}
 
 % LIGNE 5 : Liste des modules et Création de module Quiz
 \begin{figure}[htbp]
   \centering
-  \ui{Modules Quiz , sondage}{page_des_moduls_quiz.jpg}%
+  \ui{Modules — Quiz (liste)}{page_des_moduls_quiz.jpg}%
      {Recherche, filtre, bouton « + » et cartes modules (état actif, nombre de questions, action « Voir »).}%
-     {}
+     {Gérer les différents modules de quiz d'un événement.}
   \hfill
   \ui{Création d'un module — Quiz}{page_creation_module.jpg}%
      {Titre du module, type de réponse (choix unique/multiple, échelle, texte libre), éditeur de questions et options.}%
-     {}
+     {Concevoir des activités interactives adaptées aux objectifs pédagogiques.}
 \end{figure}
 
 % LIGNE 6 : Création de module Sondage et Participation (choix unique)
@@ -77,11 +87,11 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
   \centering
   \ui{Création d'un module — Sondage}{Screenshot_20250906-164855.jpg}%
      {Interface de création de sondage avec les mêmes types de réponses que le quiz, orientée recueil d'opinions.}%
-     {}
+     {Construire rapidement des sondages ciblés.}
   \hfill
   \ui{Participation — Choix unique}{page_participation.jpg}%
      {Affichage d'une question à choix unique avec boutons radio et navigation \emph{Précédent/Suivant}.}%
-     {}
+     {Permettre une réponse rapide et fluide des participants.}
 \end{figure}
 
 % LIGNE 7 : Participation (choix multiples) et Résultats de question
@@ -89,11 +99,11 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
   \centering
   \ui{Participation — Choix multiples}{Screenshot_20250906-165209.jpg}%
      {Question à choix multiples avec cases à cocher permettant plusieurs réponses.}%
-     {}
+     {Recueillir des réponses multiples lorsque plusieurs solutions sont pertinentes.}
   \hfill
   \ui{Résultats d'une question de quiz}{page_module_detail.jpg}%
      {Synthèse : nombre de répondants, barres de pourcentage par option, navigation entre les questions.}%
-     {}
+     {Visualiser instantanément la compréhension et l'adhésion du public.}
 \end{figure}
 
 % LIGNE 8 : Participants et Profil utilisateur
@@ -101,11 +111,11 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
   \centering
   \ui{Participants}{page_participants.jpg}%
      {Statistiques (participants, réponses, moyenne, événements, actifs/à venir), recherche et liste détaillée ; action \emph{Inviter}.}%
-     {}
+     {Suivre l'engagement et administrer la base de participants.}
   \hfill
   \ui{Profil utilisateur}{page_profil.jpg}%
      {Nom, e‑mail et rôle, possibilité d'édition via un crayon et bouton \emph{Déconnexion}.}%
-     {}
+     {Consulter et gérer son identité et ses droits.}
 \end{figure}
 
 % LIGNE 9 : Paramètres du compte (réinitialisation)
@@ -113,14 +123,14 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
   \centering
   \ui{Paramètres du compte}{page_paramtre.jpg}%
      {Sélection des catégories de données à effacer (événements, participants, modèles, données locales) puis exécution de la réinitialisation.}%
-     {}
+     {Offrir un contrôle explicite sur la purge des données et la remise à zéro.}
   \hfill
   \begin{minipage}[t]{0.48\linewidth}
     % Espace réservé pour une interface supplémentaire éventuelle.
   \end{minipage}
 \end{figure}
-\subsection{Interfaces de documentation de l'API}
 
+\subsection{Interfaces de documentation de l'API}
 \textbf{Remarque.} Les captures d'écran de la documentation de l'API ne sont pas
 fournies. La documentation se présente généralement sous forme de pages Web
 interactives (Swagger ou Redoc) où l'on retrouve :

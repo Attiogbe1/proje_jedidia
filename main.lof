@@ -25,4 +25,21 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Diagramme de séquence pour la création d'un événement}}{23}{figure.caption.25}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Scénarios et exploitation}{24}{chapter.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Page d'accueil}}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Page de connexion}}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Page d'inscription}}{26}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Réinitialisation du mot de passe}}{26}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Tableau de bord}}{27}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Mes événements}}{27}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Détail d'un événement}}{28}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Création d'un événement}}{28}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Modules Quiz , sondage}}{29}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Création d'un module — Quiz}}{29}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Création d'un module — Sondage}}{30}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Participation — Choix unique}}{30}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Participation — Choix multiples}}{31}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Résultats d'une question de quiz}}{31}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Participants}}{32}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Profil utilisateur}}{32}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Paramètres du compte}}{33}{figure.caption.35}%
 \contentsfinish 

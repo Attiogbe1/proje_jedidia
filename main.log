@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  7 APR 2025 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  6 SEP 2025 22:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1034,12 +1034,12 @@ Package glossaries Info: Writing glossary file main.acn on input line 434.
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
 Package: titletoc 2025/01/04 v2.17 TOC entries
 \ttl@leftsep=\dimen324
-) (glossaire_reduit.tex) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+) (ui-command.tex) (glossaire_reduit.tex) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 57.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 59.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -1062,26 +1062,26 @@ LaTeX Warning: Label `fig:mon_img' multiply defined.
 (4-conclusion.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Info: Redefining \degres on input line 57.
-LaTeX Info: Redefining \up on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Info: Redefining \degres on input line 59.
+LaTeX Info: Redefining \up on input line 59.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count417
@@ -1145,13 +1145,13 @@ See SIunits.dvi or readme.txt section: Known problems and limitations.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 57.
+Package hyperref Info: Link coloring ON on input line 59.
 (main.out) (main.out)
 \@outlinefile=\write9
 \openout9 = `main.out'.
 
 \c@lstlisting=\count423
-Package tocbasic Info: setting babel extension for `lol' on input line 57.
+Package tocbasic Info: setting babel extension for `lol' on input line 59.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks63
@@ -1209,34 +1209,34 @@ Package minitoc(hints) Warning: W0023
 (minitoc(hints))                --- It may be the consequence 
 (minitoc(hints))                of loading the ``hyperref'' package.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 59.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 61.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-<images/logoUAC1.png, id=264, 160.6pt x 186.6975pt>
+<images/logoUAC1.png, id=265, 160.6pt x 186.6975pt>
 File: images/logoUAC1.png Graphic file (type png)
 <use images/logoUAC1.png>
-Package pdftex.def Info: images/logoUAC1.png  used on input line 59.
+Package pdftex.def Info: images/logoUAC1.png  used on input line 61.
 (pdftex.def)             Requested size: 80.29979pt x 93.34851pt.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 59.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 61.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<images/logoIfri.png, id=268, 200.75pt x 126.874pt>
+<images/logoIfri.png, id=269, 200.75pt x 126.874pt>
 File: images/logoIfri.png Graphic file (type png)
 <use images/logoIfri.png>
-Package pdftex.def Info: images/logoIfri.png  used on input line 59.
+Package pdftex.def Info: images/logoIfri.png  used on input line 61.
 (pdftex.def)             Requested size: 100.37474pt x 63.43683pt.
 
-Overfull \hbox (0.7901pt too wide) in paragraph at lines 59--59
+Overfull \hbox (0.7901pt too wide) in paragraph at lines 61--61
 []  
  []
 
@@ -1345,15 +1345,15 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 
 [2]
 Chapitre 1.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 119.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 121.
 (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 119.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 121.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (1-partie/1-fichier.tex
-<images/application.png, id=414, 1798.72pt x 1027.84pt>
+<images/application.png, id=441, 1798.72pt x 1027.84pt>
 File: images/application.png Graphic file (type png)
 <use images/application.png>
 Package pdftex.def Info: images/application.png  used on input line 14.
@@ -1370,7 +1370,7 @@ Overfull \hbox (55.9233pt too wide) in paragraph at lines 14--15
 
 
 ]
-<images/78.jpg, id=422, 738.76pt x 383.4325pt>
+<images/78.jpg, id=449, 738.76pt x 383.4325pt>
 File: images/78.jpg Graphic file (type jpg)
 <use images/78.jpg>
 Package pdftex.def Info: images/78.jpg  used on input line 24.
@@ -1549,12 +1549,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [7]
 
 [8]
-<images/5.jpg, id=469, 475.7775pt x 1084.05pt>
+<images/5.jpg, id=496, 475.7775pt x 1084.05pt>
 File: images/5.jpg Graphic file (type jpg)
 <use images/5.jpg>
 Package pdftex.def Info: images/5.jpg  used on input line 187.
 (pdftex.def)             Requested size: 190.30762pt x 433.61232pt.
-<images/1.jpg, id=470, 475.7775pt x 1084.05pt>
+<images/1.jpg, id=497, 475.7775pt x 1084.05pt>
 File: images/1.jpg Graphic file (type jpg)
 <use images/1.jpg>
 Package pdftex.def Info: images/1.jpg  used on input line 194.
@@ -1562,12 +1562,12 @@ Package pdftex.def Info: images/1.jpg  used on input line 194.
 
 
 [9]
-<images/6.jpg, id=477, 483.8075pt x 1084.05pt>
+<images/6.jpg, id=504, 483.8075pt x 1084.05pt>
 File: images/6.jpg Graphic file (type jpg)
 <use images/6.jpg>
 Package pdftex.def Info: images/6.jpg  used on input line 212.
 (pdftex.def)             Requested size: 193.51956pt x 433.61232pt.
-<images/0.jpg, id=478, 475.7775pt x 1084.05pt>
+<images/0.jpg, id=505, 475.7775pt x 1084.05pt>
 File: images/0.jpg Graphic file (type jpg)
 <use images/0.jpg>
 Package pdftex.def Info: images/0.jpg  used on input line 219.
@@ -1770,7 +1770,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 17.
 
-<images/Model.png, id=501, 557.08125pt x 425.59pt>
+<images/Model.png, id=528, 557.08125pt x 425.59pt>
 File: images/Model.png Graphic file (type png)
 <use images/Model.png>
 Package pdftex.def Info: images/Model.png  used on input line 21.
@@ -1814,12 +1814,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 60.
 
-<images/studio-idx.png, id=534, 1128.215pt x 750.805pt>
+<images/studio-idx.png, id=561, 1128.215pt x 750.805pt>
 File: images/studio-idx.png Graphic file (type png)
 <use images/studio-idx.png>
 Package pdftex.def Info: images/studio-idx.png  used on input line 68.
 (pdftex.def)             Requested size: 237.01411pt x 157.71953pt.
-<images/visualstudio.jpg, id=535, 1284.8pt x 722.7pt>
+<images/visualstudio.jpg, id=562, 1284.8pt x 722.7pt>
 File: images/visualstudio.jpg Graphic file (type jpg)
 <use images/visualstudio.jpg>
 Package pdftex.def Info: images/visualstudio.jpg  used on input line 76.
@@ -1827,7 +1827,7 @@ Package pdftex.def Info: images/visualstudio.jpg  used on input line 76.
 
 
 [17 <./images/studio-idx.png> <./images/visualstudio.jpg>]
-<images/Diagram2.png, id=544, 1084.05pt x 702.625pt>
+<images/Diagram2.png, id=571, 1084.05pt x 702.625pt>
 File: images/Diagram2.png Graphic file (type png)
 <use images/Diagram2.png>
 Package pdftex.def Info: images/Diagram2.png  used on input line 140.
@@ -1842,7 +1842,7 @@ Overfull \hbox (58.32681pt too wide) in paragraph at lines 140--141
 [18]
 
 [19 <./images/Diagram2.png>]
-<images/Diagram-classes-fins1.png, id=554, 1013.7875pt x 752.8125pt>
+<images/Diagram-classes-fins1.png, id=581, 1013.7875pt x 752.8125pt>
 File: images/Diagram-classes-fins1.png Graphic file (type png)
 <use images/Diagram-classes-fins1.png>
 Package pdftex.def Info: images/Diagram-classes-fins1.png  used on input line 157.
@@ -1852,7 +1852,7 @@ Overfull \hbox (23.19565pt too wide) in paragraph at lines 157--158
 [][] 
  []
 
-<images/Diagramme-seq-inscription.png, id=557, 585.387pt x 377.61075pt>
+<images/Diagramme-seq-inscription.png, id=584, 585.387pt x 377.61075pt>
 File: images/Diagramme-seq-inscription.png Graphic file (type png)
 <use images/Diagramme-seq-inscription.png>
 Package pdftex.def Info: images/Diagramme-seq-inscription.png  used on input line 177.
@@ -1860,7 +1860,7 @@ Package pdftex.def Info: images/Diagramme-seq-inscription.png  used on input lin
 
 
 [20 <./images/Diagram-classes-fins1.png>]
-<images/diagramme-seq-connexion.png, id=564, 858.20625pt x 413.74574pt>
+<images/diagramme-seq-connexion.png, id=591, 858.20625pt x 413.74574pt>
 File: images/diagramme-seq-connexion.png Graphic file (type png)
 <use images/diagramme-seq-connexion.png>
 Package pdftex.def Info: images/diagramme-seq-connexion.png  used on input line 186.
@@ -1873,7 +1873,7 @@ Overfull \hbox (31.23087pt too wide) in paragraph at lines 186--187
 
 
 [21 <./images/Diagramme-seq-inscription.png> <./images/diagramme-seq-connexion.png>]
-<images/diagramme_sequence_creation_event.png, id=573, 823.075pt x 717.68124pt>
+<images/diagramme_sequence_creation_event.png, id=600, 823.075pt x 717.68124pt>
 File: images/diagramme_sequence_creation_event.png Graphic file (type png)
 <use images/diagramme_sequence_creation_event.png>
 Package pdftex.def Info: images/diagramme_sequence_creation_event.png  used on input line 199.
@@ -1886,7 +1886,7 @@ Overfull \hbox (10.15193pt too wide) in paragraph at lines 199--200
 
 
 [22 <./images/diagramme_sequence_creation_event.png (PNG copy)>]
-<images/diagramme_sequence_participer_event.png, id=579, 758.835pt x 570.13pt>
+<images/diagramme_sequence_participer_event.png, id=606, 758.835pt x 570.13pt>
 File: images/diagramme_sequence_participer_event.png Graphic file (type png)
 <use images/diagramme_sequence_participer_event.png>
 Package pdftex.def Info: images/diagramme_sequence_participer_event.png  used on input line 219.
@@ -1895,27 +1895,238 @@ Package pdftex.def Info: images/diagramme_sequence_participer_event.png  used on
 
 [23 <./images/diagramme_sequence_participer_event.png (PNG copy)>]
 Chapitre 3.
-(3-partie/1-fichier.tex)
+(3-partie/1-fichier.tex
+<images/page_acceul.jpg, id=610, 722.7pt x 1646.15pt>
+File: images/page_acceul.jpg Graphic file (type jpg)
+<use images/page_acceul.jpg>
+Package pdftex.def Info: images/page_acceul.jpg  used on input line 19.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Underfull \hbox (badness 1242) in paragraph at lines 19--19
+[]\T1/ppl/m/n/10 Écran d'en-trée pré-sen-tant les fonc-tion-na-li-tés clés
+ []
+
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 19--19
+ []$[]$$[]$ 
+ []
+
+<images/page_connexion.jpg, id=611, 722.7pt x 1646.15pt>
+File: images/page_connexion.jpg Graphic file (type jpg)
+<use images/page_connexion.jpg>
+Package pdftex.def Info: images/page_connexion.jpg  used on input line 24.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 24--24
+ []$[]$$[]$ 
+ []
+
+<images/page_inscription.jpg, id=612, 722.7pt x 1646.15pt>
+File: images/page_inscription.jpg Graphic file (type jpg)
+<use images/page_inscription.jpg>
+Package pdftex.def Info: images/page_inscription.jpg  used on input line 32.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 32--32
+ []$[]$$[]$ 
+ []
+
+<images/page_mise_ajour.jpg, id=613, 722.7pt x 1646.15pt>
+File: images/page_mise_ajour.jpg Graphic file (type jpg)
+<use images/page_mise_ajour.jpg>
+Package pdftex.def Info: images/page_mise_ajour.jpg  used on input line 36.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 36--36
+ []$[]$$[]$ 
+ []
+
+<images/page_dashboard.jpg, id=614, 722.7pt x 1646.15pt>
+File: images/page_dashboard.jpg Graphic file (type jpg)
+<use images/page_dashboard.jpg>
+Package pdftex.def Info: images/page_dashboard.jpg  used on input line 44.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Underfull \hbox (badness 1902) in paragraph at lines 44--44
+[]\T1/ppl/m/n/10 Carte de bien-ve-nue per-son-na-li-sée et sta-tis-tiques
+ []
+
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 44--44
+ []$[]$$[]$ 
+ []
+
+<images/page_evernement.jpg, id=615, 722.7pt x 1646.15pt>
+File: images/page_evernement.jpg Graphic file (type jpg)
+<use images/page_evernement.jpg>
+Package pdftex.def Info: images/page_evernement.jpg  used on input line 48.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 48--48
+ []$[]$$[]$ 
+ []
+
+<images/page_dtail_event.jpg, id=616, 722.7pt x 1646.15pt>
+File: images/page_dtail_event.jpg Graphic file (type jpg)
+<use images/page_dtail_event.jpg>
+Package pdftex.def Info: images/page_dtail_event.jpg  used on input line 56.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 56--56
+ []$[]$$[]$ 
+ []
+
+<images/page_creation_event.jpg, id=617, 722.7pt x 1646.15pt>
+File: images/page_creation_event.jpg Graphic file (type jpg)
+<use images/page_creation_event.jpg>
+Package pdftex.def Info: images/page_creation_event.jpg  used on input line 60.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 60--60
+ []$[]$$[]$ 
+ []
+
+<images/page_des_moduls_quiz.jpg, id=618, 722.7pt x 1646.15pt>
+File: images/page_des_moduls_quiz.jpg Graphic file (type jpg)
+<use images/page_des_moduls_quiz.jpg>
+Package pdftex.def Info: images/page_des_moduls_quiz.jpg  used on input line 68.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 68--68
+ []$[]$$[]$ 
+ []
+
+<images/page_creation_module.jpg, id=619, 722.7pt x 1646.15pt>
+File: images/page_creation_module.jpg Graphic file (type jpg)
+<use images/page_creation_module.jpg>
+Package pdftex.def Info: images/page_creation_module.jpg  used on input line 72.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 72--72
+ []$[]$$[]$ 
+ []
+
+<images/Screenshot_20250906-164855.jpg, id=620, 722.7pt x 1646.15pt>
+File: images/Screenshot_20250906-164855.jpg Graphic file (type jpg)
+<use images/Screenshot_20250906-164855.jpg>
+Package pdftex.def Info: images/Screenshot_20250906-164855.jpg  used on input line 80.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 80--80
+ []$[]$$[]$ 
+ []
+
+<images/page_participation.jpg, id=621, 722.7pt x 1646.15pt>
+File: images/page_participation.jpg Graphic file (type jpg)
+<use images/page_participation.jpg>
+Package pdftex.def Info: images/page_participation.jpg  used on input line 84.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 84--84
+ []$[]$$[]$ 
+ []
+
+<images/Screenshot_20250906-165209.jpg, id=622, 722.7pt x 1646.15pt>
+File: images/Screenshot_20250906-165209.jpg Graphic file (type jpg)
+<use images/Screenshot_20250906-165209.jpg>
+Package pdftex.def Info: images/Screenshot_20250906-165209.jpg  used on input line 92.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 92--92
+ []$[]$$[]$ 
+ []
+
+<images/page_module_detail.jpg, id=623, 722.7pt x 1646.15pt>
+File: images/page_module_detail.jpg Graphic file (type jpg)
+<use images/page_module_detail.jpg>
+Package pdftex.def Info: images/page_module_detail.jpg  used on input line 96.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 96--96
+ []$[]$$[]$ 
+ []
+
+<images/page_participants.jpg, id=624, 722.7pt x 1646.15pt>
+File: images/page_participants.jpg Graphic file (type jpg)
+<use images/page_participants.jpg>
+Package pdftex.def Info: images/page_participants.jpg  used on input line 104.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 104--104
+ []$[]$$[]$ 
+ []
+
+<images/page_profil.jpg, id=625, 722.7pt x 1646.15pt>
+File: images/page_profil.jpg Graphic file (type jpg)
+<use images/page_profil.jpg>
+Package pdftex.def Info: images/page_profil.jpg  used on input line 108.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Underfull \hbox (badness 1107) in paragraph at lines 108--108
+[]\T1/ppl/m/n/10 Nom, e[]mail et rôle, pos-si-bi-lité d'édi-tion via un
+ []
+
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 108--108
+ []$[]$$[]$ 
+ []
+
+<images/page_paramtre.jpg, id=626, 722.7pt x 1646.15pt>
+File: images/page_paramtre.jpg Graphic file (type jpg)
+<use images/page_paramtre.jpg>
+Package pdftex.def Info: images/page_paramtre.jpg  used on input line 116.
+(pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
+
+Overfull \hbox (232.17242pt too wide) in paragraph at lines 116--116
+ []$[]$$[]$ 
+ []
+
+
+Overfull \hbox (20.0067pt too wide) in paragraph at lines 131--135
+[]\T1/ppl/b/n/12 Ressources prin-ci-pales : \T1/ppl/m/n/12 end-points REST tels que \T1/pcr/m/n/12 /events\T1/ppl/m/n/12 , \T1/pcr/m/n/12 /modules\T1/ppl/m/n/12 , \T1/pcr/m/n/12 /participants\T1/ppl/m/n/12 ,
+ []
+
+
 
 [24
 
 ]
+
+[25 <./images/page_acceul.jpg> <./images/page_connexion.jpg>]
+
+[26 <./images/page_inscription.jpg> <./images/page_mise_ajour.jpg>]
+
+[27 <./images/page_dashboard.jpg> <./images/page_evernement.jpg>]
+
+[28 <./images/page_dtail_event.jpg> <./images/page_creation_event.jpg>]
+
+[29 <./images/page_des_moduls_quiz.jpg> <./images/page_creation_module.jpg>]
+
+[30 <./images/Screenshot_20250906-164855.jpg> <./images/page_participation.jpg>]
+
+[31 <./images/Screenshot_20250906-165209.jpg> <./images/page_module_detail.jpg>]
+
+[32 <./images/page_participants.jpg> <./images/page_profil.jpg>]
+
+[33 <./images/page_paramtre.jpg>])
+
+[34]
 \openout2 = `4-conclusion.aux'.
 
  (4-conclusion.tex)
 
-[25
+[35
 
 
 ] (main.bbl)
 
-[26
+[36
 
 
 
 ] (main.toc
 
-[27])
+[37])
 \tf@toc=\write12
 \openout12 = `main.toc'.
 
@@ -1940,7 +2151,7 @@ Package minitoc(hints) Warning: W0024
 
 
 
-[28] 
+[38] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux (0-dedicace.aux) (1-remerciements.aux) (2-resume.aux) (3-introduction.aux) (4-conclusion.aux))
  ***********
@@ -1952,23 +2163,23 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3BC38AB74AF42A485B94D505F62B05FE;11054.
+(rerunfilecheck)             Checksum: EE170A3B8AC4901A54B3446703434EFB;11031.
  ) 
 Here is how much of TeX's memory you used:
- 38497 strings out of 473530
- 685179 string characters out of 5713343
- 1371718 words of memory out of 5000000
- 60840 multiletter control sequences out of 15000+600000
- 606020 words of font info for 117 fonts, out of 8000000 for 9000
+ 38655 strings out of 473530
+ 689892 string characters out of 5713343
+ 1371816 words of memory out of 5000000
+ 60971 multiletter control sequences out of 15000+600000
+ 611353 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,14n,131p,2428b,756s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:UML} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (38 pages, 1845262 bytes).
+Output written on main.pdf (48 pages, 5261024 bytes).
 PDF statistics:
- 742 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
- 614 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 832 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 500000)
+ 699 words of extra memory for PDF output out of 10000 (max. 10000000)
 
