@@ -1,6 +1,7 @@
 
 \documentclass{ifri}
 \usepackage{titletoc}
+\usepackage[acronym]{glossaries}
 
 % Configuration des Google Fonts et amélioration typographique
 \input{google-fonts-config}
@@ -43,6 +44,7 @@
 \color{bookColor}
 
 %importation du glossaire
+\makeglossaries
 \loadglsentries{glossaire_reduit}
 
 \lstset{
@@ -103,9 +105,8 @@
 \newpage
 
 % Les sigles et acronymes
-setglossarystyle{altlist}
-%\printnoidxglossary[title=Liste des acronymes, toctitle=Liste des acronymes, type=\acronymtype]
-\printglossary[title=Liste des acronymes, toctitle=Liste des acronymes, type=\acronymtype]
+\setglossarystyle{altlist}
+\printglossary[type=\acronymtype, title=Liste des sigles et acronymes]
 \newpage
 
 
