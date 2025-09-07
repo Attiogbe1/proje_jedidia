@@ -1,36 +1,52 @@
 \begin{thebibliography}{10}
 
-\bibitem{definition-application-mobile}
-A.~App.
+\bibitem[1]{definition-application-mobile}
+Aquil App.
 \newblock Qu’est-ce qu’une application mobile ?
+\newblock URL:
+  \url{https://www.aquilapp.fr/ressources/application-mobile/quest-ce-quune-application-mobile}.
 
-\bibitem{bility}
-D.~de~Firebase.
+\bibitem[2]{bility}
+Définition de~Firebase.
+\newblock URL: \url{https://bility.fr/definition-firebase/}.
 
-\bibitem{ionos}
-D.~de~Flutter.
+\bibitem[3]{ionos}
+Définition de~Flutter.
+\newblock URL:
+  \url{https://www.ionos.fr/digitalguide/sites-internet/developpement-web/flutter-cest-quoi/}.
 
-\bibitem{webTech}
-D.~de~IDE.
+\bibitem[4]{webTech}
+Définition de~IDE.
+\newblock URL: \url{https://webtech.fr/glossaire/ide/}.
 
-\bibitem{yieldstudio}
-D.~de~Laravel.
+\bibitem[5]{yieldstudio}
+Définition de~Laravel.
+\newblock URL: \url{https://www.yieldstudio.fr/glossaire/laravel}.
 
-\bibitem{denierCri}
-D.~de~Supabase.
+\bibitem[6]{denierCri}
+Définition de~Supabase.
+\newblock URL: \url{https://derniercri.io/radar-items/supabase}.
 
-\bibitem{evenement}
+\bibitem[7]{evenement}
 Houefa.
 \newblock Definition des evernements.
+\newblock URL:
+  \url{https://www.evenement.com/guides-professionnels/definitions/quels-sont-les-differents-types-devenements/}.
 
-\bibitem{evenementsprofessionnel}
+\bibitem[8]{evenementsprofessionnel}
 IMMAGINA.
 \newblock Définition des événements professionnels.
+\newblock URL:
+  \url{https://imagina.com/fr/blog/article/types-evenement-entreprise/}.
 
-\bibitem{wikipedia}
+\bibitem[9]{wikipedia}
 wikipedia.
+\newblock URL:
+  \url{https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur}.
 
-\bibitem{wrike}
+\bibitem[10]{wrike}
 wrike.
+\newblock URL:
+  \url{https://www.wrike.com/fr/project-management-guide/faq/quest-ce-que-la-methode-pert-en-gestion-de-projet/}.
 
 \end{thebibliography}

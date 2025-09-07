@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  7 SEP 2025 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  7 SEP 2025 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -320,6 +320,9 @@ File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks33
 \c@AM@survey=\count306
 \AM@templatesizebox=\box60
+) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
@@ -378,10 +381,6 @@ Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
 \c@Hy@tempcnt=\count311
- (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip18
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen183
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
@@ -1123,7 +1122,10 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count420
 \@lastruleclass=\count421
 \@thisrulewidth=\dimen338
-)) (ui-command.tex) (glossaire_reduit.tex) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 195.
+Package hyperref Info: Option `breaklinks' set `true' on input line 195.
+) (ui-command.tex) (glossaire_reduit.tex) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -1217,7 +1219,7 @@ See SIunits.dvi or readme.txt section: Known problems and limitations.
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
 * \topmargin=-52.36449pt
-* \headheight=15.0pt
+* \headheight=22.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
@@ -1447,26 +1449,30 @@ Non-PDF special ignored!
 ]
 \openout2 = `1-remerciements.aux'.
 
- (1-remerciements.tex)
+ (1-remerciements.tex
 
 [3
 
 
 
 
-]
+])
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 90.
+[4]
 \openout2 = `2-resume.aux'.
 
  (2-resume.tex
 
-[4
+[5
 
 
 
 
 ])
 
-[5] (main.lof
+[6] (main.lof
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 9.
 )
@@ -1475,7 +1481,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 
-[6
+[7
 
 
 ] (main.lot)
@@ -1484,11 +1490,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 
-[7]
+[8]
 No file main.acr.
 
 
-[8]
+[9]
 \openout2 = `3-introduction.aux'.
 
  (3-introduction.tex
@@ -1502,12 +1508,12 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \subsection*{Objectifs spécifiques}
-                                          [1
+l.31     \item \textbf
+                      {Améliorer l'accessibilité et la personnalisation} [1
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 54.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 53.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
@@ -1532,7 +1538,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (1-partie/1-fichier.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 11.03998pt on input line 7.
-<images/application.png, id=479, 1798.72pt x 1027.84pt>
+<images/application.png, id=483, 1798.72pt x 1027.84pt>
 File: images/application.png Graphic file (type png)
 <use images/application.png>
 Package pdftex.def Info: images/application.png  used on input line 14.
@@ -1542,8 +1548,6 @@ Overfull \hbox (55.9233pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 15.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 15.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
@@ -1555,7 +1559,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
 
 
 ]
-<images/78.jpg, id=486, 738.76pt x 383.4325pt>
+<images/78.jpg, id=491, 738.76pt x 383.4325pt>
 File: images/78.jpg Graphic file (type jpg)
 <use images/78.jpg>
 Package pdftex.def Info: images/78.jpg  used on input line 24.
@@ -1719,12 +1723,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [7]
 
 [8]
-<images/5.jpg, id=539, 475.7775pt x 1084.05pt>
+<images/5.jpg, id=544, 475.7775pt x 1084.05pt>
 File: images/5.jpg Graphic file (type jpg)
 <use images/5.jpg>
 Package pdftex.def Info: images/5.jpg  used on input line 187.
 (pdftex.def)             Requested size: 190.30762pt x 433.61232pt.
-<images/1.jpg, id=540, 475.7775pt x 1084.05pt>
+<images/1.jpg, id=545, 475.7775pt x 1084.05pt>
 File: images/1.jpg Graphic file (type jpg)
 <use images/1.jpg>
 Package pdftex.def Info: images/1.jpg  used on input line 194.
@@ -1732,12 +1736,12 @@ Package pdftex.def Info: images/1.jpg  used on input line 194.
 
 
 [9]
-<images/6.jpg, id=546, 483.8075pt x 1084.05pt>
+<images/6.jpg, id=551, 483.8075pt x 1084.05pt>
 File: images/6.jpg Graphic file (type jpg)
 <use images/6.jpg>
 Package pdftex.def Info: images/6.jpg  used on input line 212.
 (pdftex.def)             Requested size: 193.51956pt x 433.61232pt.
-<images/0.jpg, id=547, 475.7775pt x 1084.05pt>
+<images/0.jpg, id=552, 475.7775pt x 1084.05pt>
 File: images/0.jpg Graphic file (type jpg)
 <use images/0.jpg>
 Package pdftex.def Info: images/0.jpg  used on input line 219.
@@ -1935,7 +1939,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 17.
 
-<images/Model.png, id=571, 557.08125pt x 425.59pt>
+<images/Model.png, id=575, 557.08125pt x 425.59pt>
 File: images/Model.png Graphic file (type png)
 <use images/Model.png>
 Package pdftex.def Info: images/Model.png  used on input line 21.
@@ -1974,12 +1978,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 60.
 
-<images/studio-idx.png, id=611, 1128.215pt x 750.805pt>
+<images/studio-idx.png, id=615, 1128.215pt x 750.805pt>
 File: images/studio-idx.png Graphic file (type png)
 <use images/studio-idx.png>
 Package pdftex.def Info: images/studio-idx.png  used on input line 68.
 (pdftex.def)             Requested size: 237.01411pt x 157.71953pt.
-<images/visualstudio.jpg, id=612, 1284.8pt x 722.7pt>
+<images/visualstudio.jpg, id=616, 1284.8pt x 722.7pt>
 File: images/visualstudio.jpg Graphic file (type jpg)
 <use images/visualstudio.jpg>
 Package pdftex.def Info: images/visualstudio.jpg  used on input line 76.
@@ -1987,7 +1991,7 @@ Package pdftex.def Info: images/visualstudio.jpg  used on input line 76.
 
 
 [17 <./images/studio-idx.png> <./images/visualstudio.jpg>]
-<images/Diagram2.png, id=623, 1084.05pt x 702.625pt>
+<images/Diagram2.png, id=627, 1084.05pt x 702.625pt>
 File: images/Diagram2.png Graphic file (type png)
 <use images/Diagram2.png>
 Package pdftex.def Info: images/Diagram2.png  used on input line 140.
@@ -2000,7 +2004,7 @@ Overfull \hbox (58.32681pt too wide) in paragraph at lines 140--141
 
 
 [18]
-<images/Diagram-classes-fins1.png, id=628, 1013.7875pt x 752.8125pt>
+<images/Diagram-classes-fins1.png, id=632, 1013.7875pt x 752.8125pt>
 File: images/Diagram-classes-fins1.png Graphic file (type png)
 <use images/Diagram-classes-fins1.png>
 Package pdftex.def Info: images/Diagram-classes-fins1.png  used on input line 157.
@@ -2013,7 +2017,7 @@ Overfull \hbox (23.19565pt too wide) in paragraph at lines 157--158
 
 
 [19 <./images/Diagram2.png>]
-<images/Diagramme-seq-inscription.png, id=636, 585.387pt x 377.61075pt>
+<images/Diagramme-seq-inscription.png, id=640, 585.387pt x 377.61075pt>
 File: images/Diagramme-seq-inscription.png Graphic file (type png)
 <use images/Diagramme-seq-inscription.png>
 Package pdftex.def Info: images/Diagramme-seq-inscription.png  used on input line 177.
@@ -2021,7 +2025,7 @@ Package pdftex.def Info: images/Diagramme-seq-inscription.png  used on input lin
 
 
 [20 <./images/Diagram-classes-fins1.png>]
-<images/diagramme-seq-connexion.png, id=643, 858.20625pt x 413.74574pt>
+<images/diagramme-seq-connexion.png, id=647, 858.20625pt x 413.74574pt>
 File: images/diagramme-seq-connexion.png Graphic file (type png)
 <use images/diagramme-seq-connexion.png>
 Package pdftex.def Info: images/diagramme-seq-connexion.png  used on input line 186.
@@ -2034,7 +2038,7 @@ Overfull \hbox (31.23087pt too wide) in paragraph at lines 186--187
 
 
 [21 <./images/Diagramme-seq-inscription.png> <./images/diagramme-seq-connexion.png>]
-<images/diagramme_sequence_creation_event.png, id=651, 823.075pt x 717.68124pt>
+<images/diagramme_sequence_creation_event.png, id=656, 823.075pt x 717.68124pt>
 File: images/diagramme_sequence_creation_event.png Graphic file (type png)
 <use images/diagramme_sequence_creation_event.png>
 Package pdftex.def Info: images/diagramme_sequence_creation_event.png  used on input line 199.
@@ -2044,7 +2048,7 @@ Overfull \hbox (10.15193pt too wide) in paragraph at lines 199--200
 [][] 
  []
 
-<images/diagramme_sequence_participer_event.png, id=653, 758.835pt x 570.13pt>
+<images/diagramme_sequence_participer_event.png, id=658, 758.835pt x 570.13pt>
 File: images/diagramme_sequence_participer_event.png Graphic file (type png)
 <use images/diagramme_sequence_participer_event.png>
 Package pdftex.def Info: images/diagramme_sequence_participer_event.png  used on input line 219.
@@ -2064,12 +2068,12 @@ Chapitre 3.
 [25]
 
 [26]
-<images/page_acceul.jpg, id=676, 722.7pt x 1646.15pt>
+<images/page_acceul.jpg, id=680, 722.7pt x 1646.15pt>
 File: images/page_acceul.jpg Graphic file (type jpg)
 <use images/page_acceul.jpg>
 Package pdftex.def Info: images/page_acceul.jpg  used on input line 172.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_connexion.jpg, id=677, 722.7pt x 1646.15pt>
+<images/page_connexion.jpg, id=681, 722.7pt x 1646.15pt>
 File: images/page_connexion.jpg Graphic file (type jpg)
 <use images/page_connexion.jpg>
 Package pdftex.def Info: images/page_connexion.jpg  used on input line 176.
@@ -2077,12 +2081,12 @@ Package pdftex.def Info: images/page_connexion.jpg  used on input line 176.
 
 
 [27]
-<images/page_inscription.jpg, id=682, 722.7pt x 1646.15pt>
+<images/page_inscription.jpg, id=687, 722.7pt x 1646.15pt>
 File: images/page_inscription.jpg Graphic file (type jpg)
 <use images/page_inscription.jpg>
 Package pdftex.def Info: images/page_inscription.jpg  used on input line 184.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_mise_ajour.jpg, id=683, 722.7pt x 1646.15pt>
+<images/page_mise_ajour.jpg, id=688, 722.7pt x 1646.15pt>
 File: images/page_mise_ajour.jpg Graphic file (type jpg)
 <use images/page_mise_ajour.jpg>
 Package pdftex.def Info: images/page_mise_ajour.jpg  used on input line 188.
@@ -2090,12 +2094,12 @@ Package pdftex.def Info: images/page_mise_ajour.jpg  used on input line 188.
 
 
 [28 <./images/page_acceul.jpg> <./images/page_connexion.jpg>]
-<images/page_profil.jpg, id=689, 722.7pt x 1646.15pt>
+<images/page_profil.jpg, id=693, 722.7pt x 1646.15pt>
 File: images/page_profil.jpg Graphic file (type jpg)
 <use images/page_profil.jpg>
 Package pdftex.def Info: images/page_profil.jpg  used on input line 196.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_paramtre.jpg, id=690, 722.7pt x 1646.15pt>
+<images/page_paramtre.jpg, id=694, 722.7pt x 1646.15pt>
 File: images/page_paramtre.jpg Graphic file (type jpg)
 <use images/page_paramtre.jpg>
 Package pdftex.def Info: images/page_paramtre.jpg  used on input line 200.
@@ -2103,12 +2107,12 @@ Package pdftex.def Info: images/page_paramtre.jpg  used on input line 200.
 
 
 [29 <./images/page_inscription.jpg> <./images/page_mise_ajour.jpg>]
-<images/page_dashboard.jpg, id=695, 722.7pt x 1646.15pt>
+<images/page_dashboard.jpg, id=699, 722.7pt x 1646.15pt>
 File: images/page_dashboard.jpg Graphic file (type jpg)
 <use images/page_dashboard.jpg>
 Package pdftex.def Info: images/page_dashboard.jpg  used on input line 212.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_evernement.jpg, id=696, 722.7pt x 1646.15pt>
+<images/page_evernement.jpg, id=700, 722.7pt x 1646.15pt>
 File: images/page_evernement.jpg Graphic file (type jpg)
 <use images/page_evernement.jpg>
 Package pdftex.def Info: images/page_evernement.jpg  used on input line 216.
@@ -2116,12 +2120,12 @@ Package pdftex.def Info: images/page_evernement.jpg  used on input line 216.
 
 
 [30 <./images/page_profil.jpg> <./images/page_paramtre.jpg>]
-<images/page_dtail_event.jpg, id=702, 722.7pt x 1646.15pt>
+<images/page_dtail_event.jpg, id=706, 722.7pt x 1646.15pt>
 File: images/page_dtail_event.jpg Graphic file (type jpg)
 <use images/page_dtail_event.jpg>
 Package pdftex.def Info: images/page_dtail_event.jpg  used on input line 224.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_creation_event.jpg, id=703, 722.7pt x 1646.15pt>
+<images/page_creation_event.jpg, id=707, 722.7pt x 1646.15pt>
 File: images/page_creation_event.jpg Graphic file (type jpg)
 <use images/page_creation_event.jpg>
 Package pdftex.def Info: images/page_creation_event.jpg  used on input line 228.
@@ -2129,12 +2133,12 @@ Package pdftex.def Info: images/page_creation_event.jpg  used on input line 228.
 
 
 [31 <./images/page_dashboard.jpg> <./images/page_evernement.jpg>]
-<images/page_des_moduls_quiz.jpg, id=708, 722.7pt x 1646.15pt>
+<images/page_des_moduls_quiz.jpg, id=712, 722.7pt x 1646.15pt>
 File: images/page_des_moduls_quiz.jpg Graphic file (type jpg)
 <use images/page_des_moduls_quiz.jpg>
 Package pdftex.def Info: images/page_des_moduls_quiz.jpg  used on input line 240.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_creation_module.jpg, id=709, 722.7pt x 1646.15pt>
+<images/page_creation_module.jpg, id=713, 722.7pt x 1646.15pt>
 File: images/page_creation_module.jpg Graphic file (type jpg)
 <use images/page_creation_module.jpg>
 Package pdftex.def Info: images/page_creation_module.jpg  used on input line 244.
@@ -2142,12 +2146,12 @@ Package pdftex.def Info: images/page_creation_module.jpg  used on input line 244
 
 
 [32 <./images/page_dtail_event.jpg> <./images/page_creation_event.jpg>]
-<images/Screenshot_20250906-164855.jpg, id=714, 722.7pt x 1646.15pt>
+<images/Screenshot_20250906-164855.jpg, id=718, 722.7pt x 1646.15pt>
 File: images/Screenshot_20250906-164855.jpg Graphic file (type jpg)
 <use images/Screenshot_20250906-164855.jpg>
 Package pdftex.def Info: images/Screenshot_20250906-164855.jpg  used on input line 252.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_module_detail.jpg, id=715, 722.7pt x 1646.15pt>
+<images/page_module_detail.jpg, id=719, 722.7pt x 1646.15pt>
 File: images/page_module_detail.jpg Graphic file (type jpg)
 <use images/page_module_detail.jpg>
 Package pdftex.def Info: images/page_module_detail.jpg  used on input line 256.
@@ -2155,12 +2159,12 @@ Package pdftex.def Info: images/page_module_detail.jpg  used on input line 256.
 
 
 [33 <./images/page_des_moduls_quiz.jpg> <./images/page_creation_module.jpg>]
-<images/page_participation.jpg, id=720, 722.7pt x 1646.15pt>
+<images/page_participation.jpg, id=725, 722.7pt x 1646.15pt>
 File: images/page_participation.jpg Graphic file (type jpg)
 <use images/page_participation.jpg>
 Package pdftex.def Info: images/page_participation.jpg  used on input line 268.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/Screenshot_20250906-165209.jpg, id=721, 722.7pt x 1646.15pt>
+<images/Screenshot_20250906-165209.jpg, id=726, 722.7pt x 1646.15pt>
 File: images/Screenshot_20250906-165209.jpg Graphic file (type jpg)
 <use images/Screenshot_20250906-165209.jpg>
 Package pdftex.def Info: images/Screenshot_20250906-165209.jpg  used on input line 272.
@@ -2168,7 +2172,7 @@ Package pdftex.def Info: images/Screenshot_20250906-165209.jpg  used on input li
 
 
 [34 <./images/Screenshot_20250906-164855.jpg> <./images/page_module_detail.jpg>]
-<images/page_participants.jpg, id=727, 722.7pt x 1646.15pt>
+<images/page_participants.jpg, id=731, 722.7pt x 1646.15pt>
 File: images/page_participants.jpg Graphic file (type jpg)
 <use images/page_participants.jpg>
 Package pdftex.def Info: images/page_participants.jpg  used on input line 284.
@@ -2239,13 +2243,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C14743485F4278FC55B9806E586600EF;14719.
  ) 
 Here is how much of TeX's memory you used:
- 41411 strings out of 473530
- 741389 string characters out of 5713343
- 1439497 words of memory out of 5000000
- 63352 multiletter control sequences out of 15000+600000
- 704049 words of font info for 282 fonts, out of 8000000 for 9000
+ 41421 strings out of 473530
+ 741490 string characters out of 5713343
+ 1443366 words of memory out of 5000000
+ 63354 multiletter control sequences out of 15000+600000
+ 705426 words of font info for 286 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,14n,131p,2428b,796s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,14n,131p,2428b,794s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:UML} has been referenced but does not exist, replaced by a fixed one
 
@@ -2280,9 +2284,9 @@ pdfTeX warning (dest): name{glo:TIC} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:\040MVC} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (52 pages, 5548451 bytes).
+Output written on main.pdf (53 pages, 5568414 bytes).
 PDF statistics:
- 962 PDF objects out of 1000 (max. 8388607)
- 181 named destinations out of 1000 (max. 500000)
- 106307 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 981 PDF objects out of 1000 (max. 8388607)
+ 182 named destinations out of 1000 (max. 500000)
+ 108355 words of extra memory for PDF output out of 128383 (max. 10000000)
 
