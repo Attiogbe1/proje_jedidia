@@ -4,6 +4,6 @@
     \includegraphics[width=\linewidth]{images/#2}%
     \caption{#1}%
     \parbox{\linewidth}{\small #3}%
-    \parbox{\linewidth}{\footnotesize\textit{#4}}%
+    \ifx\relax#4\relax\else\parbox{\linewidth}{\footnotesize\textit{#4}}\fi%
   \end{minipage}%
 }

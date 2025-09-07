@@ -1,0 +1,31 @@
+% Fichier de correction pour les problèmes d'affichage
+
+% Configuration pour assurer l'encodage UTF-8
+\usepackage[utf8]{inputenc}
+
+% Améliorations pour les références et les étiquettes
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+% Correction des bibliographies manquantes
+\providecommand{\citedenierCri}[0]{[denierCri]}
+\providecommand{\citebility}[0]{[bility]}
+\providecommand{\citewebTech}[0]{[webTech]}
+\providecommand{\citeionos}[0]{[ionos]}
+\providecommand{\citeyieldstudio}[0]{[yieldstudio]}
+\providecommand{\citewrikee}[0]{[wrike]}
+\providecommand{\citewikipedia}[0]{[wikipedia]}
+
+% Amélioration des affichages de figures
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.8}

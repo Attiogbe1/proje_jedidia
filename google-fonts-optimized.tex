@@ -1,0 +1,64 @@
+% Configuration optimisée des polices Google pour XeLaTeX
+% Cette version corrige les problèmes d'affichage des polices
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+% Définition explicite des chemins pour éviter les erreurs de chargement
+\defaultfontfeatures{
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+    Ligatures=TeX,
+    Scale=1.0
+}
+
+% Configuration de la police principale
+\setmainfont{Roboto}
+
+% Configuration de la police sans-serif
+\setsansfont{Roboto}
+
+% Fallback pour les caractères manquants
+\newfontfamily{\fallbackfont}{Arial}
+\DeclareTextFontCommand{\textfallback}{\fallbackfont}
+
+% Mathématiques - utiliser une police compatible
+\setmathfont{Latin Modern Math}
+
+% Configuration des titres avec la police Roboto
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\huge\bfseries\sffamily}
+  {\thechapter}
+  {20pt}
+  {}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\sffamily}
+  {\thesection}
+  {1em}
+  {}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\sffamily}
+  {\thesubsection}
+  {1em}
+  {}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\sffamily}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+% Configuration pour les légendes
+\usepackage{caption}
+\captionsetup{
+  font=small,
+  labelfont=bf,
+  textfont=it,
+  width=0.9\textwidth,
+  format=hang,
+  skip=10pt
+}

@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{ifri}
+
+% Packages essentiels pour XeLaTeX
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+
+% Packages de base
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{tocvsec2}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{setspace}
+
+% Réglages de mise en page
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\onehalfspacing
+
+% Configuration optimisée des polices Google
+\input{google-fonts-optimized}
+
+% Corrections et ajustements
+\input{corrections}
+\input{figure-styling}
+
+% Configuration hyperref (après corrections)
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue
+}
+
+\begin{document}
+
+\title{MÉMOIRE DE SOUTENANCE}
+\author{NOM ET PRÉNOM}
+\date{\today}
+
+\maketitle
+
+\include{0-dedicace}
+\include{1-remerciements}
+\include{2-resume}
+\include{3-introduction}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{1-partie/1-fichier}
+\include{2-partie/1-fichier}
+\include{3-partie/1-fichier}
+
+\include{4-conclusion}
+
+\bibliography{biblio}
+\bibliographystyle{urlbst}
+
+\include{annexe}
+
+\end{document}

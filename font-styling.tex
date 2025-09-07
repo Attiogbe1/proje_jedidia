@@ -1,0 +1,39 @@
+% Configuration optimisée des polices Google pour un mémoire de soutenance
+% Cette configuration assure une présentation professionnelle avec la police Roboto
+
+% Configuration des styles de texte pour assurer la cohérence dans tout le document
+\usepackage{titlesec}
+
+% Style pour les chapitres
+\titleformat{\chapter}
+  {\normalfont\huge\bfseries\sffamily\color{bookColor}}
+  {\thechapter}
+  {20pt}
+  {\uppercase}
+
+% Style pour les sections
+\titleformat*{\section}{\LARGE\bfseries\sffamily\color{bookColor}}
+\titleformat*{\subsection}{\Large\bfseries\sffamily\color{bookColor}}
+\titleformat*{\subsubsection}{\large\bfseries\sffamily\color{bookColor}}
+
+% Style pour le texte normal
+\renewcommand{\normalfont}{\sffamily}
+
+% Style pour les figures et tableaux
+\captionsetup{
+  font=small,
+  labelfont={bf,sf},
+  textfont=sf,
+  width=0.9\textwidth,
+  format=hang,
+  skip=10pt
+}
+
+% Configuration pour les en-têtes et pieds de page
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\sffamily\small Mémoire de soutenance - \theauthor}
+}
+
+% Assurer que le texte utilise bien la police Roboto par défaut
+\normalfont

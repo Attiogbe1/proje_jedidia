@@ -1,0 +1,170 @@
+% google-fonts.tex — Compatible pdfLaTeX / XeLaTeX / LuaLaTeX
+
+% 1) Détecter le moteur
+\usepackage{iftex}
+
+% 2) Couleurs et titres (utilisés plus bas)
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+% 3) Fonts selon le moteur
+\ifPDFTeX
+  % ----- pdfLaTeX : pas de Google Fonts -----
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern} % ou newtxtext,newtxmath si tu préfères
+\else
+  % ----- XeLaTeX / LuaLaTeX : Google Fonts via fontspec -----
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX, Scale=MatchLowercase}
+
+  % --- Roboto en texte et sans-serif ---
+  % Place les fichiers dans: fonts/Roboto/Roboto-*.ttf
+  \setmainfont{Roboto}[
+    Path=fonts/Roboto/,
+    Extension=.ttf,
+    UprightFont   = *-Regular,
+    BoldFont      = *-Bold,
+    ItalicFont    = *-Italic,
+    BoldItalicFont= *-BoldItalic
+  ]
+  \setsansfont{Roboto}[
+    Path=fonts/Roboto/,
+    Extension=.ttf,
+    UprightFont   = *-Regular,
+    BoldFont      = *-Bold,
+    ItalicFont    = *-Italic,
+    BoldItalicFont= *-BoldItalic
+  ]
+
+  % --- (Optionnel) Roboto Mono pour le code ---
+  % Fichiers dans: fonts/RobotoMono/RobotoMono-*.ttf
+  % \setmonofont{RobotoMono}[
+  %   Path=fonts/RobotoMono/,
+  %   Extension=.ttf,
+  %   UprightFont   = *-Regular,
+  %   BoldFont      = *-Bold,
+  %   ItalicFont    = *-Italic,
+  %   BoldItalicFont= *-BoldItalic
+  % ]
+\fi
+
+% Amélioration des sections avec Google Fonts (sans toucher aux chapitres)
+\titleformat{\section}
+  {\fontsize{16pt}{19pt}\selectfont\bfseries\color{blue!80!black}\sffamily}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\fontsize{14pt}{17pt}\selectfont\bfseries\color{blue!70!black}\sffamily}
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\fontsize{12pt}{15pt}\selectfont\bfseries\color{blue!60!black}\sffamily}
+  {\thesubsubsection}{1em}{}
+
+% Amélioration des paragraphes et du texte général
+\ifPDFTeX
+  % Pour pdfLaTeX, améliorer l'espacement et la lisibilité
+  \renewcommand{\baselinestretch}{1.15}
+  \setlength{\parskip}{6pt plus 2pt minus 1pt}
+  \setlength{\parindent}{1.5em}
+  
+  % Améliorer la typographie avec microtype
+  \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+  
+  % Configuration pour de meilleures polices en pdfLaTeX
+  \usepackage[scaled=0.92]{helvet} % Pour une meilleure police sans-serif
+  % Garder la police par défaut (serif) pour le contenu
+\else
+  % Pour XeLaTeX/LuaLaTeX avec Google Fonts
+  \renewcommand{\baselinestretch}{1.15}
+  \setlength{\parskip}{6pt plus 2pt minus 1pt}
+  \setlength{\parindent}{1.5em}
+  
+  % Améliorer l'affichage des citations et éléments spéciaux
+  \newfontfamily\quotefont{Roboto}[
+    Path=fonts/,
+    Extension=.ttf,
+    UprightFont=*-Italic
+  ]
+\fi
+
+% Style pour les listes avec de meilleurs espacements
+\usepackage{enumitem}
+\setlist[itemize]{
+  leftmargin=1.5em,
+  itemsep=4pt plus 2pt minus 1pt,
+  parsep=2pt plus 1pt minus 1pt,
+  topsep=6pt plus 2pt minus 2pt
+}
+
+\setlist[enumerate]{
+  leftmargin=1.8em,
+  itemsep=4pt plus 2pt minus 1pt,
+  parsep=2pt plus 1pt minus 1pt,
+  topsep=6pt plus 2pt minus 2pt
+}
+
+% Amélioration des légendes de figures et tableaux
+\usepackage{caption}
+\captionsetup{
+  font={small,sf},
+  labelfont={bf,color=blue!80!black},
+  textfont={color=black},
+  margin=10pt,
+  skip=8pt
+}
+
+% Style pour les références bibliographiques
+\usepackage{url}
+\renewcommand{\UrlFont}{\small\ttfamily}
+
+% Amélioration de l'affichage des footnotes
+\renewcommand{\footnotesize}{\fontsize{9pt}{11pt}\selectfont}
+
+% Amélioration des en-têtes et pieds de page
+\usepackage{fancyhdr}
+\fancypagestyle{thesis}{%
+  \fancyhf{} % Clear all headers and footers
+  \fancyhead[L]{\small\sffamily\leftmark}
+  \fancyhead[R]{\small\sffamily\rightmark}
+  \fancyfoot[C]{\sffamily\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Style pour les tableaux amélioré
+\usepackage{booktabs}
+\usepackage{array}
+\renewcommand{\arraystretch}{1.2} % Espacement vertical dans les tableaux
+
+% Amélioration des titres de niveau inférieur
+\titleformat{\paragraph}
+  {\fontsize{11pt}{13pt}\selectfont\bfseries\color{blue!50!black}\sffamily}
+  {\theparagraph}{1em}{}
+
+\titleformat{\subparagraph}
+  {\fontsize{10pt}{12pt}\selectfont\bfseries\color{blue!40!black}\sffamily}
+  {\thesubparagraph}{1em}{}
+
+% Style pour les environnements de code avec de meilleures fontes
+\usepackage{listings}
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    commentstyle=\color{gray}\itshape,
+    keywordstyle=\color{blue!80!black}\bfseries,
+    stringstyle=\color{green!60!black},
+    numberstyle=\tiny\color{gray},
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray!50},
+    backgroundcolor=\color{gray!5},
+    tabsize=4,
+    captionpos=b,
+    xleftmargin=2em,
+    xrightmargin=1em,
+    framextopmargin=2pt,
+    framexbottommargin=2pt
+}

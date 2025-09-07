@@ -1,0 +1,91 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+\documentclass[12pt,a4paper]{ifri}
+
+% === PACKAGES ESSENTIELS POUR XELATEX (POUR LES POLICES GOOGLE) ===
+\usepackage{fontspec} % Requis pour les polices Google Fonts
+\usepackage{xltxtra}  % Fonctionnalités supplémentaires pour XeLaTeX
+\usepackage{xunicode} % Support Unicode amélioré
+
+% === PACKAGES DE BASE ===
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{cite}
+\usepackage{url}
+
+% === CONFIGURATION DES POLICES GOOGLE (ROBOTO) ===
+% Configuration simplifiée et robuste
+\setmainfont{Roboto-Regular}[
+    Path=./fonts/,
+    Extension=.ttf,
+    BoldFont=Roboto-Bold,
+    ItalicFont=Roboto-Italic,
+    BoldItalicFont=Roboto-BoldItalic
+]
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage[scaled]{beramono}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{tocvsec2}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{makeidx}
+\usepackage{glossaries}
+
+\input{figure-styling.tex}
+
+% Réglages de la mise en page
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\onehalfspacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue
+}
+
+\begin{document}
+
+\input{corrections}
+
+\title{Mémoire de soutenance}
+\author{Nom et Prénom}
+
+\date{\today}
+\maketitle
+
+\include{0-dedicace}
+\include{1-remerciements}
+\include{2-resume}
+\include{3-introduction}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{1-partie/1-fichier}
+\include{2-partie/1-fichier}
+\include{3-partie/1-fichier}
+
+\include{4-conclusion}
+
+\bibliography{biblio}
+\bibliographystyle{urlbst}
+
+\include{annexe}
+
+\end{document}

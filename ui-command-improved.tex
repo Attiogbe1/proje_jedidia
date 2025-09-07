@@ -1,0 +1,10 @@
+% Redefine the ui command for better formatting
+\renewcommand{\ui}[4]{%
+  \begin{minipage}[t]{0.48\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/#2}%
+    \caption{#1}%
+    \parbox{0.95\linewidth}{\small #3}%
+    \parbox{0.95\linewidth}{\footnotesize\textit{#4}}%
+  \end{minipage}%
+}

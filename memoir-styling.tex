@@ -1,0 +1,116 @@
+% Configuration globale pour un mémoire de soutenance professionnel
+% Ce fichier définit la mise en page et les styles pour l'ensemble du document
+
+% ====== PACKAGES ESSENTIELS ======
+\usepackage{fontspec}      % Support des polices TrueType/OpenType
+\usepackage{polyglossia}   % Support multilingue
+\setmainlanguage{french}   % Langue principale
+\setotherlanguage{english} % Langue secondaire
+
+% ====== POLICES GOOGLE FONTS ======
+\defaultfontfeatures{
+    Path = ./fonts/,
+    Extension = .ttf,
+    Ligatures=TeX,
+    Scale=1.0
+}
+
+% Police principale pour tout le document
+\setmainfont{Roboto}[
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+
+% Police sans-serif (pour les titres et éléments d'interface)
+\setsansfont{Roboto}[
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+
+% Police pour les mathématiques
+\setmathfont{Latin Modern Math}
+
+% ====== MISE EN PAGE ======
+\usepackage{geometry}
+\geometry{
+  a4paper,           % Format A4
+  top=2.5cm,         % Marge supérieure
+  bottom=2.5cm,      % Marge inférieure
+  left=2.5cm,        % Marge gauche
+  right=2.5cm,       % Marge droite
+  headheight=14pt,   % Hauteur de l'en-tête
+  footskip=1.5cm     % Espace pour le pied de page
+}
+
+% ====== EN-TÊTES ET PIEDS DE PAGE ======
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\nouppercase{\leftmark}}
+\fancyhead[R]{\sffamily\thepage}
+\fancyfoot[C]{\sffamily\small Mémoire de soutenance}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ====== STYLES DE TEXTE ======
+\usepackage{setspace}
+\onehalfspacing  % Interligne 1.5
+
+% ====== STYLES DES FIGURES ======
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{
+  font=small,
+  labelfont={bf,sf},
+  textfont=sf,
+  format=hang,
+  width=0.9\textwidth,
+  skip=10pt
+}
+
+% ====== LIENS HYPERTEXTE ======
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksnumbered=true,
+  pdfauthor={\theauthor},
+  pdftitle={Mémoire de Soutenance}
+}
+
+% ====== STYLES DES LISTES ======
+\usepackage{enumitem}
+\setlist{nosep}  % Réduit l'espace entre les éléments de liste
+
+% ====== TABLE DES MATIÈRES ======
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\huge\bfseries\sffamily\color{bookColor}}
+\renewcommand{\cftchapfont}{\bfseries\sffamily}
+\renewcommand{\cftsecfont}{\sffamily}
+
+% ====== STYLE DES TABLEAUX ======
+\usepackage{booktabs}  % Pour des tableaux professionnels
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+% ====== CODE SOURCE ======
+\usepackage{listings}
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!60!black},
+  stringstyle=\color{red}
+}

@@ -1,0 +1,211 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+
+\documentclass[12pt,a4paper]{report}
+
+% Packages essentiels pour XeLaTeX
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+
+% Packages de base
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{glossaries}
+
+% Configuration de la mise en page
+\geometry{a4paper, margin=2.5cm}
+\onehalfspacing
+
+% Configuration des polices Google
+\setmainfont{Roboto}[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+
+% Styles pour les titres
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\chaptertitlename\ \thechapter}
+  {20pt}
+  {\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}
+  {1em}
+  {}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection}
+  {1em}
+  {}
+
+% Configuration des en-têtes et pieds de page
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{\small ATTIOGBE Kuechi Emile - Mémoire de soutenance}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Commande pour la page de titre
+\newcommand{\titrememoire}[1]{\title{#1}}
+\newcommand{\auteur}[1]{\author{#1}}
+\newcommand{\diplome}[1]{\def\@diplome{#1}}
+\newcommand{\option}[1]{\def\@option{#1}}
+\newcommand{\encadreur}[1]{\def\@encadreur{#1}}
+\newcommand{\anneescolaire}[1]{\def\@anneescolaire{#1}}
+\newcommand{\jury}[1]{\def\@jury{#1}}
+
+% Redéfinition de la commande maketitle pour personnaliser la page de titre
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    
+    {\Large\bfseries UNIVERSITÉ D'ABOMEY-CALAVI\par}
+    \vspace{0.5cm}
+    {\large INSTITUT DE FORMATION ET DE RECHERCHE EN INFORMATIQUE\par}
+    \vspace{1cm}
+    
+    \includegraphics[width=3cm]{images/logoUAC1.png}\hfill\includegraphics[width=3cm]{images/logoIfri.png}
+    \vspace{1cm}
+    
+    {\Large\bfseries\MakeUppercase{\@title}\par}
+    \vspace{1.5cm}
+    
+    {\large Mémoire de \@diplome\ en \@option\par}
+    \vspace{1cm}
+    
+    {\large Présenté par\par}
+    {\Large\bfseries \@author\par}
+    \vspace{1cm}
+    
+    {\large Sous la direction de\par}
+    {\large\bfseries \@encadreur\par}
+    \vspace{1cm}
+    
+    {\large Année académique \@anneescolaire\par}
+    \vfill
+    
+    {\normalsize\bfseries Jury\par}
+    \@jury
+    
+  \end{titlepage}
+}
+
+% Commande UI pour les figures
+\newcommand{\ui}[4]{%
+  \begin{minipage}[t]{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/#2}%
+    \caption{#1}%
+    \parbox{\linewidth}{\small #3}%
+    \ifx&#4&\else\parbox{\linewidth}{\footnotesize\textit{#4}}\fi%
+  \end{minipage}%
+}
+
+% Configuration pour les glossaires
+\makeglossaries
+
+\begin{document}
+
+% Informations du mémoire
+\titrememoire{Titre du Mémoire}
+\auteur{ATTIOGBE Kuechi Emile}
+\diplome{Licence}
+\option{Génie Logiciel}
+\encadreur{Probus KIKI}
+\anneescolaire{2023-2024}
+\jury{%
+\begin{tabular}{llll}
+    Nom et prénoms du président & Grade & Entité & Président \\
+    Nom et prénoms de l'examinateur & Grade & Entité & Examinateur \\
+    Nom et prénoms du rapporteur & Grade & Entité & Rapporteur \\
+\end{tabular}	
+}
+
+% Page de titre
+\maketitle
+
+% Pages préliminaires
+\pagenumbering{roman}
+
+% Dédicaces
+\chapter*{Dédicace}
+\input{0-dedicace}
+\clearpage
+
+% Remerciements
+\chapter*{Remerciements}
+\input{1-remerciements}
+\clearpage
+
+% Résumé
+\chapter*{Résumé}
+\input{2-resume}
+\clearpage
+
+% Table des matières et listes
+\tableofcontents
+\clearpage
+
+\listoffigures
+\clearpage
+
+\listoftables
+\clearpage
+
+% Glossaire
+\printglossary[title=Liste des acronymes]
+\clearpage
+
+% Corps du document
+\pagenumbering{arabic}
+
+% Introduction
+\chapter*{Introduction générale}
+\addcontentsline{toc}{chapter}{Introduction générale}
+\input{3-introduction}
+
+% Chapitres
+\chapter{Revue de Littérature}
+\input{1-partie/1-fichier}
+
+\chapter{Implémentation de l'infrastructure}
+\input{2-partie/1-fichier}
+
+\chapter{Scénarios et exploitation}
+\input{3-partie/1-fichier}
+
+% Conclusion
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+\input{4-conclusion}
+
+% Bibliographie
+\bibliographystyle{urlbst}
+\bibliography{biblio}
+\addcontentsline{toc}{chapter}{Bibliographie}
+
+% Annexes
+\appendix
+\chapter{Annexes}
+\input{annexe}
+
+\end{document}

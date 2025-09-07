@@ -1,0 +1,36 @@
+% google-fonts.tex
+\newif\ifxetexorluatex
+\ifx\XeTeXrevision\undefined
+  \ifx\directlua\undefined
+    \xetexorluatexfalse
+  \else
+    \xetexorluatextrue  % LuaLaTeX
+  \fi
+\else
+  \xetexorluatextrue    % XeLaTeX
+\fi
+
+\ifxetexorluatex
+  % --- XeLaTeX / LuaLaTeX ---
+  \usepackage{fontspec}
+  % Dossier où tu mets les TTF/OTF téléchargées sur fonts.google.com
+  % Exemple avec Roboto + Roboto Mono
+  \newfontfamily\Roboto{Roboto}[
+    Path=fonts/Roboto/, Extension=.ttf,
+    UprightFont=*-Regular, BoldFont=*-Bold,
+    ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic
+  ]
+  \newfontfamily\RobotoMono{RobotoMono}[
+    Path=fonts/RobotoMono/, Extension=.ttf,
+    UprightFont=*-Regular, BoldFont=*-Bold,
+    ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic
+  ]
+  \setmainfont{Roboto}      % texte principal
+  \setsansfont{Roboto}      % sans-serif
+  \setmonofont{RobotoMono}  % typewriter/code
+\else
+  % --- pdfLaTeX (fallback, pas de Google Fonts) ---
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}      % ou newtxtext,newtxmath si tu préfères
+\fi

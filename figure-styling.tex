@@ -1,0 +1,65 @@
+% Amélioration de l'affichage des figures et tableaux pour une présentation professionnelle
+\usepackage{float}             % Pour un meilleur contrôle des positions des figures
+\usepackage[export]{adjustbox} % Pour ajouter des cadres et ajuster les images
+\usepackage{subcaption}        % Pour les sous-figures
+\usepackage{wrapfig}           % Pour enrouler le texte autour des figures
+\usepackage{booktabs}          % Pour des tableaux plus professionnels
+\usepackage{multirow}          % Pour fusionner des lignes dans les tableaux
+\usepackage{colortbl}          % Pour colorer les tableaux
+
+% Les couleurs sont déjà définies dans color-styling.tex, nous les utilisons ici
+
+% Configuration avancée des légendes
+\usepackage{caption}
+\captionsetup{
+  font=small,                % Taille de police pour les légendes
+  labelfont={bf,color=captionColor}, % Label en gras et coloré
+  textfont=it,               % Texte en italique
+  width=0.9\textwidth,       % Largeur de la légende
+  format=hang,               % Format suspendu
+  skip=10pt,                 % Espace entre figure et légende
+  margin=10pt,               % Marge
+  justification=justified    % Justification du texte
+}
+
+% Définir les styles de cadre pour les figures
+\newcommand{\figurestyle}[1]{%
+  \fbox{\includegraphics[width=#1\textwidth, keepaspectratio]}%
+}
+
+% Commande pour les figures avec cadre simple
+\newcommand{\framedimage}[3][0.8]{%
+  \begin{figure}[H]
+    \centering
+    \fcolorbox{figBorder}{white}{\includegraphics[width=#1\textwidth, keepaspectratio]{#2}}
+    \caption{#3}
+  \end{figure}
+}
+
+% Commande pour les figures avec ombre
+\newcommand{\shadowimage}[3][0.8]{%
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#1\textwidth, keepaspectratio, frame, shadow]{#2}
+    \caption{#3}
+  \end{figure}
+}
+
+% Commande pour des figures côte à côte
+\newcommand{\sidebysideimages}[6][0.45]{%
+  \begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{#1\textwidth}
+      \centering
+      \includegraphics[width=\textwidth, keepaspectratio]{#2}
+      \caption{#3}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[b]{#1\textwidth}
+      \centering
+      \includegraphics[width=\textwidth, keepaspectratio]{#4}
+      \caption{#5}
+    \end{subfigure}
+    \caption{#6}
+  \end{figure}
+}

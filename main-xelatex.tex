@@ -1,0 +1,119 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% Configuration d'encodage pour XeLaTeX
+
+% Cette ligne est obligatoire pour indiquer à TeXStudio et autres éditeurs
+% d'utiliser XeLaTeX au lieu de pdfLaTeX
+
+\documentclass{ifri}
+
+% Utiliser uniquement les packages compatibles avec XeLaTeX
+\usepackage{fontspec}  % Requis pour les polices TrueType/OpenType
+\usepackage{polyglossia}
+\setmainlanguage{french}
+
+% Configuration des polices avec chemin explicite
+\setmainfont{Roboto}[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+
+\usepackage{titletoc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+
+% Importation des commandes UI personnalisées
+\input{ui-command}
+
+\setlength{\glsdescwidth}{0.65\textwidth}
+
+\typeMemoire{Diplôme de - Licence}
+\optionFormation{Génie Logiciel}
+\etudiant{ATTIOGBE Kuechi Emile}
+\titreDuMemoire{\textbf{Conception et développement d'une application mobile de gestion d'événements interactifs}}
+
+\dateSoutenance{Septembre 2025}
+\anneeScolaire{2024-2025}
+
+%%maitre de mémoire
+\encadrants{Probus KIKI}
+
+%% Membres du Jury
+\jurys{%
+\begin{tabular}{llll}
+	Nom et prénoms du président & Grade & Entité & Président \\
+	Nom et prénoms de l'examinateur & Grade & Entité & Examinateur \\
+	Nom et prénoms du rapporteur & Grade & Entité & Rapporteur \\
+\end{tabular}	
+}
+
+\hypersetup{
+	pdftitle={-},
+    pdfauthor={-},
+    pdfsubject={-},
+    pdfkeywords={--} 
+}
+
+\color{bookColor}
+
+%importation du glossaire
+\loadglsentries{glossaire_reduit}
+
+\lstset{
+    language=Bash,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue},
+    stringstyle=\color{green},
+    commentstyle=\color{gray},
+    breaklines=true,
+    frame=single
+}
+
+\begin{document}
+\maketitle
+
+% Pages préliminaires
+\frontmatter
+\include{0-dedicace}
+\include{1-remerciements}
+\include{2-resume}
+
+% Table des matières et listes
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Liste des acronymes
+\printglossary[type=\acronymtype, title=Liste des acronymes]
+
+% Corps du document
+\mainmatter
+\include{3-introduction}
+
+\chapter{Revue de Littérature}\label{chap:1}
+\input{1-partie/1-fichier}
+ 
+\chapter{Implémentation de l'infrastructure}\label{chap:2}
+\input{2-partie/1-fichier}
+ 
+\chapter{Scénarios et exploitation}\label{chap:3}
+\input{3-partie/1-fichier}
+ 
+% Conclusion
+\include{4-conclusion}
+
+% Bibliographie
+\backmatter
+\bibliographystyle{urlbst}
+\bibliography{biblio}
+
+% Annexes
+\appendix
+\include{annexe}
+
+\end{document}

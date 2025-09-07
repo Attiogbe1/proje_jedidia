@@ -1,0 +1,54 @@
+\makeatletter
+\@ifundefined{captionof}{\usepackage{caption}}{}
+\makeatother
+
+% Version améliorée de la commande UI pour un rendu plus professionnel et académique
+\newcommand{\ui}[4]{%
+  \begin{minipage}[t]{0.47\linewidth}
+    \begin{tcolorbox}[
+      colback=white,
+      colframe=gray!40,
+      arc=2mm,
+      boxrule=0.5pt,
+      left=0pt,
+      right=0pt,
+      top=0pt,
+      bottom=0pt,
+      boxsep=0pt,
+      toptitle=3mm,
+      bottomtitle=2mm,
+      title={\large\bfseries #1},
+      fonttitle=\centering,
+      coltitle=black,
+      colbacktitle=gray!5
+    ]
+    \begin{center}
+      \includegraphics[width=0.92\linewidth]{images/#2}
+    \end{center}
+    
+    \begin{tcolorbox}[
+      boxrule=0pt,
+      colback=white,
+      left=4mm,
+      right=4mm,
+      top=2mm,
+      bottom=1mm
+    ]
+      \textbf{Description:}\\
+      {\small #3}
+    \end{tcolorbox}
+    
+    \begin{tcolorbox}[
+      boxrule=0pt,
+      colback=gray!5,
+      left=4mm,
+      right=4mm,
+      top=1mm,
+      bottom=2mm
+    ]
+      \textbf{Objectif:}\\
+      {\footnotesize\itshape #4}
+    \end{tcolorbox}
+    \end{tcolorbox}
+  \end{minipage}%
+}

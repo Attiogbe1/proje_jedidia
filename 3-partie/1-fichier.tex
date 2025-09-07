@@ -2,69 +2,241 @@
 \addcontentsline{toc}{section}{Introduction}
 
 \section*{Introduction}
-Dans ce chapitre, nous présentons d'abord les interfaces majeures de l'application
-Inter\,Actif et de la documentation de l'API. Ces interfaces constituent
-les principaux écrans et vues avec lesquels un organisateur ou un participant
-interagit. Nous décrivons ensuite les limitations observées lors de la mise
-en œuvre, afin de fournir un aperçu complet de la solution proposée.
+Dans ce chapitre, nous présentons la réalisation complète de l'application 
+Inter\,Actif, en détaillant son architecture technique et ses interfaces utilisateur.
+Nous commençons par expliquer l'intégration de l'API Supabase qui constitue 
+le backbone de notre solution, puis nous présentons les différentes interfaces 
+de l'application organisées par fonctionnalités. Enfin, nous analysons les 
+limitations rencontrées lors de la mise en œuvre pour fournir un aperçu 
+complet et critique de la solution développée.
 
-\section{Interfaces de documentation de l'API et de l'application}
-\subsection{Interfaces de l'application}
+\section{Architecture technique et API Supabase}
+
+\subsection{Présentation de Supabase}
+Supabase est une plateforme Backend-as-a-Service (BaaS) open source qui offre 
+une alternative moderne à Firebase. Elle fournit une base de données PostgreSQL 
+hébergée, une authentification intégrée, des API REST et en temps réel automatiquement 
+générées, ainsi que des fonctionnalités de stockage de fichiers.
+
+Pour notre application Inter\,Actif, Supabase a été choisi pour les raisons suivantes :
+\begin{itemize}
+  \item \textbf{Base de données relationnelle :} PostgreSQL offre une robustesse 
+    et une flexibilité supérieures pour gérer les relations complexes entre 
+    événements, participants, modules et réponses.
+  \item \textbf{API automatique :} Génération automatique d'API REST et GraphQL 
+    à partir du schéma de base de données, réduisant considérablement le temps de développement.
+  \item \textbf{Authentification intégrée :} Système d'authentification complet 
+    avec gestion des utilisateurs, sessions, et politiques de sécurité (RLS - Row Level Security).
+  \item \textbf{Temps réel :} Fonctionnalités de souscription en temps réel 
+    essentielles pour les sondages, quiz et chat interactifs.
+  \item \textbf{Écosystème open source :} Transparence, extensibilité et 
+    absence de vendor lock-in.
+\end{itemize}
+
+
+\section{Documentation de l'API Supabase}
+
+L'API Supabase de notre application Inter\,Actif est automatiquement générée 
+à partir du schéma de base de données PostgreSQL. Elle fournit une interface 
+REST complète et cohérente pour toutes les opérations CRUD.
+
+\subsection{Caractéristiques de l'API}
+\begin{itemize}
+  \item \textbf{API REST automatique :} Chaque table de la base de données 
+    génère automatiquement des endpoints REST complets
+  \item \textbf{Authentification intégrée :} Tous les endpoints respectent 
+    les politiques RLS (Row Level Security) définies
+  \item \textbf{Filtrage avancé :} Support des opérateurs de comparaison, 
+    tri, pagination et jointures
+  \item \textbf{Temps réel :} Souscriptions WebSocket pour les mises à jour 
+    en temps réel
+  \item \textbf{Documentation interactive :} Interface Swagger/OpenAPI 
+    automatiquement générée
+\end{itemize}
+
+
+\subsection{Structure de la base de données}
+La base de données de l'application est organisée autour de plusieurs tables principales :
+
+\begin{itemize}
+  \item \textbf{users :} Informations des utilisateurs (organisateurs et participants)
+  \item \textbf{events :} Événements créés par les organisateurs
+  \item \textbf{modules :} Modules de quiz et sondages associés aux événements
+  \item \textbf{questions :} Questions contenues dans chaque module
+  \item \textbf{responses :} Réponses des participants aux questions
+  \item \textbf{participants :} Relation entre utilisateurs et événements
+  \item \textbf{chat\_messages :} Messages du chat en temps réel
+\end{itemize}
+
+\subsection{API et endpoints principaux}
+L'API Supabase génère automatiquement les endpoints suivants :
+
+\textbf{Gestion des événements :}
+\begin{itemize}
+  \item \texttt{GET /events} - Liste des événements
+  \item \texttt{POST /events} - Création d'un nouvel événement
+  \item \texttt{PATCH /events/:id} - Modification d'un événement
+  \item \texttt{DELETE /events/:id} - Suppression d'un événement
+\end{itemize}
+
+
+\subsection{Exemples d'utilisation}
+\textbf{Création d'un événement :}
+\begin{verbatim}
+POST /rest/v1/events
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "name": "Conférence Tech 2025",
+  "description": "Événement sur les nouvelles technologies",
+  "start_date": "2025-03-15T09:00:00Z",
+  "access_code": "TECH2025"
+}
+\end{verbatim}
+
+\textbf{Récupération des réponses avec statistiques :}
+\begin{verbatim}
+GET /rest/v1/responses?select=*,questions(*)&event_id=eq.123
+Authorization: Bearer <token>
+\end{verbatim}
+
+\textbf{Souscription en temps réel aux nouveaux messages :}
+\begin{verbatim}
+// JavaScript avec la bibliothèque Supabase
+const channel = supabase
+  .channel('chat_messages')
+  .on('postgres_changes', {
+    event: 'INSERT',
+    schema: 'public',
+    table: 'chat_messages'
+  }, (payload) => {
+    console.log('Nouveau message:', payload.new)
+  })
+  .subscribe()
+\end{verbatim}
+
+\section{Fonctionnalités temps réel avec Supabase}
+
+L'une des forces principales de Supabase dans notre application est sa capacité 
+à fournir des fonctionnalités temps réel natives, essentielles pour une 
+application interactive.
+
+\subsection{Mise à jour en temps réel des résultats}
+Lorsqu'un participant soumet une réponse à un quiz ou sondage, tous les 
+organisateurs connectés voient immédiatement les statistiques se mettre à jour 
+grâce aux souscriptions Supabase Realtime.
+
+\subsection{Chat interactif}
+Le système de chat utilise les souscriptions PostgreSQL de Supabase pour 
+diffuser instantanément les messages à tous les participants connectés, 
+sans nécessiter de polling côté client.
+
+\subsection{Notifications de participation}
+Les organisateurs reçoivent des notifications en temps réel lorsque de 
+nouveaux participants rejoignent leur événement ou soumettent des réponses.
+
+
+\textbf{Gestion des modules et questions :}
+\begin{itemize}
+  \item \texttt{GET /modules} - Liste des modules
+  \item \texttt{POST /modules} - Création d'un module
+  \item \texttt{GET /questions} - Questions d'un module
+  \item \texttt{POST /questions} - Ajout d'une question
+\end{itemize}
+
+\textbf{Gestion des participants et réponses :}
+\begin{itemize}
+  \item \texttt{GET /participants} - Liste des participants
+  \item \texttt{POST /responses} - Soumission d'une réponse
+  \item \texttt{GET /responses} - Récupération des réponses avec statistiques
+\end{itemize}
+
+\textbf{Chat en temps réel :}
+\begin{itemize}
+  \item \texttt{POST /chat\_messages} - Envoi d'un message
+  \item Souscription WebSocket pour recevoir les messages en temps réel
+\end{itemize}
+
+\section{Interfaces utilisateur de l'application}
+
+\subsection{Authentification et gestion du compte}
+Cette section présente les interfaces liées à l'authentification des utilisateurs 
+et à la gestion de leur compte, intégrées avec le système d'authentification Supabase.
 
 % LIGNE 1 : Accueil et Connexion
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \ui{ Page d'accueil}{page_acceul.jpg}%
+  \ui{Page d'accueil}{page_acceul.jpg}%
      {Écran d'entrée présentant les fonctionnalités clés (sondages, quiz, chat) et deux parcours : Organisateur ou Rejoindre.}%
      {}
-    {}
   \hfill
   \ui{Page de connexion}{page_connexion.jpg}%
-     {Formulaire e‑mail et mot de passe avec liens « S'inscrire » et « Mot de passe oublié ».}%
+     {Formulaire e‑mail et mot de passe avec liens « S'inscrire » et « Mot de passe oublié ». L'authentification utilise Supabase Auth.}%
      {}
 \end{figure}
 
 % LIGNE 2 : Inscription et Réinitialisation
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \ui{Page d'inscription}{page_inscription.jpg}%
-     {Création de compte : nom complet, e‑mail, mot de passe (avec indicateur de robustesse) et confirmation.}%
+     {Création de compte : nom complet, e‑mail, mot de passe (avec indicateur de robustesse) et confirmation. Intégrée avec Supabase Auth.}%
      {}
   \hfill
   \ui{Réinitialisation du mot de passe}{page_mise_ajour.jpg}%
-     {Saisie de l'adresse e‑mail pour recevoir un lien de réinitialisation.}%
+     {Saisie de l'adresse e‑mail pour recevoir un lien de réinitialisation via Supabase.}%
      {}
 \end{figure}
+
+% Profil utilisateur et paramètres
+\begin{figure}[H]
+  \centering
+  \ui{Profil utilisateur}{page_profil.jpg}%
+     {Nom, e‑mail et rôle, possibilité d'édition via un crayon et bouton \emph{Déconnexion}. Données synchronisées avec Supabase.}%
+     {}
+  \hfill
+  \ui{Paramètres du compte}{page_paramtre.jpg}%
+     {Sélection des catégories de données à effacer (événements, participants, modèles, données locales) puis exécution de la réinitialisation.}%
+     {}
+\end{figure}
+
+\subsection{Gestion des événements}
+Ces interfaces permettent aux organisateurs de créer, gérer et suivre leurs événements, 
+avec persistance des données dans Supabase.
 
 % LIGNE 3 : Tableau de bord et Mes événements
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \ui{Tableau de bord}{page_dashboard.jpg}%
-     {Carte de bienvenue personnalisée et statistiques (événements, participants, en cours/à venir) avec action « Nouvel événement ».}%
-     {.}
+     {Carte de bienvenue personnalisée et statistiques (événements, participants, en cours/à venir) avec action « Nouvel événement ». Données agrégées depuis Supabase.}%
+     {}
   \hfill
   \ui{Mes événements}{page_evernement.jpg}%
-     {Liste des événements avec recherche, filtres (\emph{Tous}, \emph{Actifs}, \emph{À venir}) et bouton d'ajout .}  %
+     {Liste des événements avec recherche, filtres (\emph{Tous}, \emph{Actifs}, \emph{À venir}) et bouton d'ajout. Synchronisé en temps réel avec la base de données.}%
      {}
 \end{figure}
 
-% LIGNE 4 : Détail d'un événement et Création d'un événement
-\begin{figure}[htbp]
+% LIGNE 4 : Détail et Création d'événement
+\begin{figure}[H]
   \centering
   \ui{Détail d'un événement}{page_dtail_event.jpg}%
      {Récapitulatif (nom, date/heure, code d'accès, description) et sections \emph{Sondage}, \emph{Quiz}, \emph{Chat} avec compteurs et actions.}%
      {}
   \hfill
   \ui{Création d'un événement}{page_creation_event.jpg}%
-     {Formulaire par étapes : informations générales, date/heure (début et fin optionnelle), lieu et participation.}%
+     {Formulaire par étapes : informations générales, date/heure (début et fin optionnelle), lieu et participation. Sauvegarde via API Supabase.}%
      {}
 \end{figure}
 
+\subsection{Modules interactifs (Quiz et Sondages)}
+Ces interfaces permettent la création et la gestion des modules interactifs, 
+avec stockage des questions et réponses dans Supabase.
+
 % LIGNE 5 : Liste des modules et Création de module Quiz
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \ui{Modules Quiz , sondage}{page_des_moduls_quiz.jpg}%
-     {Recherche, filtre, bouton « + » et cartes modules (état actif, nombre de questions, action « Voir »).}%
+  \ui{Modules Quiz et Sondage}{page_des_moduls_quiz.jpg}%
+     {Recherche, filtre, bouton « + » et cartes modules (état actif, nombre de questions, action « Voir »). Données récupérées via l'API Supabase.}%
      {}
   \hfill
   \ui{Création d'un module — Quiz}{page_creation_module.jpg}%
@@ -72,104 +244,139 @@ en œuvre, afin de fournir un aperçu complet de la solution proposée.
      {}
 \end{figure}
 
-% LIGNE 6 : Création de module Sondage et Participation (choix unique)
-\begin{figure}[htbp]
+% LIGNE 6 : Création de sondage
+\begin{figure}[H]
   \centering
   \ui{Création d'un module — Sondage}{Screenshot_20250906-164855.jpg}%
      {Interface de création de sondage avec les mêmes types de réponses que le quiz, orientée recueil d'opinions.}%
      {}
   \hfill
-  \ui{Participation — Choix unique}{page_participation.jpg}%
-     {Affichage d'une question à choix unique avec boutons radio et navigation \emph{Précédent/Suivant}.}%
+  \ui{Résultats d'une question de quiz}{page_module_detail.jpg}%
+     {Synthèse : nombre de répondants, barres de pourcentage par option, navigation entre les questions. Statistiques calculées en temps réel depuis Supabase.}%
      {}
 \end{figure}
 
-% LIGNE 7 : Participation (choix multiples) et Résultats de question
-\begin{figure}[htbp]
+\subsection{Participation et interaction}
+Ces interfaces montrent comment les participants interagissent avec les modules, 
+avec synchronisation en temps réel des réponses via Supabase.
+
+% LIGNE 7 : Participation choix unique et multiples
+\begin{figure}[H]
   \centering
+  \ui{Participation — Choix unique}{page_participation.jpg}%
+     {Affichage d'une question à choix unique avec boutons radio et navigation \emph{Précédent/Suivant}. Réponses envoyées via API Supabase.}%
+     {}
+  \hfill
   \ui{Participation — Choix multiples}{Screenshot_20250906-165209.jpg}%
      {Question à choix multiples avec cases à cocher permettant plusieurs réponses.}%
      {}
-  \hfill
-  \ui{Résultats d'une question de quiz}{page_module_detail.jpg}%
-     {Synthèse : nombre de répondants, barres de pourcentage par option, navigation entre les questions.}%
-     {}
 \end{figure}
 
-% LIGNE 8 : Participants et Profil utilisateur
-\begin{figure}[htbp]
+\subsection{Gestion des participants}
+Interface dédiée au suivi et à la gestion des participants, avec données 
+synchronisées depuis Supabase.
+
+% LIGNE 8 : Participants
+\begin{figure}[H]
   \centering
   \ui{Participants}{page_participants.jpg}%
-     {Statistiques (participants, réponses, moyenne, événements, actifs/à venir), recherche et liste détaillée ; action \emph{Inviter}.}%
-     {}
-  \hfill
-  \ui{Profil utilisateur}{page_profil.jpg}%
-     {Nom, e‑mail et rôle, possibilité d'édition via un crayon et bouton \emph{Déconnexion}.}%
-     {}
-\end{figure}
-
-% LIGNE 9 : Paramètres du compte (réinitialisation)
-\begin{figure}[htbp]
-  \centering
-  \ui{Paramètres du compte}{page_paramtre.jpg}%
-     {Sélection des catégories de données à effacer (événements, participants, modèles, données locales) puis exécution de la réinitialisation.}%
+     {Statistiques (participants, réponses, moyenne, événements, actifs/à venir), recherche et liste détaillée ; action \emph{Inviter}. Données agrégées depuis la base de données Supabase.}%
      {}
   \hfill
   \begin{minipage}[t]{0.48\linewidth}
     % Espace réservé pour une interface supplémentaire éventuelle.
   \end{minipage}
 \end{figure}
-\subsection{Interfaces de documentation de l'API}
 
-\textbf{Remarque.} Les captures d'écran de la documentation de l'API ne sont pas
-fournies. La documentation se présente généralement sous forme de pages Web
-interactives (Swagger ou Redoc) où l'on retrouve :
-\begin{itemize}
-  \item \textbf{Aperçu et authentification :} description de l'URL de base,
-    des schémas d'authentification (clé API ou Bearer) et des en-têtes
-    nécessaires pour chaque requête.
-  \item \textbf{Ressources principales :} endpoints REST tels que
-    \texttt{/events}, \texttt{/modules}, \texttt{/participants}, \texttt{/responses},
-    chacun documenté avec ses méthodes autorisées (GET, POST, PATCH, DELETE)
-    et les codes de réponse associés.
-  \item \textbf{Schémas JSON :} modèles détaillés pour les requêtes et
-    réponses, précisant les champs obligatoires et optionnels, avec des
-    exemples de valeurs.
-  \item \textbf{Exemples d'utilisation :} requêtes cURL ou extraits de
-    code illustrant la création d'un événement, l'ajout d'un module, la
-    soumission d'une réponse, ou la mise à jour de ressources existantes.
-  \item \textbf{Gestion des erreurs :} format de retour des erreurs (code
-    et message) et description des principaux cas d'échec (identifiants
-    invalides, données manquantes, etc.).
-\end{itemize}
 
-\section{Limites de l'application}
+\section{Limites et défis rencontrés}
+
+\subsection{Limites techniques}
 \begin{itemize}[leftmargin=1.2em]
-  \item \textbf{Dépendance réseau :} l'expérience en temps réel (quiz,
-    sondages et chat) requiert une connexion stable ; de mauvaises
+  \item \textbf{Dépendance réseau :} L'expérience en temps réel (quiz,
+    sondages et chat) requiert une connexion stable. De mauvaises
     conditions réseau peuvent altérer la réactivité et l'affichage des
-    résultats.
-  \item \textbf{Montée en charge :} un grand nombre de participants
-    simultanés peut nécessiter un dimensionnement serveur ou l'ajout de
-    mécanismes de pagination et de files d'attente pour éviter une surcharge.
-  \item \textbf{Hétérogénéité des appareils :} la diversité des tailles
+    résultats, particulièrement critique pour les souscriptions Supabase Realtime.
+  
+  \item \textbf{Limitations de Supabase :} En version gratuite, Supabase impose 
+    des limites sur le nombre de connexions simultanées (60), la bande passante 
+    et le stockage, pouvant affecter la montée en charge pour de gros événements.
+  
+  \item \textbf{Complexité des requêtes :} Certaines opérations statistiques 
+    complexes nécessitent des requêtes PostgreSQL optimisées et peuvent impacter 
+    les performances sur de gros volumes de données.
+  
+  \item \textbf{Hétérogénéité des appareils :} La diversité des tailles
     d'écran et des versions d'OS implique d'adapter l'interface (polices,
     densité, accessibilité) afin d'assurer une expérience cohérente.
-  \item \textbf{Confidentialité :} la gestion des données personnelles
-    impose de respecter des exigences strictes (conformité RGPD) pour
-    l'authentification, la conservation et la suppression définitive.
-  \item \textbf{Fonctionnalités hors ligne limitées :} certaines actions
-    critiques (vote en temps réel, synchronisation des résultats) ne sont
-    pas disponibles sans accès internet.
+\end{itemize}
+
+\subsection{Limites fonctionnelles}
+\begin{itemize}[leftmargin=1.2em]
+  \item \textbf{Fonctionnalités hors ligne limitées :} L'architecture basée 
+    sur Supabase nécessite une connexion internet constante. Bien que certaines 
+    données puissent être mises en cache localement, les actions critiques 
+    (vote en temps réel, synchronisation des résultats) ne sont pas disponibles 
+    hors ligne.
+  
+  \item \textbf{Gestion des conflits :} En cas de connexion instable, la 
+    gestion des conflits lors de la synchronisation des données n'est pas 
+    encore optimalement implémentée.
+  
+  \item \textbf{Customisation limitée des types de questions :} L'architecture 
+    actuelle supporte les types de base (choix unique/multiple, texte libre, 
+    échelle) mais l'ajout de nouveaux types nécessite des modifications 
+    importantes du schéma de base de données.
+\end{itemize}
+
+\subsection{Défis de sécurité et conformité}
+\begin{itemize}[leftmargin=1.2em]
+  \item \textbf{Politiques RLS :} La configuration des politiques Row Level 
+    Security de Supabase nécessite une expertise approfondie pour garantir 
+    que chaque utilisateur n'accède qu'aux données appropriées.
+  
+  \item \textbf{Confidentialité des données :} La gestion des données personnelles 
+    via Supabase impose de respecter des exigences strictes (conformité RGPD) 
+    pour l'authentification, la conservation et la suppression définitive.
+  
+  \item \textbf{Audit et logs :} Le suivi des actions utilisateurs et la 
+    génération de logs d'audit pour les événements sensibles nécessitent 
+    une configuration supplémentaire.
+\end{itemize}
+
+\subsection{Améliorations futures envisagées}
+\begin{itemize}[leftmargin=1.2em]
+  \item \textbf{Migration vers Supabase Pro :} Pour lever les limitations 
+    de performance et de connexions simultanées.
+  
+  \item \textbf{Implémentation d'un cache intelligent :} Pour améliorer 
+    les performances et réduire la dépendance réseau.
+  
+  \item \textbf{Système de synchronisation avancé :} Pour gérer les conflits 
+    et permettre un mode partiellement hors ligne.
+  
+  \item \textbf{Analytics avancées :} Intégration d'outils d'analyse pour 
+    fournir des insights plus poussés aux organisateurs.
 \end{itemize}
 
 \phantomsection
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
-Dans ce chapitre, nous avons décrit en détail les interfaces de
-l'application Inter\,Actif en les illustrant de captures d'écran et en
-explicitant leur objectif. Nous avons également expliqué la structure
-générale de la documentation de l'API et souligné les limites inhérentes
-à l'implémentation actuelle. Ces éléments constituent un socle utile pour
-comprendre le fonctionnement global de la solution et orienter les
-améliorations futures.
+Dans ce chapitre, nous avons présenté une vue d'ensemble complète de la 
+réalisation de l'application Inter\,Actif. Nous avons d'abord détaillé 
+l'architecture technique basée sur Supabase, expliquant les choix technologiques 
+et la structure de l'API. Ensuite, nous avons organisé la présentation des 
+interfaces utilisateur par fonctionnalités logiques : authentification, 
+gestion des événements, modules interactifs, participation et gestion des 
+participants.
+
+L'intégration de Supabase comme backend s'est révélée particulièrement 
+bénéfique pour le développement rapide d'une application interactive avec 
+des fonctionnalités temps réel. Cependant, cette analyse nous a également 
+permis d'identifier des limites importantes, notamment concernant les 
+performances à grande échelle et la dépendance réseau.
+
+Les éléments présentés dans ce chapitre constituent une base solide pour 
+comprendre le fonctionnement global de la solution et orienter les 
+améliorations futures, notamment vers une version plus robuste et scalable 
+de l'application.
