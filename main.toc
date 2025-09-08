@@ -18,14 +18,14 @@
 \contentsline {subsection}{\numberline {1.1.1} Application mobile}{3}{subsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1.1}Definition}{3}{subsubsection.1.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1.2} Les différents types d'applications mobiles}{4}{subsubsection.1.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.2}L'applications de gestion d’événements}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}L'applications de gestion d’événements}{6}{subsection.1.1.2}%
 \contentsline {subsubsection}{\numberline {1.1.2.1}Definition}{6}{subsubsection.1.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.1.2.2}Principales caractéristiques de l'application événementielle}{6}{subsubsection.1.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.1.2.3}Gestion d'événements}{7}{subsubsection.1.1.2.3}%
 \contentsline {section}{\numberline {1.2}Les types d'événements professionnels}{7}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Les événements de réseautage}{7}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Les ateliers et formations}{7}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3} Congrès}{7}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3} Congrès}{8}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4} Les conférences}{8}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5} Les Séminaires}{8}{subsection.1.2.5}%
 \contentsline {subsection}{\numberline {1.2.6}Les salons et foires}{8}{subsection.1.2.6}%
