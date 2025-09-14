@@ -4,17 +4,16 @@
 \ttl@starttoc {default@1}
 \contentsline {chapter}{Dédicace}{ii}{chapter*.2}%
 \contentsline {chapter}{Remerciements}{iii}{chapter*.3}%
-\contentsline {chapter}{Résumé}{v}{chapter*.4}%
+\contentsline {chapter}{Résumé}{iv}{chapter*.4}%
 \babel@toc {french}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Abstract}{vi}{chapter*.4}%
-\contentsline {chapter}{List of Figures}{vii}{section*.5}%
-\contentsline {chapter}{List of Tables}{viii}{section*.6}%
-\contentsline {chapter}{Liste des sigles et acronymes}{ix}{section*.7}%
-\contentsline {chapter}{Introduction générale}{1}{chapter*.9}%
+\contentsline {chapter}{Abstract}{v}{chapter*.4}%
+\contentsline {chapter}{Liste des figures}{vi}{section*.5}%
+\contentsline {chapter}{Liste des tableaux}{vii}{section*.6}%
+\contentsline {chapter}{Introduction générale}{1}{chapter*.7}%
 \babel@toc {french}{}\relax 
 \contentsline {chapter}{\numberline {1}Revue de Littérature}{3}{chapter.1}%
-\contentsline {section}{Introduction}{3}{section*.10}%
+\contentsline {section}{Introduction}{3}{section*.8}%
 \contentsline {section}{\numberline {1.1}Clarification conceptuelle}{3}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1} Application mobile}{3}{subsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1.1}Definition}{3}{subsubsection.1.1.1.1}%
@@ -22,27 +21,23 @@
 \contentsline {subsection}{\numberline {1.1.2}L'applications de gestion d’événements}{6}{subsection.1.1.2}%
 \contentsline {subsubsection}{\numberline {1.1.2.1}Definition}{6}{subsubsection.1.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.1.2.2}Principales caractéristiques de l'application événementielle}{6}{subsubsection.1.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.1.2.3}Gestion d'événements}{7}{subsubsection.1.1.2.3}%
-\contentsline {section}{\numberline {1.2}Les types d'événements professionnels}{7}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Les événements de réseautage}{7}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Les ateliers et formations}{7}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3} Congrès}{8}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4} Les conférences}{8}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5} Les Séminaires}{8}{subsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.2.6}Les salons et foires}{8}{subsection.1.2.6}%
-\contentsline {section}{\numberline {1.3}Solutions existantes et leurs limites}{8}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Kahoot}{8}{subsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.1.1}Définition}{8}{subsubsection.1.3.1.1}%
-\contentsline {subsubsection}{\numberline {1.3.1.2}Limites}{9}{subsubsection.1.3.1.2}%
-\contentsline {subsection}{\numberline {1.3.2}Slido}{9}{subsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.2.1}Définition}{9}{subsubsection.1.3.2.1}%
-\contentsline {subsubsection}{\numberline {1.3.2.2}Limites}{9}{subsubsection.1.3.2.2}%
-\contentsline {subsection}{\numberline {1.3.3}Poll For All}{10}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}Limites}{10}{subsubsection.1.3.3.1}%
-\contentsline {section}{\numberline {1.4}Notre solution}{11}{section.1.4}%
-\contentsline {section}{Conclusion}{12}{table.caption.16}%
+\contentsline {subsection}{\numberline {1.1.3}événement interactif}{7}{subsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.3.1}Définition}{7}{subsubsection.1.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.1.3.2}Les types d'événements interactifs}{7}{subsubsection.1.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.1.3.3}Gestion Événement interactif}{8}{subsubsection.1.1.3.3}%
+\contentsline {section}{\numberline {1.2}Solutions existantes et leurs limites}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Kahoot}{8}{subsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.1.1}Définition}{8}{subsubsection.1.2.1.1}%
+\contentsline {subsubsection}{\numberline {1.2.1.2}Limites}{9}{subsubsection.1.2.1.2}%
+\contentsline {subsection}{\numberline {1.2.2}Slido}{9}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Définition}{9}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}Limites}{9}{subsubsection.1.2.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Poll For All}{10}{subsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.1}Limites}{10}{subsubsection.1.2.3.1}%
+\contentsline {section}{\numberline {1.3}Notre solution}{11}{section.1.3}%
+\contentsline {section}{Conclusion}{12}{table.caption.14}%
 \contentsline {chapter}{\numberline {2}Implémentation de l'infrastructure}{14}{chapter.2}%
-\contentsline {section}{Introduction}{14}{section*.17}%
+\contentsline {section}{Introduction}{14}{section*.15}%
 \contentsline {section}{\numberline {2.1}Choix techniques}{14}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Méthodologie de gestion du projet}{14}{subsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.1.1}Méthode de \gls {PERT} \cite {wrike}}{14}{subsubsection.2.1.1.1}%
@@ -55,13 +50,13 @@
 \contentsline {subsection}{\numberline {2.1.4}\gls { IDE} ou environnement de développement \cite {webTech}}{17}{subsection.2.1.4}%
 \contentsline {section}{\numberline {2.2} Conception}{17}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Modélisation}{17}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}Analyse des besoins}{18}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Analyse des besoins}{17}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}Identification des acteurs}{18}{subsubsection.2.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.2.1.3}Le diagramme de cas d’utilisation}{18}{subsubsection.2.2.1.3}%
 \contentsline {subsubsection}{\numberline {2.2.1.4}Le diagramme des classes}{19}{subsubsection.2.2.1.4}%
 \contentsline {subsubsection}{\numberline {2.2.1.5}Les diagramme de séquence}{20}{subsubsection.2.2.1.5}%
 \contentsline {chapter}{\numberline {3}Scénarios et exploitation}{24}{chapter.3}%
-\contentsline {section}{Introduction}{24}{section*.26}%
+\contentsline {section}{Introduction}{24}{section*.24}%
 \contentsline {section}{\numberline {3.1}Architecture technique et API Supabase}{24}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Présentation de Supabase}{24}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}Documentation de l'API Supabase}{25}{section.3.2}%
@@ -84,9 +79,9 @@
 \contentsline {subsection}{\numberline {3.5.2}Limites fonctionnelles}{37}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Défis de sécurité et conformité}{37}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}Améliorations futures envisagées}{37}{subsection.3.5.4}%
-\contentsline {section}{Conclusion}{38}{section*.36}%
-\contentsline {chapter}{Conclusion}{39}{chapter*.37}%
-\contentsline {chapter}{Bibliographie}{40}{chapter*.37}%
-\contentsline {chapter}{Bibliographie}{40}{chapter*.38}%
-\contentsline {chapter}{Table des mati\`eres}{41}{section*.39}%
+\contentsline {section}{Conclusion}{37}{section*.34}%
+\contentsline {chapter}{Conclusion}{39}{chapter*.35}%
+\contentsline {chapter}{Bibliographie}{40}{chapter*.35}%
+\contentsline {chapter}{Bibliographie}{40}{chapter*.36}%
+\contentsline {chapter}{Table des mati\`eres}{41}{section*.37}%
 \contentsfinish 

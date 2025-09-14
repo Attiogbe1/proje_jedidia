@@ -123,6 +123,10 @@
   skip=8pt
 }
 
+% Modifier les intitulés des légendes pour les tableaux
+\DeclareCaptionLabelFormat{tabformat}{Tableau~#2}
+\captionsetup[table]{labelformat=tabformat}
+
 % Style pour les références bibliographiques
 \usepackage{url}
 \renewcommand{\UrlFont}{\small\ttfamily}
