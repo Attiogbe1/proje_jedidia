@@ -12,16 +12,10 @@ Dans le monde actuel de la gestion de projet, les chefs de projet et les leaders
 n’adhèrent pas à une seule méthodologie, ils connaissent bien bon nombre d’entre elles, et
 ils apprennent à harmoniser diverses pratiques afin de s’adapter à ce que le projet exige.
 Ainsi, pour ce projet, nous avons utilisé la méthode \gls{PERT}
-\subsubsection{Méthode de \gls{PERT} \cite{wrike}}
-La \gls{PERT} est un outil de planification de projet utilisé pour calculer de manière réaliste le temps nécessaire pour terminer un projet. Les diagrammes de \gls{PERT} sont utilisés pour planifier les tâches au sein d'un projet, ce qui facilite la programmation des livrables et la coordination avec les membres de l'équipe.
-\subsection{L’architecture du projet \cite{wikipedia}}
+\subsubsection*{Méthode de \gls{PERT}}
+La  \cite{wrike} \gls{PERT}  est un outil de planification de projet utilisé pour calculer de manière réaliste le temps nécessaire pour terminer un projet. Les diagrammes de \gls{PERT} sont utilisés pour planifier les tâches au sein d'un projet, ce qui facilite la programmation des livrables et la coordination avec les membres de l'équipe.
+\subsection{L’architecture du projet }
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{images/Model.png}
-    \caption{  Architecture \gls{ MVC} \cite{wikipedia} }
-    \label{fig:mon_img}
- \end{figure}
 L’architecture d’un logiciel décrit la manière dont seront agencés les différents éléments
  d’une application et comment ils interagissent entre eux. Cette étape est donc l’une des pre
 mières étapes du développement logiciel et intervient lors de la phase de conception.
@@ -31,34 +25,43 @@ surtout à définir leur rôle. Le but de \gls{ MVC} est justement de séparer l
 trois parties que l’on retrouve dans des fichiers distincts.
  Le motif est composé de trois types de modules ayant trois responsabilités différentes :
 
-     \textbf{Modèle } :Élément qui contient les données ainsi que de la logique en rapport avec les données : validation, lecture et enregistrement4. Il peut, dans sa forme la plus simple, contenir uniquement une simple valeur, ou une structure de données plus complexe5. Le modèle représente l'univers dans lequel s'inscrit l'application3. Par exemple pour une application de banque, le modèle représente des comptes, des clients, ainsi que les opérations telles que dépôt et retraits, et vérifie que les retraits ne dépassent pas la limite de crédit. ;
+     \textbf{Modèle } :Élément qui contient les données ainsi que de la logique en rapport avec les données : validation, lecture et enregistrement4. Il peut, dans sa forme la plus simple, contenir uniquement une simple valeur, ou une structure de données plus complexe. Le modèle représente l'univers dans lequel s'inscrit l'application3. Par exemple pour une application de banque, le modèle représente des comptes, des clients, ainsi que les opérations telles que dépôt et retraits, et vérifie que les retraits ne dépassent pas la limite de crédit. ;
 
-     \textbf{Vue } : Partie visible d'une interface graphique4. La vue se sert du modèle, et peut être un diagramme, un formulaire, des boutons, etc4. Une vue contient des éléments visuels ainsi que la logique nécessaire pour afficher les données provenant du modèle4. Dans une application de bureau classique, la vue obtient les données nécessaires à la présentation du modèle en posant des questions. Elle peut également mettre à jour le modèle en envoyant des messages appropriés5. Dans une application web une vue contient des balises \gls{HTML};
+     \textbf{Vue } : Partie visible d'une interface graphique4. La vue se sert du modèle, et peut être un diagramme, un formulaire, des boutons, etc. Une vue contient des éléments visuels ainsi que la logique nécessaire pour afficher les données provenant du modèle. Dans une application de bureau classique, la vue obtient les données nécessaires à la présentation du modèle en posant des questions. Elle peut également mettre à jour le modèle en envoyant des messages appropriés5. Dans une application web une vue contient des balises \gls{HTML};
 
     \textbf{Contrôleur} : Module qui traite les actions de l'utilisateur, modifie les données du modèle et de la vue.
+    \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{images/Model.png}
+    \caption{  Architecture \gls{ MVC} \cite{wikipedia} }
+    \label{fig:mon_img}
+ \end{figure}
     \subsection{    La technologie adaptée à notre projet }
 Comme pour la création de sites web, il est essentiel de bien définir les besoins avant de choisir une technologie adaptée. Pour notre application mobile, nous avons opté pour \textbf{ Flutter} afin de concevoir l’interface utilisateur et \textbf{ Laravel  } , \textbf{ Supabase } et \textbf{ Firebase  } pour gérer le back-end. Ce choix repose sur leur efficacité, leur flexibilité et leur adéquation avec nos objectifs.
-\subsubsection{ Flutter \cite{ionos}}
+
+
+
+\subsubsection{ Flutter}
 Flutter est un framework de développement d’applications multiplateforme, conçu par Google, dont la première version a été publiée sous forme de projet open source à la fin de l’année 2018. Flutter met à disposition une grande variété de bibliothèques d’éléments d’IU standard pour Android et iOS.
 Nous avons opté ce choix parce que Flutter permet de développer des applications Android et iOS sans nécessiter de code distinct pour chaque système. Il garantit une expérience fluide et native sur tous les appareils. Avant leur publication, ces applications sont compilées pour chaque plateforme, éliminant ainsi le besoin d’un module runtime ou d’un navigateur. Grâce à cette base de code unique, Flutter peut également servir à créer des applications web et des logiciels natifs pour Windows, Linux et macOS.
-Le Flutter SDK se base sur le langage de programmation Dart qui est  également développé par Google
-\subsubsection{ Laravel \cite{yieldstudio}}
+Le Flutter SDK se base sur le langage de programmation Dart qui est  également développé par Google  \cite{ionos}
+\subsubsection{ Laravel }
 Créé en 2011 par \textbf{Taylor Otwell}, Laravel est un  framework \gls{PHP} conçu pour offrir une structure organisée et efficace au développement web. Il facilite la création d’applications, qu’elles soient simples ou complexes, en fournissant des outils intégrés dès l’installation.  
 Grâce à sa flexibilité, Laravel permet de développer divers types de projets, tels que des sites web dynamiques, des logiciels d’entreprise (\gls{CRM}, \gls{CMS }), des plateformes e-commerce  ou encore des réseaux sociaux. Il est particulièrement adapté aux applications nécessitant un backend robuste, incluant la gestion des utilisateurs et des commandes.  
-Laravel est ainsi un choix idéal pour les développeurs recherchant un environnement structuré, performant et évolutif.
+Laravel est ainsi un choix idéal pour les développeurs recherchant un environnement structuré, performant et évolutif \cite{yieldstudio}.
 
 
 
-\subsubsection{ Supabase \cite{denierCri}}
+\subsubsection{ Supabase}
 Supabase est une plateforme open source permettant de développer des applications web et mobiles en s’appuyant sur une infrastructure complète et clé en main. Elle repose sur PostgreSQL comme base de données, offrant une gestion simplifiée via une interface intuitive et une exposition automatique sous forme d'API, éliminant ainsi le besoin d’un backend dédié.  
 Ses fonctionnalités incluent un système d’authentification intégré, compatible avec de nombreux fournisseurs (Google, GitHub, Azure, etc.), des fonctions serverless, ainsi que des outils puissants pour la gestion du temps réel et des bases de données vectorielles adaptées à l’intelligence artificielle.  
-Avec une approche axée sur la rapidité et la simplicité, Supabase se positionne comme une alternative open source à Firebase, idéale pour accélérer le développement d’applications modernes.
+Avec une approche axée sur la rapidité et la simplicité, Supabase se positionne comme une alternative open source à Firebase, idéale pour accélérer le développement d’applications modernes  \cite{denierCri}.
 
-\subsubsection{ Firebase \cite{bility}}
-Firebase est une plateforme de développement mobile et web proposée par Google. Elle offre un large éventail de services et d’outils pour les développeurs, y compris des bases de données en temps réel, des analyses, des notifications push, des authentifications et des outils de gestion de projet.
+\subsubsection{ Firebase }
+Firebase est une plateforme de développement mobile et web proposée par Google. Elle offre un large éventail de services et d’outils pour les développeurs, y compris des bases de données en temps réel, des analyses, des notifications push, des authentifications et des outils de gestion de projet \cite{bility}.
 
-\subsection{\gls{ IDE} ou environnement de développement \cite{webTech}}
-Un \gls{ IDE} ou environnement de développement intégré en français, est un logiciel qui fournit un ensemble d’outils et de fonctionnalités pour faciliter le développement de logiciels. Il regroupe plusieurs outils nécessaires à la programmation en un seul endroit, améliorant ainsi l’efficacité et la productivité des développeurs. 
+\subsection{\gls{ IDE} ou environnement de développement}
+Un \gls{ IDE} ou environnement de développement intégré en français, est un logiciel qui fournit un ensemble d’outils et de fonctionnalités pour faciliter le développement de logiciels. Il regroupe plusieurs outils nécessaires à la programmation en un seul endroit, améliorant ainsi l’efficacité et la productivité des développeurs  \cite{webTech}. 
 
 Comme environnement de développment, nous avons utilisé dans le cadre de ce projet,Android Studio et le IDE Vusual Studio Code  pour écrire le code Flutter et Dart.
 \begin{figure}[H]
@@ -80,10 +83,11 @@ Comme environnement de développment, nous avons utilisé dans le cadre de ce pr
 \end{figure}
 \section{ Conception}
 \subsection{Modélisation}
-Afin demodéliser les fonctionnalités de notre plateforme, nous avons porté notre choix sur le langage
-\gls{UML},un langage de modélisation visuelle standard destiné à être utilisé pour spécifier, visualiser et
-documenter des modèles de systèmes logiciels,y compris leur structure et leur conception demanière
-à répondre à toutes ses exigences.
+Afin de modéliser les fonctionnalités de notre plateforme, nous avons retenu le langage \gls{UML}, 
+standard de modélisation visuelle permettant de spécifier, visualiser et documenter les systèmes logiciels, 
+tant du point de vue de leur structure que de leur comportement, de manière à satisfaire l’ensemble des 
+exigences du projet.
+
 \subsubsection{Analyse des besoins}
 L’analyse des besoins est la première étape à franchir dans la conception de notre application mobile. Cette
 analyse définira de façon succincte les différentes fonctionnalités de notre application.
@@ -125,7 +129,7 @@ qu’ils peuvent effectuer sur l’application. On distingue donc :
 En se basant sur la structure définie dans le diagramme de classes, nous identifions les acteurs suivants :
 \begin{itemize}
     \item \textbf{Participants} : Utilisateurs pouvant assister aux sessions et fournir du feedback.
-    \item \textbf{Organisateurs} : Utilisateurs responsables de la création et de la gestion des événements.
+    \item \textbf{Formateurs} : Utilisateurs responsables de la création et de la gestion des événements.
     \item \textbf{Administrateurs} : Gestionnaires ayant un contrôle sur les utilisateurs et les paramètres de la plateforme.
 \end{itemize}
 \subsubsection{Le diagramme de cas d’utilisation}

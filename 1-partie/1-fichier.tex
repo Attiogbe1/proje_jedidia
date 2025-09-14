@@ -49,14 +49,7 @@ Cependant, les \gls{PWA} ont aussi leurs limites. Elles sont moins bien intégr�
 
 
 
-% Preambule (assurez-vous d'avoir ces packages)
-% \usepackage{multirow}   % pour \multirow dans l’en-tête
-% \usepackage{float}      % pour [H]
-% \usepackage{glossaries} % si vous utilisez \gls
-% Preambule (assurez-vous d'avoir ces packages)
-% \usepackage{multirow}   % pour \multirow dans l’en-tête
-% \usepackage{float}      % pour [H]
-% \usepackage{glossaries} % si vous utilisez \gls
+
 \noindent Le tableau~\ref{tab:types_app} récapitule les différences entre les principales approches d’applications mobiles
 (natif, hybride, PWA), en précisant les langages cibles, les avantages et les limites.
 
@@ -216,6 +209,28 @@ Kahoot est une plateforme d’apprentissage numérique innovante qui permet aux 
    \item \textbf{Publicités} :La version gratuite inclut des publicités, ce qui peut être distrayant.
    \item \textbf{Types de Questions} : La version gratuite est limitée à deux types de questions.
   \end{itemize}
+  Pour illustrer l’interface de \textit{Kahoot},  les figures \ref{ig:kahoot-home} et \ref{fig:kahoot-join}
+présentent  les pages d’accueil  de participation
+où les apprenants saisissent le code de session.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.36\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/Kahoot a.jpg}
+    \caption{ Page de participation (saisie du code)}
+    \label{fig:kahoot-home}
+  \end{minipage}\hfill % <-- espace extensible
+  \begin{minipage}{0.36\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/Kahoot.jpg}
+    \caption{ Page d’accueil de Kahoot}
+    \label{fig:kahoot-join}
+  \end{minipage}
+\end{figure}
+
+
+
 \subsection{Slido}
 \subsubsection{Définition}
 Slido est une plateforme permet de créer des sondages, des questions en direct, et des QCM interactifs. Il est particulièrement utile pour les événements en direct et les réunions, offrant une intégration avec PowerPoint et Google Slides.
@@ -224,18 +239,23 @@ Slido est une plateforme permet de créer des sondages, des questions en direct,
    \item \textbf{Nombre de participants} : Bien que \textit{Slido} ne divulgue pas de limite stricte pour les participants, son efficacité peut diminuer avec un grand nombre d'utilisateurs.
    \item \textbf{Fonctionnalités avancées} : Certaines fonctionnalités avancées, comme l'intégration avec d'autres outils, peuvent nécessiter un abonnement payant.
 \end{itemize}
+
+Comme le montre la \autoref{fig:image1}, Slido propose un tableau de bord
+pour créer et piloter les événements ; la \autoref{fig:image2} présente,
+côté participant, l’écran d’accueil avec champ de code et dernier événement.
+
 \begin{figure}[H]
    \centering
-   \begin{minipage}{0.45\textwidth}
+   \begin{minipage}{0.36\textwidth}
        \centering
        \includegraphics[scale=0.4]{images/5.jpg}
        \caption{Tableau de bord de gestion des événements Slido}
        \label{fig:image1}
    \end{minipage}
    \hfill
-   \begin{minipage}{0.45\textwidth}
+   \begin{minipage}{0.40\textwidth}
        \centering
-       \includegraphics[scale=0.4]{images/1.jpg}
+       \includegraphics[scale=0.40]{images/1.jpg}
        \caption{Écran d'accueil des participants sur Slido avec un champ de code et le dernier événement}
        \label{fig:image2}
    \end{minipage}
@@ -248,6 +268,8 @@ Poll For All est un outil simple pour créer des sondages en ligne. Il est facil
    \item \textbf{Fonctionnalités limitées} Il ne propose pas autant de fonctionnalités interactives que d'autres plateformes comme \textbf{Kahoot} ou \textbf{Slido}.
    \item \textbf{Pas de Gamifications} Il manque de fonctionnalités ludiques pour engager les participants.
 \end{itemize}
+Comme le montre la \autoref{fig:image1}, \textit{Poll For All} propose une page d’accueil claire ;
+la \autoref{fig:image2} présente, côté participant, l’écran d’accueil avec champ d’option.
 
 \begin{figure}[H]
    \centering
@@ -266,22 +288,52 @@ Poll For All est un outil simple pour créer des sondages en ligne. Il est facil
    \end{minipage}
 \end{figure}
 \section{Notre solution}
-Notre solution est de  concevoire une application mobile innovante pour faciliter la gestion des événements interactifs, qu’il s’agisse de formations, de conférences ou de cours. L’objectif est d’offrir une expérience dynamique où les participants peuvent poser des questions, répondre à des sondages, participer à des quiz et interagir en temps réel avec les organisateurs.  
 
-Ce qui distingue notre application des autres, c’est avant tout sa simplicité d’utilisation et son accessibilité. Elle permet aux utilisateurs de consulter les les événements même sans connexion Internet, garantissant ainsi une continuité d’apprentissage et d’échange en toute circonstance. De plus, les organisateurs disposent d’un tableau de bord complet pour suivre les interactions, analyser la participation et adapter leurs événements en fonction des retours des utilisateurs.  
+\subsection{Constats et limites des solutions existantes}
+\label{sec:limites}
+Dans la pratique, les plateformes d'interactivité largement diffusées présentent des limites récurrentes :
+\begin{itemize}
+  \item \textbf{ Limitations d'usage en version gratuite} : plafonds de participants, types de questions restreints, présence de publicités, rapports analytiques réduits.
+  \item \textbf{ Dépendance au réseau} : impossibilité (ou faible qualité) d'usage en contexte à faible connectivité (amphithéâtres saturés, déplacements, zones à faible couverture).
+  \item \textbf{ Analyse et pilotage} : indicateurs peu actionnables en temps réel, export de données limité, difficile segmentation par session, groupe ou question.
+  \item \textbf{ Personnalisation et image} : personnalisation limitée (charte graphique, nom de domaine, codes d’accès), expérience hétérogène pour l’institution.
+  \item \textbf{ Orchestration multi-rôles/événements} : gestion perfectible des rôles (organisateur, modérateur, intervenant), des droits fins et des événements simultanés.
+  \item \textbf{Accessibilité et inclusivité} : prise en charge inégale de l’\emph{accessibility} (lecteurs d’écran, contrastes, navigation clavier) et du multilingue.
+\end{itemize}
 
-Un autre atout majeur de notre solution est son automatisation. Contrairement aux outils classiques qui nécessitent souvent une gestion manuelle, notre application fonctionne de manière fluide et autonome. Tout est optimisé pour que les utilisateurs puissent se concentrer sur l’essentiel : apprendre, échanger et s’impliquer pleinement dans les événements.  
+\subsection{Principes de conception}
+Notre application vise la \textbf{simplicité d’usage}, l’\textbf{accessibilité hors-ligne} et un \textbf{pilotage data-driven} pour l’organisateur, tout en minimisant les frictions côté participant (zéro inscription, code court, UI claire).
 
-En résumé, notre application apporte une réelle valeur ajoutée en rendant les événements plus interactifs, plus engageants et plus accessibles. Que ce soit pour un usage professionnel ou éducatif, elle permet d’améliorer l’expérience des participants tout en simplifiant la gestion pour les organisateurs.
+\subsection{Fonctionnalités proposées (réponse directe aux limites)}
+\label{sec:fct-proposees}
+\begin{description}
+  \item\textbf{Noyau fonctionnel complet sans publicité} : sondage à choix multiples et  quiz chronométrés. Politique de quotas configurable côté serveur (événements simultanés, participants actifs) et \textbf{rapports essentiels}.
+  \item \textbf{Mode hors-ligne} : préchargement des contenus (questions, médias), file locale des réponses et synchronisation différée dès retour réseau (gestion basique des conflits par horodatage, dernière version gagnante avec journal d’audit).
+  \item \textbf{Tableau de bord temps réel} : taux de participation par question, heatmap des réponses, chronologie des interactions, filtres par groupe.
+  \item \textbf{Personnalisation avancée} : thèmes institutionnels (logo, couleurs, typographies), URL d’accès court dédiée, codes d’événement personnalisables, écrans d’attente et messages d’accueil éditables.
+  \item \textbf{Gestion multi-événements et rôles} : rôles Organisateur,Modérateur,Intervenant, délégation de droits par événement, duplication de sessions, banque de questions réutilisable, planification et reprise.
+\end{description}
 
-\begin{table}[h]
+\subsection{Expérience utilisateur attendue}
+\textbf{Participant} : saisie d’un code court \(\rightarrow\) accès immédiat aux activités \(\rightarrow\) participation en temps réel ou différée (hors-ligne) \(\rightarrow\) retour visuel clair (scores, classements, synthèses).\\
+\textbf{Organisateur} : création guidée (ou import question bank) \(\rightarrow\) diffusion (présentiel/distanciel/hybride) \(\rightarrow\) suivi live \(\rightarrow\) analyse post-événement et export.
+
+\noindent
+Le tableau~\ref{tab:comparaison} compare les principales plateformes d’interactivité
+(Kahoot, Slido, Poll For All) à notre solution selon des critères fonctionnels
+(type d’interaction, limites de participants, mode hors-ligne, automatisation, etc.).
+
+% ------ Tableau forcé "ici" + largeur sécurisée ------
+\begin{table}[H] % [H] = ici strictement (nécessite \usepackage{float})
     \centering
     \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{4pt} % compacter légèrement l’espace horizontal
+    \resizebox{\textwidth}{!}{%
     \begin{tabular}{|m{4cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
         \hline
         \textbf{Fonctionnalités} & \textbf{Kahoot} & \textbf{Slido} & \textbf{Poll For All} & \textbf{Notre solution} \\
         \hline
-        \textbf{Type d’interaction} & Jeux éducatifs interactifs & Sondages, Q\&A, QCM interactifs & Sondages en ligne & Interactions complètes (Q\&A, sondages, quiz, feedback, gestion des rôles) \\
+        \textbf{Type d’interaction} & Jeux éducatifs interactifs & Sondages, Q\&A ou Q\&R , QCM interactifs & Sondages en ligne & Interactions complètes (Q\&A, sondages, quiz, feedback, gestion des rôles) \\
         \hline
         \textbf{Limite de participants} & 40 joueurs en version gratuite & Peut être limité selon la version & Pas de limite claire, mais fonctionnalités basiques & Optimisé pour tout type d’événement sans restriction \\
         \hline
@@ -291,21 +343,14 @@ En résumé, notre application apporte une réelle valeur ajoutée en rendant le
         \hline
         \textbf{Personnalisation} & Limitée aux types de jeux proposés & Disponible en version payante & Très limitée & Interface et fonctionnalités adaptables aux besoins des organisateurs \\
         \hline
-        \textbf{Accessibilité} & Connexion Internet requise & Connexion Internet requise & Connexion Internet requise & Fonctionne en ligne et hors ligne \\
-        \hline
         \textbf{Analyse et statistiques} & Rapports limités en version gratuite & Statistiques avancées en version payante & Analyse très basique & Outils intégrés pour suivre l’engagement et améliorer les événements \\
         \hline
-        \textbf{Expérience utilisateur} & Ludique mais limité aux quiz & Bonne, mais payante pour des fonctionnalités avancées & Interface très simple, peu interactive & Expérience fluide, intuitive et complète pour tous les utilisateurs \\
+        \textbf{Expérience utilisateur} & Ludique mais limitée aux quiz & Bonne, mais payante pour des fonctionnalités avancées & Interface très simple, peu interactive & Expérience fluide, intuitive et complète pour tous les utilisateurs \\
         \hline
-    \end{tabular}
+    \end{tabular}}
     \caption{Différences entre les solutions existantes et notre solution}
     \label{tab:comparaison}
 \end{table}
-
-
-
-
-
 
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
