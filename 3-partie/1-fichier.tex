@@ -9,156 +9,53 @@ le backbone de notre solution, puis nous présentons les différentes interfaces
 de l'application organisées par fonctionnalités. Enfin, nous analysons les 
 limitations rencontrées lors de la mise en œuvre pour fournir un aperçu 
 complet et critique de la solution développée.
-
-\section{Architecture technique et API Supabase}
-
-\subsection{Présentation de Supabase}
-Supabase est une plateforme Backend-as-a-Service (BaaS) open source qui offre 
-une alternative moderne à Firebase. Elle fournit une base de données PostgreSQL 
-hébergée, une authentification intégrée, des API REST et en temps réel automatiquement 
-générées, ainsi que des fonctionnalités de stockage de fichiers.
-
-Pour notre application Inter\,Actif, Supabase a été choisi pour les raisons suivantes :
-\begin{itemize}
-  \item \textbf{Base de données relationnelle :} PostgreSQL offre une robustesse 
-    et une flexibilité supérieures pour gérer les relations complexes entre 
-    événements, participants, modules et réponses.
-  \item \textbf{API automatique :} Génération automatique d'API REST et GraphQL 
-    à partir du schéma de base de données, réduisant considérablement le temps de développement.
-  \item \textbf{Authentification intégrée :} Système d'authentification complet 
-    avec gestion des utilisateurs, sessions, et politiques de sécurité (RLS - Row Level Security).
-  \item \textbf{Temps réel :} Fonctionnalités de souscription en temps réel 
-    essentielles pour les sondages, quiz et chat interactifs.
-  \item \textbf{Écosystème open source :} Transparence, extensibilité et 
-    absence de vendor lock-in.
-\end{itemize}
+% ------------------------------------------------------------------
+% ARCHITECTURE (inchangée si tu veux conserver le texte actuel)
 
 
-\section{Documentation de l'API Supabase}
+% ========= 3.1 Interfaces de documentation de l’API et de l’application =========
+\section{Interfaces de documentation de l’API et de l’application}
+\label{subsec:interfaces-doc}
 
-L'API Supabase de notre application Inter\,Actif est automatiquement générée 
-à partir du schéma de base de données PostgreSQL. Elle fournit une interface 
-REST complète et cohérente pour toutes les opérations CRUD.
+Cette section regroupe les interfaces de documentation à la fois pour l’API et pour
+l’application. Elle met l’accent sur la documentation générée automatiquement à
+partir de l’OpenAPI de Supabase et exposée dans Swagger.
 
-\subsection{Caractéristiques de l'API}
-\begin{itemize}
-  \item \textbf{API REST automatique :} Chaque tableau de la base de données 
-    génère automatiquement des endpoints REST complets
-  \item \textbf{Authentification intégrée :} Tous les endpoints respectent 
-    les politiques RLS (Row Level Security) définies
-  \item \textbf{Filtrage avancé :} Support des opérateurs de comparaison, 
-    tri, pagination et jointures
-  \item \textbf{Temps réel :} Souscriptions WebSocket pour les mises à jour 
-    en temps réel
-  \item \textbf{Documentation interactive :} Interface Swagger/OpenAPI 
-    automatiquement générée
-\end{itemize}
+% ---------------- 3.1.1 Interfaces de documentation de l’API ----------------
+\subsection{Interfaces de documentation de l’API}
+\label{subsubsec:interfaces-doc-api}
 
+La documentation de l’API est générée grâce au package Swagger (OpenAPI)
+intégré à notre projet . Swagger consomme le fichier OpenAPI/JSON exposé
+par Supabase (PostgREST) et produit une interface de consultation interactive.
+Nous présentons ci-dessous les vues principales de cette documentation.
 
-\subsection{Structure de la base de données}
-La base de données de l'application est organisée autour de plusieurs tableaux principaux :
+% (1) Vue d'ensemble Swagger
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{images/apieduc1.png}
+  \caption{API swagger 1}
+  \label{fig:swagger-overview}
+\end{figure}
 
-\begin{itemize}
-  \item \textbf{users :} Informations des utilisateurs (organisateurs et participants)
-  \item \textbf{events :} Événements créés par les organisateurs
-  \item \textbf{modules :} Modules de quiz et sondages associés aux événements
-  \item \textbf{questions :} Questions contenues dans chaque module
-  \item \textbf{responses :} Réponses des participants aux questions
-  \item \textbf{participants :} Relation entre utilisateurs et événements
-  \item \textbf{chat\_messages :} Messages du chat en temps réel
-\end{itemize}
+% (2) Catalogue des endpoints
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{images/apieduc2.png}
+  \caption{API swagger 2}
+  \label{fig:swagger-endpoints}
+\end{figure}
 
-\subsection{API et endpoints principaux}
-L'API Supabase génère automatiquement les endpoints suivants :
-
-\textbf{Gestion des événements :}
-\begin{itemize}
-  \item \texttt{GET /events} - Liste des événements
-  \item \texttt{POST /events} - Création d'un nouvel événement
-  \item \texttt{PATCH /events/:id} - Modification d'un événement
-  \item \texttt{DELETE /events/:id} - Suppression d'un événement
-\end{itemize}
+% (3) Schémas et modèles (definitions)
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{images/apieduc3.png}
+  \caption{API swagger 3}
+  \label{fig:swagger-schemas}
+\end{figure}
 
 
-\subsection{Exemples d'utilisation}
-\textbf{Création d'un événement :}
-\begin{verbatim}
-POST /rest/v1/events
-Authorization: Bearer <token>
-Content-Type: application/json
-
-{
-  "name": "Conférence Tech 2025",
-  "description": "Événement sur les nouvelles technologies",
-  "start_date": "2025-03-15T09:00:00Z",
-  "access_code": "TECH2025"
-}
-\end{verbatim}
-
-\textbf{Récupération des réponses avec statistiques :}
-\begin{verbatim}
-GET /rest/v1/responses?select=*,questions(*)&event_id=eq.123
-Authorization: Bearer <token>
-\end{verbatim}
-
-\textbf{Souscription en temps réel aux nouveaux messages :}
-\begin{verbatim}
-// JavaScript avec la bibliothèque Supabase
-const channel = supabase
-  .channel('chat_messages')
-  .on('postgres_changes', {
-    event: 'INSERT',
-    schema: 'public',
-    table: 'chat_messages'
-  }, (payload) => {
-    console.log('Nouveau message:', payload.new)
-  })
-  .subscribe()
-\end{verbatim}
-
-\section{Fonctionnalités temps réel avec Supabase}
-
-L'une des forces principales de Supabase dans notre application est sa capacité 
-à fournir des fonctionnalités temps réel natives, essentielles pour une 
-application interactive.
-
-\subsection{Mise à jour en temps réel des résultats}
-Lorsqu'un participant soumet une réponse à un quiz ou sondage, tous les 
-organisateurs connectés voient immédiatement les statistiques se mettre à jour 
-grâce aux souscriptions Supabase Realtime.
-
-\subsection{Chat interactif}
-Le système de chat utilise les souscriptions PostgreSQL de Supabase pour 
-diffuser instantanément les messages à tous les participants connectés, 
-sans nécessiter de polling côté client.
-
-\subsection{Notifications de participation}
-Les organisateurs reçoivent des notifications en temps réel lorsque de 
-nouveaux participants rejoignent leur événement ou soumettent des réponses.
-
-
-\textbf{Gestion des modules et questions :}
-\begin{itemize}
-  \item \texttt{GET /modules} - Liste des modules
-  \item \texttt{POST /modules} - Création d'un module
-  \item \texttt{GET /questions} - Questions d'un module
-  \item \texttt{POST /questions} - Ajout d'une question
-\end{itemize}
-
-\textbf{Gestion des participants et réponses :}
-\begin{itemize}
-  \item \texttt{GET /participants} - Liste des participants
-  \item \texttt{POST /responses} - Soumission d'une réponse
-  \item \texttt{GET /responses} - Récupération des réponses avec statistiques
-\end{itemize}
-
-\textbf{Chat en temps réel :}
-\begin{itemize}
-  \item \texttt{POST /chat\_messages} - Envoi d'un message
-  \item Souscription WebSocket pour recevoir les messages en temps réel
-\end{itemize}
-
-\section{Interfaces utilisateur de l'application}
+\subsection{Interfaces utilisateur de l'application}
 
 \subsection{Authentification et gestion du compte}
 Cette section présente les interfaces liées à l'authentification des utilisateurs 
@@ -289,94 +186,19 @@ synchronisées depuis Supabase.
 \end{figure}
 
 
-\section{Limites et défis rencontrés}
-
-\subsection{Limites techniques}
+\section{  Défis de sécurité et conformité}
 \begin{itemize}[leftmargin=1.2em]
-  \item \textbf{Dépendance réseau :} L'expérience en temps réel (quiz,
-    sondages et chat) requiert une connexion stable. De mauvaises
-    conditions réseau peuvent altérer la réactivité et l'affichage des
-    résultats, particulièrement critique pour les souscriptions Supabase Realtime.
-  
-  \item \textbf{Limitations de Supabase :} En version gratuite, Supabase impose 
-    des limites sur le nombre de connexions simultanées (60), la bande passante 
-    et le stockage, pouvant affecter la montée en charge pour de gros événements.
-  
-  \item \textbf{Complexité des requêtes :} Certaines opérations statistiques 
-    complexes nécessitent des requêtes PostgreSQL optimisées et peuvent impacter 
-    les performances sur de gros volumes de données.
-  
-  \item \textbf{Hétérogénéité des appareils :} La diversité des tailles
-    d'écran et des versions d'OS implique d'adapter l'interface (polices,
-    densité, accessibilité) afin d'assurer une expérience cohérente.
+  \item \textbf{Difficultés propres au mode « participant sans compte ».} Accès simple via code et pseudo, mais identité peu fiable (pseudos non uniques), risque de doublons et suivi de présence fragile ; à compenser par des garde-fous comme la limitation, la modération et l’audit.
+  \item \textbf{Contraintes d’usage.} Sessions non transférables entre appareils sans compte ; pseudos identiques sont  susceptibles de créer des confusions .
+
 \end{itemize}
 
-\subsection{Limites fonctionnelles}
-\begin{itemize}[leftmargin=1.2em]
-  \item \textbf{Fonctionnalités hors ligne limitées :} L'architecture basée 
-    sur Supabase nécessite une connexion internet constante. Bien que certaines 
-    données puissent être mises en cache localement, les actions critiques 
-    (vote en temps réel, synchronisation des résultats) ne sont pas disponibles 
-    hors ligne.
-  
-  \item \textbf{Gestion des conflits :} En cas de connexion instable, la 
-    gestion des conflits lors de la synchronisation des données n'est pas 
-    encore optimalement implémentée.
-  
-  \item \textbf{Customisation limitée des types de questions :} L'architecture 
-    actuelle supporte les types de base (choix unique/multiple, texte libre, 
-    échelle) mais l'ajout de nouveaux types nécessite des modifications 
-    importantes du schéma de base de données.
-\end{itemize}
 
-\subsection{Défis de sécurité et conformité}
-\begin{itemize}[leftmargin=1.2em]
-  \item \textbf{Politiques RLS :} La configuration des politiques Row Level 
-    Security de Supabase nécessite une expertise approfondie pour garantir 
-    que chaque utilisateur n'accède qu'aux données appropriées.
-  
-  \item \textbf{Confidentialité des données :} La gestion des données personnelles 
-    via Supabase impose de respecter des exigences strictes (conformité RGPD) 
-    pour l'authentification, la conservation et la suppression définitive.
-  
-  \item \textbf{Audit et logs :} Le suivi des actions utilisateurs et la 
-    génération de logs d'audit pour les événements sensibles nécessitent 
-    une configuration supplémentaire.
-\end{itemize}
 
-\subsection{Améliorations futures envisagées}
-\begin{itemize}[leftmargin=1.2em]
-  \item \textbf{Migration vers Supabase Pro :} Pour lever les limitations 
-    de performance et de connexions simultanées.
-  
-  \item \textbf{Implémentation d'un cache intelligent :} Pour améliorer 
-    les performances et réduire la dépendance réseau.
-  
-  \item \textbf{Système de synchronisation avancé :} Pour gérer les conflits 
-    et permettre un mode partiellement hors ligne.
-  
-  \item \textbf{Analytics avancées :} Intégration d'outils d'analyse pour 
-    fournir des insights plus poussés aux organisateurs.
-\end{itemize}
 
 \phantomsection
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
-Dans ce chapitre, nous avons présenté une vue d'ensemble complète de la 
-réalisation de l'application Inter\,Actif. Nous avons d'abord détaillé 
-l'architecture technique basée sur Supabase, expliquant les choix technologiques 
-et la structure de l'API. Ensuite, nous avons organisé la présentation des 
-interfaces utilisateur par fonctionnalités logiques : authentification, 
-gestion des événements, modules interactifs, participation et gestion des 
-participants.
-
-L'intégration de Supabase comme backend s'est révélée particulièrement 
-bénéfique pour le développement rapide d'une application interactive avec 
-des fonctionnalités temps réel. Cependant, cette analyse nous a également 
-permis d'identifier des limites importantes, notamment concernant les 
-performances à grande échelle et la dépendance réseau.
-
-Les éléments présentés dans ce chapitre constituent une base solide pour 
-comprendre le fonctionnement global de la solution et orienter les 
-améliorations futures, notamment vers une version plus robuste et scalable 
-de l'application.
+Ce chapitre nous a permis de présenter les résultats de notre projet. Nous avons présenter les inter
+faces tant du côté de l’API que de l’application mobile puis nous avons présenté les limites de notre
+ solution.
