@@ -76,8 +76,6 @@
 %\thispagestyle{empty}\ \clearpage
 
 
-\selectlanguage{french}
-
 % sommaire
 \pagenumbering{roman}
 
@@ -85,41 +83,41 @@
 \tableofcontents
 \clearpage
 
-%% rdedicaces
-\include{0-dedicace}
-\newpage 
+
+\input{0-dedicace}
+\clearpage
 
 %% remerciements
-\include{1-remerciements}
-\newpage 
+\input{1-remerciements}
+\clearpage
 
 % Résume
-\include{2-resume}
-\newpage
+\input{2-resume}
+\clearpage
 
-%liste des figures
 \renewcommand{\listfigurename}{Liste des figures}
 \listoffigures 
-\cleardoublepage
+\clearpage
 
 
-%liste des tableaux
+% Liste des tableaux
 \renewcommand{\listtablename}{Liste des tableaux}
 \listoftables
-\cleardoublepage
-
+\markboth{Liste des tableaux}{}
+\clearpage  % Utilisez \clearpage au lieu de \cleardoublepage
 
 % Les sigles et acronymes
 \setglossarystyle{altlist}
 \printglossary[type=\acronymtype, title=Liste des sigles et acronymes]
-\cleardoublepage
-
+\clearpage
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
-%%introduction
-\include{3-introduction}
-%\lhead[]{} \rhead[]{} \chead[]{}
+
+%% introduction
+\input{3-introduction}
+% Réinitialisation des en-têtes après l'introduction
+\markboth{Revue de Littérature}{}
 \selectlanguage{french}
 \fancyhead[L]{\tiny \leftmark}
 \fancyhead[R]{\scriptsize \rightmark}
@@ -136,7 +134,7 @@
  
 % \include{perspectives}
 %%conclusion
-\include{4-conclusion}
+\input{4-conclusion}
 % 
 \lhead[]{} \rhead[]{} \chead[]{}
 

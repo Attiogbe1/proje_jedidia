@@ -1,16 +1,6 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-Reallocating 'name_of_file' (item size: 1) to 15 items.
-A level-1 auxiliary file: 0-dedicace.aux
-Reallocating 'name_of_file' (item size: 1) to 20 items.
-A level-1 auxiliary file: 1-remerciements.aux
-Reallocating 'name_of_file' (item size: 1) to 13 items.
-A level-1 auxiliary file: 2-resume.aux
-Reallocating 'name_of_file' (item size: 1) to 19 items.
-A level-1 auxiliary file: 3-introduction.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
-A level-1 auxiliary file: 4-conclusion.aux
 Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: urlbst.bst
 Reallocating 'name_of_file' (item size: 1) to 7 items.
@@ -24,7 +14,7 @@ Warning--empty title in wikipedia
 Warning--empty title in wrike
 You've used 10 entries,
             2187 wiz_defined-function locations,
-            513 strings with 4516 characters,
+            508 strings with 4437 characters,
 and the built_in function-call counts, 1937 in all, are:
 = -- 206
 > -- 70
