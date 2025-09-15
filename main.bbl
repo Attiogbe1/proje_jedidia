@@ -5,48 +5,58 @@ Aquil App.
 \newblock Qu’est-ce qu’une application mobile ?
 \newblock URL:
   \url{https://www.aquilapp.fr/ressources/application-mobile/quest-ce-quune-application-mobile}.
+\newblock (consulté le 05 Mars 2025).
 
 \bibitem[2]{bility}
 Définition de~Firebase.
 \newblock URL: \url{https://bility.fr/definition-firebase/}.
+\newblock (consulté le 05 Mars 2025).
 
 \bibitem[3]{ionos}
 Définition de~Flutter.
 \newblock URL:
   \url{https://www.ionos.fr/digitalguide/sites-internet/developpement-web/flutter-cest-quoi/}.
+\newblock (consulté le 06 Mars 2025).
 
 \bibitem[4]{webTech}
 Définition de~IDE.
 \newblock URL: \url{https://webtech.fr/glossaire/ide/}.
+\newblock (consulté le 05 Mars 2025).
 
 \bibitem[5]{yieldstudio}
 Définition de~Laravel.
 \newblock URL: \url{https://www.yieldstudio.fr/glossaire/laravel}.
+\newblock (consulté le 05 Mars 2025).
 
 \bibitem[6]{denierCri}
 Définition de~Supabase.
 \newblock URL: \url{https://derniercri.io/radar-items/supabase}.
+\newblock (consulté le 05 Mars 2025).
 
 \bibitem[7]{evenement}
 Houefa.
 \newblock Definition des evernements.
 \newblock URL:
   \url{https://www.evenement.com/guides-professionnels/definitions/quels-sont-les-differents-types-devenements/}.
+\newblock Consulté le 15 janvier 2025.
 
 \bibitem[8]{evenementsprofessionnel}
 IMMAGINA.
 \newblock Définition des événements professionnels.
 \newblock URL:
   \url{https://imagina.com/fr/blog/article/types-evenement-entreprise/}.
+\newblock Consulté le 15 janvier 2025.
 
 \bibitem[9]{wikipedia}
 wikipedia.
 \newblock URL:
   \url{https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur}.
+\newblock (consulté le 06 Mars 2025).
 
 \bibitem[10]{wrike}
 wrike.
 \newblock URL:
   \url{https://www.wrike.com/fr/project-management-guide/faq/quest-ce-que-la-methode-pert-en-gestion-de-projet/}.
+\newblock (consulté le 05 Mars 2025).
 
 \end{thebibliography}

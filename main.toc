@@ -1,76 +1,79 @@
 \babel@toc {english}{}\relax 
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{Dédicace}{ii}{chapter*.2}%
-\contentsline {chapter}{Remerciements}{iii}{chapter*.3}%
-\contentsline {chapter}{Résumé}{iv}{chapter*.4}%
+\contentsline {chapter}{Table des mati\`eres}{i}{section*.1}%
+\contentsline {chapter}{Dédicace}{iii}{chapter*.2}%
+\contentsline {chapter}{Remerciements}{iv}{chapter*.3}%
+\contentsline {chapter}{Résumé}{v}{chapter*.4}%
 \babel@toc {french}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Abstract}{v}{chapter*.4}%
-\contentsline {chapter}{Liste des figures}{vi}{section*.5}%
-\contentsline {chapter}{Liste des tableaux}{vii}{section*.6}%
-\contentsline {chapter}{Introduction générale}{1}{chapter*.7}%
+\contentsline {chapter}{Abstract}{vi}{chapter*.4}%
+\contentsline {chapter}{Liste des figures}{vii}{section*.5}%
+\contentsline {chapter}{Liste des tableaux}{ix}{section*.6}%
+\contentsline {chapter}{\numberline {1}Introduction générale}{1}{chapter.1}%
+\contentsline {chapter}{Introduction générale}{1}{chapter.1}%
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Revue de Littérature}{3}{chapter.1}%
-\contentsline {section}{Introduction}{3}{section*.8}%
-\contentsline {section}{\numberline {1.1}Clarification conceptuelle}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1} Application mobile}{3}{subsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1.1}Definition}{3}{subsubsection.1.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1.2} Les différents types d'applications mobiles}{4}{subsubsection.1.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.2}L'applications de gestion des événements éducatifs interactifs}{6}{subsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.2.1}Definition}{6}{subsubsection.1.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.1.2.2}Principales caractéristiques de l'application événementielle}{6}{subsubsection.1.1.2.2}%
-\contentsline {subsection}{\numberline {1.1.3}Evénements éducatifs interactif}{7}{subsection.1.1.3}%
-\contentsline {subsubsection}{\numberline {1.1.3.1}Définition}{7}{subsubsection.1.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.1.3.2}Gestion Événement interactif}{7}{subsubsection.1.1.3.2}%
-\contentsline {section}{\numberline {1.2}Solutions existantes et leurs limites}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Kahoot}{8}{subsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.1.1}Définition}{8}{subsubsection.1.2.1.1}%
-\contentsline {subsubsection}{\numberline {1.2.1.2}Limites}{8}{subsubsection.1.2.1.2}%
-\contentsline {subsection}{\numberline {1.2.2}Slido}{9}{subsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.2.1}Définition}{9}{subsubsection.1.2.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2.2}Limites}{9}{subsubsection.1.2.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Poll For All}{10}{subsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.3.1}Définition}{10}{subsubsection.1.2.3.1}%
-\contentsline {subsubsection}{\numberline {1.2.3.2}Limites}{10}{subsubsection.1.2.3.2}%
-\contentsline {section}{\numberline {1.3}Notre solution}{11}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Constats et limites des solutions existantes}{11}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Principes de conception}{12}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Fonctionnalités proposées (réponse directe aux limites)}{12}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Expérience utilisateur attendue}{12}{subsection.1.3.4}%
-\contentsline {section}{Conclusion}{13}{table.caption.15}%
-\contentsline {chapter}{\numberline {2}Implémentation de l'infrastructure}{14}{chapter.2}%
-\contentsline {section}{Introduction}{14}{section*.16}%
-\contentsline {section}{\numberline {2.1}Choix techniques}{14}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Méthodologie de gestion du projet}{14}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}L’architecture du projet }{14}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3} La technologie adaptée à notre projet }{16}{subsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.3.1} Flutter}{16}{subsubsection.2.1.3.1}%
-\contentsline {subsubsection}{\numberline {2.1.3.2} Laravel }{16}{subsubsection.2.1.3.2}%
-\contentsline {subsubsection}{\numberline {2.1.3.3} Supabase}{16}{subsubsection.2.1.3.3}%
-\contentsline {subsubsection}{\numberline {2.1.3.4} Firebase }{16}{subsubsection.2.1.3.4}%
-\contentsline {subsection}{\numberline {2.1.4}\gls { IDE} ou environnement de développement}{17}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2} Conception}{17}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Modélisation}{17}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}Analyse des besoins}{17}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}Identification des acteurs}{18}{subsubsection.2.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.2.1.3}Le diagramme de cas d’utilisation}{18}{subsubsection.2.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.2.1.4}Le diagramme des classes}{19}{subsubsection.2.2.1.4}%
-\contentsline {subsubsection}{\numberline {2.2.1.5}Les diagramme de séquence}{20}{subsubsection.2.2.1.5}%
-\contentsline {chapter}{\numberline {3}Présentation de la solution}{24}{chapter.3}%
-\contentsline {section}{Introduction}{24}{section*.25}%
-\contentsline {section}{\numberline {3.1}Interfaces de documentation de l’API et de l’application}{24}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Interfaces de documentation de l’API}{24}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Interfaces utilisateur de l'application}{25}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Authentification et gestion du compte}{26}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Gestion des événements}{28}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Modules interactifs (Quiz et Sondages)}{30}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Participation et interaction}{32}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Gestion des participants}{33}{subsection.3.1.7}%
-\contentsline {section}{\numberline {3.2} Défis de sécurité et conformité}{34}{section.3.2}%
-\contentsline {section}{Conclusion}{35}{section*.38}%
-\contentsline {section}{Conclusion générale}{36}{section*.39}%
-\contentsline {chapter}{Bibliographie}{37}{section*.39}%
-\contentsline {chapter}{Bibliographie}{37}{chapter*.40}%
-\contentsline {chapter}{Table des mati\`eres}{38}{section*.41}%
+\contentsline {chapter}{\numberline {2}Revue de Littérature}{3}{chapter.2}%
+\contentsline {section}{Introduction}{3}{section*.7}%
+\contentsline {section}{\numberline {2.1}Clarification conceptuelle}{3}{section.2.1}%
+\contentsline {section}{Introduction}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Clarification conceptuelle}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1} Application mobile}{3}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Definition}{4}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2} Les différents types d'applications mobiles}{4}{subsubsection.2.2.1.2}%
+\contentsline {subsection}{\numberline {2.2.2}L'applications de gestion des événements éducatifs interactifs}{6}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Definition}{6}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Principales caractéristiques de l'application événementielle}{7}{subsubsection.2.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Evénements éducatifs interactif}{7}{subsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}Définition}{7}{subsubsection.2.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.2.3.2}Gestion Événement interactif}{8}{subsubsection.2.2.3.2}%
+\contentsline {section}{\numberline {2.3}Solutions existantes et leurs limites}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Kahoot}{8}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}Définition}{8}{subsubsection.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}Limites}{8}{subsubsection.2.3.1.2}%
+\contentsline {subsection}{\numberline {2.3.2}Slido}{9}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}Définition}{9}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}Limites}{9}{subsubsection.2.3.2.2}%
+\contentsline {subsection}{\numberline {2.3.3}Poll For All}{10}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}Définition}{10}{subsubsection.2.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.3.2}Limites}{11}{subsubsection.2.3.3.2}%
+\contentsline {section}{\numberline {2.4}Notre solution}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Constats et limites des solutions existantes}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Principes de conception}{12}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Fonctionnalités proposées (réponse directe aux limites)}{12}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Expérience utilisateur attendue}{12}{subsection.2.4.4}%
+\contentsline {section}{Conclusion}{13}{table.caption.14}%
+\contentsline {chapter}{\numberline {3}Implémentation de l'infrastructure}{15}{chapter.3}%
+\contentsline {section}{Introduction}{15}{section*.15}%
+\contentsline {section}{\numberline {3.1}Choix techniques}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Méthodologie de gestion du projet}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}L’architecture du projet }{15}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3} La technologie adaptée à notre projet }{17}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1} Flutter}{17}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2} Laravel }{17}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3} Supabase}{17}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4} Firebase }{17}{subsubsection.3.1.3.4}%
+\contentsline {subsection}{\numberline {3.1.4}\gls { IDE} ou environnement de développement}{18}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2} Conception}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Modélisation}{18}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Analyse des besoins}{18}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Identification des acteurs}{19}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}Le diagramme de cas d’utilisation}{19}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}Le diagramme des classes}{20}{subsubsection.3.2.1.4}%
+\contentsline {subsubsection}{\numberline {3.2.1.5}Les diagramme de séquence}{21}{subsubsection.3.2.1.5}%
+\contentsline {chapter}{\numberline {4}Présentation de la solution}{25}{chapter.4}%
+\contentsline {section}{Introduction}{25}{section*.24}%
+\contentsline {section}{\numberline {4.1}Interfaces de documentation de l’API et de l’application}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Interfaces de documentation de l’API}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Interfaces utilisateur de l'application}{27}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Authentification et gestion du compte}{28}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Gestion des événements}{30}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Modules interactifs (Quiz et Sondages)}{32}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Participation et interaction}{34}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Gestion des participants}{35}{subsection.4.1.7}%
+\contentsline {section}{\numberline {4.2} Défis de sécurité et conformité}{36}{section.4.2}%
+\contentsline {section}{Conclusion}{37}{section*.40}%
+\contentsline {section}{Conclusion générale}{38}{section*.41}%
+\contentsline {chapter}{Bibliographie}{39}{section*.41}%
+\contentsline {chapter}{Bibliographie}{39}{chapter*.42}%
 \contentsfinish 

@@ -81,10 +81,9 @@
 % sommaire
 \pagenumbering{roman}
 
-\setcounter{tocdepth}{0}
-\startlist{toc}
-\printlist{toc}{}{\chapter*{Sommaire}}
-\setcounter{tocdepth}{5}
+% Table des matières
+\tableofcontents
+\clearpage
 
 %% rdedicaces
 \include{0-dedicace}
@@ -101,19 +100,19 @@
 %liste des figures
 \renewcommand{\listfigurename}{Liste des figures}
 \listoffigures 
-\newpage
+\cleardoublepage
+
 
 %liste des tableaux
 \renewcommand{\listtablename}{Liste des tableaux}
 \listoftables
-\newpage
+\cleardoublepage
+
 
 % Les sigles et acronymes
 \setglossarystyle{altlist}
 \printglossary[type=\acronymtype, title=Liste des sigles et acronymes]
-\newpage
-
-
+\cleardoublepage
 
 
 \pagenumbering{arabic}
@@ -145,12 +144,6 @@
 \bibliographystyle{urlbst}
 \bibliography{biblio}
 
-
-
-
 %\include{annexe}
-
-\newpage
-\tableofcontents
 
 \end{document}
