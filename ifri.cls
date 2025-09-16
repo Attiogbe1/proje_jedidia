@@ -225,7 +225,8 @@ frame=leftline
 %différente pagination pour les figures
 %\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 %différente pagination la table des matières
-\renewcommand{\glsaddall}{\arabic{chapter}.\arabic{glossary}}
+% Suppression de la redéfinition erronée de \glsaddall qui empêchait l'affichage des acronymes
+% \renewcommand{\glsaddall}{\arabic{chapter}.\arabic{glossary}}
 
 \newcommand\dedicace{\chapter*{Dédicace}\addcontentsline{toc}{chapter}{Dédicace}}
 \newcommand\remerciements{\chapter*{Remerciements}\addcontentsline{toc}{chapter}{Remerciements}}
