@@ -91,7 +91,7 @@ Cependant, les \gls{PWA} ont aussi leurs limites. Elles sont moins bien intégr�
 
 \subsection{L'applications de gestion d'événements éducatifs interactifs}
 \subsubsection{Definition}
-Une application mobile de gestion d’événements éducatifs interactifs est une application mobile  qui centralise l’organisation et l’animation d’activités pédagogiques liées à un cours, atelier, séminaire ou conférence. Elle offre aux participants un accès unifié au programme, aux intervenants et aux ressources, ainsi que des modules d’interaction en temps réel (sondages, quiz, Q\&A, messagerie).
+Une application mobile de gestion d’événements éducatifs interactifs est une application mobile  qui centralise l’organisation et l’animation d’activités pédagogiques liées à un cours, atelier, séminaire ou conférence. Elle offre aux participants un accès unifié au programme, aux intervenants et aux ressources, ainsi que des modules d’interaction en temps réel (sondages, quiz, questions-réponses, messagerie).
 
 \subsubsection{Principales caractéristiques de l'application événementielle}
 
@@ -102,7 +102,7 @@ Les applications d’événements sont essentielles pour optimiser l’organisat
 
 \textbf{Mise en réseau} : Messagerie, échange de contacts et planification de réunions.
 
-\textbf{Sondages et Q\&R en direct} : Interaction en temps réel avec les intervenants.
+\textbf{Sondages et questions-réponses en direct} : Interaction en temps réel avec les intervenants.
 
 \textbf{Notifications} : Mises à jour instantanées sur le déroulement de l’événement.
 
@@ -118,7 +118,7 @@ Un événement éducatif interactif, c’est un cours, atelier ou conférence o�
 
 \subsubsection*{Les ateliers et formations}
 
-Les ateliers et formations sont des événements interactifs 
+Les ateliers et formations sont des événements éducatifs interactifs 
 conçus pour enseigner de nouvelles compétences ou améliorer
 les compétences existantes.
 Ces cours mettent l'accent sur le bien-être et le développement
@@ -147,19 +147,19 @@ pour discuter et débattre de sujets spécifiques.
 Elles sont idéales pour présenter des informations,
 partager des idées, créer des réseaux professionnels
 et favoriser la communication entre les salariés. 
-Parmi les différents types d'événements, les conférences 
+Parmi les différents types d'événements éducatifs interactifs, les conférences 
 jouent une fonction importante dans le métier de l' organisateur.
 La mise en place d'un tel événement offre une opportunité unique
 de développer des compétences en matière de team building et d'organisation.\cite{evenementsprofessionnel}
 
-\subsubsection{Gestion d'événement interactif} 
-La gestion d'événements désigne l'ensemble des activités et processus permettant de planifier, organiser, exécuter et évaluer un événement. Cela inclut la coordination des ressources, la gestion des participants, l'organisation logistique et la supervision des activités tout au long de l'événement. L'objectif principal de la gestion d'événements est de garantir le bon déroulement de l'événement, en répondant aux attentes des participants et en optimisant les ressources disponibles. Cela englobe également l'utilisation d'outils technologiques, comme les applications d'événements, pour améliorer l'efficacité, faciliter la communication et recueillir des retours pour des améliorations futures.
+\subsubsection{Gestion d'événements éducatifs interactifs} 
+La gestion d'événements éducatifs interactifs désigne l'ensemble des activités et processus permettant de planifier, organiser, exécuter et évaluer un événement éducatif interactif. Cela inclut la coordination des ressources, la gestion des participants, l'organisation logistique et la supervision des activités tout au long de l'événement. L'objectif principal de la gestion d'événements est de garantir le bon déroulement de l'événement, en répondant aux attentes des participants et en optimisant les ressources disponibles. Cela englobe également l'utilisation d'outils technologiques, comme les applications d'événements, pour améliorer l'efficacité, faciliter la communication et recueillir des retours pour des améliorations futures.
 
 
 
 
 \section{Solutions existantes et leurs limites}
-Plusieurs solutions existent déjà dans le but de rémédier au problème de la gestions des evenements éducatifs interactifs. voici une liste
+Plusieurs solutions existent déjà dans le but de rémédier au problème de la gestions des événements éducatifs interactifs. voici une liste
 non exhaustive:
 \subsection{Kahoot}
 \subsubsection{Définition}
@@ -193,15 +193,15 @@ Les figures \ref{fig:kahoot-home} et \ref{fig:kahoot-join} montrent l’écran K
 
 \subsection{Slido}
 \subsubsection{Définition}
-Slido est une plateforme  qui permet de créer des sondages, des questions en direct, et des QCM interactifs. Il est particulièrement utile pour les événements en direct et les réunions, offrant une intégration avec PowerPoint et Google Slides.
+Slido est une plateforme  qui permet de créer des sondages, des questions-réponses en direct, et des QCM interactifs. Il est particulièrement utile pour les événements en direct et les réunions, offrant une intégration avec PowerPoint et Google Slides.
 \subsubsection{Limites}
 \begin{itemize}
    \item \textbf{Nombre de participants} : Bien que \textit{Slido} ne divulgue pas de limite stricte pour les participants, son efficacité peut diminuer avec un grand nombre d'utilisateurs.
    \item \textbf{Fonctionnalités avancées} : Certaines fonctionnalités avancées, comme l'intégration avec d'autres outils, peuvent nécessiter un abonnement payant.
 \end{itemize}
 
-Comme le montre la \autoref{fig:image1}, Slido propose un tableau de bord
-pour créer et piloter les événements ; la \autoref{fig:image2} présente,
+Comme le montre la \autoref{fig:slido-dashboard}, Slido propose un tableau de bord
+pour créer et piloter les événements ; la \autoref{fig:slido-participant} présente,
 côté participant, l’écran d’accueil avec champ de code et dernier événement.
 
 \begin{figure}[H]
@@ -285,8 +285,6 @@ Le tableau~\ref{tab:comparaison} compare les principales plateformes d’interac
 
 
 
-\section{Notre solution}
-
 \subsection{Constats et limites des solutions existantes}
 \label{sec:limites}
 Dans la pratique, les plateformes d'interactivité largement diffusées présentent des limites récurrentes :
@@ -297,6 +295,15 @@ Dans la pratique, les plateformes d'interactivité largement diffusées présent
   \item \textbf{ Personnalisation et image} : personnalisation limitée (charte graphique, nom de domaine, codes d’accès), expérience hétérogène pour l’institution.
   \item \textbf{ Orchestration multi-rôles/événements} : gestion perfectible des rôles (organisateur, modérateur, intervenant), des droits fins et des événements simultanés.
   \item \textbf{Accessibilité et inclusivité} : prise en charge inégale de l’\emph{accessibility} (lecteurs d’écran, contrastes, navigation clavier) et du multilingue.
+\end{itemize}
+\subsection{Notre solution}
+Notre application mobile permet d’animer des événements éducatifs. Concrètement, elle :
+\begin{itemize}
+  \item propose des activités interactives essentielles (quiz, sondages, questions–réponses) avec modération en direct ;
+  \item fonctionne même sans Internet (mode hors ligne) et synchronise les données dès que le réseau revient ;
+  \item affiche un tableau de bord en direct (participation, temps de réponse, répartition des réponses) et permet l’export des données ;
+  \item offre une personnalisation simple pour l’institution (thème, logo, codes d’accès) ;
+  \item permet de mieux suivre les participants grâce à des outils d’analyse en direct, statistiques détaillées et informations utiles pour améliorer les prochains événements.
 \end{itemize}
 
 

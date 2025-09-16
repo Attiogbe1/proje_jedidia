@@ -17,9 +17,8 @@ régulièrement le planning pour respecter l’échéance.
 La  \cite{wrike} \gls{PERT}  est un outil de planification de projet utilisé pour calculer de manière réaliste le temps nécessaire pour terminer un projet. Les diagrammes de \gls{PERT} sont utilisés pour planifier les tâches au sein d'un projet, ce qui facilite la programmation des livrables et la coordination avec les membres de l'équipe.
 \subsection{L’architecture du projet }
 
-L’architecture d’un logiciel décrit la manière dont seront agencés les différents éléments
- d’une application et comment ils interagissent entre eux. Cette étape est donc l’une des pre
-mières étapes du développement logiciel et intervient lors de la phase de conception.
+L’architecture d’un logiciel décrit la manière dont sont agencés les différents éléments
+ d’une application et comment ils interagissent entre eux. Cette étape est donc l’une des premières étapes du développement logiciel et intervient lors de la phase de conception.
 C’est celle que nous allons utiliser dans le développment de cette application.\gls{ MVC} est un motif d'architecture logicielle destiné aux interfaces graphiques
 permet de bien organiser son code source. Il va nous aider à savoir quels fichiers créer, mais
 surtout à définir leur rôle. Le but de \gls{ MVC} est justement de séparer la logique du code en
@@ -127,7 +126,7 @@ qu’ils peuvent effectuer sur l’application. On distingue donc :
 
 \subsubsection{Acteurs du système}
 
-\noindent\textit{Définition.} Dans un diagramme de cas d'utilisation, un acteur désigne un rôle (personne ou profil)
+\noindent Dans un diagramme de cas d'utilisation, un acteur désigne un rôle (personne ou profil)
 qui interagit avec l’application pour atteindre un objectif précis. À partir du diagramme de classes,
 nous retenons les rôles suivants :
 
@@ -205,19 +204,16 @@ La figure  \ref{fig:mon_img-des-seq-creation-evenement} illustre ce déroulement
 
 \item \textbf{Diagramme  de séquence pour la participation à un événement}
 
-Pour participer à un événement, l'utilisateur doit d'abord être connecté à la plateforme.  
-Une fois authentifié, il peut envoyer une demande de participation en précisant l’identifiant de l’événement ciblé.  
-L’API réceptionne cette requête et commence par vérifier si l’utilisateur est bien connecté.  
-
-Si la vérification est positive, l’API consulte la base de données afin de s’assurer que l’événement existe effectivement.  
+Pour participer à un événement, l'utilisateur doit d'abord renseigner le code de l'événement et son pseudo.  
+Une fois ces informations fournies,  l’API consulte la base de données afin de s’assurer que l’événement existe effectivement.  
 Une fois l’événement retrouvé, l’API procède à l’enregistrement de la participation de l’utilisateur en l’ajoutant à la liste des participants.  
 L’utilisateur reçoit alors une confirmation indiquant que sa participation a été prise en compte.  
 
-En revanche, si l’utilisateur n’est pas connecté, la plateforme le redirige automatiquement vers l’écran de connexion.  
+En revanche, si l'événement n'est pas trouvé, terminé   le système le redirige automatiquement vers l’écran de participation avec une notification..  
 La figure \ref{fig:mon_img-des-seq-participation-evenement}  illustre ce déroulement sous forme de diagramme de séquence.
 
 \begin{figure}[H]
-    \includegraphics[scale=0.6]{images/diagramme_sequence_participer_event.png}
+    \includegraphics[scale=0.8]{images/diagramme_sequence_participer_event.png}
     \caption{ Diagramme de séquence pour la création d'un événement}
     \label{fig:mon_img-des-seq-participation-evenement}
   \end{figure}
