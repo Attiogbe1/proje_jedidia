@@ -78,38 +78,40 @@
 
 % sommaire
 \pagenumbering{roman}
+\setcounter{tocdepth}{0}
+\startlist{toc}
+\printlist{toc}{}{\chapter*{Sommaire}}
+\setcounter{tocdepth}{5}
 
-% Table des matières
-\tableofcontents
-\clearpage
+
+
 
 
 \input{0-dedicace}
-\clearpage
-
+\newpage
 %% remerciements
 \input{1-remerciements}
 \clearpage
 
 % Résume
 \input{2-resume}
-\clearpage
+\newpage
 
 \renewcommand{\listfigurename}{Liste des figures}
 \listoffigures 
-\clearpage
+\newpage
 
 
 % Liste des tableaux
 \renewcommand{\listtablename}{Liste des tableaux}
 \listoftables
 \markboth{Liste des tableaux}{}
-\clearpage  % Utilisez \clearpage au lieu de \cleardoublepage
+\newpage % Utilisez \clearpage au lieu de \cleardoublepage
 
 % Les sigles et acronymes
 \setglossarystyle{altlist}
 \printglossary[type=\acronymtype, title=Liste des sigles et acronymes]
-\clearpage
+\newpage
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
@@ -142,6 +144,8 @@
 \bibliographystyle{urlbst}
 \bibliography{biblio}
 
-%\include{annexe}
+% Table des matières
+\tableofcontents
+\newpage
 
 \end{document}
