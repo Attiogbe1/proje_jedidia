@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  16 SEP 2025 22:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  17 SEP 2025 08:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1544,13 +1544,18 @@ Package pdftex.def Info: images/78.jpg  used on input line 25.
 
 
 [4 <./images/application.png> <./images/78.jpg>]
-Overfull \hbox (3.8366pt too wide) in paragraph at lines 63--64
+Overfull \hbox (9.52705pt too wide) in paragraph at lines 63--64
 []|[]| 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 71--72
-[]|\T1/lmr/m/n/10.95 (+10) Swift, Objective-
+[]|\T1/lmr/m/n/10.95 (+10) Swift,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+\T1/lmr/m/n/10.95 (+10) Objective-
  []
 
 
@@ -1564,8 +1569,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 74--75
-[]|\T1/lmr/m/n/10.95 (+10) Coûts de dé-ve-lop-pe-ment
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\T1/lmr/m/n/10.95 (+10) dé-ve-lop-pe-ments sé-pa-rés
  []
 
 
@@ -1574,23 +1579,8 @@ Underfull \hbox (badness 2495) in paragraph at lines 78--79
  []
 
 
-Underfull \hbox (badness 2269) in paragraph at lines 79--80
-\T1/lmr/m/n/10.95 (+10) rap-port aux ap-pli-ca-tions
- []
-
-
-Underfull \hbox (badness 1275) in paragraph at lines 79--80
-\T1/lmr/m/n/10.95 (+10) na-tives, ac-cès li-mité aux
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 \T1/lmr/m/n/10.95 (+10) fonc-tion-na-li-tés du té-lé-
- []
-
-
-Underfull \hbox (badness 3568) in paragraph at lines 81--82
-[]|\T1/lmr/bx/n/10.95 (+10) Progressive Web
  []
 
 
@@ -1604,17 +1594,12 @@ Underfull \hbox (badness 3449) in paragraph at lines 83--84
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 84--85
+Underfull \hbox (badness 4779) in paragraph at lines 84--85
 \T1/lmr/m/n/10.95 (+10) vent in-fé-rieure aux ap-
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 84--85
-\T1/lmr/m/n/10.95 (+10) pli-ca-tions na-tives, dé-pen-
- []
-
-
-Overfull \hbox (56.6263pt too wide) in paragraph at lines 61--87
+Overfull \hbox (48.09038pt too wide) in paragraph at lines 61--87
  [][] 
  []
 
@@ -2126,13 +2111,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  41458 strings out of 473530
  741415 string characters out of 5713343
- 1444282 words of memory out of 5000000
+ 1443282 words of memory out of 5000000
  63432 multiletter control sequences out of 15000+600000
  704209 words of font info for 276 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,14n,131p,2428b,794s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (50 pages, 6077072 bytes).
+Output written on main.pdf (50 pages, 6077046 bytes).
 PDF statistics:
  935 PDF objects out of 1000 (max. 8388607)
  171 named destinations out of 1000 (max. 500000)
