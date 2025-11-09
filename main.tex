@@ -11,6 +11,8 @@
 \usepackage{subcaption} % Pour l'environnement subfigure
 
 \input{ui-command}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{biblio.bib} % <-- un seul fichier, toutes les références
 
 
 % \usepackage{lscape}
@@ -62,6 +64,7 @@
     frame=single,
     tabsize=4
 }
+
 
 \begin{document}
 
@@ -142,10 +145,17 @@
 % 
 \lhead[]{} \rhead[]{} \chead[]{}
 
-\addcontentsline{toc}{chapter}{}
-\bibliographystyle{urlbst}
-\bibliography{biblio}
-% Table des matières
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliographie}
+\printbibliography[title={Bibliographie}, keyword=biblio]
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Webographie}
+\printbibliography[title={Webographie}, keyword=webl]
+
 \tableofcontents
 \newpage
 

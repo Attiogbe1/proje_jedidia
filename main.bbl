@@ -1,62 +1,321 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[1]{definition-application-mobile}
-Aquil App.
-\newblock Qu’est-ce qu’une application mobile ?
-\newblock URL:
-  \url{https://www.aquilapp.fr/ressources/application-mobile/quest-ce-quune-application-mobile}.
-\newblock (consulté le 05 Mars 2025).
 
-\bibitem[2]{bility}
-Définition de~Firebase.
-\newblock URL: \url{https://bility.fr/definition-firebase/}.
-\newblock (consulté le 05 Mars 2025).
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{definition-application-mobile}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=83dd3b3d3e2c158ad49a935fbc839e67}{%
+           family={App},
+           familyi={A\bibinitperiod},
+           given={Aquil},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \strng{fullhash}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \strng{fullhashraw}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \strng{bibnamehash}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \strng{authorbibnamehash}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \strng{authornamehash}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \strng{authorfullhash}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \strng{authorfullhashraw}{83dd3b3d3e2c158ad49a935fbc839e67}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{(consulté le 05 Mars 2025)}
+      \field{title}{Qu’est-ce qu’une application mobile ?}
+      \verb{urlraw}
+      \verb https://www.aquilapp.fr/ressources/application-mobile/quest-ce-quune-application-mobile
+      \endverb
+      \verb{url}
+      \verb https://www.aquilapp.fr/ressources/application-mobile/quest-ce-quune-application-mobile
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{bility}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7466cdd9f7e7f71ceda6d9788841f1d7}{%
+           family={Firebase},
+           familyi={F\bibinitperiod},
+           given={Définition},
+           giveni={D\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \strng{fullhash}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \strng{fullhashraw}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \strng{bibnamehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \strng{authorbibnamehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \strng{authornamehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \strng{authorfullhash}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \strng{authorfullhashraw}{7466cdd9f7e7f71ceda6d9788841f1d7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{note}{(consulté le 05 Mars 2025)}
+      \verb{urlraw}
+      \verb https://bility.fr/definition-firebase/
+      \endverb
+      \verb{url}
+      \verb https://bility.fr/definition-firebase/
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{ionos}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ea431f6e631d3e34c57b8beeb7b534a7}{%
+           family={Flutter},
+           familyi={F\bibinitperiod},
+           given={Définition},
+           giveni={D\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \strng{fullhash}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \strng{fullhashraw}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \strng{bibnamehash}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \strng{authorbibnamehash}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \strng{authornamehash}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \strng{authorfullhash}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \strng{authorfullhashraw}{ea431f6e631d3e34c57b8beeb7b534a7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{note}{(consulté le 06 Mars 2025)}
+      \verb{urlraw}
+      \verb https://www.ionos.fr/digitalguide/sites-internet/developpement-web/flutter-cest-quoi/
+      \endverb
+      \verb{url}
+      \verb https://www.ionos.fr/digitalguide/sites-internet/developpement-web/flutter-cest-quoi/
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{evenement}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=485d4287969fe28e4c3bba4aac4bda57}{%
+           family={Houefa},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{485d4287969fe28e4c3bba4aac4bda57}
+      \strng{fullhash}{485d4287969fe28e4c3bba4aac4bda57}
+      \strng{fullhashraw}{485d4287969fe28e4c3bba4aac4bda57}
+      \strng{bibnamehash}{485d4287969fe28e4c3bba4aac4bda57}
+      \strng{authorbibnamehash}{485d4287969fe28e4c3bba4aac4bda57}
+      \strng{authornamehash}{485d4287969fe28e4c3bba4aac4bda57}
+      \strng{authorfullhash}{485d4287969fe28e4c3bba4aac4bda57}
+      \strng{authorfullhashraw}{485d4287969fe28e4c3bba4aac4bda57}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consulté le 15 janvier 2025}
+      \field{title}{Definition des evernements}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.evenement.com/guides-professionnels/definitions/quels-sont-les-differents-types-devenements/
+      \endverb
+      \verb{url}
+      \verb https://www.evenement.com/guides-professionnels/definitions/quels-sont-les-differents-types-devenements/
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{webTech}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=2f6e12d2a2efa7a590a4ef4add0cbf60}{%
+           family={IDE},
+           familyi={I\bibinitperiod},
+           given={Définition},
+           giveni={D\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \strng{fullhash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \strng{fullhashraw}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \strng{bibnamehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \strng{authorbibnamehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \strng{authornamehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \strng{authorfullhash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \strng{authorfullhashraw}{2f6e12d2a2efa7a590a4ef4add0cbf60}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{note}{(consulté le 05 Mars 2025)}
+      \verb{urlraw}
+      \verb https://webtech.fr/glossaire/ide/
+      \endverb
+      \verb{url}
+      \verb https://webtech.fr/glossaire/ide/
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{evenementsprofessionnel}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b73eb2817a3998d4a2ebeab5c5c3be42}{%
+           family={IMMAGINA},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \strng{fullhash}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \strng{fullhashraw}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \strng{bibnamehash}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \strng{authorbibnamehash}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \strng{authornamehash}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \strng{authorfullhash}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \strng{authorfullhashraw}{b73eb2817a3998d4a2ebeab5c5c3be42}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consulté le 15 janvier 2025}
+      \field{title}{Définition des événements professionnels}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://imagina.com/fr/blog/article/types-evenement-entreprise/
+      \endverb
+      \verb{url}
+      \verb https://imagina.com/fr/blog/article/types-evenement-entreprise/
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{yieldstudio}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8f54b4333d13099813a65840f3ed32c3}{%
+           family={Laravel},
+           familyi={L\bibinitperiod},
+           given={Définition},
+           giveni={D\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f54b4333d13099813a65840f3ed32c3}
+      \strng{fullhash}{8f54b4333d13099813a65840f3ed32c3}
+      \strng{fullhashraw}{8f54b4333d13099813a65840f3ed32c3}
+      \strng{bibnamehash}{8f54b4333d13099813a65840f3ed32c3}
+      \strng{authorbibnamehash}{8f54b4333d13099813a65840f3ed32c3}
+      \strng{authornamehash}{8f54b4333d13099813a65840f3ed32c3}
+      \strng{authorfullhash}{8f54b4333d13099813a65840f3ed32c3}
+      \strng{authorfullhashraw}{8f54b4333d13099813a65840f3ed32c3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{note}{(consulté le 05 Mars 2025)}
+      \verb{urlraw}
+      \verb https://www.yieldstudio.fr/glossaire/laravel
+      \endverb
+      \verb{url}
+      \verb https://www.yieldstudio.fr/glossaire/laravel
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{denierCri}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9333a9e1213abec46ce7516c750bed9c}{%
+           family={Supabase},
+           familyi={S\bibinitperiod},
+           given={Définition},
+           giveni={D\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{9333a9e1213abec46ce7516c750bed9c}
+      \strng{fullhash}{9333a9e1213abec46ce7516c750bed9c}
+      \strng{fullhashraw}{9333a9e1213abec46ce7516c750bed9c}
+      \strng{bibnamehash}{9333a9e1213abec46ce7516c750bed9c}
+      \strng{authorbibnamehash}{9333a9e1213abec46ce7516c750bed9c}
+      \strng{authornamehash}{9333a9e1213abec46ce7516c750bed9c}
+      \strng{authorfullhash}{9333a9e1213abec46ce7516c750bed9c}
+      \strng{authorfullhashraw}{9333a9e1213abec46ce7516c750bed9c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{note}{(consulté le 05 Mars 2025)}
+      \verb{urlraw}
+      \verb https://derniercri.io/radar-items/supabase
+      \endverb
+      \verb{url}
+      \verb https://derniercri.io/radar-items/supabase
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{wikipedia}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=12672e79b01e9ca7018105efb0ef871c}{%
+           family={wikipedia},
+           familyi={w\bibinitperiod}}}%
+      }
+      \strng{namehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{fullhash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{fullhashraw}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{bibnamehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{authorbibnamehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{authornamehash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{authorfullhash}{12672e79b01e9ca7018105efb0ef871c}
+      \strng{authorfullhashraw}{12672e79b01e9ca7018105efb0ef871c}
+      \field{sortinit}{w}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{note}{(consulté le 06 Mars 2025)}
+      \verb{urlraw}
+      \verb https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur
+      \endverb
+      \verb{url}
+      \verb https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur
+      \endverb
+      \keyw{webl}
+    \endentry
+    \entry{wrike}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=4f52348666758bf10198d9425e3399b3}{%
+           family={wrike},
+           familyi={w\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f52348666758bf10198d9425e3399b3}
+      \strng{fullhash}{4f52348666758bf10198d9425e3399b3}
+      \strng{fullhashraw}{4f52348666758bf10198d9425e3399b3}
+      \strng{bibnamehash}{4f52348666758bf10198d9425e3399b3}
+      \strng{authorbibnamehash}{4f52348666758bf10198d9425e3399b3}
+      \strng{authornamehash}{4f52348666758bf10198d9425e3399b3}
+      \strng{authorfullhash}{4f52348666758bf10198d9425e3399b3}
+      \strng{authorfullhashraw}{4f52348666758bf10198d9425e3399b3}
+      \field{sortinit}{w}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{note}{(consulté le 05 Mars 2025)}
+      \verb{urlraw}
+      \verb https://www.wrike.com/fr/project-management-guide/faq/quest-ce-que-la-methode-pert-en-gestion-de-projet/
+      \endverb
+      \verb{url}
+      \verb https://www.wrike.com/fr/project-management-guide/faq/quest-ce-que-la-methode-pert-en-gestion-de-projet/
+      \endverb
+      \keyw{webl}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem[3]{ionos}
-Définition de~Flutter.
-\newblock URL:
-  \url{https://www.ionos.fr/digitalguide/sites-internet/developpement-web/flutter-cest-quoi/}.
-\newblock (consulté le 06 Mars 2025).
-
-\bibitem[4]{webTech}
-Définition de~IDE.
-\newblock URL: \url{https://webtech.fr/glossaire/ide/}.
-\newblock (consulté le 05 Mars 2025).
-
-\bibitem[5]{yieldstudio}
-Définition de~Laravel.
-\newblock URL: \url{https://www.yieldstudio.fr/glossaire/laravel}.
-\newblock (consulté le 05 Mars 2025).
-
-\bibitem[6]{denierCri}
-Définition de~Supabase.
-\newblock URL: \url{https://derniercri.io/radar-items/supabase}.
-\newblock (consulté le 05 Mars 2025).
-
-\bibitem[7]{evenement}
-Houefa.
-\newblock Definition des evernements.
-\newblock URL:
-  \url{https://www.evenement.com/guides-professionnels/definitions/quels-sont-les-differents-types-devenements/}.
-\newblock Consulté le 15 janvier 2025.
-
-\bibitem[8]{evenementsprofessionnel}
-IMMAGINA.
-\newblock Définition des événements professionnels.
-\newblock URL:
-  \url{https://imagina.com/fr/blog/article/types-evenement-entreprise/}.
-\newblock Consulté le 15 janvier 2025.
-
-\bibitem[9]{wikipedia}
-wikipedia.
-\newblock URL:
-  \url{https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur}.
-\newblock (consulté le 06 Mars 2025).
-
-\bibitem[10]{wrike}
-wrike.
-\newblock URL:
-  \url{https://www.wrike.com/fr/project-management-guide/faq/quest-ce-que-la-methode-pert-en-gestion-de-projet/}.
-\newblock (consulté le 05 Mars 2025).
-
-\end{thebibliography}
