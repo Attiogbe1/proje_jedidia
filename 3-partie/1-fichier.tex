@@ -76,116 +76,184 @@ Nous présentons ci-dessous les vues principales de cette documentation.
 
 \subsection{Interfaces utilisateur de l'application}
 
-\subsection{Authentification et gestion du compte}
-Cette section présente les interfaces liées à l'authentification des utilisateurs 
-et à la gestion de leur compte, intégrées avec le système d'authentification Supabase.
-
+\subsection*{Authentification et gestion du compte}
+La figure \ref{fig:page_accueil} illustre la page d’accueil de l’application, qui présente les principales activités et oriente l’utilisateur vers les différentes sessions. Quant à la figure \ref{fig:page_connexion}, elle montre l’écran de connexion permettant à l’organisateur d’accéder à son espace de gestion.
 % LIGNE 1 : Accueil et Connexion
+% Figure 4.2 : Page d'accueil
 \begin{figure}[H]
   \centering
-  \ui{Page d'accueil}{page_acceul.jpg}%
-     {Écran d'entrée présentant les fonctionnalités clés (sondages, quiz, chat) et deux parcours : Organisateur ou Rejoindre.}%
-     {}
+  % Première image
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_acceul.jpg}
+    \caption{Page d'accueil de l'application}
+    \label{fig:page_accueil}
+  \end{minipage}
   \hfill
-  \ui{Page de connexion}{page_connexion.jpg}%
-     {Formulaire e‑mail et mot de passe avec liens « S'inscrire » et « Mot de passe oublié ». L'authentification utilise Supabase Auth.}%
-     {}
+  % Deuxième image
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_connexion.jpg}
+    \caption{Page de connexion de l'application}
+    \label{fig:page_connexion}
+  \end{minipage}
 \end{figure}
+\newpage
+
+% LIGNE 2 : Inscription et Réinitialisation
+La figure \ref{fig:page_inscription} illustre la page d’inscription de l’application, permettant à un nouvel utilisateur de créer son compte et de configurer son mot de passe en toute sécurité. Quant à la figure \ref{fig:page_mise_ajour}, elle montre l’écran de réinitialisation du mot de passe, qui permet à l’utilisateur de récupérer l’accès à son compte via un lien envoyé par e-mail.
 
 % LIGNE 2 : Inscription et Réinitialisation
 \begin{figure}[H]
   \centering
-  \ui{Page d'inscription}{page_inscription.jpg}%
-     {Création de compte : nom complet, e‑mail, mot de passe (avec indicateur de robustesse) et confirmation. Intégrée avec Supabase Auth.}%
-     {}
+  % Première image
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_inscription.jpg}
+    \caption{Page d'inscription de l'application}
+    \label{fig:page_inscription}
+  \end{minipage}
   \hfill
-  \ui{Réinitialisation du mot de passe}{page_mise_ajour.jpg}%
-     {Saisie de l'adresse e‑mail pour recevoir un lien de réinitialisation via Supabase.}%
-     {}
+  % Deuxième image
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_mise_ajour.jpg}
+    \caption{Réinitialisation du mot de passe}
+    \label{fig:page_mise_ajour}
+  \end{minipage}
 \end{figure}
+\newpage
 
-% Profil utilisateur et paramètres
+La figure \ref{fig:page_profil} illustre la page de profil utilisateur, où l’utilisateur peut consulter et modifier ses informations personnelles. Quant à la figure \ref{fig:page_parametre}, elle montre l’écran des paramètres du compte, permettant de gérer les données à effacer et d’effectuer la réinitialisation du compte si nécessaire.
+
+% LIGNE 3 : Profil utilisateur et Paramètres
 \begin{figure}[H]
   \centering
-  \ui{Profil utilisateur}{page_profil.jpg}%
-     {Nom, e‑mail et rôle, possibilité d'édition via un crayon et bouton \emph{Déconnexion}. Données synchronisées avec Supabase.}%
-     {}
+  % Première image
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_profil.jpg}
+    \caption{Profil utilisateur}
+    \label{fig:page_profil}
+  \end{minipage}
   \hfill
-  \ui{Paramètres du compte}{page_paramtre.jpg}%
-     {Sélection des catégories de données à effacer (événements, participants, modèles, données locales) puis exécution de la réinitialisation.}%
-     {}
+  % Deuxième image
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_paramtre.jpg}
+    \caption{Paramètres du compte}
+    \label{fig:page_parametre}
+  \end{minipage}
 \end{figure}
+\newpage
 
-\subsection{Gestion des événements}
-Ces interfaces permettent aux organisateurs de créer, gérer et suivre leurs événements, 
-avec persistance des données dans Supabase.
 
-% LIGNE 3 : Tableau de bord et Mes événements
+\subsection*{Gestion des événements}
+Ces interfaces permettent aux organisateurs de créer, gérer et suivre leurs événements, avec persistance des données dans Supabase.
+La firugure \ref{fig:page_creation_event}présente l'interface qui permet de créer un nouvel événement via un formulaire guidé en plusieurs étapes : informations générales, dates et heures, lieu, paramètres de participation. Validation en temps réel et sauvegarde via Supabase.Quant à la firgure \ref{fig:page_detail_event} ,elle présente  l'interface de permet de visualiser toutes les informations de l’événement : nom, dates, code d’accès, description. Elle propose les modules interactifs (sondages, quiz, chat), avec suivi des participants, statistiques et actions rapides (édition, suppression, duplication).  
 \begin{figure}[H]
   \centering
-  \ui{Tableau de bord}{page_dashboard.jpg}%
-     {Carte de bienvenue personnalisée et statistiques (événements, participants, en cours/à venir) avec action « Nouvel événement ». Données agrégées depuis Supabase.}%
-     {}
+  % Première image : Détail d'un événement
+
+  % Deuxième image : Création d'un événement
+  \begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_creation_event.jpg}
+    \caption{Création d'un événement}
+    \label{fig:page_creation_event}
+  \end{minipage}
   \hfill
-  \ui{Mes événements}{page_evernement.jpg}%
-     {Liste des événements avec recherche, filtres (\emph{Tous}, \emph{Actifs}, \emph{À venir}) et bouton d'ajout. Synchronisé en temps réel avec la base de données.}%
-     {}
+  \begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_dtail_event.jpg}
+    \caption{Détail d'un événement}
+    \label{fig:page_detail_event}
+  \end{minipage}
+  
 \end{figure}
 
-% LIGNE 4 : Détail et Création d'événement
+
+\subsection*{Modules interactifs (Quiz et Sondages)}
+La figure \ref{fig:page_creation_module} montre l’interface de création d’un quiz.  
+Elle permet de définir le titre du module, le type de réponse (choix unique, multiple, échelle ou texte libre) et d’ajouter les questions correspondantes.  
+L’organisateur peut également configurer les réponses correctes, ajuster les paramètres et sauvegarder le tout automatiquement dans Supabase.
+La figure \ref{fig:page_modules_quiz}, présente  l'interface de la liste des modules créés par l’organisateur.  
+Chaque module s’affiche sous forme de carte indiquant son type (quiz ou sondage), son état (actif ou inactif), le nombre de questions et une action « Voir ».  
+L’utilisateur peut également effectuer une recherche, filtrer les modules existants et créer un nouveau module à l’aide du bouton « + ».  
+Toutes les données affichées sont récupérées automatiquement via l’API Supabase. 
+
 \begin{figure}[H]
   \centering
-  \ui{Détail d'un événement}{page_dtail_event.jpg}%
-     {Récapitulatif (nom, date/heure, code d'accès, description) et sections \emph{Sondage}, \emph{Quiz}, \emph{Chat} avec compteurs et actions.}%
-     {}
+  % Première image : Modules Quiz et Sondage
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_creation_module.jpg}
+    \caption{Création d’un module — Quiz}
+    \label{fig:page_modules_quiz}
+  \end{minipage}
   \hfill
-  \ui{Création d'un événement}{page_creation_event.jpg}%
-     {Formulaire par étapes : informations générales, date/heure (début et fin optionnelle), lieu et participation. Sauvegarde via API Supabase.}%
-     {}
+  % Deuxième image : Création d'un module — Quiz
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_des_moduls_quiz.jpg}
+    \caption{Modules Quiz et Sondage}
+    \label{fig:page_creation_module}
+  \end{minipage}
 \end{figure}
 
-\subsection{Modules interactifs (Quiz et Sondages)}
-Ces interfaces permettent la création et la gestion des modules interactifs, 
-avec stockage des questions et réponses dans Supabase.
+\subsection*{Création et analyse des sondages}
+ La figure \ref{fig:page_creation_sondage}, présente  l'interface qui permet de créer un sondage en définissant le titre, la description et le type de réponse souhaité (choix unique, multiple, échelle ou texte libre).  
+Elle reprend la même logique que la création d’un quiz, mais vise davantage la collecte d’opinions et de feedbacks auprès des participants.  
+Chaque question est enregistrée dans Supabase pour un suivi et une analyse ultérieure.
+La figure \ref{fig:page_resultats_quiz} montre l’écran de visualisation des résultats d’un quiz.  
+L’organisateur peut y consulter le nombre total de répondants, le pourcentage de chaque option de réponse et naviguer entre les questions.  
+Les statistiques sont calculées et actualisées en temps réel grâce à l’intégration de Supabase, offrant ainsi une analyse instantanée des performances et tendances.
 
-% LIGNE 5 : Liste des modules et Création de module Quiz
 \begin{figure}[H]
   \centering
-  \ui{Modules Quiz et Sondage}{page_des_moduls_quiz.jpg}%
-     {Recherche, filtre, bouton « + » et cartes modules (état actif, nombre de questions, action « Voir »). Données récupérées via l'API Supabase.}%
-     {}
+  % Première image : Création d’un module — Sondage
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/Screenshot_20250906-164855.jpg}
+    \caption{Création d’un module Sondage }
+    \label{fig:page_creation_sondage}
+  \end{minipage}
   \hfill
-  \ui{Création d'un module — Quiz}{page_creation_module.jpg}%
-     {Titre du module, type de réponse (choix unique/multiple, échelle, texte libre), éditeur de questions et options.}%
-     {}
+  % Deuxième image : Résultats d’une question de quiz
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_module_detail.jpg}
+    \caption{Résultats d’une question de quiz}
+    \label{fig:page_resultats_quiz}
+  \end{minipage}
 \end{figure}
 
-% LIGNE 6 : Création de sondage
+\subsection*{Participation et interaction}
+ 
+La figure \ref{fig:participation_choix_unique}, cette interface permet aux participants de répondre à une question à choix unique.  
+Chaque option est présentée sous forme de bouton radio, et la navigation entre les questions s’effectue à l’aide des boutons \emph{Précédent} et \emph{Suivant}.  
+Une fois la réponse sélectionnée, elle est automatiquement transmise au serveur via l’API Supabase pour mise à jour en temps réel.
+La figure \ref{fig:participation_choix_multiples} montre un exemple de question à choix multiples.  
+Le participant peut sélectionner plusieurs options grâce à des cases à cocher, ce qui rend l’interface adaptée aux sondages d’opinion ou aux évaluations plus ouvertes.  
+Les réponses sont également sauvegardées instantanément dans Supabase, assurant une cohérence entre tous les participants connectés.
+
 \begin{figure}[H]
   \centering
-  \ui{Création d'un module — Sondage}{Screenshot_20250906-164855.jpg}%
-     {Interface de création de sondage avec les mêmes types de réponses que le quiz, orientée recueil d'opinions.}%
-     {}
+  % Première image : Participation — Choix unique
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/page_participation.jpg}
+    \caption{Participation — Choix unique }
+    \label{fig:participation_choix_unique}
+  \end{minipage}
   \hfill
-  \ui{Résultats d'une question de quiz}{page_module_detail.jpg}%
-     {Synthèse : nombre de répondants, barres de pourcentage par option, navigation entre les questions. Statistiques calculées en temps réel depuis Supabase.}%
-     {}
-\end{figure}
-
-\subsection{Participation et interaction}
-Ces interfaces montrent comment les participants interagissent avec les modules, 
-avec synchronisation en temps réel des réponses via Supabase.
-
-% LIGNE 7 : Participation choix unique et multiples
-\begin{figure}[H]
-  \centering
-  \ui{Participation — Choix unique}{page_participation.jpg}%
-     {Affichage d'une question à choix unique avec boutons radio et navigation \emph{Précédent/Suivant}. Réponses envoyées via API Supabase.}%
-     {}
-  \hfill
-  \ui{Participation — Choix multiples}{Screenshot_20250906-165209.jpg}%
-     {Question à choix multiples avec cases à cocher permettant plusieurs réponses.}%
-     {}
+  % Deuxième image : Participation — Choix multiples
+  \begin{minipage}[b]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/Screenshot_20250906-165209.jpg}
+    \caption{Participation — Choix multiples }
+    \label{fig:participation_choix_multiples}
+  \end{minipage}
 \end{figure}
 
 \subsection{Gestion des participants}
