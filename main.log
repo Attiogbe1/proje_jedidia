@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  9 NOV 2025 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  10 NOV 2025 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2080,24 +2080,24 @@ Package pdftex.def Info: images/visualstudio.jpg  used on input line 79.
 
 
 [17 <./images/studio-idx.png> <./images/visualstudio.jpg>]
-<images/Diagram3.png, id=555, 1084.05pt x 742.775pt>
-File: images/Diagram3.png Graphic file (type png)
-<use images/Diagram3.png>
-Package pdftex.def Info: images/Diagram3.png  used on input line 148.
-(pdftex.def)             Requested size: 487.818pt x 334.24565pt.
+<images/Diagram_cas_utlisatin_fin 24.png, id=555, 1134.2375pt x 742.775pt>
+File: images/Diagram_cas_utlisatin_fin 24.png Graphic file (type png)
+<use images/Diagram_cas_utlisatin_fin 24.png>
+Package pdftex.def Info: images/Diagram_cas_utlisatin_fin 24.png  used on input line 148.
+(pdftex.def)             Requested size: 510.40216pt x 334.24565pt.
 
-Overfull \hbox (4.12112pt too wide) in paragraph at lines 148--149
+Overfull \hbox (26.70529pt too wide) in paragraph at lines 148--149
  [] 
  []
 
 
 
 [18]
-<images/Diagram-classes-fins1.png, id=561, 1013.7875pt x 752.8125pt>
-File: images/Diagram-classes-fins1.png Graphic file (type png)
-<use images/Diagram-classes-fins1.png>
-Package pdftex.def Info: images/Diagram-classes-fins1.png  used on input line 157.
-(pdftex.def)             Requested size: 506.89252pt x 376.40532pt.
+<images/Diagram_class_fin.25.png, id=561, 1013.7875pt x 582.175pt>
+File: images/Diagram_class_fin.25.png Graphic file (type png)
+<use images/Diagram_class_fin.25.png>
+Package pdftex.def Info: images/Diagram_class_fin.25.png  used on input line 157.
+(pdftex.def)             Requested size: 506.89252pt x 291.08679pt.
 
 Overfull \hbox (23.19565pt too wide) in paragraph at lines 157--158
 [][] 
@@ -2105,7 +2105,7 @@ Overfull \hbox (23.19565pt too wide) in paragraph at lines 157--158
 
 
 
-[19 <./images/Diagram3.png>]
+[19 <./images/Diagram_cas_utlisatin_fin 24.png>]
 <images/Diagramme-seq-inscription.png, id=569, 585.387pt x 377.61075pt>
 File: images/Diagramme-seq-inscription.png Graphic file (type png)
 <use images/Diagramme-seq-inscription.png>
@@ -2113,7 +2113,7 @@ Package pdftex.def Info: images/Diagramme-seq-inscription.png  used on input lin
 (pdftex.def)             Requested size: 444.8898pt x 286.98138pt.
 
 
-[20 <./images/Diagram-classes-fins1.png>]
+[20 <./images/Diagram_class_fin.25.png>]
 <images/diagramme-seq-connexion.png, id=576, 858.20625pt x 413.74574pt>
 File: images/diagramme-seq-connexion.png Graphic file (type png)
 <use images/diagramme-seq-connexion.png>
@@ -2365,7 +2365,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  48688 strings out of 473530
- 889583 string characters out of 5713343
+ 889716 string characters out of 5713343
  1860691 words of memory out of 5000000
  70635 multiletter control sequences out of 15000+600000
  703819 words of font info for 271 fonts, out of 8000000 for 9000
@@ -2402,7 +2402,7 @@ pdfTeX warning (dest): name{glo:CSS} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:MVC} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (48 pages, 5604258 bytes).
+Output written on main.pdf (48 pages, 5591485 bytes).
 PDF statistics:
  889 PDF objects out of 1000 (max. 8388607)
  163 named destinations out of 1000 (max. 500000)
