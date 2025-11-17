@@ -289,32 +289,6 @@
       \endverb
       \keyw{webl}
     \endentry
-    \entry{wrike}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=4f52348666758bf10198d9425e3399b3}{%
-           family={wrike},
-           familyi={w\bibinitperiod}}}%
-      }
-      \strng{namehash}{4f52348666758bf10198d9425e3399b3}
-      \strng{fullhash}{4f52348666758bf10198d9425e3399b3}
-      \strng{fullhashraw}{4f52348666758bf10198d9425e3399b3}
-      \strng{bibnamehash}{4f52348666758bf10198d9425e3399b3}
-      \strng{authorbibnamehash}{4f52348666758bf10198d9425e3399b3}
-      \strng{authornamehash}{4f52348666758bf10198d9425e3399b3}
-      \strng{authorfullhash}{4f52348666758bf10198d9425e3399b3}
-      \strng{authorfullhashraw}{4f52348666758bf10198d9425e3399b3}
-      \field{sortinit}{w}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{note}{(consulté le 05 Mars 2025)}
-      \verb{urlraw}
-      \verb https://www.wrike.com/fr/project-management-guide/faq/quest-ce-que-la-methode-pert-en-gestion-de-projet/
-      \endverb
-      \verb{url}
-      \verb https://www.wrike.com/fr/project-management-guide/faq/quest-ce-que-la-methode-pert-en-gestion-de-projet/
-      \endverb
-      \keyw{webl}
-    \endentry
   \enddatalist
 \endrefsection
 \endinput

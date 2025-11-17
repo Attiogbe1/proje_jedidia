@@ -64,6 +64,6 @@
 \contentsline {section}{Conclusion}{35}{section*.40}%
 \contentsline {section}{Conclusion générale}{35}{section*.41}%
 \contentsline {chapter}{Bibliographie}{36}{section*.42}%
-\contentsline {chapter}{Webographie}{36}{section*.43}%
-\contentsline {chapter}{Table des mati\`eres}{36}{section*.45}%
+\contentsline {chapter}{Bibliographie}{36}{section*.43}%
+\contentsline {chapter}{Table des mati\`eres}{37}{section*.45}%
 \contentsfinish 
