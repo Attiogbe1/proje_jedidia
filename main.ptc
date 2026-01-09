@@ -9,62 +9,66 @@
 \contentsline {chapter}{Abstract}{v}{chapter*.4}%
 \contentsline {chapter}{Liste des figures}{vi}{section*.5}%
 \contentsline {chapter}{Liste des tableaux}{viii}{section*.6}%
-\contentsline {chapter}{Introduction générale}{1}{chapter*.7}%
-\babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Revue de Littérature}{3}{chapter.1}%
-\contentsline {section}{Introduction}{3}{section*.8}%
-\contentsline {section}{\numberline {1.1}Clarification conceptuelle}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1} Application mobile}{3}{subsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1.1}Definition}{3}{subsubsection.1.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1.2} Les différents types d'applications mobiles}{4}{subsubsection.1.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.2}L'applications de gestion d'événements éducatifs interactifs}{6}{subsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.2.1}Definition}{6}{subsubsection.1.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.1.2.2}Principales caractéristiques de l'application événementielle}{6}{subsubsection.1.1.2.2}%
-\contentsline {subsection}{\numberline {1.1.3}Evénements éducatifs interactif}{7}{subsection.1.1.3}%
-\contentsline {subsubsection}{\numberline {1.1.3.1}Définition}{7}{subsubsection.1.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.1.3.2}Gestion d'événements éducatifs interactifs}{7}{subsubsection.1.1.3.2}%
-\contentsline {section}{\numberline {1.2}Solutions existantes et leurs limites}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Kahoot}{8}{subsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.1.1}Définition}{8}{subsubsection.1.2.1.1}%
-\contentsline {subsubsection}{\numberline {1.2.1.2}Limites}{8}{subsubsection.1.2.1.2}%
-\contentsline {subsection}{\numberline {1.2.2}Slido}{9}{subsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.2.1}Définition}{9}{subsubsection.1.2.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2.2}Limites}{9}{subsubsection.1.2.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Poll For All}{10}{subsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.3.1}Définition}{10}{subsubsection.1.2.3.1}%
-\contentsline {subsubsection}{\numberline {1.2.3.2}Limites}{10}{subsubsection.1.2.3.2}%
-\contentsline {subsection}{\numberline {1.2.4}Constats et limites des solutions existantes}{12}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Notre solution}{13}{subsection.1.2.5}%
-\contentsline {section}{Conclusion}{13}{subsection.1.2.5}%
-\contentsline {chapter}{\numberline {2}Implémentation de l'infrastructure}{14}{chapter.2}%
-\contentsline {section}{Introduction}{14}{section*.16}%
-\contentsline {section}{\numberline {2.1}Choix techniques}{14}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Méthodologie de gestion du projet}{14}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}L’architecture du projet }{14}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3} La technologie adaptée à notre projet }{16}{subsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.3.1} Flutter}{16}{subsubsection.2.1.3.1}%
-\contentsline {subsubsection}{\numberline {2.1.3.2} Laravel }{16}{subsubsection.2.1.3.2}%
-\contentsline {subsubsection}{\numberline {2.1.3.3} Supabase}{16}{subsubsection.2.1.3.3}%
-\contentsline {subsubsection}{\numberline {2.1.3.4} Firebase }{16}{subsubsection.2.1.3.4}%
-\contentsline {subsection}{\numberline {2.1.4}\gls {IDE} ou environnement de développement}{17}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2} Conception}{17}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Modélisation}{17}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}Analyse des besoins}{17}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}Acteurs du système}{18}{subsubsection.2.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.2.1.3}Le diagramme de cas d’utilisation}{18}{subsubsection.2.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.2.1.4}Le diagramme des classes}{19}{subsubsection.2.2.1.4}%
-\contentsline {subsubsection}{\numberline {2.2.1.5}Les diagramme de séquence}{20}{subsubsection.2.2.1.5}%
-\contentsline {section}{Conclusion}{23}{figure.caption.24}%
-\contentsline {chapter}{\numberline {3}Présentation de la solution}{24}{chapter.3}%
-\contentsline {section}{Introduction}{24}{section*.25}%
-\contentsline {section}{\numberline {3.1}Interfaces de documentation de l’API et de l’application}{24}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Interfaces de documentation de l’API}{24}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Interfaces utilisateur de l'application}{26}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Gestion des participants}{34}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2} Défis de sécurité et conformité}{35}{section.3.2}%
-\contentsline {section}{Conclusion}{35}{section*.40}%
-\contentsline {section}{Conclusion générale}{35}{section*.41}%
-\contentsline {chapter}{Bibliographie}{36}{section*.42}%
-\contentsline {chapter}{Bibliographie}{36}{section*.43}%
-\contentsline {chapter}{Table des mati\`eres}{37}{section*.45}%
+\contentsline {chapter}{Liste des sigles et acronymes}{ix}{section*.7}%
+\contentsline {chapter}{Introduction}{1}{chapter*.9}%
+\contentsline {chapter}{\numberline {1}REVUE DE LITTERATURE}{3}{chapter.1}%
+\contentsline {section}{Introduction}{3}{section*.10}%
+\contentsline {section}{\numberline {1.1} Généralités sur les réseaux informatiques }{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Définition }{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Objectifs des réseaux informatiques}{3}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Composants d’un réseau informatique}{3}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Types de réseau informatique}{4}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Modèles de communication réseau}{4}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Protocoles réseau}{4}{subsection.1.1.6}%
+\contentsline {section}{\numberline {1.2}Présentation du ROUTEROS MIKROTIK}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1} Fonctionnalités principales}{4}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}Réseau et sécurité informatique}{7}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Risques et vulnérabilités}{7}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Bonnes pratiques de sécurisation}{7}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Technologies existantes d’optimisation de réseau}{7}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Présentation du protocole \gls {PPPoE}}{7}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Présentation du protocole SSTP}{7}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Autres solutions courantes (\gls {VPN}, \gls {VLAN}, \gls {QoS}, etc.)}{8}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Comparaison des différentes technologies}{8}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}\gls {PPPoE} vs \gls {SSTP} : avantages, limites, cas d’usage}{8}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Analyse comparative avec d'autres technologies}{8}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Présentation du réseau existant de la CMMB}{9}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Limites fonctionnelles et besoins d’amélioration}{9}{subsection.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.5}Proposition d’une solution basée sur \gls {PPPoE} et \gls {SSTP}}{10}{subsection.1.5.5}%
+\contentsline {section}{Conclusion}{10}{subsection.1.5.5}%
+\contentsline {chapter}{\numberline {2}RECHERCHE PRELIMINAIRE}{11}{chapter.2}%
+\contentsline {section}{Introduction}{11}{section*.13}%
+\contentsline {section}{\numberline {2.1}Architecture réseau proposée pour la \gls {CMMB}}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Schéma global d’interconnexion des agences }{11}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Rôle des protocoles \gls {PPPoE} et \gls {SSTP} dans l’architecture}{13}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Outils et équipements utilisés}{13}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Plan d’adressage et schéma logique du réseau}{15}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Configuration du serveur PPPoE avec MikroTik}{16}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Configuration du tunnel \gls {SSTP} avec MikroTik }{20}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}L’architecture du projet }{23}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8} La technologie adaptée à notre projet }{24}{subsection.2.1.8}%
+\contentsline {subsubsection}{\numberline {2.1.8.1} Flutter}{24}{subsubsection.2.1.8.1}%
+\contentsline {subsubsection}{\numberline {2.1.8.2} Laravel }{25}{subsubsection.2.1.8.2}%
+\contentsline {subsubsection}{\numberline {2.1.8.3} Supabase}{25}{subsubsection.2.1.8.3}%
+\contentsline {subsubsection}{\numberline {2.1.8.4} Firebase }{25}{subsubsection.2.1.8.4}%
+\contentsline {subsection}{\numberline {2.1.9} ou environnement de développement}{25}{subsection.2.1.9}%
+\contentsline {section}{\numberline {2.2} Conception}{26}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Modélisation}{26}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Analyse des besoins}{26}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}Acteurs du système}{27}{subsubsection.2.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.2.1.3}Le diagramme de cas d’utilisation}{27}{subsubsection.2.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.2.1.4}Le diagramme des classes}{28}{subsubsection.2.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.2.1.5}Les diagramme de séquence}{28}{subsubsection.2.2.1.5}%
+\contentsline {section}{Conclusion}{31}{figure.caption.37}%
+\contentsline {chapter}{\numberline {3}Présentation de la solution}{32}{chapter.3}%
+\contentsline {section}{Introduction}{32}{section*.38}%
+\contentsline {section}{\numberline {3.1}Interfaces de documentation de l’API et de l’application}{32}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Interfaces de documentation de l’API}{32}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Interfaces utilisateur de l'application}{34}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Gestion des participants}{42}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2} Défis de sécurité et conformité}{43}{section.3.2}%
+\contentsline {section}{Conclusion}{43}{section*.53}%
+\contentsline {section}{Conclusion générale}{43}{section*.54}%
+\contentsline {chapter}{Bibliographie}{44}{section*.55}%
+\contentsline {chapter}{Webographie}{44}{section*.56}%
 \contentsfinish 

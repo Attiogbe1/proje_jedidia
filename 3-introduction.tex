@@ -1,51 +1,50 @@
-
-\chapter*{Introduction générale}
-\markboth{Introduction générale}{}
-\addcontentsline{toc}{chapter}{Introduction générale}
-
-
-\vspace{0.5cm}
+\chapter*{Introduction}
+\markboth{Introduction}{}
+\addcontentsline{toc}{chapter}{Introduction}
 
 \section*{Contexte général}
 
-L’éducation constitue un pilier fondamental du développement des sociétés. Dans un contexte de transition numérique, les technologies de l’information et de la communication (TIC) offrent de nouvelles opportunités pour enrichir les méthodes pédagogiques traditionnelles.
+Avec la montée en puissance de la digitalisation des services financiers, la 
+stabilité et la performance des réseaux informatiques sont devenues des enjeux 
+stratégiques pour les institutions, notamment dans la microfinance où la fluidité des 
+transactions conditionne directement la satisfaction et la confiance des clients. Dans ce 
+type d’organisation, comme la \gls{CMMB}, où de multiples transactions de faible montant 
+sont effectuées simultanément, toute instabilité réseau peut entraîner des retards, une 
+baisse de productivité et une dégradation de l’expérience client. 
 
-Parmi ces évolutions, les événements éducatifs interactifs – tels que les ateliers, formations,  conférences – favorisent l’engagement des apprenants grâce à une participation active et en temps réel. Toutefois, les outils existants présentent souvent des limites en termes d’intégration, de flexibilité ou d’accessibilité.
+La technologie \gls{PPPoE} (Point-to-Point Protocol over Ethernet), intégrée au 
+système \gls{RouterOS} de MikroTik, offre une solution adaptée en permettant une 
+authentification centralisée, une allocation contrôlée des adresses \gls{IP} et une gestion 
+fine des sessions utilisateurs. De plus, le protocole \gls{SSTP} (Secure Socket Tunneling 
+Protocol), basé sur le chiffrement \gls{SSL}/\gls{TLS}, renforce la sécurité des 
+communications inter-agences à travers un tunnel VPN chiffré. 
 
-C’est dans cette optique que s’inscrit ce projet : concevoir et développer une application mobile de gestion d’événements éducatifs interactifs, permettant aux organisateurs de créer des activités dynamiques (quiz, sondages, questions-réponses) et aux participants de contribuer facilement via une interface intuitive. Cette solution vise à améliorer l’interaction pédagogique et à soutenir une expérience d’apprentissage plus participative.
-\section*{Questions  de recherche}
-Comment concevoir et développer une application mobile de gestion d’événements éducatifs interactifs qui améliore significativement l’engagement des participants et l’efficacité pédagogique par rapport
- aux solutions existantes ?
+Dans le cas spécifique de la \gls{CMMB}, dont les agences sont géographiquement 
+dispersées, la mise en œuvre conjointe de ces technologies représente une opportunité 
+stratégique pour garantir la continuité du service, minimiser les interruptions et 
+renforcer la sécurité des échanges de données sensibles entre agences. 
 
-\section*{Objectif général de recherche}
-Cette recherche vise à concevoir et développer une application mobile capable de transformer la gestion et l’animation des événements éducatifs en y intégrant des fonctionnalités interactives, accessibles et adaptées aux contextes à faible connectivité.
+\section*{Problématique}
 
+Dans un contexte où la fiabilité et la stabilité du réseau informatique de la \gls{CMMB} 
+sont régulièrement mises à l’épreuve, comment les technologies PPPoE et \gls{SSTP}, 
+intégrées au \gls{RouterOS} de MikroTik, peuvent-elles être exploitées pour optimiser la 
+gestion des utilisateurs et la performance du réseau, tout en garantissant la 
+confidentialité, l’intégrité et la disponibilité des données sensibles des clients 
+conformément aux exigences de sécurité propres au secteur de la microfinance ?
 
-\subsection*{Objectifs spécifiques}
-Notre démarche s'articule autour de quatre objectifs spécifiques complémentaires :
-\begin{enumerate}[leftmargin=2em]
-    \item  Développer une interface fluide et intuitive permettant de gérer dynamiquement les rôles et permissions des utilisateurs selon leur profil d’accès.
-    \item Intégrer des fonctionnalités interactives (quiz, sondages, Q\&A) synchronisées en temps réel.
-    \item Mettre en œuvre un système de stockage local avec synchronisation distante
-    \item Développer un tableau de bord analytique pour le suivi et l’évaluation des participants.
-\end{enumerate}
-\section*{Méthodologie et approche}
-Cette recherche adopte une approche méthodologique mixte combinant :
-\begin{itemize}[leftmargin=1.5em]
-    \item \textbf{Analyse comparative} des solutions existantes sur le marché
-    \item \textbf{Développement itératif} basé sur des retours utilisateurs
-    \item \textbf{Tests d'utilisabilité} et évaluation de performance
-    \item \textbf{Validation empirique} à travers des cas d'usage réels
+\section*{Objectif général}
+
+Améliorer la fiabilité, la performance et la sécurité du réseau de la\gls{CMMB}  grâce à 
+l’utilisation conjointe des technologies PPPoE et SSTP sur le \gls{RouterOS} de 
+MikroTik, afin d’assurer une gestion efficace des connexions et une interconnexion 
+sécurisée entre le siège et les agences.
+
+\section*{Axes du travail}
+
+Notre travail s’articule autour de trois axes principaux :
+\begin{itemize}[leftmargin=2em]
+    \item Le chapitre I traite de la revue littéraire;
+    \item Le chapitre II parle de la mise en œuvre de la solution;
+    \item Le chapitre III aborde les résultats et évaluations.
 \end{itemize}
-La démarche se conclut par une synthèse des contributions, une évaluation des résultats obtenus et les perspectives d'évolution du projet.
-\vspace{1cm}
-\section*{Organisation du document}
- Le travail est structuré en trois chapitres. Le chapitre 1 présente une revue de littérature concernant
- la problématique. Nous abordons ensuite dans le chapitre 2 la question des choix techniques ainsi
- que les étapes de conception de notre projet puis dans le chapitre 3 nous présentons  les résultats obtenus
-
-
-
-
-
-

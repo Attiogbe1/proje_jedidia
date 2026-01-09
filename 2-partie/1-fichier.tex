@@ -3,37 +3,450 @@
 
 
 \section*{Introduction}
-Dans le cadre du développement de notre application mobile de gestion d'événements éducatifs interactifs, il est essentiel de bien définir les étapes préliminaires du projet afin de garantir une solution qui répond parfaitement aux besoins et attentes des utilisateurs. Ce chapitre sera consacré à l'analyse détaillée de ces besoins, à la conception de l'application, ainsi qu'à l'explication des choix technologiques effectués pour la mise en œuvre de l'application
+Ce chapitre est consacré à la mise en œuvre pratique de la solution réseau 
+proposée pour la \gls{CMMB}. Il décrit l’architecture d’interconnexion retenue entre le 
+siège et les différentes agences, ainsi que le rôle des protocoles \gls{PPPoE} et \gls{SSTP} 
+dans la gestion des accès et la sécurisation des communications. Les outils, 
+équipements et plans d’adressage utilisés sont présentés afin de garantir une 
+configuration cohérente et maîtrisée. Enfin, ce chapitre détaille les différentes 
+étapes de configuration des services \gls{PPPoE} et \gls{SSTP} sous MikroTik, l’intégration 
+des mesures de sécurité et les tests réalisés pour valider le bon fonctionnement de
+l’infrastructure déployée.
 
-\section{Choix techniques}
-Dans cette section, nous décrirons la méthodologie de gestion de notre projet, les technologies que nous avons choisies, ainsi que les outils utilisés pour développer notre application.
-\subsection{Méthodologie de gestion du projet}
-Dans un projet mobile marqué par des durées incertaines (UX, intégrations, tests multi-appareils)
-et de nombreuses dépendances, la méthode \gls{PERT} s’impose : la triple estimation O–M–P produit des
-durées attendues plus fiables, met en évidence le chemin critique et les marges, et permet d’ajuster
-régulièrement le planning pour respecter l’échéance.
+\section{Architecture réseau proposée pour la \gls{CMMB}}
+\subsection{Schéma global d’interconnexion des agences }
+La \gls{CMMB} dispose de plusieurs agences réparties dans différentes villes du pays.
+Le réseau proposé repose sur une architecture en étoile, avec un siège central jouant
+le rôle de nœud principal (Data Center) et des agences distantes connectées via
+Internet.
 
-\subsubsection*{Méthode de \gls{PERT}}
-La   \gls{PERT}  est un outil de planification de projet utilisé pour calculer de manière réaliste le temps nécessaire pour terminer un projet. Les diagrammes de \gls{PERT} sont utilisés pour planifier les tâches au sein d'un projet, ce qui facilite la programmation des livrables et la coordination avec les membres de l'équipe.
+Chaque agence accède aux ressources du siège (serveurs de base de données,
+applications de gestion, fichiers internes) à travers un \gls{VPN} sécurisé
+\gls{SSTP}.
+
+L’accès Internet interne de chaque agence est fourni via un serveur \gls{PPPoE}
+MikroTik, garantissant une gestion fine des utilisateurs et une meilleure traçabilité.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/1.jpg}
+    \caption{Proposition d’architecture du réseau de la CMMB pour le projet }
+    \label{fig:reseau-cmmb}
+\end{figure}
+
+\subsection{Rôle des protocoles \gls{PPPoE} et \gls{SSTP} dans l’architecture}
+   \subsubsection*{ \gls{PPPoE} (Point-to-Point Protocol over Ethernet)}
+    \begin{itemize}
+    \item Fournit un accès Internet contrôlé à chaque utilisateur interne.
+    \item Permet une authentification par identifiant/mot de passe.
+    \item Facilite la facturation, la gestion de bande passante et la traçabilité.
+    \item Intégré au serveur MikroTik pour une administration centralisée des comptes utilisateurs.
+\end{itemize}
+
+   \subsubsection*{ \gls{SSTP} (Secure Socket Tunneling Protocol)}
+\begin{itemize}
+    \item Assure la connexion sécurisée entre les agences et le siège.
+    \item Utilise \gls{SSL}\//\gls{TLS} (port 443), donc fonctionne même à travers les pare-feux restrictifs.
+    \item Garantit la confidentialité et l’intégrité des données échangées entre les sites.
+\end{itemize}
+
+\subsection{Outils et équipements utilisés}
+Le succès de l'implémentation de cette architecture repose sur le choix judicieux
+d'outils de simulation, de systèmes d'exploitation (\gls{OS}) de réseau et d'équipements
+virtuels et réels.
+\subsubsection*{• Outils de Simulation et Virtualisation}
+\begin{table}[H]
+\centering
+\caption{Tableau : Présentation des outils}
+\label{tab:outils}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{3cm}|p{5cm}|p{7cm}|}
+\hline
+\textbf{Outil} & \textbf{Rôle dans l'Architecture} & \textbf{Justification du Choix} \\
+\hline
+\gls{GNS3} &
+Plateforme de virtualisation et d'émulation réseau. &
+Permet d'intégrer et de simuler l'interconnexion de routeurs MikroTik (\gls{RouterOS}), de commutateurs (Switchs), et de \gls{PC} virtuels (\gls{VPCS}) dans un environnement sécurisé et évolutif. \\
+\hline
+\gls{VPCS} &
+Représentation des terminaux utilisateurs (\gls{PC}1 à \gls{PC}10). &
+Utilisé pour simuler les clients légers, notamment pour effectuer les tests de connectivité (Ping) et valider le mécanisme d'authentification \gls{PPPoE}. \\
+\hline
+WinBox &
+Interface de gestion graphique pour MikroTik \gls{RouterOS}. &
+Outil essentiel pour la configuration à distance et la surveillance des routeurs MikroTik (RT-SIEGE et les routeurs d'agences) de manière intuitive. \\
+\hline
+\end{tabular}
+\end{table}
+\subsubsection*{• Équipements Réseau}
+
+\begin{table}[H]
+\centering
+\caption{Présentation des équipements}
+\label{tab:equipements}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4cm}|p{4cm}|p{6cm}|}
+\hline
+\textbf{Équipement} & \textbf{Modèle/OS Utilisé} & \textbf{Rôle dans l'Architecture} \\
+\hline
+Routeurs (RT-X) & MikroTik RouterOS (v6 ou v7) &
+Cœur de l'architecture. Le RT-SIEGE sert de serveur \gls{SSTP}, de passerelle Internet et de point de sortie \gls{NAT}.
+Les routeurs d'agences (ex : RT-AKPAKPA) servent de clients \gls{SSTP} et de serveurs \gls{PPPoE} locaux. \\
+\hline
+Commutateur Principal (Switch1) &
+Commutateur virtuel (ou réel, géré/non géré). &
+Assure la connectivité de la couche 2 entre le RT-SIEGE et tous les routeurs d'agences. \\
+\hline
+Commutateurs d'Agence (Switch1’ à Switch5) &
+Commutateurs virtuels (ou réels, non gérés). &
+Utilisés pour connecter les PC clients (\gls{PC}1, \gls{PC}2, etc.) au routeur de leur agence respective. \\
+\hline
+Client \gls{PPPoE} (\gls{VPCS}) &
+Module \gls{PPPoE} intégré au \gls{VPCS} ou client \gls{PPPoE} \gls{OS} réel (Windows/Linux). &
+Permet aux \gls{PC} clients de s'authentifier auprès du serveur \gls{PPPoE} de leur routeur d'agence. \\
+\hline
+\end{tabular}
+\end{table}
+\subsubsection*{• Logiciels et Protocoles Clés}
+\begin{table}[H]
+\centering
+\caption{Présentation des logiciels et protocoles}
+\label{tab:logiciels et protocoles}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4cm}|p{4cm}|p{6cm}|}
+\hline
+\textbf{Logiciel/Protocole} & \textbf{Catégorie} & \textbf{Application Critique} \\
+\hline
+\gls{RouterOS} &
+Système d'exploitation réseau. &
+Fournit toutes les fonctionnalités nécessaires : routage, firewall, services \gls{PPPoE} et \gls{SSTP}, gestion des certificats \gls{SSL}. \\
+\hline
+\gls{SSTP} &
+Protocole \gls{VPN}. &
+Assure la sécurisation (chiffrement \gls{TLS}) et la connexion persistante entre le siège et les agences. \\
+\hline
+\gls{PPPoE} &
+Protocole d'encapsulation. &
+Garantit l'authentification par identifiant et l'allocation contrôlée d'adresses \gls{IP} pour les \gls{PC} clients. \\
+\hline
+\gls{SSL}\//\gls{TLS} &
+Protocole de sécurité. &
+Utilisé par \gls{SSTP} pour chiffrer les communications et par la gestion des certificats pour authentifier les routeurs. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Plan d’adressage et schéma logique du réseau}
+
+\begin{itemize}
+\item \textbf{Adressage du Tronc Principal (WAN / Réseau de Transport)}
+\end{itemize}
+
+Ce réseau est utilisé pour la communication de la couche 2 entre le RT-SIEGE et les
+routeurs d'agences via le Switch1.
+\begin{table}[H]
+\centering
+\caption{Proposition de plan d’adressage pour le réseau}
+\label{tab:adressage_wan}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4cm}|p{4cm}|p{3cm}|p{5cm}|}
+\hline
+\textbf{Élément} & \textbf{Adresse \gls{IP}} & \textbf{Masque} & \textbf{Rôle / Description} \\
+\hline
+Interface \gls{WAN} (RT-SIEGE) & 192.168.254.2 & /24 &
+Adresse de sortie vers l'Internet / FAI (simulée). \\
+\hline
+Passerelle \gls{WAN} & 192.168.254.1 & /24 &
+Gateway par défaut. \\
+\hline
+Réseau de Transport & 10.0.0.0 & /24 &
+Sous-réseau de liaison entre le RT-SIEGE et les agences (via Switch1). \\
+\hline
+RT-SIEGE (Interface \gls{LAN}) & 10.0.0.1 & /24 &
+Passerelle sur le réseau de transport. \\
+\hline
+RT-AKPAKPA & 10.0.0.10 & /24 &
+Point d'entrée de l'agence 1 sur le Switch1. \\
+\hline
+RT-AKASSATO & 10.0.0.20 & /24 &
+Point d'entrée de l'agence 2 sur le Switch1. \\
+\hline
+RT-OVENDO & 10.0.0.30 & /24 &
+Point d'entrée de l'agence 3 sur le Switch1. \\
+\hline
+RT-COCODJI & 10.0.0.40 & /24 &
+Point d'entrée de l'agence 4 sur le Switch1. \\
+\hline
+RT-FIDJROSSE & 10.0.0.50 & /24 &
+Point d'entrée de l'agence 5 sur le Switch1. \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item \textbf{Adressage des Tunnels \gls{VPN} \gls{SSTP}}
+\end{itemize}
+
+Ce réseau est utilisé par les interfaces virtuelles du \gls{VPN} \gls{SSTP} pour le routage des
+données entre les sites.
+\begin{table}[H]
+\centering
+\caption{Plan d’adressage des tunnels VPN SSTP}
+\label{tab:adressage_sstp}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4cm}|p{4cm}|p{3cm}|p{5cm}|}
+\hline
+\textbf{Élément} & \textbf{Adresse \gls{IP}} & \textbf{Masque} & \textbf{Rôle / Description} \\
+\hline
+Réseau Tunnels \gls{VPN} & 172.16.0.0 & /24 &
+Sous-réseau dédié aux liaisons \gls{VPN} \gls{SSTP} . \\
+\hline
+RT-SIEGE (Serveur \gls{SSTP}) & 172.16.0.1 & /24 &
+Adresse locale du Serveur \gls{SSTP} (Hub). \\
+\hline
+RT-AKPAKPA (Client \gls{SSTP}) & 172.16.0.10 & /24 &
+Adresse distante du tunnel (Pool attribué). \\
+\hline
+RT-AKASSATO (Client \gls{SSTP}) & 172.16.0.20 & /24 &
+Adresse distante du tunnel (Pool attribué). \\
+\hline
+RT-OVENDO (Client \gls{SSTP}) & 172.16.0.30 & /24 &
+Adresse distante du tunnel (Pool attribué). \\
+\hline
+RT-COCODJI (Client \gls{SSTP}) & 172.16.0.40 & /24 &
+Adresse distante du tunnel (Pool attribué). \\
+\hline
+RT-FIDJROSSE (Client \gls{SSTP}) & 172.16.0.50 & /24 &
+Adresse distante du tunnel (Pool attribué). \\
+\hline
+\end{tabular}
+\end{table}
+\begin{itemize}
+\item \textbf{Winbox :}
+\end{itemize}
+\subsection{Configuration du serveur PPPoE avec MikroTik}
+
+Essayons avec le routeur de \textbf{AKPAKPA}.
+
+\textbf{Étapes principales :}
+
+\begin{enumerate}
+    \item \textbf{Création du pool d’adresses IP :} \\
+    Ce pool définit la plage d'adresses qui sera distribuée aux clients après 
+    leur authentification.
+    
+    \begin{itemize}
+        \item \textbf{Invite de commande :}
+        \begin{verbatim}
+/ip pool add name=pool-akpakpa ranges=10.1.1.100-10.1.1.200
+        \end{verbatim}
+
+        \item \textbf{Winbox} \\
+    \end{itemize}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/5.jpg}
+    \caption{Création du pool akpakpa }
+    \label{fig:reseau_cmmb}
+\end{figure}
+ \item \textbf{Création du profil PPP :} \\
+  Le profil lie l'adresse de la passerelle du routeur (local-address) au pool 
+d'adresses pour les clients (remote-address).
+    
+    \begin{itemize}
+        \item \textbf{ Invite de commande :}
+        \begin{verbatim}
+/ppp profile add name=profil-clients \ local-address=10.1.1.1 \remote-address=pool
+akpakpa \dns-server=8.8.8.8 
+        \end{verbatim}
+
+        \item \textbf{Winbox} \\
+    \end{itemize}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/6.jpg}
+    \caption{Création du profil PPP }
+    \label{fig:reseau_cmmb}
+\end{figure}
+\item \textbf{Activation du serveur PPPoE sur l’interface \gls{LAN} : } \\
+On active le service \gls{PPPoE} sur l'interface du \gls{LAN} (ether1) pour qu'il 
+écoute les demandes de connexion des clients
+    
+    \begin{itemize}
+        \item \textbf{ Invite de commande :}
+        \begin{verbatim}
+/interface pppoe-server server add \ service-name =PPPoE-LAN-AKPAKPA 
+interface=ether1 \ default-profile=profil-clients \ enabled=yes
+        \end{verbatim}
+
+        \item \textbf{Winbox} \\
+    \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{images/Model.png}
+    \caption{Création du PPPoE service}
+    \label{fig:mon_img_mvc}
+ \end{figure}
+ \item \textbf{Ajout des utilisateurs \gls{PPPoE}: } \\
+Ceci est la base de données d'authentification pour le contrôle d'accès.    
+        \begin{table}[h!]
+        \centering
+        \caption{Base de donnée d’authentification pour \gls{PPPoE}}
+        \label{tab:pppoe_auth}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Utilisateur} & \textbf{Mot de passe} & \gls{PC} & Service / Profil \gls{PPPoE} \\ \hline
+        \gls{PC}1 & \gls{PPPoE} & \gls{PC}1 & profil-clients \\ \hline
+        \gls{PC}2 & \gls{PPPoE} & \gls{PC}2 & profil-clients \\ \hline
+        \end{tabular}
+        \end{table}
+   \begin{itemize}
+        \item \textbf{ Invite de commande :}
+        \begin{verbatim}
+
+       - /ppp secret add name=PC1 password=     service=pppoe profile=profil
+        clients 
+       - /ppp secret add name=PC2 password=     service=pppoe profile=profil
+        clients
+        \end{verbatim}
+
+        \item \textbf{Winbox} \\
+    \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{images/Model.png}
+    \caption{ Création des PPP secrets}
+    \label{fig:mon_img_PPP}
+ \end{figure}
+\end{enumerate}
+
+\subsection{Configuration du tunnel \gls{SSTP} avec MikroTik }
+
+Le \gls{SSTP} est utilisé pour établir un VPN chiffré 
+entre le RT-SIEGE (Serveur) et les routeurs d'agences (Clients), en utilisant le bloc 
+d'adressage \gls{VPN}172.16.0.0/24.
+
+\begin{enumerate}
+    \item \textbf{ Configuration du RT-SIEGE (Serveur \gls{SSTP}):} \\
+    Le siège agit comme le Hub central et distribue les adresses \gls{IP} du réseau \gls{VPN}
+(172.16.0.0/24). 
+    
+    \begin{enumerate}[label=A.]
+    \item \textbf{Adressage et Pool VPN :} \\
+    Nous devons nous assurer que le pool d'adresses VPN pour les clients est défini 
+    (le siège lui-même utilise 172.16.0.1/24).
+
+    \textbf{Invite de commande :}
+    \begin{verbatim}
+    /ip address add address=10.0.0.1/24 interface=ether2
+    /ip pool add name=sstp-pool ranges=172.16.0.10-172.16.0.50
+    \end{verbatim}
+
+\end{enumerate}
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/5.jpg}
+    \caption{ SSTP pool configuration   }
+    \label{fig:reseau_cmmb_ pool}
+\end{figure}
+ \item \textbf{Créer le profil \gls{SSTP} qui attribue les adresses du pool } \\
+  /ppp profile add name=default-encryption \ local-address=172.16.0.1 \ remote
+address=sstp-pool  
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/6.jpg}
+    \caption{PPP profil configuration  }
+    \label{fig:reseau_cmmb}
+\end{figure}
+
+ \begin{enumerate}[label=B.]
+    \item \textbf{Secrets et Activation du Serveur \gls{SSTP} :} \\
+   Nous créons un secret pour l'agence et activons le service sans certificat. 
+
+    \textbf{Invite de commande :}
+    \begin{verbatim}
+    /ip address add address=10.0.0.1/24 interface=ether2
+    /ip pool add name=sstp-pool ranges=172.16.0.10-172.16.0.50
+    \end{verbatim}
+
+\end{enumerate}
+
+\item \textbf{Activation du serveur PPPoE sur l’interface \gls{LAN} : } \\
+On active le service \gls{PPPoE} sur l'interface du \gls{LAN} (ether1) pour qu'il 
+écoute les demandes de connexion des clients
+    
+    \begin{itemize}
+        \item \textbf{ Invite de commande :}
+        \begin{verbatim}
+/interface pppoe-server server add \ service-name =PPPoE-LAN-AKPAKPA 
+interface=ether1 \ default-profile=profil-clients \ enabled=yes
+        \end{verbatim}
+
+        \item \textbf{Winbox} \\
+    \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{images/Model.png}
+    \caption{Création du PPPoE service}
+    \label{fig:mon_img_mvc}
+ \end{figure}
+ \item \textbf{Ajout des utilisateurs \gls{PPPoE}: } \\
+Ceci est la base de données d'authentification pour le contrôle d'accès.    
+        \begin{table}[h!]
+        \centering
+        \caption{Base de donnée d’authentification pour \gls{PPPoE}}
+        \label{tab:pppoe_auth}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Utilisateur} & \textbf{Mot de passe} & \gls{PC} & Service / Profil \gls{PPPoE} \\ \hline
+        \gls{PC}1 & \gls{PPPoE} & \gls{PC}1 & profil-clients \\ \hline
+        \gls{PC}2 & \gls{PPPoE} & \gls{PC}2 & profil-clients \\ \hline
+        \end{tabular}
+        \end{table}
+   \begin{itemize}
+        \item \textbf{ Invite de commande :}
+        \begin{verbatim}
+
+       - /ppp secret add name=PC1 password=     service=pppoe profile=profil
+        clients 
+       - /ppp secret add name=PC2 password=     service=pppoe profile=profil
+        clients
+        \end{verbatim}
+
+        \item \textbf{Winbox} \\
+    \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{images/Model.png}
+    \caption{ Création des PPP secrets}
+    \label{fig:mon_img_PPP}
+ \end{figure}
+\end{enumerate}
+
+
+
+\subsubsection*{Méthode de }
+La     est un outil de planification de projet utilisé pour calculer de manière réaliste le temps nécessaire pour terminer un projet. Les diagrammes de  sont utilisés pour planifier les tâches au sein d'un projet, ce qui facilite la programmation des livrables et la coordination avec les membres de l'équipe.
 \subsection{L’architecture du projet }
 
 L’architecture d’un logiciel décrit la manière dont sont agencés les différents éléments
  d’une application et comment ils interagissent entre eux. Cette étape est donc l’une des premières étapes du développement logiciel et intervient lors de la phase de conception.
-C’est celle que nous allons utiliser dans le développment de cette application.\gls{MVC} est un motif d'architecture logicielle destiné aux interfaces graphiques
+C’est celle que nous allons utiliser dans le développment de cette application. est un motif d'architecture logicielle destiné aux interfaces graphiques
 permet de bien organiser son code source. Il va nous aider à savoir quels fichiers créer, mais
-surtout à définir leur rôle. Le but de \gls{MVC} est justement de séparer la logique du code en
+surtout à définir leur rôle. Le but de  est justement de séparer la logique du code en
 trois parties que l’on retrouve dans des fichiers distincts.
  Le motif est composé de trois types de modules ayant trois responsabilités différentes :
 
      \textbf{Modèle } :Élément qui contient les données ainsi que de la logique en rapport avec les données : validation, lecture et enregistrement. Il peut, dans sa forme la plus simple, contenir uniquement une simple valeur, ou une structure de données plus complexe. Le modèle représente l'univers dans lequel s'inscrit l'application. Par exemple pour une application de banque, le modèle représente des comptes, des clients, ainsi que les opérations telles que dépôt et retraits, et vérifie que les retraits ne dépassent pas la limite de crédit. ;
 
-     \textbf{Vue } : Partie visible d'une interface graphique. La vue se sert du modèle, et peut être un diagramme, un formulaire, des boutons, etc. Une vue contient des éléments visuels ainsi que la logique nécessaire pour afficher les données provenant du modèle. Dans une application de bureau classique, la vue obtient les données nécessaires à la présentation du modèle en posant des questions. Elle peut également mettre à jour le modèle en envoyant des messages appropriés. Dans une application web une vue contient des balises \gls{HTML};
+     \textbf{Vue } : Partie visible d'une interface graphique. La vue se sert du modèle, et peut être un diagramme, un formulaire, des boutons, etc. Une vue contient des éléments visuels ainsi que la logique nécessaire pour afficher les données provenant du modèle. Dans une application de bureau classique, la vue obtient les données nécessaires à la présentation du modèle en posant des questions. Elle peut également mettre à jour le modèle en envoyant des messages appropriés. Dans une application web une vue contient des balises ;
 
     \textbf{Contrôleur} : Module qui traite les actions de l'utilisateur, modifie les données du modèle et de la vue.
     \begin{figure}[H]
     \centering
     \includegraphics[scale=0.8]{images/Model.png}
-    \caption{  Architecture \gls{MVC} \cite{wikipedia} }
+    \caption{  Architecture  \cite{wikipedia} }
     \label{fig:mon_img_mvc}
  \end{figure}
     \subsection{    La technologie adaptée à notre projet }
@@ -46,8 +459,8 @@ Flutter est un framework de développement d’applications multiplateforme, con
 Nous avons opté ce choix parce que Flutter permet de développer des applications Android et iOS sans nécessiter de code distinct pour chaque système. Il garantit une expérience fluide et native sur tous les appareils. Avant leur publication, ces applications sont compilées pour chaque plateforme, éliminant ainsi le besoin d’un module runtime ou d’un navigateur. Grâce à cette base de code unique, Flutter peut également servir à créer des applications web et des logiciels natifs pour Windows, Linux et macOS.
 Le Flutter SDK se base sur le langage de programmation Dart qui est  également développé par Google  \cite{ionos}
 \subsubsection{ Laravel }
-Créé en 2011 par \textbf{Taylor Otwell}, Laravel est un  framework \gls{PHP} conçu pour offrir une structure organisée et efficace au développement web. Il facilite la création d’applications, qu’elles soient simples ou complexes, en fournissant des outils intégrés dès l’installation.  
-Grâce à sa flexibilité, Laravel permet de développer divers types de projets, tels que des sites web dynamiques, des logiciels d’entreprise (\gls{CRM}, \gls{CMS}), des plateformes e-commerce  ou encore des réseaux sociaux. Il est particulièrement adapté aux applications nécessitant un backend robuste, incluant la gestion des utilisateurs et des commandes.  
+Créé en 2011 par \textbf{Taylor Otwell}, Laravel est un  framework  conçu pour offrir une structure organisée et efficace au développement web. Il facilite la création d’applications, qu’elles soient simples ou complexes, en fournissant des outils intégrés dès l’installation.  
+Grâce à sa flexibilité, Laravel permet de développer divers types de projets, tels que des sites web dynamiques, des logiciels d’entreprise , , des plateformes e-commerce  ou encore des réseaux sociaux. Il est particulièrement adapté aux applications nécessitant un backend robuste, incluant la gestion des utilisateurs et des commandes.  
 Laravel est ainsi un choix idéal pour les développeurs recherchant un environnement structuré, performant et évolutif \cite{yieldstudio}.
 
 
@@ -60,8 +473,8 @@ Avec une approche axée sur la rapidité et la simplicité, Supabase se position
 \subsubsection{ Firebase }
 Firebase est une plateforme de développement mobile et web proposée par Google. Elle offre un large éventail de services et d’outils pour les développeurs, y compris des bases de données en temps réel, des analyses, des notifications push, des authentifications et des outils de gestion de projet \cite{bility}.
 
-\subsection{\gls{IDE} ou environnement de développement}
-Un \gls{IDE} ou environnement de développement intégré en français, est un logiciel qui fournit un ensemble d’outils et de fonctionnalités pour faciliter le développement de logiciels. Il regroupe plusieurs outils nécessaires à la programmation en un seul endroit, améliorant ainsi l’efficacité et la productivité des développeurs  \cite{webTech}. 
+\subsection{ ou environnement de développement}
+Un ou environnement de développement intégré en français, est un logiciel qui fournit un ensemble d’outils et de fonctionnalités pour faciliter le développement de logiciels. Il regroupe plusieurs outils nécessaires à la programmation en un seul endroit, améliorant ainsi l’efficacité et la productivité des développeurs  \cite{webTech}. 
 
 Comme environnement de développment, nous avons utilisé dans le cadre de ce projet,Android Studio et le IDE Vusual Studio Code  pour écrire le code Flutter et Dart.
 \begin{figure}[H]
@@ -83,7 +496,7 @@ Comme environnement de développment, nous avons utilisé dans le cadre de ce pr
 \end{figure}
 \section{ Conception}
 \subsection{Modélisation}
-Afin de modéliser les fonctionnalités de notre application mobile, nous avons retenu le langage \gls{UML}, 
+Afin de modéliser les fonctionnalités de notre application mobile, nous avons retenu le langage , 
 standard de modélisation visuelle permettant de spécifier, visualiser et documenter les systèmes logiciels, 
 tant du point de vue de leur structure que de leur comportement, de manière à satisfaire l’ensemble des 
 exigences du projet.
@@ -160,7 +573,7 @@ Le diagramme de classes est un diagramme  UML  qui constitue à faire la représ
  \end{figure}
 \subsubsection{Les diagramme de séquence}
 Les diagrammes de séquence sont la représentation graphique des interactions entre les acteurs et le
-système selon un ordre chronologique dans la formulation \gls{UML}.
+système selon un ordre chronologique dans la formulation .
 Ici, nous allons illustrer quelques  diagrammes de séquence de  notre système.
 \begin{itemize}
     \item \textbf{Diagramme  de séquence pour l’inscription et la connexion}

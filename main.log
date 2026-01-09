@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  30 NOV 2025 08:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.2)  9 JAN 2026 16:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Memoire de soutenace/Template Emile/Template Gabin/main.tex"
-(d:/Memoire de soutenace/Template Emile/Template Gabin/main.tex
+**"d:/Memoire de soutenace/meemoire autrue/Template HOUNGUR JEDIDIA1/main.tex"
+(d:/Memoire de soutenace/meemoire autrue/Template HOUNGUR JEDIDIA1/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (ifri.cls
@@ -1370,10 +1370,31 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count551
 \@quotereset=\count552
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 69.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 60.
 (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux
+
+LaTeX Warning: Label `fig:reseau_cmmb' multiply defined.
+
+
+LaTeX Warning: Label `fig:reseau_cmmb' multiply defined.
+
+
+LaTeX Warning: Label `fig:reseau_cmmb' multiply defined.
+
+
+LaTeX Warning: Label `fig:mon_img_mvc' multiply defined.
+
+
+LaTeX Warning: Label `tab:pppoe_auth' multiply defined.
+
+
+LaTeX Warning: Label `fig:mon_img_PPP' multiply defined.
+
+
+LaTeX Warning: Label `fig:mon_img_mvc' multiply defined.
+
 
 LaTeX Warning: Label `fig:swagger-schemas' multiply defined.
 
@@ -1386,26 +1407,26 @@ LaTeX Warning: Label `fig:swagger-schemas' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Info: Redefining \degres on input line 69.
-LaTeX Info: Redefining \up on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Info: Redefining \degres on input line 60.
+LaTeX Info: Redefining \up on input line 60.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count553
@@ -1469,13 +1490,13 @@ See SIunits.dvi or readme.txt section: Known problems and limitations.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 69.
+Package hyperref Info: Link coloring ON on input line 60.
 (main.out) (main.out)
 \@outlinefile=\write10
 \openout10 = `main.out'.
 
 \c@lstlisting=\count559
-Package tocbasic Info: setting babel extension for `lol' on input line 69.
+Package tocbasic Info: setting babel extension for `lol' on input line 60.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \c@minilofdepth=\count560
@@ -1528,13 +1549,13 @@ Package minitoc(hints) Warning: W0023
 (minitoc(hints))                --- It may be the consequence 
 (minitoc(hints))                of loading the ``hyperref'' package.
 
-LaTeX Info: Redefining \microtypecontext on input line 69.
-Package microtype Info: Applying patch `item' on input line 69.
-Package microtype Info: Applying patch `toc' on input line 69.
-Package microtype Info: Applying patch `eqnum' on input line 69.
-Package microtype Info: Applying patch `footnote' on input line 69.
-Package microtype Info: Applying patch `verbatim' on input line 69.
-LaTeX Info: Redefining \microtypesetup on input line 69.
+LaTeX Info: Redefining \microtypecontext on input line 60.
+Package microtype Info: Applying patch `item' on input line 60.
+Package microtype Info: Applying patch `toc' on input line 60.
+Package microtype Info: Applying patch `eqnum' on input line 60.
+Package microtype Info: Applying patch `footnote' on input line 60.
+Package microtype Info: Applying patch `verbatim' on input line 60.
+LaTeX Info: Redefining \microtypesetup on input line 60.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
@@ -1576,37 +1597,37 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 69.
-Package biblatex Info: Reference segment=0 on input line 69.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 71.
+Package biblatex Info: Reference section=0 on input line 60.
+Package biblatex Info: Reference segment=0 on input line 60.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 71.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 71.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 71.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 71.
+(Font)              <10.95> on input line 62.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 71.
+(Font)              <8> on input line 62.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 71.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+(Font)              <6> on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
@@ -1614,28 +1635,28 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 71.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 71.
+(Font)              scaled to size 10.07397pt on input line 62.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 71.
-<images/logoUAC1.png, id=253, 160.6pt x 186.6975pt>
+(Font)              scaled to size 7.35999pt on input line 62.
+<images/logoUAC1.png, id=273, 160.6pt x 186.6975pt>
 File: images/logoUAC1.png Graphic file (type png)
 <use images/logoUAC1.png>
-Package pdftex.def Info: images/logoUAC1.png  used on input line 71.
+Package pdftex.def Info: images/logoUAC1.png  used on input line 62.
 (pdftex.def)             Requested size: 80.29979pt x 93.34851pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.35999pt on input line 71.
+(Font)              scaled to size 7.35999pt on input line 62.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.27998pt on input line 71.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 71.
+(Font)              scaled to size 8.27998pt on input line 62.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 62.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1644,18 +1665,18 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 71.
+(Font)              <10> on input line 62.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 71.
+(Font)              <7> on input line 62.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 71.
-<images/logoIfri.png, id=257, 200.75pt x 126.874pt>
+(Font)              <5> on input line 62.
+<images/logoIfri.png, id=277, 200.75pt x 126.874pt>
 File: images/logoIfri.png Graphic file (type png)
 <use images/logoIfri.png>
-Package pdftex.def Info: images/logoIfri.png  used on input line 71.
+Package pdftex.def Info: images/logoIfri.png  used on input line 62.
 (pdftex.def)             Requested size: 100.37474pt x 63.43683pt.
 
-Overfull \hbox (0.7901pt too wide) in paragraph at lines 71--71
+Overfull \hbox (0.7901pt too wide) in paragraph at lines 62--62
 []  
  []
 
@@ -1695,612 +1716,671 @@ Non-PDF special ignored!
 
 [2
 
-] (1-remerciements.tex)
+] (1-remerciements.tex
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 15.
+ (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
 
 [3
 
-] (2-resume.tex
+{C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] (2-resume.tex
 
 [4
 
 
 ])
 
-[5] (main.lof)
+[5] (main.lof
+
+[6])
 \tf@lof=\write11
 \openout11 = `main.lof'.
 
 
 
-[6]
-
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 105.
+(Font)              scaled to size 9.19998pt on input line 84.
 [7] (main.lot)
 \tf@lot=\write12
 \openout12 = `main.lot'.
 
+ (main.acr
 
-No file main.acr.
+[8]
+
+[9
 
 
-[8] (3-introduction.tex
+]
+
+[10])
+
+[11] (3-introduction.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 14.71997pt on input line 9.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.87997pt on input line 24.
+(Font)              scaled to size 14.71997pt on input line 5.
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28     \item I
-                ntÃ©grer des fonctionnalitÃ©s interactives (quiz, sondages, ... [1
+l.47     \item L
+                e chapitre I traite de la revue littÃ©raire; [1
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 35.
- (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
+])
 
-[2{C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-Chapitre 1.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 133.
+[2]
+Chapter 1.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 101.
 (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 12.87997pt on input line 133.
+(Font)              scaled to size 12.87997pt on input line 101.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 133.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 101.
  (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (1-partie/1-fichier.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 8.
-<images/application.png, id=410, 1798.72pt x 1027.84pt>
-File: images/application.png Graphic file (type png)
-<use images/application.png>
-Package pdftex.def Info: images/application.png  used on input line 15.
-(pdftex.def)             Requested size: 539.62016pt x 308.35437pt.
-
-Overfull \hbox (55.9233pt too wide) in paragraph at lines 15--16
- [][] 
- []
-
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.19998pt on input line 16.
-LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 9.19998pt on input line 16.
+(Font)              scaled to size 12.87997pt on input line 6.
 
 
 [3
 
 ]
-<images/78.jpg, id=418, 738.76pt x 383.4325pt>
-File: images/78.jpg Graphic file (type jpg)
-<use images/78.jpg>
-Package pdftex.def Info: images/78.jpg  used on input line 25.
-(pdftex.def)             Requested size: 369.37909pt x 191.71577pt.
 
-
-[4 <./images/application.png> <./images/78.jpg>]
-Overfull \hbox (9.52705pt too wide) in paragraph at lines 64--65
-[]|[]| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-[]|\T1/lmr/m/n/10.95 (+10) Swift,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-\T1/lmr/m/n/10.95 (+10) Objective-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-[]|\T1/lmr/m/n/10.95 (+10) Performance op-ti-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-\T1/lmr/m/n/10.95 (+10) aux fonc-tion-na-li-tés
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-\T1/lmr/m/n/10.95 (+10) dé-ve-lop-pe-ments sé-pa-rés
- []
-
-
-Underfull \hbox (badness 2495) in paragraph at lines 79--80
-\T1/lmr/m/n/10.95 (+10) une seule base de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-\T1/lmr/m/n/10.95 (+10) fonc-tion-na-li-tés du té-lé-
- []
-
-
-Underfull \hbox (badness 3668) in paragraph at lines 84--85
-\T1/lmr/m/n/10.95 (+10) na-vi-ga-teur, pas be-
- []
-
-
-Underfull \hbox (badness 3449) in paragraph at lines 84--85
-\T1/lmr/m/n/10.95 (+10) soin de té-lé-char-ge-
- []
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 85--86
-\T1/lmr/m/n/10.95 (+10) vent in-fé-rieure aux ap-
- []
-
-
-Overfull \hbox (48.09038pt too wide) in paragraph at lines 62--89
- [][] 
- []
-
+[4]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.03998pt on input line 70.
 
 
 [5]
 
 [6]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 167.
+
+
+
 [7]
-<images/Kahoot a.jpg, id=463, 722.7pt x 1646.15pt>
-File: images/Kahoot a.jpg Graphic file (type jpg)
-<use images/Kahoot a.jpg>
-Package pdftex.def Info: images/Kahoot a.jpg  used on input line 180.
-(pdftex.def)             Requested size: 174.13116pt x 396.61629pt.
-<images/Kahoot.jpg, id=464, 722.7pt x 1646.15pt>
-File: images/Kahoot.jpg Graphic file (type jpg)
-<use images/Kahoot.jpg>
-Package pdftex.def Info: images/Kahoot.jpg  used on input line 186.
-(pdftex.def)             Requested size: 174.13116pt x 396.61629pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 182.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 182.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 182.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 195.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 195.
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.19998pt on input line 199.
+<images/0.jpg, id=838, 475.7775pt x 1084.05pt>
+File: images/0.jpg Graphic file (type jpg)
+<use images/0.jpg>
+Package pdftex.def Info: images/0.jpg  used on input line 235.
+(pdftex.def)             Requested size: 237.88815pt x 542.02368pt.
 
 
 [8]
-<images/5.jpg, id=471, 475.7775pt x 1084.05pt>
-File: images/5.jpg Graphic file (type jpg)
-<use images/5.jpg>
-Package pdftex.def Info: images/5.jpg  used on input line 211.
-(pdftex.def)             Requested size: 190.30762pt x 433.61232pt.
 
-Overfull \hbox (16.17645pt too wide) in paragraph at lines 211--212
+[9 <./images/0.jpg>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 256.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 256.
+
+)
+
+[10]
+Chapter 2.
+(2-partie/1-fichier.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 16.
+
+<images/1.jpg, id=876, 475.7775pt x 1084.05pt>
+File: images/1.jpg Graphic file (type jpg)
+<use images/1.jpg>
+Package pdftex.def Info: images/1.jpg  used on input line 32.
+(pdftex.def)             Requested size: 386.95897pt x 881.71478pt.
+
+
+[11
+
+]
+Overfull \vbox (170.47894pt too high) has occurred while \output is active []
+
+
+
+[12 <./images/1.jpg>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 37.
+
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 57.
+(C:\Users\ATTIOGBE\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
+(Font)              scaled to size 11.03998pt on input line 57.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+[]|\T1/lmr/m/n/10.95 (+10) Permet d'intégrer et de simuler
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 69--70
+\T1/lmr/m/n/10.95 (+10) l'interconnexion de rou-teurs MikroTik
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 77--78
+\T1/lmr/m/n/10.95 (+10) MikroTik (RT-SIEGE et les rou-teurs
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 93--95
+[]|\T1/lmr/m/n/10.95 (+10) C÷ur de l'architecture. Le RT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[]|\T1/lmr/m/n/10.95 (+10) Commutateur virtuel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\T1/lmr/m/n/10.95 (+10) Commutateurs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+\T1/lmr/m/n/10.95 (+10) d'Agence (Switch1'
+ []
+
+
+Underfull \hbox (badness 7116) in paragraph at lines 105--105
+[]|\T1/lmr/m/n/10.95 (+10) Module [][][]PP-PoE[][] in-té-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+[]|\T1/lmr/m/n/10.95 (+10) Permet aux [][][]PC[][] clients de
+ []
+
+
+Underfull \hbox (badness 5161) in paragraph at lines 106--107
+\T1/lmr/m/n/10.95 (+10) s'authentifier auprès du serveur
+ []
+
+
+
+[13]
+Underfull \hbox (badness 1168) in paragraph at lines 122--123
+[]|\T1/lmr/m/n/10.95 (+10) Fournit toutes les fonc-tion-nal-ités
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[]|\T1/lmr/m/n/10.95 (+10) Protocole
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+[]|\T1/lmr/m/n/10.95 (+10) Garantit l'authentification par
+ []
+
+
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\T1/lmr/m/n/10.95 (+10) Interface [][][]WAN[][] (RT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+[]|\T1/lmr/m/n/10.95 (+10) Adresse de sor-tie vers
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]|\T1/lmr/m/n/10.95 (+10) RT-SIEGE (In-ter-face
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 166--167
+[]|\T1/lmr/m/n/10.95 (+10) Passerelle sur le réseau de
+ []
+
+
+Overfull \hbox (21.54718pt too wide) in paragraph at lines 152--184
  [][] 
  []
 
-<images/1.jpg, id=472, 475.7775pt x 1084.05pt>
-File: images/1.jpg Graphic file (type jpg)
-<use images/1.jpg>
-Package pdftex.def Info: images/1.jpg  used on input line 218.
-(pdftex.def)             Requested size: 190.30762pt x 433.61232pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+[]|\T1/lmr/m/n/10.95 (+10) RT-SIEGE (Serveur
+ []
 
 
-[9 <./images/Kahoot a.jpg> <./images/Kahoot.jpg>]
-<images/6.jpg, id=479, 483.8075pt x 1084.05pt>
+Underfull \hbox (badness 3724) in paragraph at lines 205--206
+[]|\T1/lmr/m/n/10.95 (+10) Adresse lo-cale du Serveur
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 208--209
+[]|\T1/lmr/m/n/10.95 (+10) Adresse dis-tante du tun-nel
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 211--212
+[]|\T1/lmr/m/n/10.95 (+10) Adresse dis-tante du tun-nel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
+[]|\T1/lmr/m/n/10.95 (+10) RT-OVENDO (Client
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 214--215
+[]|\T1/lmr/m/n/10.95 (+10) Adresse dis-tante du tun-nel
+ []
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 216--216
+[]|\T1/lmr/m/n/10.95 (+10) RT-COCODJI (Client
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 217--218
+[]|\T1/lmr/m/n/10.95 (+10) Adresse dis-tante du tun-nel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+[]|\T1/lmr/m/n/10.95 (+10) RT-FIDJROSSE
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 220--221
+[]|\T1/lmr/m/n/10.95 (+10) Adresse dis-tante du tun-nel
+ []
+
+
+Overfull \hbox (21.54718pt too wide) in paragraph at lines 197--223
+ [][] 
+ []
+
+
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+<images/5.jpg, id=960, 475.7775pt x 1084.05pt>
+File: images/5.jpg Graphic file (type jpg)
+<use images/5.jpg>
+Package pdftex.def Info: images/5.jpg  used on input line 248.
+(pdftex.def)             Requested size: 193.47578pt x 440.82431pt.
+
+
+[16]
+Overfull \hbox (23.83429pt too wide) in paragraph at lines 261--261
+ []\T1/lmtt/m/n/10.95 /ppp profile add name=profil-clients \ local-address=10.1.1.1 \remote-address=pool[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+
+ []
+
+<images/6.jpg, id=966, 483.8075pt x 1084.05pt>
 File: images/6.jpg Graphic file (type jpg)
 <use images/6.jpg>
-Package pdftex.def Info: images/6.jpg  used on input line 239.
-(pdftex.def)             Requested size: 193.51956pt x 433.61232pt.
-<images/0.jpg, id=480, 475.7775pt x 1084.05pt>
-File: images/0.jpg Graphic file (type jpg)
-<use images/0.jpg>
-Package pdftex.def Info: images/0.jpg  used on input line 246.
-(pdftex.def)             Requested size: 190.30762pt x 433.61232pt.
+Package pdftex.def Info: images/6.jpg  used on input line 267.
+(pdftex.def)             Requested size: 193.47578pt x 433.51308pt.
 
 
-[10 <./images/5.jpg> <./images/1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Sondages, Q&A
+[17 <./images/5.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
  []
 
-
-Underfull \hbox (badness 1418) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) dages, quiz, feed-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/bx/n/10.95 (+10) Limite de par-ti-ci-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Pas de li-mite
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) claire, mais
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) fonc-tion-na-li-tés
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Optimisé pour
- []
-
-
-Underfull \hbox (badness 3098) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) tout type d'évé-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) ne-ment sans
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Oui, ac-cès aux
- []
-
-
-Underfull \hbox (badness 2856) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) ac-tions pos-sibles
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Partielle (né-ces-
- []
-
-
-Underfull \hbox (badness 2277) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) site une ges-tion
- []
-
-
-Underfull \hbox (badness 4001) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) tion-na-li-tés adap-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/bx/n/10.95 (+10) Analyse et sta-tis-
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Rapports li-mi-tés
- []
-
-
-Underfull \hbox (badness 7362) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) en ver-sion gra-
- []
-
-
-Underfull \hbox (badness 5245) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) cées en ver-sion
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Analyse très ba-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Outils in-té-grés
- []
-
-
-Underfull \hbox (badness 1755) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) pour suivre l'en-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) ga-ge-ment et
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) amé-lio-rer les
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/bx/n/10.95 (+10) Expérience uti-li-sa-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Bonne, mais
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) fonc-tion-na-li-tés
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]|\T1/lmr/m/n/10.95 (+10) Interface très
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 282--282
-\T1/lmr/m/n/10.95 (+10) in-tui-tive et com-
- []
-
-
-
-[11 <./images/6.jpg> <./images/0.jpg>]
-
-[12])
-
-[13]
-Chapitre 2.
-(2-partie/1-fichier.tex
-
-[14
-
-]
-<images/Model.png, id=511, 557.08125pt x 425.59pt>
+<images/Model.png, id=976, 557.08125pt x 425.59pt>
 File: images/Model.png Graphic file (type png)
 <use images/Model.png>
-Package pdftex.def Info: images/Model.png  used on input line 35.
+Package pdftex.def Info: images/Model.png  used on input line 286.
+(pdftex.def)             Requested size: 222.82855pt x 170.23297pt.
+
+
+[18 <./images/6.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
+
+ []
+
+File: images/Model.png Graphic file (type png)
+<use images/Model.png>
+Package pdftex.def Info: images/Model.png  used on input line 317.
+(pdftex.def)             Requested size: 222.82855pt x 170.23297pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\gls' on input line 323.
+
+
+
+[19 <./images/Model.png>]
+File: images/5.jpg Graphic file (type jpg)
+<use images/5.jpg>
+Package pdftex.def Info: images/5.jpg  used on input line 349.
+(pdftex.def)             Requested size: 193.47578pt x 440.82431pt.
+File: images/6.jpg Graphic file (type jpg)
+<use images/6.jpg>
+Package pdftex.def Info: images/6.jpg  used on input line 358.
+(pdftex.def)             Requested size: 193.47578pt x 433.51308pt.
+
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+
+ []
+
+
+
+[21]
+File: images/Model.png Graphic file (type png)
+<use images/Model.png>
+Package pdftex.def Info: images/Model.png  used on input line 390.
+(pdftex.def)             Requested size: 222.82855pt x 170.23297pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+ []
+
+File: images/Model.png Graphic file (type png)
+<use images/Model.png>
+Package pdftex.def Info: images/Model.png  used on input line 421.
+(pdftex.def)             Requested size: 222.82855pt x 170.23297pt.
+
+
+[22]
+File: images/Model.png Graphic file (type png)
+<use images/Model.png>
+Package pdftex.def Info: images/Model.png  used on input line 448.
 (pdftex.def)             Requested size: 445.6656pt x 340.47244pt.
 
 
-[15 <./images/Model.png>]
+[23]
 
-[16]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gls' on input line 63.
-
-<images/studio-idx.png, id=542, 1128.215pt x 750.805pt>
+[24]
+<images/studio-idx.png, id=1058, 1128.215pt x 750.805pt>
 File: images/studio-idx.png Graphic file (type png)
 <use images/studio-idx.png>
-Package pdftex.def Info: images/studio-idx.png  used on input line 71.
+Package pdftex.def Info: images/studio-idx.png  used on input line 484.
 (pdftex.def)             Requested size: 237.01411pt x 157.71953pt.
-<images/visualstudio.jpg, id=543, 1284.8pt x 722.7pt>
+<images/visualstudio.jpg, id=1059, 1284.8pt x 722.7pt>
 File: images/visualstudio.jpg Graphic file (type jpg)
 <use images/visualstudio.jpg>
-Package pdftex.def Info: images/visualstudio.jpg  used on input line 79.
+Package pdftex.def Info: images/visualstudio.jpg  used on input line 492.
 (pdftex.def)             Requested size: 237.01411pt x 133.31143pt.
 
 
-[17 <./images/studio-idx.png> <./images/visualstudio.jpg>]
-<images/Diagram_cas_utlisatin_fin 24..png, id=553, 1134.2375pt x 742.775pt>
+[25]
+
+[26 <./images/studio-idx.png> <./images/visualstudio.jpg>]
+<images/Diagram_cas_utlisatin_fin 24..png, id=1073, 1134.2375pt x 742.775pt>
 File: images/Diagram_cas_utlisatin_fin 24..png Graphic file (type png)
 <use images/Diagram_cas_utlisatin_fin 24..png>
-Package pdftex.def Info: images/Diagram_cas_utlisatin_fin 24..png  used on input line 148.
+Package pdftex.def Info: images/Diagram_cas_utlisatin_fin 24..png  used on input line 561.
 (pdftex.def)             Requested size: 510.40216pt x 334.24565pt.
 
-Overfull \hbox (26.70529pt too wide) in paragraph at lines 148--149
+Overfull \hbox (26.70529pt too wide) in paragraph at lines 561--562
  [] 
  []
 
-
-
-[18]
-<images/Diagram _de_classe emile.png, id=559, 1063.975pt x 552.0625pt>
+<images/Diagram _de_classe emile.png, id=1075, 1063.975pt x 552.0625pt>
 File: images/Diagram _de_classe emile.png Graphic file (type png)
 <use images/Diagram _de_classe emile.png>
-Package pdftex.def Info: images/Diagram _de_classe emile.png  used on input line 157.
+Package pdftex.def Info: images/Diagram _de_classe emile.png  used on input line 570.
 (pdftex.def)             Requested size: 531.9862pt x 276.03056pt.
 
-Overfull \hbox (48.28934pt too wide) in paragraph at lines 157--158
+Overfull \hbox (48.28934pt too wide) in paragraph at lines 570--571
 [][] 
  []
 
 
 
-[19 <./images/Diagram_cas_utlisatin_fin 24..png>]
-<images/Diagramme-seq-inscription.png, id=567, 585.387pt x 377.61075pt>
+[27 <./images/Diagram_cas_utlisatin_fin 24..png>]
+<images/Diagramme-seq-inscription.png, id=1082, 585.387pt x 377.61075pt>
 File: images/Diagramme-seq-inscription.png Graphic file (type png)
 <use images/Diagramme-seq-inscription.png>
-Package pdftex.def Info: images/Diagramme-seq-inscription.png  used on input line 177.
+Package pdftex.def Info: images/Diagramme-seq-inscription.png  used on input line 590.
 (pdftex.def)             Requested size: 444.8898pt x 286.98138pt.
 
 
-[20 <./images/Diagram _de_classe emile.png>]
-<images/diagramme-seq-connexion.png, id=574, 858.20625pt x 413.74574pt>
+[28 <./images/Diagram _de_classe emile.png>]
+<images/diagramme-seq-connexion.png, id=1089, 858.20625pt x 413.74574pt>
 File: images/diagramme-seq-connexion.png Graphic file (type png)
 <use images/diagramme-seq-connexion.png>
-Package pdftex.def Info: images/diagramme-seq-connexion.png  used on input line 187.
+Package pdftex.def Info: images/diagramme-seq-connexion.png  used on input line 600.
 (pdftex.def)             Requested size: 506.33731pt x 244.10786pt.
 
-Overfull \hbox (22.64044pt too wide) in paragraph at lines 187--188
+Overfull \hbox (22.64044pt too wide) in paragraph at lines 600--601
  [] 
  []
 
 
+Overfull \hbox (33.52103pt too wide) in paragraph at lines 594--603
+[]\T1/lmr/m/n/10.95 (-10) Pour se con-necter, l'utilisateur saisit ses iden-ti-fi-ants. Si ces derniers sont cor-rects, un to-ken d'authentification
+ []
 
-[21 <./images/Diagramme-seq-inscription.png> <./images/diagramme-seq-connexion.png>]
-<images/diagramme_sequence_de_ceation_event1.png, id=582, 910.40125pt x 947.54pt>
+<images/diagramme_sequence_de_ceation_event1.png, id=1091, 910.40125pt x 947.54pt>
 File: images/diagramme_sequence_de_ceation_event1.png Graphic file (type png)
 <use images/diagramme_sequence_de_ceation_event1.png>
-Package pdftex.def Info: images/diagramme_sequence_de_ceation_event1.png  used on input line 201.
+Package pdftex.def Info: images/diagramme_sequence_de_ceation_event1.png  used on input line 614.
 (pdftex.def)             Requested size: 546.24496pt x 568.52838pt.
 
-Overfull \hbox (62.5481pt too wide) in paragraph at lines 201--202
+Overfull \hbox (62.5481pt too wide) in paragraph at lines 614--615
  [] 
  []
 
 
 
-[22 <./images/diagramme_sequence_de_ceation_event1.png>]
-<images/diagramme_sequence_participer_event.png, id=590, 808.01875pt x 357.335pt>
+[29 <./images/Diagramme-seq-inscription.png> <./images/diagramme-seq-connexion.png>]
+
+[30 <./images/diagramme_sequence_de_ceation_event1.png>]
+<images/diagramme_sequence_participer_event.png, id=1104, 808.01875pt x 357.335pt>
 File: images/diagramme_sequence_participer_event.png Graphic file (type png)
 <use images/diagramme_sequence_participer_event.png>
-Package pdftex.def Info: images/diagramme_sequence_participer_event.png  used on input line 219.
+Package pdftex.def Info: images/diagramme_sequence_participer_event.png  used on input line 632.
 (pdftex.def)             Requested size: 484.815pt x 214.40265pt.
 
-Overfull \hbox (1.11813pt too wide) in paragraph at lines 219--220
+Overfull \hbox (1.11813pt too wide) in paragraph at lines 632--633
  [] 
  []
 
 )
 
-[23 <./images/diagramme_sequence_participer_event.png>]
-Chapitre 3.
+[31 <./images/diagramme_sequence_participer_event.png>]
+Chapter 3.
 (3-partie/1-fichier.tex
-<images/apieduc1.png, id=596, 1114.76476pt x 395.076pt>
+<images/apieduc1.png, id=1111, 1114.76476pt x 395.076pt>
 File: images/apieduc1.png Graphic file (type png)
 <use images/apieduc1.png>
 Package pdftex.def Info: images/apieduc1.png  used on input line 36.
 (pdftex.def)             Requested size: 483.69687pt x 171.42262pt.
 
 
-[24
+[32
 
 ]
-<images/apieduc2.png, id=601, 1103.322pt x 446.8695pt>
+<images/apieduc2.png, id=1116, 1103.322pt x 446.8695pt>
 File: images/apieduc2.png Graphic file (type png)
 <use images/apieduc2.png>
 Package pdftex.def Info: images/apieduc2.png  used on input line 44.
 (pdftex.def)             Requested size: 483.69687pt x 195.90723pt.
-<images/apieduc3.png, id=602, 1094.28825pt x 446.8695pt>
+<images/apieduc3.png, id=1117, 1094.28825pt x 446.8695pt>
 File: images/apieduc3.png Graphic file (type png)
 <use images/apieduc3.png>
 Package pdftex.def Info: images/apieduc3.png  used on input line 52.
 (pdftex.def)             Requested size: 483.69687pt x 197.52325pt.
-<images/API2.png, id=603, 1102.71976pt x 498.06075pt>
+<images/API2.png, id=1118, 1102.71976pt x 498.06075pt>
 File: images/API2.png Graphic file (type png)
 <use images/API2.png>
 Package pdftex.def Info: images/API2.png  used on input line 58.
 (pdftex.def)             Requested size: 483.69687pt x 218.47102pt.
-<images/API6.png, id=604, 1082.24326pt x 236.082pt>
+<images/API6.png, id=1119, 1082.24326pt x 236.082pt>
 File: images/API6.png Graphic file (type png)
 <use images/API6.png>
 Package pdftex.def Info: images/API6.png  used on input line 64.
 (pdftex.def)             Requested size: 483.69687pt x 105.51544pt.
 
 
-[25 <./images/apieduc1.png> <./images/apieduc2.png> <./images/apieduc3.png>]
-<images/api1.png, id=612, 1109.3445pt x 471.56175pt>
+[33 <./images/apieduc1.png> <./images/apieduc2.png> <./images/apieduc3.png>]
+<images/api1.png, id=1127, 1109.3445pt x 471.56175pt>
 File: images/api1.png Graphic file (type png)
 <use images/api1.png>
 Package pdftex.def Info: images/api1.png  used on input line 70.
 (pdftex.def)             Requested size: 483.69687pt x 205.60979pt.
-<images/page_acceul.jpg, id=615, 722.7pt x 1646.15pt>
+<images/page_acceul.jpg, id=1130, 722.7pt x 1646.15pt>
 File: images/page_acceul.jpg Graphic file (type jpg)
 <use images/page_acceul.jpg>
 Package pdftex.def Info: images/page_acceul.jpg  used on input line 88.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
-<images/page_connexion.jpg, id=616, 722.7pt x 1646.15pt>
+<images/page_connexion.jpg, id=1131, 722.7pt x 1646.15pt>
 File: images/page_connexion.jpg Graphic file (type jpg)
 <use images/page_connexion.jpg>
 Package pdftex.def Info: images/page_connexion.jpg  used on input line 96.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
 
 
-[26 <./images/API2.png> <./images/API6.png> <./images/api1.png>]
+[34 <./images/API2.png> <./images/API6.png> <./images/api1.png>]
 
-[27 <./images/page_acceul.jpg> <./images/page_connexion.jpg>]
-<images/page_inscription.jpg, id=630, 722.7pt x 1646.15pt>
+[35 <./images/page_acceul.jpg> <./images/page_connexion.jpg>]
+<images/page_inscription.jpg, id=1145, 722.7pt x 1646.15pt>
 File: images/page_inscription.jpg Graphic file (type jpg)
 <use images/page_inscription.jpg>
 Package pdftex.def Info: images/page_inscription.jpg  used on input line 112.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
-<images/page_mise_ajour.jpg, id=631, 722.7pt x 1646.15pt>
+<images/page_mise_ajour.jpg, id=1146, 722.7pt x 1646.15pt>
 File: images/page_mise_ajour.jpg Graphic file (type jpg)
 <use images/page_mise_ajour.jpg>
 Package pdftex.def Info: images/page_mise_ajour.jpg  used on input line 120.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
 
 
-[28 <./images/page_inscription.jpg> <./images/page_mise_ajour.jpg>]
-<images/page_profil.jpg, id=639, 722.7pt x 1646.15pt>
+[36 <./images/page_inscription.jpg> <./images/page_mise_ajour.jpg>]
+<images/page_profil.jpg, id=1153, 722.7pt x 1646.15pt>
 File: images/page_profil.jpg Graphic file (type jpg)
 <use images/page_profil.jpg>
 Package pdftex.def Info: images/page_profil.jpg  used on input line 135.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
-<images/page_paramtre.jpg, id=640, 722.7pt x 1646.15pt>
+<images/page_paramtre.jpg, id=1154, 722.7pt x 1646.15pt>
 File: images/page_paramtre.jpg Graphic file (type jpg)
 <use images/page_paramtre.jpg>
 Package pdftex.def Info: images/page_paramtre.jpg  used on input line 143.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
 
 
-[29 <./images/page_profil.jpg> <./images/page_paramtre.jpg>]
-<images/page_creation_event.jpg, id=647, 722.7pt x 1646.15pt>
+[37 <./images/page_profil.jpg> <./images/page_paramtre.jpg>]
+<images/page_creation_event.jpg, id=1162, 722.7pt x 1646.15pt>
 File: images/page_creation_event.jpg Graphic file (type jpg)
 <use images/page_creation_event.jpg>
 Package pdftex.def Info: images/page_creation_event.jpg  used on input line 161.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
-<images/page_dtail_event.jpg, id=648, 722.7pt x 1646.15pt>
+<images/page_dtail_event.jpg, id=1163, 722.7pt x 1646.15pt>
 File: images/page_dtail_event.jpg Graphic file (type jpg)
 <use images/page_dtail_event.jpg>
 Package pdftex.def Info: images/page_dtail_event.jpg  used on input line 168.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
 
 
-[30 <./images/page_creation_event.jpg> <./images/page_dtail_event.jpg>]
-<images/page_creation_module.jpg, id=655, 722.7pt x 1646.15pt>
+[38 <./images/page_creation_event.jpg> <./images/page_dtail_event.jpg>]
+<images/page_creation_module.jpg, id=1170, 722.7pt x 1646.15pt>
 File: images/page_creation_module.jpg Graphic file (type jpg)
 <use images/page_creation_module.jpg>
 Package pdftex.def Info: images/page_creation_module.jpg  used on input line 190.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
-<images/page_des_moduls_quiz.jpg, id=656, 722.7pt x 1646.15pt>
+<images/page_des_moduls_quiz.jpg, id=1171, 722.7pt x 1646.15pt>
 File: images/page_des_moduls_quiz.jpg Graphic file (type jpg)
 <use images/page_des_moduls_quiz.jpg>
 Package pdftex.def Info: images/page_des_moduls_quiz.jpg  used on input line 198.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
 
 
-[31 <./images/page_creation_module.jpg> <./images/page_des_moduls_quiz.jpg>]
-<images/Screenshot_20250906-164855.jpg, id=663, 722.7pt x 1646.15pt>
+[39 <./images/page_creation_module.jpg> <./images/page_des_moduls_quiz.jpg>]
+<images/Screenshot_20250906-164855.jpg, id=1178, 722.7pt x 1646.15pt>
 File: images/Screenshot_20250906-164855.jpg Graphic file (type jpg)
 <use images/Screenshot_20250906-164855.jpg>
 Package pdftex.def Info: images/Screenshot_20250906-164855.jpg  used on input line 217.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
-<images/page_module_detail.jpg, id=664, 722.7pt x 1646.15pt>
+<images/page_module_detail.jpg, id=1179, 722.7pt x 1646.15pt>
 File: images/page_module_detail.jpg Graphic file (type jpg)
 <use images/page_module_detail.jpg>
 Package pdftex.def Info: images/page_module_detail.jpg  used on input line 225.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
 
 
-[32 <./images/Screenshot_20250906-164855.jpg> <./images/page_module_detail.jpg>]
-<images/page_participation.jpg, id=671, 722.7pt x 1646.15pt>
+[40 <./images/Screenshot_20250906-164855.jpg> <./images/page_module_detail.jpg>]
+<images/page_participation.jpg, id=1186, 722.7pt x 1646.15pt>
 File: images/page_participation.jpg Graphic file (type jpg)
 <use images/page_participation.jpg>
 Package pdftex.def Info: images/page_participation.jpg  used on input line 245.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
-<images/Screenshot_20250906-165209.jpg, id=672, 722.7pt x 1646.15pt>
+<images/Screenshot_20250906-165209.jpg, id=1187, 722.7pt x 1646.15pt>
 File: images/Screenshot_20250906-165209.jpg Graphic file (type jpg)
 <use images/Screenshot_20250906-165209.jpg>
 Package pdftex.def Info: images/Screenshot_20250906-165209.jpg  used on input line 253.
 (pdftex.def)             Requested size: 237.01411pt x 539.86534pt.
 
 
-[33 <./images/page_participation.jpg> <./images/Screenshot_20250906-165209.jpg>]
-<images/page_participants.jpg, id=677, 722.7pt x 1646.15pt>
+[41 <./images/page_participation.jpg> <./images/Screenshot_20250906-165209.jpg>]
+<images/page_participants.jpg, id=1192, 722.7pt x 1646.15pt>
 File: images/page_participants.jpg Graphic file (type jpg)
 <use images/page_participants.jpg>
 Package pdftex.def Info: images/page_participants.jpg  used on input line 268.
 (pdftex.def)             Requested size: 232.17242pt x 528.83846pt.
 
 
-[34 <./images/page_participants.jpg>]) (4-conclusion.tex)
+[42 <./images/page_participants.jpg>]) (4-conclusion.tex)
 
-[35]
+[43]
 
-Package biblatex Warning: Keyword 'biblio' not found on input line 152.
+Package biblatex Warning: Keyword 'biblio' not found on input line 116.
 
 
-LaTeX Warning: Empty bibliography on input line 152.
+LaTeX Warning: Empty bibliography on input line 116.
 
 
 Package biblatex Warning: Split bibliography detected.
@@ -2311,21 +2391,6 @@ Package biblatex Warning: Split bibliography detected.
 (biblatex)                This warning can be suppressed with
 (biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
 
-
-
-[36
-
-
-
-] (main.toc
-
-[37])
-\tf@toc=\write13
-\openout13 = `main.toc'.
-
-
-
-[38]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the main.maf file.
@@ -2337,17 +2402,20 @@ Package minitoc(hints) Info: I0053
 (minitoc(hints))             facilities can not be used for new types 
 (minitoc(hints))             of floats defined by the float package.
 
-
 Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-\tf@ptc=\write14
-\openout14 = `main.ptc'.
+\tf@ptc=\write13
+\openout13 = `main.ptc'.
 
 
 
-[39] 
+[44
+
+
+
+] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2359,53 +2427,23 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D61318B6D8C0E4B910B29A46A1C09B7A;10749.
+(rerunfilecheck)             Checksum: E92AEAFDB684F471C66AD4CDF341F71F;13886.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48684 strings out of 473530
- 889641 string characters out of 5713343
- 1860579 words of memory out of 5000000
- 70632 multiletter control sequences out of 15000+600000
- 703819 words of font info for 271 fonts, out of 8000000 for 9000
+ 49642 strings out of 473530
+ 903775 string characters out of 5713343
+ 1872435 words of memory out of 5000000
+ 71549 multiletter control sequences out of 15000+600000
+ 692436 words of font info for 255 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,14n,131p,2428b,3658s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{glo:UML} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:IDE} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:CMS} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:CRM} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:PHP} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:PERT} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:PWA} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:HTML} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:CSS} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:MVC} has been referenced but does not exist, replaced by a fixed one
-
-<C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (48 pages, 5598877 bytes).
+ 125i,14n,131p,2440b,3392s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ATTIOGBE/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (56 pages, 4918167 bytes).
 PDF statistics:
- 885 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
- 107201 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1329 PDF objects out of 1440 (max. 8388607)
+ 222 named destinations out of 1000 (max. 500000)
+ 103637 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -1,315 +1,288 @@
 \phantomsection
 \addcontentsline{toc}{section}{Introduction}
 \section*{Introduction}
-Afin de mener à bien la conception et le développement d'une application mobile de gestion des événements éducatifs interactifs, il est essentiel de réaliser une collecte d'informations sur les travaux existants et les solutions déjà mises en place dans ce domaine. Ce chapitre sera consacré, dans un premier temps, à une clarification conceptuelle des notions clés liées aux événements interactifs et à leur gestion. Ensuite, une étude des applications existantes sera menée afin d'identifier leurs fonctionnalités, leurs forces et leurs limites. Cette analyse permettra de mieux cerner les défis actuels et de poser les bases pour le développement d'une solution optimisée et adaptée aux besoins des utilisateurs.
+Cette section présente les bases des réseaux informatiques et le fonctionnement de \gls{RouterOS} de \textbf{MikroTik}. Elle explore les technologies d’optimisation réseau existantes, les compare, puis analyse le réseau actuel de la \gls{CMMB} afin de proposer une solution adaptée reposant sur \gls{PPPoE} et \textbf{MikroTik}.
+\section{ Généralités sur les réseaux informatiques  }
+\subsection{Définition }
+Un réseau informatique est un ensemble d'ordinateurs et d'autres périphériques 
+interconnectés, permettant la communication et le partage de ressources.  
+\subsection{Objectifs des réseaux informatiques}
+Les objectifs principaux d'un réseau incluent :  
+\begin{itemize}
+    \item \textbf{Partage de ressources} : Les utilisateurs peuvent partager des fichiers, des imprimantes, des connexions internet et d'autres ressources.
+    \item \textbf{Communication} : Les utilisateurs peuvent communiquer entre eux par e-mail, messagerie instantanée, visioconférence et d'autres moyens.
+    \item \textbf{Accès à l’information} : Les utilisateurs peuvent accéder à des informations stockées sur des serveurs centraux ou sur d'autres ordinateurs du réseau.
+\end{itemize}
 
-\section{Clarification conceptuelle}
-\subsection{ Application mobile}
-\subsubsection{Definition}
-Les applications mobiles, sont des logiciels développés spécifiquement pour les systèmes d’exploitation mobiles. Elles sont, ensuite, accessibles au téléchargement depuis les plateformes de distribution (App Store et Google Play Store). On utilise des langages de programmation et des outils adaptés à chaque plateforme ou des approches multiplateformes permettant de cibler plusieurs systèmes avec une base de code unique.
+\subsection{Composants d’un réseau informatique}
+Les principaux composants d'un réseau informatique incluent :  
+\begin{itemize}
+    \item \textbf{Ordinateurs} : Les ordinateurs sont les éléments de base d'un réseau, capables de traiter et de stocker des données.
+    \item \textbf{Périphériques} : Les périphériques sont des appareils connectés aux ordinateurs, tels que des imprimantes, des scanners, des souris et des claviers.
+    \item \textbf{Câbles ou ondes} : Les câbles ou les ondes électromagnétiques permettent la transmission des données entre les appareils du réseau.
+    \item \textbf{Logiciels réseaux} : Les logiciels réseaux gèrent la communication et le partage des ressources sur le réseau.
+\end{itemize}
+\subsection{Types de réseau informatique}
+Les réseaux informatiques peuvent être classés selon leur taille et leur portée :  
+\begin{itemize}
+    \item \textbf{Réseaux locaux (LAN)} : Connectent des ordinateurs et des périphériques dans un espace limité, comme une maison ou un bureau.
+    \item \textbf{Réseaux métropolitains (MAN)} : Connectent des LAN dans une zone géographique plus étendue, comme une ville ou une région.
+    \item \textbf{Réseaux étendus (WAN)} : Connectent des LAN et des MAN sur de grandes distances, à l'échelle nationale ou internationale.
+\end{itemize}
 
-la figure \ref{fig:mon_application} montre qu'une application mobile s’exécute sur un dispositif mobile et peut utiliser ses ressources, telles que le GPS, la caméra, et les capteurs de mouvement, afin d’offrir des fonctionnalités interactives et personnalisées. Elles communiquent souvent avec des serveurs distants via internet pour récupérer des données, mettre à jour leur contenu, ou exécuter des tâches qui nécessitent de la puissance de calcul supplémentaire ou un accès à des bases de données volumineuses \cite{definition-application-mobile}.
+\subsection{Modèles de communication réseau}
+Deux modèles principaux décrivent la communication réseau :  
+\begin{itemize}
+    \item \textbf{Modèle \gls{OSI}} : Un modèle conceptuel à sept couches définissant les fonctions de la communication réseau.
+    \item \textbf{Modèle  \gls{TCP}\/\gls{IP}} : Un modèle plus pragmatique à quatre couches utilisées dans l'architecture Internet.
+\end{itemize}
 
-\begin{figure}[H]
-   \centering
-   \includegraphics[scale=0.3]{images/application.png}
-   \caption{Une application mobile}
-   \label{fig:mon_application}
-\end{figure}
-
-
-\subsubsection{ Les différents types d'applications mobiles}
-La Figure \ref{fig:mon_img} présente une vue d’ensemble comparative des trois grandes catégories d’applications mobiles : natives, web et hybrides. Cette classification permet de mieux comprendre leurs spécificités techniques, leurs domaines d’application, ainsi que les implications pour le développement et la maintenance
-\begin{figure}[H]
-   \centering
-   \includegraphics[scale=0.5]{images/78.jpg}
-   \caption{ Les différents types d’application mobile}
-   \label{fig:mon_img}
-\end{figure}
-
-
-\subsubsection*{Applications Natives}
-Une application est dite \textbf{native} lorsqu’elle est développée spécifiquement pour un système d’exploitation donné, tel qu’iOS ou Android. Ce type d’application utilise des technologies adaptées au système d’exploitation cible. 
-
-Pour Android, on utilise principalement \textbf{Java}, \textbf{Kotlin}, ainsi que \textbf{C} et \textbf{C++}. L’environnement de développement privilégié est \textbf{Android Studio}. Du côté d’iOS, les technologies employées incluent \textbf{Objective-C} et \textbf{Swift}, avec \textbf{XCode} comme IDE exclusif aux Mac.  
-
-Les applications natives offrent plusieurs avantages. Elles sont plus rapides et réactives, garantissant une meilleure expérience utilisateur. Elles permettent également d’envoyer des notifications push, un atout essentiel pour l’engagement des utilisateurs. De plus, elles peuvent fonctionner sans connexion Internet et accéder aux fonctionnalités matérielles du smartphone, telles que l’appareil photo, le GPS et le microphone. Cependant, leur développement présente certaines contraintes, notamment un coût plus élevé et un temps de développement plus long. Lorsqu’il est nécessaire de cibler plusieurs plateformes, il peut être judicieux de commencer par une seule pour optimiser les ressources \cite{definition-application-mobile}.  
-
-\subsubsection*{Applications Hybrides}
-L’application hybride constitue une alternative qui permet d’exécuter le même code sur plusieurs systèmes d’exploitation, évitant ainsi de devoir coder séparément pour iOS et Android. Son développement repose sur des frameworks comme \textbf{React Native}, \textbf{Ionic} ou \textbf{Cordova}, qui permettent d’utiliser des technologies web telles que \gls{CSS}, \gls{HTML} et \textbf{JavaScript}.  
-
-Les applications hybrides offrent un gain de temps significatif, car un seul code source est utilisé pour toutes les plateformes, ce qui réduit les coûts et simplifie la gestion des mises à jour. Elles permettent également d’accéder aux fonctionnalités du smartphone, comme l’appareil photo et le GPS. Toutefois, elles présentent aussi des inconvénients. L’expérience utilisateur peut être moins fluide que celle d’une application native et les performances sont souvent inférieures, notamment pour les applications nécessitant un traitement intensif. De plus, chaque système d’exploitation ayant ses propres particularités, l’adaptation peut s’avérer plus complexe \cite{definition-application-mobile}.  
-
-\subsubsection*{Progressive Web Apps (\gls{PWA})}
-Une autre alternative aux applications classiques est la \gls{PWA}, qui fonctionne comme une application mobile tout en étant accessible depuis un navigateur, sans nécessiter de téléchargement sur un store. Développées avec des technologies telles que \gls{HTML}, \textbf{React} et \gls{CSS}, les PWA présentent plusieurs avantages.  
-
-Elles sont universellement accessibles, consomment peu d’espace de stockage et permettent une navigation rapide. Certaines fonctionnalités restent disponibles hors ligne, et les mises à jour se font automatiquement. De grandes entreprises comme \textbf{Spotify}, \textbf{Twitter}, \textbf{AliExpress} et \textbf{Uber} ont adopté cette approche pour offrir une expérience utilisateur fluide et rapide\cite{definition-application-mobile}.  
-
-Cependant, les \gls{PWA} ont aussi leurs limites. Elles sont moins bien intégrées aux systèmes iOS et ne prennent pas en charge certaines fonctionnalités comme les notifications push. De plus, elles sont souvent plus énergivores, ce qui peut être un inconvénient pour les utilisateurs mobiles.  
+\subsection{Protocoles réseau}
+Les protocoles réseau définissent les règles et les formats de communication entre les appareils du réseau. Des exemples de protocoles incluent \gls{TCP}\/\gls{IP},\gls{HTTP}, \gls{FTP}, \gls{SMTP} etc.
 
 
 
+\section{Présentation du ROUTEROS MIKROTIK}
+MikroTik \gls{RouterOS} est un puissant système d'exploitation réseau polyvalent, 
+capable de transformer un simple ordinateur en un routeur complet. Allons explorer 
+ses principales fonctionnalités:
 
+\subsection{ Fonctionnalités principales}
+\gls{RouterOS}est le système d'exploitation développé par MikroTik pour ses équipements 
+réseau. Il est reconnu pour sa richesse fonctionnelle et sa souplesse. Parmi ses 
+principales fonctionnalités, on retrouve :
+\begin{itemize}
+    \item Le routage dynamique (\gls{OSPF}, \gls{BGP}, \gls{RIP})
+    \item Le pare-feu (firewall) avancé
+    \item La gestion de la qualité de service (\gls{QoS})
+    \item Le \gls{VPN} (\gls{PPTP}, \gls{SSTP}, \gls{L2TP}, \gls{OpenVPN}, etc.)
+    \item Le contrôle de la bande passante
+    \item La surveillance réseau (via \gls{SMTP}, NetFlow, etc.)
+    \item La gestion de \gls{VLAN}, \gls{PPPoE}, Hotspot, et bien plus.
+\end{itemize}
 
-\noindent Le tableau~\ref{tab:types_app} récapitule les différences entre les principales approches d’applications mobiles
-(natif, hybride, PWA), en précisant les langages cibles, les avantages et les limites.
+Son interface Web (\textbf{Winbox}) permet une administration intuitive, tandis que la ligne 
+de commande (\gls{CLI}) offre une précision optimale pour les utilisateurs avancés. 
+MikroTik RouterOS propose un ensemble de fonctionnalités avancées permettant de 
+concevoir des infrastructures réseau performantes, sécurisées et évolutives. Les 
+principales sont détaillées ci-dessous selon le manuel officiel de MikroTik.
 
-\begin{table}[H]
-  \centering
-  \renewcommand{\arraystretch}{1.1}
-  \setlength{\tabcolsep}{4pt}
-    \caption{Un résumé des différents genres d’application}
-  \begin{tabular}{|p{3.3cm}|p{2.5cm}|p{2.5cm}|p{3.5cm}|p{4.4cm}|}
-    \hline
-    \multirow[t]{2}{*}{\textbf{Type d’application}} 
-      & \multicolumn{2}{c|}{\textbf{Langage de programmation}} 
-      & \multirow[t]{2}{*}{\textbf{Avantages}} 
-      & \multirow[t]{2}{*}{\textbf{Inconvénients}} \\
-    \cline{2-3}
-      & \textbf{iOS} & \textbf{Android} & & \\
-    \hline
-    \textbf{Native} 
-      & Swift, Objective-C 
-      & Java, Kotlin 
-      & Performance optimale, accès complet aux fonctionnalités du téléphone 
-      & Coûts de développement plus élevés, nécessite des développements séparés pour chaque plate-forme \\
-    \hline
-    \textbf{Hybride} 
-      & \multicolumn{2}{|p{\dimexpr 6cm+2\tabcolsep}|}{JavaScript, \gls{HTML}, \gls{CSS} (via des frameworks comme React Native ou Cordova)} 
-      & Coûts et temps de développement réduits, une seule base de code pour plusieurs plates-formes 
-      & Performance inférieure par rapport aux applications natives, accès limité aux fonctionnalités du téléphone \\
-    \hline
-    \textbf{Progressive Web App (\gls{PWA})} 
-      & \multicolumn{2}{|p{\dimexpr 6cm+2\tabcolsep}|}{JavaScript, \gls{HTML}, \gls{CSS}} 
-      & Accessible depuis un navigateur, pas besoin de téléchargement, coûts de développement réduits 
-      & Expérience utilisateur souvent inférieure aux applications natives, dépendance à la qualité de la connexion internet, accès limité aux fonctionnalités du téléphone \\
-    \hline
-  \end{tabular}
-  \label{tab:types_app}
+\subsubsection*{Routage Dynamique (\gls{OSPF}, \gls{BGP}, \gls{RIP})}
+\gls{RouterOS} prend en charge les protocoles de routage dynamiques tels qu’\gls{OSPF}, \gls{BGP} 
+et \gls{RIP}, permettant l’interconnexion de plusieurs réseaux et l’adaptation automatique 
+en cas de changement de topologie. 
+\begin{itemize}
+    \item \gls{OSPF} (Open Shortest Path First) : assure la découverte automatique des voisins 
+    et une mise à jour rapide des routes, améliorant la résilience.
+    \item \gls{BGP} (Border Gateway Protocol) : permet le peering entre différents systèmes 
+    autonomes et un contrôle précis du routage inter-domaines.
+    \item \gls{RIP} : plus simple, adapté aux réseaux de petite taille.
+\end{itemize}
+
+\subsubsection*{Pare-feu Avancé}
+\gls{RouterOS} intègre un pare-feu stateful capable de filtrer les paquets selon des critères 
+tels que l’adresse \gls{IP}, le port, le protocole, l’interface ou les flags TCP.
+\begin{itemize}
+    \item \gls{NAT} (Network Address Translation) : assure la traduction et la protection des adresses internes.
+    \item Inspection de couche 7 (Layer 7) : permet d’identifier les applications et de bloquer certains flux à un niveau granulaire.
+\end{itemize}
+
+\subsubsection*{Gestion de la Qualité de Service (\gls{QoS})}
+La \gls{QoS} permet de prioriser les flux critiques (voix, vidéo, applications sensibles) afin 
+de réduire la latence et les pertes de paquets.
+\begin{itemize}
+    \item Mise en place de files d’attente hiérarchiques
+    \item Attribution de priorités par utilisateur, service ou protocole
+    \item Limitation de bande passante pour éviter la congestion réseau
+\end{itemize}
+
+\subsubsection*{Réseaux Privés Virtuels (\gls{VPN})}
+\gls{RouterOS} prend en charge plusieurs protocoles \gls{VPN} \gls{PPTP}, \gls{L2TP}\/\gls{IPSec}, \gls{SSTP}, \gls{OpenVPN}, 
+permettant de créer des tunnels sécurisés entre sites distants.
+\begin{itemize}
+    \item \gls{SSTP} : basé sur \gls{SSL}\/\gls{TLS}, fonctionne sur le port 443 et traverse facilement les pare-feu
+    \item \gls{L2TP}\/\gls{IPSec} : offre un chiffrement fort pour les connexions distantes
+    \item \gls{OpenVPN} : fournit une solution flexible et multiplateforme
+\end{itemize}
+
+\subsubsection*{Contrôle de la Bande Passante}
+\gls{RouterOS} permet de gérer la bande passante par utilisateur, par interface ou par type de trafic.
+\begin{itemize}
+    \item Les queues simples et hiérarchiques permettent un partage équitable des ressources
+    \item Les règles de marquage (\textbf{mangle}) permettent de classifier le trafic et d’appliquer des politiques spécifiques
+\end{itemize}
+
+\subsubsection*{Surveillance et Supervision Réseau}
+RouterOS prend en charge \gls{SMTP} (v1, v2c, v3), NetFlow et divers outils de monitoring :
+\begin{itemize}
+    \item Suivi en temps réel de l’utilisation \gls{CPU}, mémoire et interfaces
+    \item Exportation des données vers des systèmes de supervision
+    \item Détection proactive des anomalies et génération de logs détaillés
+\end{itemize}
+
+\subsubsection*{Gestion des \gls{VLAN}, \gls{PPPoE} et Hotspot}
+\begin{itemize}
+    \item \gls{VLAN} : segmentation logique du réseau pour isoler les services ou départements et réduire le broadcast
+    \item \gls{PPPoE} : serveur d’accès permettant d’authentifier les utilisateurs et de gérer leurs sessions
+    \item \gls{Hotspot} : portail captif avec authentification, idéal pour le contrôle d’accès des utilisateurs temporaires
+\end{itemize}
+
+\subsection*{1.2.2 Intérêts de MikroTik dans les environnements professionnels}
+MikroTik s’est imposé comme une solution économique et puissante dans les 
+\gls{PME}, les établissements éducatifs et les fournisseurs d’accès Internet (\gls{ISP}). Il permet 
+une gestion complète du réseau sans recourir à des solutions propriétaires coûteuses. 
+Sa flexibilité le rend adapté aux projets de virtualisation, aux topologies complexes et 
+aux environnements nécessitant une haute disponibilité. De plus, ses mises à jour 
+régulières et sa large communauté assurent un suivi constant des nouvelles menaces et 
+besoins techniques.
+
+\section{Réseau et sécurité informatique}
+
+\subsection{Risques et vulnérabilités}
+Tout système réseau est exposé à des menaces, qu'elles soient internes (mauvaises 
+configurations, accès non autorisés) ou externes (attaques par déni de service, 
+intrusions, espionnage). Les vulnérabilités les plus courantes incluent : 
+\begin{itemize}
+    \item Ports ouverts non surveillés
+    \item Mots de passe faibles
+    \item Failles de configuration dans les protocoles (ex : telnet, FTP non sécurisés)
+    \item Logiciels obsolètes ou non patchés
+    \item Attaques de type man-in-the-middle (\gls{MITM})
+\end{itemize}
+
+\subsection{Bonnes pratiques de sécurisation}
+Pour garantir un niveau de sécurité acceptable dans un réseau équipé de MikroTik, il 
+est recommandé de : 
+\begin{itemize}
+    \item Désactiver les services non utilisés
+    \item Utiliser des mots de passe complexes et une authentification à deux facteurs
+    \item Mettre à jour régulièrement RouterOS
+    \item Limiter les accès à l’interface de gestion Winbox, \gls{SSH} par adresse \gls{IP}
+    \item Configurer correctement les règles du pare-feu
+    \item Mettre en place des logs et une surveillance régulière
+\end{itemize}
+
+\section{Technologies existantes d’optimisation de réseau}
+
+\subsection{Présentation du protocole \gls{PPPoE}}
+Le Point-to-Point Protocol over Ethernet (\gls{PPPoE}) est une technologie permettant 
+d'établir des connexions point-à-point sur un réseau Ethernet. Utilisée principalement 
+par les FAI, elle permet l’authentification des utilisateurs via un identifiant et un mot 
+de passe, tout en supportant la gestion de bande passante et le suivi des sessions. 
+MikroTik offre une implémentation stable de PPPoE, adaptée aux environnements 
+clients-serveurs.
+
+\subsection{Présentation du protocole SSTP}
+Le Secure Socket Tunneling Protocol (\gls{SSTP}) est un protocole VPN développé par 
+Microsoft. Il utilise \gls{SSL}/\gls{TLS} (port 443), ce qui lui permet de passer facilement à 
+travers les pare-feux et les proxys. Son principal avantage est la sécurité accrue grâce 
+au chiffrement natif SSL. MikroTik intègre SSTP comme solution VPN, idéale dans 
+des environnements fortement filtrés ou nécessitant un haut niveau de confidentialité.
+
+\subsection{Autres solutions courantes (\gls{VPN}, \gls{VLAN}, \gls{QoS}, etc.)}
+Outre \gls{PPPoE} et \gls{SSTP}, MikroTik prend en charge : 
+\begin{itemize}
+    \item VPN (\gls{PPTP}, \gls{L2TP}, \gls{OpenVPN}) : pour relier des sites distants de manière 
+    sécurisée.
+    \item \gls{VLAN} (802.1Q) : pour la segmentation réseau et l’optimisation du trafic.
+    \item \gls{QoS} : pour prioriser certains types de trafic (voix, vidéo).
+    \item \gls{MPLS}, Bonding, Bridge, Routing Policy : pour une gestion avancée et 
+    performante du réseau.
+\end{itemize}
+
+\section{Comparaison des différentes technologies}
+
+\subsection{\gls{PPPoE} vs \gls{SSTP} : avantages, limites, cas d’usage}
+
+\begin{table}[h!]
+\centering
+\caption{Comparaison \gls{PPPoE} et \gls{SSTP}}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Critère} & {\gls{PPPoE}} & {\gls{SSTP}} \\ \hline
+Sécurité & Faible (authentification simple) & Élevée (chiffrement \gls{SSL}\/\gls{TLS}) \\ \hline
+Usage typique & Fournisseurs d’accès, \gls{ISP} & \gls{VPN} sécurisé en entreprise \\ \hline
+Configuration & Simple côté client et serveur & Légèrement plus complexe \\ \hline
+Traversée \gls{NAT} & Peut poser problème & Excellente (utilise \gls{HTTPS}/443) \\ \hline
+Performance & Excellente & Moyenne (chiffrement impacte) \\ \hline
+\end{tabular}
 \end{table}
 
+Conclusion : \gls{PPPoE} est plus léger et adapté aux accès Internet contrôlés, tandis que 
+\gls{SSTP} convient aux entreprises exigeant un \gls{VPN} robuste et discret.
 
-\subsection{L'applications de gestion d'événements éducatifs interactifs}
-\subsubsection{Definition}
-Une application mobile de gestion d’événements éducatifs interactifs est une application mobile  qui centralise l’organisation et l’animation d’activités pédagogiques liées à un cours, atelier, séminaire ou conférence. Elle offre aux participants un accès unifié au programme, aux intervenants et aux ressources, ainsi que des modules d’interaction en temps réel (sondages, quiz, questions-réponses, messagerie).
-
-\subsubsection{Principales caractéristiques de l'application événementielle}
-
-
-Les applications d’événements sont essentielles pour optimiser l’organisation et l’expérience des participants. Elles offrent plusieurs fonctionnalités clés :
-
-\textbf{Agenda interactif} : Consultation du programme, rappels et personnalisation.
-
-\textbf{Mise en réseau} : Messagerie, échange de contacts et planification de réunions.
-
-\textbf{Sondages et questions-réponses en direct} : Interaction en temps réel avec les intervenants.
-
-\textbf{Notifications} : Mises à jour instantanées sur le déroulement de l’événement.
-
-\textbf{Analyse et retours} : Collecte de données sur l’engagement et la satisfaction.
-
-
-Ces outils améliorent l’interactivité et fournissent aux organisateurs des insights précieux pour optimiser leurs événements.
-
-\subsection{Evénements éducatifs interactif}
-\subsubsection{Définition}
-Un événement éducatif interactif, c’est un cours, atelier ou conférence où le public ne fait pas que regarder : il participe pendant la séance. Les gens posent des questions, votent, répondent à des quiz, donnent des idées, et l’animateur adapte la suite en direct grâce à ces retours. Cela peut se passer en salle, en ligne ou en hybride, avec des outils numériques (sondages, chat, Q\&A) ou des moyens très simples (mains levées).
-
-
-\subsubsection*{Les ateliers et formations}
-
-Les ateliers et formations sont des événements éducatifs interactifs 
-conçus pour enseigner de nouvelles compétences ou améliorer
-les compétences existantes.
-Ces cours mettent l'accent sur le bien-être et le développement
-des salariés face aux enjeux spécifiques au sein de l'entreprise.
-Ils sont parfaits pour les entreprises qui cherchent à développer 
-le savoir-faire de leurs salariés.
-Les organisateurs jouent un rôle clé dans la gestion de ces types 
-événements, assurant une communication efficace et répondant aux 
-exigences de chaque collaborateurs.
-En effet, la fonction des ateliers et formations va au-delà de 
-l'apprentissage, contribuant également à renforcer la cohésion 
-et l'engagement envers les collaborateurs de l'entreprise \cite{evenementsprofessionnel}.
-\subsubsection*{ Congrès}
-Ce type d’événement est assez similaire
-à la conférence. La différence majeure 
-est que le congrès a une dimension
-internationale. Il réunit souvent 
-des experts ou personnalités de plusieurs 
-pays du monde afin de débattre autour d’une 
-question ou d’une thématique \cite{evenement}.
-\subsubsection*{ Les conférences}
-
-Ce sont des types d'événements de grande envergure 
-qui rassemblent un grand nombre de collaborateurs 
-pour discuter et débattre de sujets spécifiques.
-Elles sont idéales pour présenter des informations,
-partager des idées, créer des réseaux professionnels
-et favoriser la communication entre les salariés. 
-Parmi les différents types d'événements éducatifs interactifs, les conférences 
-jouent une fonction importante dans le métier de l' organisateur.
-La mise en place d'un tel événement offre une opportunité unique
-de développer des compétences en matière de team building et d'organisation.\cite{evenementsprofessionnel}
-
-\subsubsection{Gestion d'événements éducatifs interactifs} 
-La gestion d'événements éducatifs interactifs désigne l'ensemble des activités et processus permettant de planifier, organiser, exécuter et évaluer un événement éducatif interactif. Cela inclut la coordination des ressources, la gestion des participants, l'organisation logistique et la supervision des activités tout au long de l'événement. L'objectif principal de la gestion d'événements est de garantir le bon déroulement de l'événement, en répondant aux attentes des participants et en optimisant les ressources disponibles. Cela englobe également l'utilisation d'outils technologiques, comme les applications d'événements, pour améliorer l'efficacité, faciliter la communication et recueillir des retours pour des améliorations futures.
-
-
-
-
-\section{Solutions existantes et leurs limites}
-Plusieurs solutions existent déjà dans le but de rémédier au problème de la gestions des événements éducatifs interactifs. voici une liste
-non exhaustive:
-\subsection{Kahoot}
-\subsubsection{Définition}
-Kahoot est une plateforme d’apprentissage numérique innovante qui permet aux éducateurs et aux apprenants de créer, partager et jouer à des jeux éducatifs interactifs et amusants. Conçu pour être intuitif et facile à utiliser, Kahoot offre aux enseignants et aux étudiants la possibilité de créer des jeux à choix multiples – appelés « kahoots » – qui peuvent être joués en classe ou à distance. Les utilisateurs n’ont besoin que d’une connexion Internet et d’un appareil compatible pour se lancer. Alors que l’éducation se numérise à un rythme accéléré, Kahoot est utilisé par des millions de personnes à travers le monde. Des données récentes montrent que plus de 50\% des écoles aux États-Unis l’ont intégré dans leurs programmes. En France, de nombreux établissements scolaires ont également adopté Kahoot pour favoriser l’engagement et stimuler l’apprentissage.
-\subsubsection{Limites}
+\subsection{Analyse comparative avec d'autres technologies}
+Comparativement à : 
 \begin{itemize}
-   \item \textbf{Version Gratuite}: Limitée à 40 joueurs pour les sessions en direct et asynchrones, avec des fonctionnalités réduites comme l'absence de rapports détaillés et de questions à réponses multiples .
-   \item \textbf{Publicités} :La version gratuite inclut des publicités, ce qui peut être distrayant.
-   \item \textbf{Types de Questions} : La version gratuite est limitée à deux types de questions.
-  \end{itemize}
+    \item \gls{PPTP} : moins sécurisé que \gls{SSTP}
+    \item \gls{L2TP}\/\gls{IPSec} : performant mais plus difficile à configurer
+    \item \gls{OpenVPN} : très sécurisé et open source, mais non natif sur MikroTik
+    \item \gls{VLAN} : complémentaire, utile pour la segmentation 
+    \item \gls{QoS} : indispensable pour la gestion de priorités, particulièrement en VoIP et vidéos
+\end{itemize}
 
-Les figures \ref{fig:kahoot-home} et \ref{fig:kahoot-join} montrent l’écran Kahoot où les participants entrent le code (PIN) pour rejoindre la session
+L’analyse globale montre que le choix dépend du contexte d’usage : performance, 
+sécurité, compatibilité avec les infrastructures existantes.
+
+\subsection{Présentation du réseau existant de la CMMB}
+
+Le réseau actuel de la CMMB repose sur une architecture relativement simple, 
+composée de plusieurs agences interconnectées, dont l’agence mère sert de point 
+central.
 
 \begin{figure}[H]
-  \centering
-  \begin{minipage}{0.36\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/Kahoot a.jpg}
-    \caption{ Page de participation (saisie du code)}
-    \label{fig:kahoot-home}
-  \end{minipage}\hfill % <-- espace extensible
-  \begin{minipage}{0.36\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/Kahoot.jpg}
-    \caption{ Page d’accueil de Kahoot}
-    \label{fig:kahoot-join}
-  \end{minipage}
+    \includegraphics[scale=0.5]{images/0.jpg} % Remplace par le nom de ton image
+    \caption{ Représentation du réseau actuel de la CMMB }
+    \label{fig:reseau_cmmb}
 \end{figure}
 
 
 
-\subsection{Slido}
-\subsubsection{Définition}
-Slido est une plateforme  qui permet de créer des sondages, des questions-réponses en direct, et des QCM interactifs. Il est particulièrement utile pour les événements en direct et les réunions, offrant une intégration avec PowerPoint et Google Slides.
-\subsubsection{Limites}
+\subsection{Limites fonctionnelles et besoins d’amélioration}
+
+Parmi les principales limites observées :
 \begin{itemize}
-   \item \textbf{Nombre de participants} : Bien que \textit{Slido} ne divulgue pas de limite stricte pour les participants, son efficacité peut diminuer avec un grand nombre d'utilisateurs.
-   \item \textbf{Fonctionnalités avancées} : Certaines fonctionnalités avancées, comme l'intégration avec d'autres outils, peuvent nécessiter un abonnement payant.
+    \item Manque de contrôle sur les connexions dans les agences ;
+    \item Difficulté à gérer les utilisateurs et leurs droits d’accès ;
+    \item Absence de système d’authentification individualisé ;
+    \item Faible fiabilité des connexions inter-sites ;
+    \item Surconsommation de bande passante, sans priorisation du trafic ;
+    \item Impossibilité de surveiller et limiter l’usage par utilisateur ou par service.
 \end{itemize}
 
-Comme le montre la \autoref{fig:slido-dashboard}, Slido propose un tableau de bord
-pour créer et piloter les événements ; la \autoref{fig:slido-participant} présente,
-côté participant, l’écran d’accueil avec champ de code et dernier événement.
+Ces limites nuisent à la qualité du service et à la productivité des agences. Il devient donc nécessaire de mettre en place une solution centralisée, sécurisée et modulable.
 
-\begin{figure}[H]
-   \centering
-   \begin{minipage}{0.36\textwidth}
-       \centering
-       \includegraphics[scale=0.4]{images/5.jpg}
-       \caption{Tableau de bord de gestion des événements Slido}
-       \label{fig:slido-dashboard}
-   \end{minipage}
-   \hfill
-   \begin{minipage}{0.40\textwidth}
-       \centering
-       \includegraphics[scale=0.40]{images/1.jpg}
-       \caption{Écran d'accueil des participants sur Slido avec un champ de code et le dernier événement}
-       \label{fig:slido-participant}
-   \end{minipage}
-\end{figure}
-\subsection{Poll For All}
-\subsubsection{Définition}
-Poll For All est un outil simple pour créer des sondages en ligne. Il est facile à utiliser et permet de partager des résultats en temps réel.
+\subsection{Proposition d’une solution basée sur \gls{PPPoE} et \gls{SSTP}}
 
-\subsubsection{Limites}
+Pour répondre aux besoins précédemment identifiés, nous proposons une solution intégrée basée sur les technologies suivantes :
+
+\textbf{\gls{PPPoE} – Authentification locale des utilisateurs} \\
+Le protocole \gls{PPPoE} permettra :
 \begin{itemize}
-   \item \textbf{Fonctionnalités limitées} Il ne propose pas autant de fonctionnalités interactives que d'autres plateformes comme \textbf{Kahoot} ou \textbf{Slido}.
-   \item \textbf{Pas de Gamifications} Il manque de fonctionnalités ludiques pour engager les participants.
+    \item Une connexion individuelle par utilisateur avec login/mot de passe ;
+    \item Un suivi précis des sessions ;
+    \item L’attribution de profils avec limites de bande passante ;
+    \item Une facturation ou un historique d’usage possible si nécessaire.
 \end{itemize}
-Comme le montrent les figures \ref{fig:pollforall-home} et \ref{fig:pollforall-participant},
-Poll For All propose une page d’accueil claire ; côté participant, l’écran d’accueil
-affiche un champ d’option
-\begin{figure}[H]
-   \centering
-   \begin{minipage}{0.45\textwidth}
-       \centering
-       \includegraphics[scale=0.4]{images/6.jpg}
-       \caption{Page d'accueil de  Poll For All}
-       \label{fig:pollforall-home}
-   \end{minipage}
-   \hfill
-   \begin{minipage}{0.45\textwidth}
-       \centering
-       \includegraphics[scale=0.4]{images/0.jpg}
-       \caption{Écran d'accueil des participants sur Poll For All avec un champ  d'option}
-       \label{fig:pollforall-participant}
-   \end{minipage}
-\end{figure}
 
-\noindent
-Le tableau~\ref{tab:comparaison} compare les principales plateformes d’interactivité
-(Kahoot, Slido, Poll For All) à notre solution selon des critères fonctionnels
-(type d’interaction, limites de participants, mode hors-ligne, automatisation, etc.).
+Cela remplacera l’accès libre actuel par une logique plus sécurisée et personnalisée.
 
-% ------ Tableau forcé "ici" + largeur sécurisée ------
-\begin{table}[H] % [H] = ici strictement (nécessite \usepackage{float})
-    \centering
-        \caption{Différences entre les solutions existantes et notre solution}
-    \renewcommand{\arraystretch}{1.3}
-    \setlength{\tabcolsep}{4pt} % compacter légèrement l’espace horizontal
-    \resizebox{\textwidth}{!}{%
-    \begin{tabular}{|m{4cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
-        \hline
-        \textbf{Fonctionnalités} & \textbf{Kahoot} & \textbf{Slido} & \textbf{Poll For All} & \textbf{Notre solution} \\
-        \hline
-        \textbf{Type d’interaction} & Jeux éducatifs interactifs & Sondages, Q\&A ou Q\&R , QCM interactifs & Sondages en ligne & Interactions complètes (Q\&A, sondages, quiz, feedback, gestion des rôles) \\
-        \hline
-        \textbf{Limite de participants} & 40 joueurs en version gratuite & Peut être limité selon la version & Pas de limite claire, mais fonctionnalités basiques & Optimisé pour tout type d’événement sans restriction \\
-        \hline
-        \textbf{Mode hors ligne} & Non & Non & Non & Oui, accès aux supports et interactions possibles sans connexion \\
-        \hline
-        \textbf{Automatisation} & Non & Partielle (nécessite une gestion manuelle) & Non & Oui, gestion autonome des interactions, analyse des données en temps réel \\
-        \hline
-        \textbf{Personnalisation} & Limitée aux types de jeux proposés & Disponible en version payante & Très limitée & Interface et fonctionnalités adaptables aux besoins des organisateurs \\
-        \hline
-        \textbf{Analyse et statistiques} & Rapports limités en version gratuite & Statistiques avancées en version payante & Analyse très basique & Outils intégrés pour suivre l’engagement et améliorer les événements \\
-        \hline
-        \textbf{Expérience utilisateur} & Ludique mais limitée aux quiz & Bonne, mais payante pour des fonctionnalités avancées & Interface très simple, peu interactive & Expérience fluide, intuitive et complète pour tous les utilisateurs \\
-        \hline
-    \end{tabular}}
-
-    \label{tab:comparaison}
-\end{table}
-
-
-
-\subsection{Constats et limites des solutions existantes}
-\label{sec:limites}
-Dans la pratique, les plateformes d'interactivité largement diffusées présentent des limites récurrentes :
+\textbf{SSTP – Accès distant sécurisé} \\
+La mise en place de \gls{SSTP} \gls{VPN} (via MikroTik) permettra aux agents distants ou en mission d’accéder :
 \begin{itemize}
-  \item \textbf{ Limitations d'usage en version gratuite} : plafonds de participants, types de questions restreints, présence de publicités, rapports analytiques réduits.
-  \item \textbf{ Dépendance au réseau} : impossibilité (ou faible qualité) d'usage en contexte à faible connectivité (amphithéâtres saturés, déplacements, zones à faible couverture).
-  \item \textbf{ Analyse et pilotage} : indicateurs peu actionnables en temps réel, export de données limité, difficile segmentation par session, groupe ou question.
-  \item \textbf{ Personnalisation et image} : personnalisation limitée (charte graphique, nom de domaine, codes d’accès), expérience hétérogène pour l’institution.
-  \item \textbf{ Orchestration multi-rôles/événements} : gestion perfectible des rôles (organisateur, modérateur, intervenant), des droits fins et des événements simultanés.
-  \item \textbf{Accessibilité et inclusivité} : prise en charge inégale de l’\emph{accessibility} (lecteurs d’écran, contrastes, navigation clavier) et du multilingue.
+    \item À leurs fichiers internes ;
+    \item À la messagerie professionnelle ;
+    \item À des services partagés (\gls{ERP}, \gls{GED}...).
 \end{itemize}
-\subsection{Notre solution}
-Notre application mobile permet d’animer des événements éducatifs. Concrètement, elle :
-\begin{itemize}
-  \item propose des activités interactives essentielles (quiz, sondages, questions–réponses) avec modération en direct ;
-  \item fonctionne même sans Internet (mode hors ligne) et synchronise les données dès que le réseau revient ;
-  \item affiche un tableau de bord en direct (participation, temps de réponse, répartition des réponses) et permet l’export des données ;
-  \item offre une personnalisation simple pour l’institution (thème, logo, codes d’accès) ;
-  \item permet de mieux suivre les participants grâce à des outils d’analyse en direct, statistiques détaillées et informations utiles pour améliorer les prochains événements.
-\end{itemize}
+
+\gls{SSTP} utilise le port \gls{HTTPS} (443), ce qui permet de contourner les restrictions réseau sans compromettre la sécurité (chiffrement \gls{SSL}\/\gls{TLS}).
+
+
 
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
 
-Ce chapitre a permis de mieux comprendre les solutions existantes et leurs limites, mettant ainsi en évidence la nécessité de notre application pour une gestion interactive et optimisée des événements éducatifs interactifs. Nous avons pu identifier les fonctionnalités essentielles à intégrer pour offrir une expérience plus fluide et complète aux utilisateurs.  
+Ce chapitre a présenté les notions essentielles des réseaux informatiques ainsi que les fonctionnalités clés de RouterOS de MikroTik. L’analyse des technologies d’optimisation réseau, notamment \gls{PPPoE} et \gls{SSTP}, a permis d’identifier leurs apports en matière de contrôle d’accès, de sécurité et de gestion de la bande passante. 
 
-
+L’étude du réseau actuel de la \gls{CMMB} a révélé plusieurs limites justifiant la mise en place d’une solution centralisée et sécurisée. Ainsi, l’adoption de \gls{PPPoE} pour l’authentification des utilisateurs et de \gls{SSTP} pour les accès distants constitue une réponse adaptée aux besoins de performance, de sécurité et de gestion du réseau de la CMMB.
