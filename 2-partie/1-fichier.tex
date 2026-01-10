@@ -29,7 +29,7 @@ MikroTik, garantissant une gestion fine des utilisateurs et une meilleure traça
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/1.jpg}
+    \includegraphics[width=0.99\textwidth]{images/2.png}
     \caption{Proposition d’architecture du réseau de la CMMB pour le projet }
     \label{fig:reseau-cmmb}
 \end{figure}
@@ -50,7 +50,7 @@ MikroTik, garantissant une gestion fine des utilisateurs et une meilleure traça
     \item Garantit la confidentialité et l’intégrité des données échangées entre les sites.
 \end{itemize}
 
-\subsection{Outils et équipements utilisés}
+\section{Outils et équipements utilisés}
 Le succès de l'implémentation de cette architecture repose sur le choix judicieux
 d'outils de simulation, de systèmes d'exploitation (\gls{OS}) de réseau et d'équipements
 virtuels et réels.
@@ -136,7 +136,7 @@ Utilisé par \gls{SSTP} pour chiffrer les communications et par la gestion des c
 \end{tabular}
 \end{table}
 
-\subsection{Plan d’adressage et schéma logique du réseau}
+\section{Plan d’adressage et schéma logique du réseau}
 
 \begin{itemize}
 \item \textbf{Adressage du Tronc Principal (WAN / Réseau de Transport)}
@@ -224,7 +224,7 @@ Adresse distante du tunnel (Pool attribué). \\
 \begin{itemize}
 \item \textbf{Winbox :}
 \end{itemize}
-\subsection{Configuration du serveur PPPoE avec MikroTik}
+\section{Configuration du serveur PPPoE avec MikroTik}
 
 Essayons avec le routeur de \textbf{AKPAKPA}.
 
@@ -245,7 +245,7 @@ Essayons avec le routeur de \textbf{AKPAKPA}.
     \end{itemize}
     \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{images/5.jpg}
+    \includegraphics[width=0.99\textwidth]{images/3.png}
     \caption{Création du pool akpakpa }
     \label{fig:reseau_cmmb}
 \end{figure}
@@ -264,7 +264,7 @@ akpakpa \dns-server=8.8.8.8
     \end{itemize}
     \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{images/6.jpg}
+    \includegraphics[width=0.8\textwidth]{images/4.png}
     \caption{Création du profil PPP }
     \label{fig:reseau_cmmb}
 \end{figure}
@@ -283,7 +283,7 @@ interface=ether1 \ default-profile=profil-clients \ enabled=yes
     \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{images/Model.png}
+    \includegraphics[scale=0.9]{images/5.png}
     \caption{Création du PPPoE service}
     \label{fig:mon_img_mvc}
  \end{figure}
@@ -314,334 +314,253 @@ Ceci est la base de données d'authentification pour le contrôle d'accès.
     \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{images/Model.png}
+    \includegraphics[scale=0.8]{images/6.png}
     \caption{ Création des PPP secrets}
     \label{fig:mon_img_PPP}
  \end{figure}
 \end{enumerate}
 
-\subsection{Configuration du tunnel \gls{SSTP} avec MikroTik }
+\section{Configuration du tunnel \gls{SSTP} avec MikroTik }
 
 Le \gls{SSTP} est utilisé pour établir un VPN chiffré 
 entre le RT-SIEGE (Serveur) et les routeurs d'agences (Clients), en utilisant le bloc 
-d'adressage \gls{VPN}172.16.0.0/24.
+d'adressage \gls{VPN}172.16.0.0\//24
 
 \begin{enumerate}
-    \item \textbf{ Configuration du RT-SIEGE (Serveur \gls{SSTP}):} \\
-    Le siège agit comme le Hub central et distribue les adresses \gls{IP} du réseau \gls{VPN}
-(172.16.0.0/24). 
-    
-    \begin{enumerate}[label=A.]
-    \item \textbf{Adressage et Pool VPN :} \\
-    Nous devons nous assurer que le pool d'adresses VPN pour les clients est défini 
-    (le siège lui-même utilise 172.16.0.1/24).
+\item \textbf{Configuration du RT-SIÈGE (Serveur \gls{SSTP})} \\[0.2cm]
+Le siège agit comme le Hub central et distribue les adresses IP du réseau VPN 
+(172.16.0.0/24)
+%==================================================
+\begin{enumerate}[label=\textbf{\Alph*.}]
 
-    \textbf{Invite de commande :}
+%---------------- A ----------------
+\item \textbf{Adressage et Pool VPN } \\[0.2cm]
+Nous devons nous assurer que le pool d'adresses VPN pour les clients est défini (le 
+siège lui-même utilise 172.16.0.1/24).
+
+\textbf{Invite de commande :}
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Adressage de l’interface LAN du siège (vers le réseau de transport)}
     \begin{verbatim}
     /ip address add address=10.0.0.1/24 interface=ether2
-    /ip pool add name=sstp-pool ranges=172.16.0.10-172.16.0.50
     \end{verbatim}
 
-\end{enumerate}
-
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.4\textwidth]{images/5.jpg}
-    \caption{ SSTP pool configuration   }
-    \label{fig:reseau_cmmb_ pool}
-\end{figure}
- \item \textbf{Créer le profil \gls{SSTP} qui attribue les adresses du pool } \\
-  /ppp profile add name=default-encryption \ local-address=172.16.0.1 \ remote
-address=sstp-pool  
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.4\textwidth]{images/6.jpg}
-    \caption{PPP profil configuration  }
-    \label{fig:reseau_cmmb}
-\end{figure}
-
- \begin{enumerate}[label=B.]
-    \item \textbf{Secrets et Activation du Serveur \gls{SSTP} :} \\
-   Nous créons un secret pour l'agence et activons le service sans certificat. 
-
-    \textbf{Invite de commande :}
+    \item \textbf{Définition du pool d’adresses pour les clients SSTP}
     \begin{verbatim}
-    /ip address add address=10.0.0.1/24 interface=ether2
     /ip pool add name=sstp-pool ranges=172.16.0.10-172.16.0.50
     \end{verbatim}
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/7.png}
+        \caption{ SSTP pool configuration   }
+        \label{fig:reseau_cmmb_ pool}
+      \end{figure}
 
+    \item \textbf{. Créer le profil SSTP qui attribue les adresses du pool}
+    \begin{verbatim}
+   /ppp profile add name=default-encryption \ local-address=172.16.0.1 \ remote
+address=sstp-poo
+    \end{verbatim}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/8.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
 \end{enumerate}
 
-\item \textbf{Activation du serveur PPPoE sur l’interface \gls{LAN} : } \\
-On active le service \gls{PPPoE} sur l'interface du \gls{LAN} (ether1) pour qu'il 
-écoute les demandes de connexion des clients
-    
-    \begin{itemize}
-        \item \textbf{ Invite de commande :}
-        \begin{verbatim}
-/interface pppoe-server server add \ service-name =PPPoE-LAN-AKPAKPA 
-interface=ether1 \ default-profile=profil-clients \ enabled=yes
-        \end{verbatim}
+%---------------- B ----------------
+\item \textbf{Secrets et activation du serveur SSTP} \\[0.2cm]
+Nous créons un secret pour l'agence et activons le service sans certificat. 
 
-        \item \textbf{Winbox} \\
-    \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.4]{images/Model.png}
-    \caption{Création du PPPoE service}
-    \label{fig:mon_img_mvc}
- \end{figure}
- \item \textbf{Ajout des utilisateurs \gls{PPPoE}: } \\
-Ceci est la base de données d'authentification pour le contrôle d'accès.    
-        \begin{table}[h!]
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{ Créer le secret pour l'agence}
+    \begin{verbatim}
+   /ppp secret add name=akassato-vpn-user password=secure-pass service=sstp 
+profile=sstp-profile 
+    \end{verbatim}
+       \begin{figure}[H]
         \centering
-        \caption{Base de donnée d’authentification pour \gls{PPPoE}}
-        \label{tab:pppoe_auth}
-        \begin{tabular}{|c|c|c|c|}
-        \hline
-        \textbf{Utilisateur} & \textbf{Mot de passe} & \gls{PC} & Service / Profil \gls{PPPoE} \\ \hline
-        \gls{PC}1 & \gls{PPPoE} & \gls{PC}1 & profil-clients \\ \hline
-        \gls{PC}2 & \gls{PPPoE} & \gls{PC}2 & profil-clients \\ \hline
-        \end{tabular}
-        \end{table}
-   \begin{itemize}
-        \item \textbf{ Invite de commande :}
-        \begin{verbatim}
+        \includegraphics[width=0.5\textwidth]{images/9.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
 
-       - /ppp secret add name=PC1 password=     service=pppoe profile=profil
-        clients 
-       - /ppp secret add name=PC2 password=     service=pppoe profile=profil
-        clients
-        \end{verbatim}
+    \item \textbf{ Activer le serveur SSTP sans certificat (très important pour contourner l'étape SSL) }
+    \begin{verbatim}
+    /interface sstp-server server set enabled=yes \ default-profile= default-encryption 
+    \verify-client-certificate=no \ certificate=none
+    \end{verbatim}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/10.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
 
-        \item \textbf{Winbox} \\
-    \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.4]{images/Model.png}
-    \caption{ Création des PPP secrets}
-    \label{fig:mon_img_PPP}
- \end{figure}
 \end{enumerate}
+\item \textbf{Routage du trafic vers l’agence} \\[0.2cm]
+Pour que le siège puisse communiquer avec le LAN de l'agence (10.1.1.0/24), une 
+route statique est nécessaire après l'établissement du tunnel. 
 
-
-
-\subsubsection*{Méthode de }
-La     est un outil de planification de projet utilisé pour calculer de manière réaliste le temps nécessaire pour terminer un projet. Les diagrammes de  sont utilisés pour planifier les tâches au sein d'un projet, ce qui facilite la programmation des livrables et la coordination avec les membres de l'équipe.
-\subsection{L’architecture du projet }
-
-L’architecture d’un logiciel décrit la manière dont sont agencés les différents éléments
- d’une application et comment ils interagissent entre eux. Cette étape est donc l’une des premières étapes du développement logiciel et intervient lors de la phase de conception.
-C’est celle que nous allons utiliser dans le développment de cette application. est un motif d'architecture logicielle destiné aux interfaces graphiques
-permet de bien organiser son code source. Il va nous aider à savoir quels fichiers créer, mais
-surtout à définir leur rôle. Le but de  est justement de séparer la logique du code en
-trois parties que l’on retrouve dans des fichiers distincts.
- Le motif est composé de trois types de modules ayant trois responsabilités différentes :
-
-     \textbf{Modèle } :Élément qui contient les données ainsi que de la logique en rapport avec les données : validation, lecture et enregistrement. Il peut, dans sa forme la plus simple, contenir uniquement une simple valeur, ou une structure de données plus complexe. Le modèle représente l'univers dans lequel s'inscrit l'application. Par exemple pour une application de banque, le modèle représente des comptes, des clients, ainsi que les opérations telles que dépôt et retraits, et vérifie que les retraits ne dépassent pas la limite de crédit. ;
-
-     \textbf{Vue } : Partie visible d'une interface graphique. La vue se sert du modèle, et peut être un diagramme, un formulaire, des boutons, etc. Une vue contient des éléments visuels ainsi que la logique nécessaire pour afficher les données provenant du modèle. Dans une application de bureau classique, la vue obtient les données nécessaires à la présentation du modèle en posant des questions. Elle peut également mettre à jour le modèle en envoyant des messages appropriés. Dans une application web une vue contient des balises ;
-
-    \textbf{Contrôleur} : Module qui traite les actions de l'utilisateur, modifie les données du modèle et de la vue.
-    \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{images/Model.png}
-    \caption{  Architecture  \cite{wikipedia} }
-    \label{fig:mon_img_mvc}
- \end{figure}
-    \subsection{    La technologie adaptée à notre projet }
-Comme pour la création de sites web, il est essentiel de bien définir les besoins avant de choisir une technologie adaptée. Pour notre application mobile, nous avons opté pour \textbf{ Flutter} afin de concevoir l’interface utilisateur et \textbf{ Laravel  } , \textbf{ Supabase } et \textbf{ Firebase  } pour gérer le back-end. Ce choix repose sur leur efficacité, leur flexibilité et leur adéquation avec nos objectifs.
-
-
-
-\subsubsection{ Flutter}
-Flutter est un framework de développement d’applications multiplateforme, conçu par Google, dont la première version a été publiée sous forme de projet open source à la fin de l’année 2018. Flutter met à disposition une grande variété de bibliothèques d’éléments d’IU standard pour Android et iOS.
-Nous avons opté ce choix parce que Flutter permet de développer des applications Android et iOS sans nécessiter de code distinct pour chaque système. Il garantit une expérience fluide et native sur tous les appareils. Avant leur publication, ces applications sont compilées pour chaque plateforme, éliminant ainsi le besoin d’un module runtime ou d’un navigateur. Grâce à cette base de code unique, Flutter peut également servir à créer des applications web et des logiciels natifs pour Windows, Linux et macOS.
-Le Flutter SDK se base sur le langage de programmation Dart qui est  également développé par Google  \cite{ionos}
-\subsubsection{ Laravel }
-Créé en 2011 par \textbf{Taylor Otwell}, Laravel est un  framework  conçu pour offrir une structure organisée et efficace au développement web. Il facilite la création d’applications, qu’elles soient simples ou complexes, en fournissant des outils intégrés dès l’installation.  
-Grâce à sa flexibilité, Laravel permet de développer divers types de projets, tels que des sites web dynamiques, des logiciels d’entreprise , , des plateformes e-commerce  ou encore des réseaux sociaux. Il est particulièrement adapté aux applications nécessitant un backend robuste, incluant la gestion des utilisateurs et des commandes.  
-Laravel est ainsi un choix idéal pour les développeurs recherchant un environnement structuré, performant et évolutif \cite{yieldstudio}.
-
-
-
-\subsubsection{ Supabase}
-Supabase est une plateforme open source permettant de développer des applications web et mobiles en s’appuyant sur une infrastructure complète et clé en main. Elle repose sur PostgreSQL comme base de données, offrant une gestion simplifiée via une interface intuitive et une exposition automatique sous forme d'API, éliminant ainsi le besoin d’un backend dédié.  
-Ses fonctionnalités incluent un système d’authentification intégré, compatible avec de nombreux fournisseurs (Google, GitHub, Azure, etc.), des fonctions serverless, ainsi que des outils puissants pour la gestion du temps réel et des bases de données vectorielles adaptées à l’intelligence artificielle.  
-Avec une approche axée sur la rapidité et la simplicité, Supabase se positionne comme une alternative open source à Firebase, idéale pour accélérer le développement d’applications modernes  \cite{denierCri}.
-
-\subsubsection{ Firebase }
-Firebase est une plateforme de développement mobile et web proposée par Google. Elle offre un large éventail de services et d’outils pour les développeurs, y compris des bases de données en temps réel, des analyses, des notifications push, des authentifications et des outils de gestion de projet \cite{bility}.
-
-\subsection{ ou environnement de développement}
-Un ou environnement de développement intégré en français, est un logiciel qui fournit un ensemble d’outils et de fonctionnalités pour faciliter le développement de logiciels. Il regroupe plusieurs outils nécessaires à la programmation en un seul endroit, améliorant ainsi l’efficacité et la productivité des développeurs  \cite{webTech}. 
-
-Comme environnement de développment, nous avons utilisé dans le cadre de ce projet,Android Studio et le IDE Vusual Studio Code  pour écrire le code Flutter et Dart.
-\begin{figure}[H]
-    \centering
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{images/studio-idx.png}
-        \caption{IDE Android Studio  }
-        \label{fig:img1}
-    \end{minipage}
-    \hfill
-    \hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{images/visualstudio.jpg}
-        \caption{IDE Vusual Studio Code}
-        \label{fig:img2}
-    \end{minipage}
-\end{figure}
-\section{ Conception}
-\subsection{Modélisation}
-Afin de modéliser les fonctionnalités de notre application mobile, nous avons retenu le langage , 
-standard de modélisation visuelle permettant de spécifier, visualiser et documenter les systèmes logiciels, 
-tant du point de vue de leur structure que de leur comportement, de manière à satisfaire l’ensemble des 
-exigences du projet.
-
-\subsubsection{Analyse des besoins}
-L’analyse des besoins est la première étape à franchir dans la conception de notre application mobile. Cette
-analyse définira de façon succincte les différentes fonctionnalités de notre application.
-Ainsi, l’application sera utilisé par tout personne qui le désire après que cette personne crée un
-compte et se connecte. Néanmoins, les utilisateurs sont classés par catégories suivant les actions
-qu’ils peuvent effectuer sur l’application. On distingue donc :
-
-\begin{itemize}
-    \item \textbf{Les participants} 
-
-    Les participants peuvent :
-    \begin{itemize}
-        \item[--] Assister à des sessions et interagir avec le contenu.
-        \item[--] Donner du feedback sur les événements ou sessions auxquels ils ont participé.
-    \end{itemize}
-
-    \item \textbf{Les formateurs} 
-
-    Les formateurs ont les privilèges suivants :
-    \begin{itemize}
-        \item[--] Créer des événements et des sessions.
-        \item[--] Demander et analyser des feedbacks des participants.
-        \item[--] Suivre l’engagement des participants.
-    \end{itemize}
-
-    \item \textbf{L'administrateur} 
-
-    Les administrateurs ont un rôle de gestion globale. Ils peuvent :
-    \begin{itemize}
-        \item[--] Gérer les utilisateurs inscrits sur l'application mobile.
-        \item[--] Configurer les paramètres de l’application.
-        \item[--] Consulter les statistiques d’utilisation.
-   
-    \end{itemize}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Créer la route vers le LAN de l’agence AKASSATO (via son IP VPN)}
+    \begin{verbatim}
+    /ip route add dst-address=10.1.1.0/24 \
+    gateway=172.16.0.10 \
+    comment="Route vers LAN AKASSATO via SSTP"
+    \end{verbatim}
 \end{itemize}
+       \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/11.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+\end{enumerate}
+\item \textbf{Configuration du RT-AKASSATO (Client SSTP)} \\[0.2cm]
+L'agence doit initier la connexion vers l'adresse WAN du siège (192.168.254.2). 
+\begin{enumerate}[label=\textbf{\Alph*.}]
+%---------------- A ----------------
+\item \textbf{Création de l'Interface Client SSTP } \\
+Nous utilisons le même nom d'utilisateur et mot de passe définis dans les secrets du 
+siège. 
+ \textbf{CLI}
 
-\subsubsection{Acteurs du système}
-
-\noindent Dans un diagramme de cas d'utilisation, un acteur désigne un rôle (personne ou profil)
-qui interagit avec l’application pour atteindre un objectif précis. À partir du diagramme de classes,
-nous retenons les rôles suivants :
-
+\begin{verbatim}
+    /interface sstp-client add name=sstp-out-sieges \connect to=192.168.254.2\ 
+user=akassato-vpn-user password=     \add-default-route=yes \profile=default
+encryption \ verify-server-certificate=no 
+\end{verbatim}
 \begin{itemize}
-    \item \textbf{Participants} : utilisateurs qui s’inscrivent aux événements, rejoignent les sessions
-          (quiz, sondages, Q\&A) et fournissent du feedback.
-    \item \textbf{Formateurs} (ou \textbf{Organisateurs}) : utilisateurs qui créent et pilotent les événements
-          et leurs sessions, configurent les activités interactives, consultent les résultats et modèrent les échanges.
-    \item \textbf{Administrateur} : rôle de gouvernance chargé de la gestion des utilisateurs et des droits,
-          des paramètres globaux et de la supervision (journalisation, sécurité, conformité).
+    \item \textbf{connect-to=192.168.254.2} : Adresse WAN du RT-SIÈGE.
+    \item \textbf{add-default-route=yes} : Permet au trafic non local
+    (y compris le trafic Internet du LAN PPPoE) de passer par le tunnel.
+    \item \textbf{verify-server-certificate=no} : Crucial pour désactiver
+    la vérification SSL que vous souhaitez ignorer.
 \end{itemize}
-
-\subsubsection{Le diagramme de cas d’utilisation}
- Le diagramme de cas d’utilisation est un diagramme UML qui résume la façon dont les acteurs
- interagissent avec un système. Il permet de recueillir, d’analyser et d’organiser les besoins et de 
- recenser les grandes fonctionnalités d’un système. Grâce au diagramme de cas d’utilisation, nous aurons  une vue globale du comportement fonctionnel du système. 
- \begin{figure}[H]
-    \center
-    \includegraphics[scale=0.45]{images/Diagram_cas_utlisatin_fin 24..png}
-    \caption{ Diagramme de cas d’utilisation}
-    \label{fig:mon_img-des-cas-utilisateur}
- \end{figure}
-
- \subsubsection{Le diagramme des classes}
-Le diagramme de classes est un diagramme  UML  qui constitue à faire la représentation structurelle d'un système : il formalise les types d’objets manipulés, leurs attributs et opérations, ainsi que les liens qui les unissent (héritage, agrégation, composition, associations). Dans le cadre de notre application d’animation d’événements éducatifs interactifs, le diagramme \ref{fig:mon_img-des-classes} sert à prsenter la la structure de l'application de gestion d'événements éducatifs interactifs.
-\begin{figure}[H]
-   
-    \includegraphics[scale=0.5]{images/Diagram _de_classe emile.png}
-    \caption{ Diagramme des classes}
-    \label{fig:mon_img-des-classes}
- \end{figure}
-\subsubsection{Les diagramme de séquence}
-Les diagrammes de séquence sont la représentation graphique des interactions entre les acteurs et le
-système selon un ordre chronologique dans la formulation .
-Ici, nous allons illustrer quelques  diagrammes de séquence de  notre système.
-\begin{itemize}
-    \item \textbf{Diagramme  de séquence pour l’inscription et la connexion}
-     est undiagramme UML qui  illustre le processus d'inscription d'un utilisateur sur 
-    notre application. Celui-ci commence par renseigner ses informations 
-    personnelles (email, mot de passe, etc.). Une fois cette étape complétée,
-     un code de validation lui est envoyé par email. Il doit ensuite saisir 
-     ce code pour confirmer la création de son compte. 
-     La figure \ref{fig:mon_img-des-seq-inscription} présente le diagramme
-      de séquence correspondant à cette procédure.
-
-    \begin{figure}[H]
-    \center
-   \includegraphics[scale=0.76]{images/Diagramme-seq-inscription.png}
-    \caption{ Diagramme de séquence pour l'incription}
-    \label{fig:mon_img-des-seq-inscription}
- \end{figure}
-Pour se connecter, l'utilisateur saisit ses identifiants. Si ces derniers 
- sont corrects, un token d'authentification lui est attribué, lui permettant 
- d'accéder aux services de l'application sans avoir à s'identifier à chaque
-  requête. La figure \ref{fig:mon_img-des-seq-connexion} illustre ce processus sous forme de diagramme de séquence.
   \begin{figure}[H]
-    \center
-  \includegraphics[scale=0.59]{images/diagramme-seq-connexion.png}
-  \caption{ Diagramme de séquence pour la connexion}
-  \label{fig:mon_img-des-seq-connexion}
-\end{figure}
-
-\item \textbf{Diagramme  de séquence pour la création d'un événement}
-
-Pour créer un événement, l'organisateur doit d'abord s'authentifier sur la plateforme. 
-Une fois connecté, il accède à l'option Créer événement, où il renseigne les détails essentiels tels que le nom, la date, le lieu et la description. 
-Ce processus peut être étendu par l'ajout de sessions associées à l’événement. 
-La figure  \ref{fig:mon_img-des-seq-creation-evenement} illustre ce déroulement sous forme de diagramme de séquence.
-   
-\begin{figure}[H]
-    \center
-    \includegraphics[scale=0.6]{images/diagramme_sequence_de_ceation_event1.png}
-    \caption{ Diagramme de séquence pour la création d'un événement}
-    \label{fig:mon_img-des-seq-creation-evenement}
-  \end{figure}
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/12.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+\end{enumerate}
+\item \textbf{ Vérification } \\
+\begin{itemize}
+    \item \textbf{Sur RT-AKASSATO :}  
+    Exécutez /interface print. L'interface sstp-out-sieges 
+devrait afficher l'état \textbf{R} (Running) et \textbf{D} (Dynamic).
 
 
-\item \textbf{Diagramme  de séquence pour la participation à un événement}
-
-Pour participer à un événement, l'utilisateur doit d'abord renseigner le code de l'événement et son pseudo.  
-Une fois ces informations fournies,  l’API consulte la base de données afin de s’assurer que l’événement existe effectivement.  
-Une fois l’événement retrouvé, l’API procède à l’enregistrement de la participation de l’utilisateur en l’ajoutant à la liste des participants.  
-L’utilisateur reçoit alors une confirmation indiquant que sa participation a été prise en compte.  
-
-En revanche, si l'événement n'est pas trouvé, terminé   le système le redirige automatiquement vers l’écran de participation avec une notification..  
-La figure \ref{fig:mon_img-des-seq-participation-evenement}  illustre ce déroulement sous forme de diagramme de séquence.
-
-\begin{figure}[H]
-    \center
-    \includegraphics[scale=0.6]{images/diagramme_sequence_participer_event.png}
-    \caption{ Diagramme de séquence pour la création d'un événement}
-    \label{fig:mon_img-des-seq-participation-evenement}
-  \end{figure}
-
+    \item \textbf{Sur RT-SIÈGE :}  
+    Exécutez /ppp active print. Vous devriez voir une session 
+active pour akassato-vpn-user avec l'adresse \gls{VPN} 172.16.0.X
+    
 \end{itemize}
+ \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/13.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
 
 
+\end{enumerate}
+\section{Intégration des mesures de sécurité réseau  }
+
+\subsection{Filtres d’accès et contrôle par identifiants }
+\begin{itemize}
+    \item  \textbf{Règles de pare-feu: }
+     \begin{verbatim}
+    /ip firewall filter add chain=input protocol=tcp port=443 action=accept 
+    comment="Autoriser SSTP" 
+    /ip firewall filter add chain=input protocol=tcp port=1723 action=drop 
+comment="Bloquer PPTP obsolète" 
+    \end{verbatim}
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/14.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+       \item Authentification centralisée par identifiants \gls{PPPoE}. 
+       \item Limitation d’accès aux seules IP internes autorisées. 
+\end{itemize}
+\subsection{Journalisation et gestion des logs  }
+\begin{itemize}
+    \item  \textbf{Activation de la journalisation : }
+     \begin{verbatim}
+     /system logging add topics=ppp,info action=disk 
+     /system logging add topics=firewall action=disk 
+    \end{verbatim}
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/15.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+       \item Export périodique des logs vers un serveur syslog pour suivi et audit. 
+         \begin{verbatim}
+        /system logging action add name=syslog target=remote remote=192.168.254.20 
+        /system logging add topics=ppp action=syslog 
+        /system logging add topics=firewall action=syslog
+    \end{verbatim}
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/16.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+    \end{itemize}
+
+\subsection{Tests de connectivité, d’allocation IP et suivi du trafic }
+\begin{itemize}
+    \item  \textbf{Test des tunnels SSTP : }ping 10.0.0.1 depuis une agence. 
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/17.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+       \item \textbf{Vérification des IP attribuées : } /ppp active print . 
+        
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/18.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+       \item \textbf{Suivi du trafic : } /tool graphing interface (outil MikroTik). 
+
+      \item Observation du débit et de la stabilité pour confirmer la bonne interconnexion. 
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/19.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+       \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/20.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb}
+       \end{figure}
+    \end{itemize}
 
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
 
-Ce chapitre a été consacré à la présentation détaillée des choix techniques effectués ainsi qu’à la description des différentes étapes de conception de notre projet. Nous y avons exposé notre démarche méthodologique et notre approche de modélisation. Dans le chapitre suivant, nous présenterons les résultats obtenus à l’issue de ce travail de conception.
-
+La mise en œuvre de l’architecture réseau proposée pour la \gls{CMMB} a permis de 
+démontrer la faisabilité et l’efficacité d’une solution basée sur MikroTik, \gls{PPPoE} et 
+\gls{SSTP}. L’architecture en étoile, centrée sur le siège, assure une interconnexion fiable et 
+sécurisée des agences tout en facilitant l’administration centralisée. La configuration 
+du serveur \gls{PPPoE} a apporté un meilleur contrôle des utilisateurs, une gestion 
+optimisée de la bande passante et une traçabilité accrue des connexions. Par ailleurs, le 
+déploiement des tunnels \gls{SSTP} a garanti la confidentialité et l’intégrité des échanges 
+inter-sites. Les tests de connectivité et de supervision ont confirmé la stabilité et les 
+performances de la solution, faisant de cette architecture une réponse adaptée aux 
+besoins actuels et futurs de la CMMB.
 
 
