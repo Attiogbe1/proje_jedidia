@@ -28,22 +28,36 @@
 
   % --- Roboto en texte et sans-serif ---
   % Place les fichiers dans: fonts/Roboto/Roboto-*.ttf
-  \setmainfont{Roboto}[
+ % Police principale (serif)
+\setmainfont{Roboto}[
     Path=fonts/,
     Extension=.ttf,
     UprightFont   = *-Regular,
     BoldFont      = *-Bold,
     ItalicFont    = *-Italic,
     BoldItalicFont= *-BoldItalic
-  ]
-  \setsansfont{Roboto}[
+]
+
+% Police sans-serif
+\setsansfont{Roboto}[
     Path=fonts/,
     Extension=.ttf,
     UprightFont   = *-Regular,
     BoldFont      = *-Bold,
     ItalicFont    = *-Italic,
     BoldItalicFont= *-BoldItalic
-  ]
+]
+
+% Police monospace (optionnelle, si tu veux l'utiliser)
+\setmonofont{RobotoMono}[
+    Path=fonts/,
+    Extension=.ttf,
+    UprightFont   = *-Regular,
+    BoldFont      = *-Bold,
+    ItalicFont    = *-Italic,
+    BoldItalicFont= *-BoldItalic
+]
+
 
   % --- (Optionnel) Roboto Mono pour le code ---
   % Fichiers dans: fonts/RobotoMono/RobotoMono-*.ttf

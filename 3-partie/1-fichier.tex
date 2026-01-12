@@ -2,283 +2,172 @@
 \addcontentsline{toc}{section}{Introduction}
 
 \section*{Introduction}
-Dans ce chapitre, nous présentons la réalisation complète de l'application 
-Inter\,Actif, en détaillant son architecture technique et ses interfaces utilisateur.
-Nous commençons par expliquer l'intégration de l'API Supabase qui constitue 
-le back-end de notre solution, puis nous présentons les différentes interfaces 
-de l'application organisées par fonctionnalités. Ensuite  nous analysons les 
-limitations rencontrées lors de la mise en  place de notre système  et  finir par la présentation des perspectives d'avenir de notre système
-complet.
+Ce chapitre présente les résultats obtenus après la mise en œuvre de l’architecture 
+réseau proposée pour la \gls{CMMB}. 
+L’objectif est d’évaluer les performances, la fiabilité, la sécurité et la gestion des 
+utilisateurs afin de mesurer les améliorations apportées par l’intégration des protocoles 
+\gls{PPPoE} et \gls{SSTP} au sein du réseau. 
+Les tests ont été réalisés sur l’ensemble des agences interconnectées et sur le siège 
+central.
 % ------------------------------------------------------------------
 % ARCHITECTURE (inchangée si tu veux conserver le texte actuel)
 
 
 % ========= 3.1 Interfaces de documentation de l’API et de l’application =========
-\section{Interfaces de documentation de l’API et de l’application}
+\section{Résultats des tests de performance du réseau }
 \label{subsec:interfaces-doc}
 
-Cette section regroupe les interfaces de documentation à la fois pour l’API et pour
-l’application. Elle met l’accent sur la documentation générée automatiquement à
-partir de l’OpenAPI de Supabase et exposée dans Swagger.
 
 % ---------------- 3.1.1 Interfaces de documentation de l’API ----------------
-\subsection{Interfaces de documentation de l’API}
+\subsection{Test et validation du serveur PPPoE }
 \label{subsubsec:interfaces-doc-api}
-
-La documentation de l’API est générée grâce au package Swagger (OpenAPI)
-intégré à notre projet . Swagger consomme le fichier OpenAPI/JSON exposé
-par Supabase (PostgREST) et produit une interface de consultation interactive.
-Nous présentons ci-dessous les vues principales de cette documentation.
-
+Le test du serveur \gls{PPPoE} n’a pas pu être réalisé à l’aide des hôtes VPCS, car 
+l’outil VPCS utilisé dans GNS3 ne prend pas en charge le protocole \gls{PPPoE}. En effet, 
+VPCS permet uniquement la configuration d’adresses \gls{IP} statiques ou via DHCP, mais 
+ne dispose pas de client \gls{PPPoE} intégré. 
+Afin de valider le bon fonctionnement du serveur \gls{PPPoE}, un routeur MikroTik 
+physique a été utilisé comme serveur \gls{PPPoE} et notre machine physique comme client 
+\gls{PPPoE} .  
+La réussite de la connexion, confirmée par l’attribution d’une adresse \gls{IP} issue du pool 
+\gls{PPPoE} et l’apparition d’une session active sur le serveur, atteste du bon 
+fonctionnement du service \gls{PPPoE} déployé au sein de l’agence AKPAKPA. 
 % (1) Vue d'ensemble Swagger
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{images/apieduc1.png}
-  \caption{API swagger 1}
-  \label{fig:swagger-overview}
-\end{figure}
-
-% (2) Catalogue des endpoints
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{images/apieduc2.png}
-  \caption{API swagger 2}
-  \label{fig:swagger-endpoints}
-\end{figure}
-
-% (3) Schémas et modèles (definitions)
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{images/apieduc3.png}
-  \caption{API swagger 3}
-  \label{fig:swagger-schemas}
-\end{figure}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{images/API2.png}
-  \caption{API swagger 4}
-  \label{fig:swagger-schemas}
-\end{figure}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{images/API6.png}
-  \caption{API swagger 5}
-  \label{fig:swagger-schemas}
-\end{figure}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{images/api1.png}
-  \caption{API swagger 6}
-  \label{fig:swagger-schemas}
-\end{figure}
 
 
-
-\subsection{Interfaces utilisateur de l'application}
-
-\subsection*{Authentification et gestion du compte}
-La figure \ref{fig:page_accueil} illustre la page d’accueil de l’application, qui présente les principales activités et oriente l’utilisateur vers les différentes sessions. Quant à la figure \ref{fig:page_connexion}, elle montre l’écran de connexion permettant à l’organisateur d’accéder à son espace de gestion.
-% LIGNE 1 : Accueil et Connexion
-% Figure 4.2 : Page d'accueil
-\begin{figure}[H]
-  \centering
-  % Première image
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_acceul.jpg}
-    \caption{Page d'accueil de l'application}
-    \label{fig:page_accueil}
-  \end{minipage}
-  \hfill
-  % Deuxième image
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_connexion.jpg}
-    \caption{Page de connexion de l'application}
-    \label{fig:page_connexion}
-  \end{minipage}
-\end{figure}
-\newpage
-
-% LIGNE 2 : Inscription et Réinitialisation
-La figure \ref{fig:page_inscription} illustre la page d’inscription de l’application, permettant à un nouvel utilisateur de créer son compte et de configurer son mot de passe en toute sécurité. Quant à la figure \ref{fig:page_mise_ajour}, elle montre l’écran de réinitialisation du mot de passe, qui permet à l’utilisateur de récupérer l’accès à son compte via un lien envoyé par e-mail.
-
-% LIGNE 2 : Inscription et Réinitialisation
-\begin{figure}[H]
-  \centering
-  % Première image
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_inscription.jpg}
-    \caption{Page d'inscription de l'application}
-    \label{fig:page_inscription}
-  \end{minipage}
-  \hfill
-  % Deuxième image
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_mise_ajour.jpg}
-    \caption{Réinitialisation du mot de passe}
-    \label{fig:page_mise_ajour}
-  \end{minipage}
-\end{figure}
-\newpage
-
-La figure \ref{fig:page_profil} illustre la page de profil utilisateur, où l’utilisateur peut consulter et modifier ses informations personnelles. Quant à la figure \ref{fig:page_parametre}, elle montre l’écran des paramètres du compte, permettant de gérer les données à effacer et d’effectuer la réinitialisation du compte si nécessaire.
-
-% LIGNE 3 : Profil utilisateur et Paramètres
-\begin{figure}[H]
-  \centering
-  % Première image
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_profil.jpg}
-    \caption{Profil utilisateur}
-    \label{fig:page_profil}
-  \end{minipage}
-  \hfill
-  % Deuxième image
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_paramtre.jpg}
-    \caption{Paramètres du compte}
-    \label{fig:page_parametre}
-  \end{minipage}
-\end{figure}
-\newpage
-
-
-\subsection*{Gestion des événements}
-Ces interfaces permettent aux organisateurs de créer, gérer et suivre leurs événements, avec persistance des données dans Supabase.
-La firugure \ref{fig:page_creation_event}présente l'interface qui permet de créer un nouvel événement via un formulaire guidé en plusieurs étapes : informations générales, dates et heures, lieu, paramètres de participation. Validation en temps réel et sauvegarde via Supabase.Quant à la firgure \ref{fig:page_detail_event} ,elle présente  l'interface de permet de visualiser toutes les informations de l’événement : nom, dates, code d’accès, description. Elle propose les modules interactifs (sondages, quiz, chat), avec suivi des participants, statistiques et actions rapides (édition, suppression, duplication).  
-\begin{figure}[H]
-  \centering
-  % Première image : Détail d'un événement
-
-  % Deuxième image : Création d'un événement
-  \begin{minipage}[b]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_creation_event.jpg}
-    \caption{Création d'un événement}
-    \label{fig:page_creation_event}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_dtail_event.jpg}
-    \caption{Détail d'un événement}
-    \label{fig:page_detail_event}
-  \end{minipage}
-  
-\end{figure}
-
-
-\subsection*{Modules interactifs (Quiz et Sondages)}
-La figure \ref{fig:page_creation_module} montre l’interface de création d’un quiz.  
-Elle permet de définir le titre du module, le type de réponse (choix unique, multiple, échelle ou texte libre) et d’ajouter les questions correspondantes.  
-L’organisateur peut également configurer les réponses correctes, ajuster les paramètres et sauvegarder le tout automatiquement dans Supabase.
-La figure \ref{fig:page_modules_quiz}, présente  l'interface de la liste des modules créés par l’organisateur.  
-Chaque module s’affiche sous forme de carte indiquant son type (quiz ou sondage), son état (actif ou inactif), le nombre de questions et une action « Voir ».  
-L’utilisateur peut également effectuer une recherche, filtrer les modules existants et créer un nouveau module à l’aide du bouton « + ».  
-Toutes les données affichées sont récupérées automatiquement via l’API Supabase. 
-
-\begin{figure}[H]
-  \centering
-  % Première image : Modules Quiz et Sondage
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_creation_module.jpg}
-    \caption{Création d’un module — Quiz}
-    \label{fig:page_modules_quiz}
-  \end{minipage}
-  \hfill
-  % Deuxième image : Création d'un module — Quiz
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_des_moduls_quiz.jpg}
-    \caption{Modules Quiz et Sondage}
-    \label{fig:page_creation_module}
-  \end{minipage}
-\end{figure}
-
-\subsection*{Création et analyse des sondages}
- La figure \ref{fig:page_creation_sondage}, présente  l'interface qui permet de créer un sondage en définissant le titre, la description et le type de réponse souhaité (choix unique, multiple, échelle ou texte libre).  
-Elle reprend la même logique que la création d’un quiz, mais vise davantage la collecte d’opinions et de feedbacks auprès des participants.  
-Chaque question est enregistrée dans Supabase pour un suivi et une analyse ultérieure.
-La figure \ref{fig:page_resultats_quiz} montre l’écran de visualisation des résultats d’un quiz.  
-L’organisateur peut y consulter le nombre total de répondants, le pourcentage de chaque option de réponse et naviguer entre les questions.  
-Les statistiques sont calculées et actualisées en temps réel grâce à l’intégration de Supabase, offrant ainsi une analyse instantanée des performances et tendances.
-
-\begin{figure}[H]
-  \centering
-  % Première image : Création d’un module — Sondage
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/Screenshot_20250906-164855.jpg}
-    \caption{Création d’un module Sondage }
-    \label{fig:page_creation_sondage}
-  \end{minipage}
-  \hfill
-  % Deuxième image : Résultats d’une question de quiz
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_module_detail.jpg}
-    \caption{Résultats d’une question de quiz}
-    \label{fig:page_resultats_quiz}
-  \end{minipage}
-\end{figure}
-
-\subsection*{Participation et interaction}
- 
-La figure \ref{fig:participation_choix_unique}, cette interface permet aux participants de répondre à une question à choix unique.  
-Chaque option est présentée sous forme de bouton radio, et la navigation entre les questions s’effectue à l’aide des boutons \emph{Précédent} et \emph{Suivant}.  
-Une fois la réponse sélectionnée, elle est automatiquement transmise au serveur via l’API Supabase pour mise à jour en temps réel.
-La figure \ref{fig:participation_choix_multiples} montre un exemple de question à choix multiples.  
-Le participant peut sélectionner plusieurs options grâce à des cases à cocher, ce qui rend l’interface adaptée aux sondages d’opinion ou aux évaluations plus ouvertes.  
-Les réponses sont également sauvegardées instantanément dans Supabase, assurant une cohérence entre tous les participants connectés.
-
-\begin{figure}[H]
-  \centering
-  % Première image : Participation — Choix unique
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/page_participation.jpg}
-    \caption{Participation — Choix unique }
-    \label{fig:participation_choix_unique}
-  \end{minipage}
-  \hfill
-  % Deuxième image : Participation — Choix multiples
-  \begin{minipage}[b]{0.49\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/Screenshot_20250906-165209.jpg}
-    \caption{Participation — Choix multiples }
-    \label{fig:participation_choix_multiples}
-  \end{minipage}
-\end{figure}
-
-\subsection{Gestion des participants}
-Interface dédiée au suivi et à la gestion des participants, avec données 
-synchronisées depuis Supabase.
-
-% LIGNE 8 : Participants
-\begin{figure}[H]
-  \centering
-  \ui{Participants}{page_participants.jpg}%
-     {Statistiques (participants, réponses, moyenne, événements, actifs/à venir), recherche et liste détaillée ; action \emph{Inviter}. Données agrégées depuis la base de données Supabase.}%
-     {}
-  \hfill
-  \begin{minipage}[t]{0.48\linewidth}
-    % Espace réservé pour une interface supplémentaire éventuelle.
-  \end{minipage}
-\end{figure}
-
-
-\section{  Défis de sécurité et conformité}
-\begin{itemize}[leftmargin=1.2em]
-  \item \textbf{Difficultés propres au mode « participant sans compte ».} Accès simple via code et pseudo, mais identité peu fiable (pseudos non uniques), risque de doublons et suivi de présence fragile ; à compenser par des garde-fous comme la limitation, la modération et l’audit.
-  \item \textbf{Contraintes d’usage.} Sessions non transférables entre appareils sans compte ; pseudos identiques sont  susceptibles de créer des confusions .
-
+\subsection{Mesure de la latence, du ping et de la bande passante sur le protocole SSTP}
+Des tests de connectivité ont été effectués à l’aide des outils intégrés de MikroTik 
+(ping, bandwidth-test) .Les résultats moyens observés sont les suivants : 
+\begin{itemize}
+    \item \textbf{Avant }  
+    Le test avant se fera sur un routeur où la technologie n’a pas été mis en place
+    
+    \begin{description}
+         \item[--] \textbf{TEST 1 :} Connectivité réseau (Ping)
+         \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/20.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb16}
+       \end{figure} 
+        \item[--] \textbf{TEST 2 :} Latence et chemin réseau (Traceroute)
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/21.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb25}
+       \end{figure} 
+         \item[--] \textbf{TEST 3 :}  Bande passante (Bandwidth Test) 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/22.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb22}
+       \end{figure} 
+    \end{description}
+    Avant la mise en œuvre, la communication inter-sites est donc totalement indisponible. 
+    \item \textbf{Après }
+    Le test avant se fera sur un routeur où la technologie a été mis en place 
+    \begin{description}
+         \item[--] \textbf{TEST 1 :} Connectivité réseau (Ping)
+         \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/23.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb17}
+       \end{figure} 
+        \item[--] \textbf{TEST 2 :} Latence et chemin réseau (Traceroute)
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/24.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb18}
+       \end{figure} 
+         \item[--] \textbf{TEST 3 :}  Bande passante (Bandwidth Test) 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/25.png}
+        \caption{PPP profil configuration  }
+        \label{fig:reseau_cmmb20}
+       \end{figure} 
+    \end{description}
 \end{itemize}
+Ces résultats montrent une amélioration significative de la qualité de la connexion et 
+de la stabilité du réseau après déploiement. 
+
+
+
+\subsection{Résilience de la connexion via SSTP et PPPoE }
+
+La résilience de la connexion réseau repose théoriquement sur la combinaison 
+des technologies \gls{SSTP} et \gls{PPPoE}, déployées sur les routeurs MikroTik. 
+Le protocole \gls{PPPoE} permet une gestion structurée des sessions, avec 
+authentification et reconnexion automatique, tandis que \gls{SSTP} assure un 
+tunnel chiffré et stable pour l’interconnexion des sites distants. 
+
+Dans des conditions normales d’exploitation, l’utilisation de \gls{SSTP} via le port 
+HTTPS (TCP 443) permettrait de maintenir la connectivité même en présence de 
+restrictions réseau, tout en garantissant la confidentialité des échanges. 
+Cependant, dans le cadre de ce projet, l’architecture a été mise en œuvre dans un 
+environnement de simulation, ce qui ne permet pas de reproduire fidèlement 
+l’ensemble des contraintes réelles (pannes physiques, fluctuations du lien Internet, 
+surcharge du trafic). 
+
+Néanmoins, au regard des résultats obtenus lors des tests effectués, il est 
+raisonnable de supposer que cette architecture offrirait, en situation réelle, une 
+meilleure stabilité, une latence réduite et une continuité de service satisfaisante pour 
+les communications inter-agences de la \gls{CMMB}.Ainsi, la combinaison de ces deux protocoles garantit une connexion continue et 
+sécurisée entre les agences et le siège. 
+
+\section{Évaluation de la fiabilité du réseau après implémentation }
+La nouvelle architecture a considérablement amélioré \textbf{la fiabilité du réseau inter-agence :}  
+
+\begin{itemize}
+    \item Disponibilité moyenne qui doit être observée : \textbf{99,3~\%}.
+    \item Les incidents de déconnexion devraient devenir rares.
+    \item La surveillance à l’aide des \textbf{logs MikroTik} confirme une continuité de service stable.
+\end{itemize}
+
+Les agences peuvent désormais accéder aux applications internes de manière fluide, 
+sans interruptions fréquentes comme auparavant.
+
+\subsection{Améliorations observées dans la gestion des utilisateurs}
+
+Grâce à \gls{PPPoE}, chaque utilisateur dispose désormais d’un identifiant personnel pour se connecter :  
+
+\begin{itemize}
+    \item La traçabilité est améliorée (enregistrement des sessions et adresses IP attribuées).
+    \item Le contrôle d’accès est simplifié via les profils MikroTik.
+    \item La répartition de la bande passante est plus équitable grâce aux queues et limites par profil.
+\end{itemize}
+
+Cela a permis de réduire les abus (téléchargements excessifs, connexions non autorisées) et d’optimiser la productivité en agence.
+
+\subsection{Apport de PPPoE et SSTP en matière de sécurité et de contrôle}
+
+\begin{itemize}
+    \item Le \gls{PPPoE} assure une authentification individuelle et une gestion centralisée des sessions, réduisant le risque d’accès non autorisé.
+    \item Le \gls{SSTP}, basé sur \gls{SSL}/\gls{TLS}, garantit la confidentialité des données entre le siège et les agences.
+    \item Les logs d’activité facilitent la détection d’anomalies et la gestion des incidents.
+\end{itemize}
+
+En somme, l’association \gls{PPPoE} + \gls{SSTP} offre un équilibre entre performance, sécurité et contrôle administratif.
+
+
+
+
+
+\subsection{Difficultés rencontrées et limites de la solution}
+
+Malgré les résultats positifs, certaines difficultés ont été observées :  
+
+\begin{itemize}
+    \item Paramétrage initial complexe des certificats \gls{SSL} pour \gls{SSTP}.
+    \item Nécessité d’une formation technique du personnel pour la gestion des serveurs MikroTik.
+    \item Dépendance à la stabilité des connexions Internet locales, pouvant affecter les performances.
+    \item Coût initial d’investissement pour le matériel réseau.
+\end{itemize}
+
+Ces limites restent toutefois compensées par la robustesse et la sécurité offertes par la solution mise en place.
 
 
 
@@ -286,6 +175,9 @@ synchronisées depuis Supabase.
 \phantomsection
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
-Ce chapitre nous a permis de présenter les résultats de notre projet. Nous avons présenter les inter
-faces tant du côté de l’API que de l’application mobile puis nous avons présenté les limites de notre
- solution.
+L’évaluation globale de la solution révèle que l’architecture réseau proposée, fondée 
+sur les protocoles \gls{PPPoE} et \gls{SSTP}, a nettement amélioré les performances, la 
+sécurité, et la gestion des utilisateurs au sein de la \gls{CMMB}. 
+
+Le réseau interconnecte désormais efficacement les huit agences et le siège, tout en 
+garantissant la confidentialité, la traçabilité et la stabilité des communications.

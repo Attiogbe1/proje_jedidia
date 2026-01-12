@@ -19,183 +19,123 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{bility}{online}{}{}
+    \entry{mikrotik-pppoe}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=7466cdd9f7e7f71ceda6d9788841f1d7}{%
-           family={Firebase},
-           familyi={F\bibinitperiod},
-           given={Définition},
-           giveni={D\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
+        {{hash=adfb2a8d8157aca460a415e38e7c0d3b}{%
+           family={MikroTik},
+           familyi={M\bibinitperiod}}}%
       }
-      \strng{namehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \strng{fullhash}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \strng{fullhashraw}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \strng{bibnamehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \strng{authorbibnamehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \strng{authornamehash}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \strng{authorfullhash}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \strng{authorfullhashraw}{7466cdd9f7e7f71ceda6d9788841f1d7}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \strng{namehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{fullhash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{fullhashraw}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{bibnamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorbibnamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authornamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorfullhash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorfullhashraw}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
-      \field{note}{(consulté le 05 Mars 2025)}
+      \field{labeltitlesource}{title}
+      \field{note}{(consulté le 06 décembre 2025)}
+      \field{title}{PPPoE Configuration Guide}
       \verb{urlraw}
-      \verb https://bility.fr/definition-firebase/
+      \verb https://help.mikrotik.com/docs/display/ROS/PPPoE
       \endverb
       \verb{url}
-      \verb https://bility.fr/definition-firebase/
+      \verb https://help.mikrotik.com/docs/display/ROS/PPPoE
       \endverb
       \keyw{webl}
     \endentry
-    \entry{ionos}{online}{}{}
+    \entry{mikrotik-docs}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=ea431f6e631d3e34c57b8beeb7b534a7}{%
-           family={Flutter},
-           familyi={F\bibinitperiod},
-           given={Définition},
-           giveni={D\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
+        {{hash=adfb2a8d8157aca460a415e38e7c0d3b}{%
+           family={MikroTik},
+           familyi={M\bibinitperiod}}}%
       }
-      \strng{namehash}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \strng{fullhash}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \strng{fullhashraw}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \strng{bibnamehash}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \strng{authorbibnamehash}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \strng{authornamehash}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \strng{authorfullhash}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \strng{authorfullhashraw}{ea431f6e631d3e34c57b8beeb7b534a7}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \strng{namehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{fullhash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{fullhashraw}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{bibnamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorbibnamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authornamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorfullhash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorfullhashraw}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
-      \field{note}{(consulté le 06 Mars 2025)}
+      \field{labeltitlesource}{title}
+      \field{note}{(consulté le 05 décembre 2025)}
+      \field{title}{RouterOS Documentation}
       \verb{urlraw}
-      \verb https://www.ionos.fr/digitalguide/sites-internet/developpement-web/flutter-cest-quoi/
+      \verb https://help.mikrotik.com/docs/
       \endverb
       \verb{url}
-      \verb https://www.ionos.fr/digitalguide/sites-internet/developpement-web/flutter-cest-quoi/
+      \verb https://help.mikrotik.com/docs/
       \endverb
       \keyw{webl}
     \endentry
-    \entry{webTech}{online}{}{}
+    \entry{mikrotik-sstp}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=2f6e12d2a2efa7a590a4ef4add0cbf60}{%
-           family={IDE},
-           familyi={I\bibinitperiod},
-           given={Définition},
-           giveni={D\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
+        {{hash=adfb2a8d8157aca460a415e38e7c0d3b}{%
+           family={MikroTik},
+           familyi={M\bibinitperiod}}}%
       }
-      \strng{namehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \strng{fullhash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \strng{fullhashraw}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \strng{bibnamehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \strng{authorbibnamehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \strng{authornamehash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \strng{authorfullhash}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \strng{authorfullhashraw}{2f6e12d2a2efa7a590a4ef4add0cbf60}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \strng{namehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{fullhash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{fullhashraw}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{bibnamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorbibnamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authornamehash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorfullhash}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \strng{authorfullhashraw}{adfb2a8d8157aca460a415e38e7c0d3b}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
-      \field{note}{(consulté le 05 Mars 2025)}
+      \field{labeltitlesource}{title}
+      \field{note}{(consulté le 07 décembre 2025)}
+      \field{title}{Secure Socket Tunneling Protocol (SSTP)}
       \verb{urlraw}
-      \verb https://webtech.fr/glossaire/ide/
+      \verb https://help.mikrotik.com/docs/display/ROS/SSTP
       \endverb
       \verb{url}
-      \verb https://webtech.fr/glossaire/ide/
+      \verb https://help.mikrotik.com/docs/display/ROS/SSTP
       \endverb
       \keyw{webl}
     \endentry
-    \entry{yieldstudio}{online}{}{}
+    \entry{reseaux-info}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=8f54b4333d13099813a65840f3ed32c3}{%
-           family={Laravel},
-           familyi={L\bibinitperiod},
-           given={Définition},
-           giveni={D\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
+        {{hash=ff2b77cf2f3777ae17ad16382850e621}{%
+           family={Wikilivres},
+           familyi={W\bibinitperiod}}}%
       }
-      \strng{namehash}{8f54b4333d13099813a65840f3ed32c3}
-      \strng{fullhash}{8f54b4333d13099813a65840f3ed32c3}
-      \strng{fullhashraw}{8f54b4333d13099813a65840f3ed32c3}
-      \strng{bibnamehash}{8f54b4333d13099813a65840f3ed32c3}
-      \strng{authorbibnamehash}{8f54b4333d13099813a65840f3ed32c3}
-      \strng{authornamehash}{8f54b4333d13099813a65840f3ed32c3}
-      \strng{authorfullhash}{8f54b4333d13099813a65840f3ed32c3}
-      \strng{authorfullhashraw}{8f54b4333d13099813a65840f3ed32c3}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{note}{(consulté le 05 Mars 2025)}
-      \verb{urlraw}
-      \verb https://www.yieldstudio.fr/glossaire/laravel
-      \endverb
-      \verb{url}
-      \verb https://www.yieldstudio.fr/glossaire/laravel
-      \endverb
-      \keyw{webl}
-    \endentry
-    \entry{denierCri}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=9333a9e1213abec46ce7516c750bed9c}{%
-           family={Supabase},
-           familyi={S\bibinitperiod},
-           given={Définition},
-           giveni={D\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
-      }
-      \strng{namehash}{9333a9e1213abec46ce7516c750bed9c}
-      \strng{fullhash}{9333a9e1213abec46ce7516c750bed9c}
-      \strng{fullhashraw}{9333a9e1213abec46ce7516c750bed9c}
-      \strng{bibnamehash}{9333a9e1213abec46ce7516c750bed9c}
-      \strng{authorbibnamehash}{9333a9e1213abec46ce7516c750bed9c}
-      \strng{authornamehash}{9333a9e1213abec46ce7516c750bed9c}
-      \strng{authorfullhash}{9333a9e1213abec46ce7516c750bed9c}
-      \strng{authorfullhashraw}{9333a9e1213abec46ce7516c750bed9c}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{note}{(consulté le 05 Mars 2025)}
-      \verb{urlraw}
-      \verb https://derniercri.io/radar-items/supabase
-      \endverb
-      \verb{url}
-      \verb https://derniercri.io/radar-items/supabase
-      \endverb
-      \keyw{webl}
-    \endentry
-    \entry{wikipedia}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=12672e79b01e9ca7018105efb0ef871c}{%
-           family={wikipedia},
-           familyi={w\bibinitperiod}}}%
-      }
-      \strng{namehash}{12672e79b01e9ca7018105efb0ef871c}
-      \strng{fullhash}{12672e79b01e9ca7018105efb0ef871c}
-      \strng{fullhashraw}{12672e79b01e9ca7018105efb0ef871c}
-      \strng{bibnamehash}{12672e79b01e9ca7018105efb0ef871c}
-      \strng{authorbibnamehash}{12672e79b01e9ca7018105efb0ef871c}
-      \strng{authornamehash}{12672e79b01e9ca7018105efb0ef871c}
-      \strng{authorfullhash}{12672e79b01e9ca7018105efb0ef871c}
-      \strng{authorfullhashraw}{12672e79b01e9ca7018105efb0ef871c}
-      \field{sortinit}{w}
+      \strng{namehash}{ff2b77cf2f3777ae17ad16382850e621}
+      \strng{fullhash}{ff2b77cf2f3777ae17ad16382850e621}
+      \strng{fullhashraw}{ff2b77cf2f3777ae17ad16382850e621}
+      \strng{bibnamehash}{ff2b77cf2f3777ae17ad16382850e621}
+      \strng{authorbibnamehash}{ff2b77cf2f3777ae17ad16382850e621}
+      \strng{authornamehash}{ff2b77cf2f3777ae17ad16382850e621}
+      \strng{authorfullhash}{ff2b77cf2f3777ae17ad16382850e621}
+      \strng{authorfullhashraw}{ff2b77cf2f3777ae17ad16382850e621}
+      \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
-      \field{note}{(consulté le 06 Mars 2025)}
+      \field{labeltitlesource}{title}
+      \field{note}{(consulté le 05 décembre 2025)}
+      \field{title}{Généralités sur les réseaux informatiques / Introduction aux réseaux}
       \verb{urlraw}
-      \verb https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur
+      \verb https://fr.wikibooks.org/wiki/G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_r%C3%A9seaux_informatiques
       \endverb
       \verb{url}
-      \verb https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur
+      \verb https://fr.wikibooks.org/wiki/G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_r%C3%A9seaux_informatiques
       \endverb
       \keyw{webl}
     \endentry
   \enddatalist
+  \missing{mikrotik\unhbox \voidb@x \kern \z@ \char `\-sstp}
 \endrefsection
 \endinput
 

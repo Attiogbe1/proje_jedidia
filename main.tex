@@ -1,3 +1,5 @@
+% !TeX program = xelatex
+
 \documentclass{ifri}
 \usepackage{titletoc}
 \usepackage[acronym, toc]{glossaries} 
@@ -60,22 +62,34 @@
 \begin{document}
 
 \pageDeGarde
+%\pageTitre
 
 \pagecolor{white}
 
 \selectlanguage{french}
 
-% Sommaire
+%% page vide
+%\thispagestyle{empty}\ \clearpage
+
+
+% sommaire
 \pagenumbering{roman}
 \setcounter{tocdepth}{0}
 \startlist{toc}
 \printlist{toc}{}{\chapter*{Sommaire}}
 \setcounter{tocdepth}{5}
 
+
+
+
+
 \input{0-dedicace}
 \newpage
+%% remerciements
 \input{1-remerciements}
 \clearpage
+
+% Résume
 \input{2-resume}
 \newpage
 
@@ -83,41 +97,59 @@
 \listoffigures 
 \newpage
 
+
+% Liste des tableaux
 \renewcommand{\listtablename}{Liste des tableaux}
 \listoftables
 \markboth{Liste des tableaux}{}
+% Suppression de \newpage pour éviter la page vide
 
-% Liste des sigles et acronymes
+% Les sigles et acronymes
+
 \setglossarystyle{altlist}
-\printglossary[type=\acronymtype, title={Liste des sigles et acronymes}]
+\glsaddall
+\printglossary[type=\acronymtype, title=Liste des sigles et acronymes]
 \newpage
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-% Contenu
+%% introduction
 \input{3-introduction}
+% Réinitialisation des en-têtes après l'introduction
+\markboth{Revue de Littérature}{}
+\selectlanguage{french}
+\fancyhead[L]{\tiny \leftmark}
+\fancyhead[R]{\scriptsize \rightmark}
+\fancyfoot[C]{\thepage}
 
-\chapter{REVUE DE LITTERATURE}\label{chap:1}
-\input{1-partie/1-fichier}
-
-\chapter{RECHERCHE PRELIMINAIRE}\label{chap:2}
-\input{2-partie/1-fichier}
-
+\chapter{Revue de Littérature}\label{chap:1}
+ \input{1-partie/1-fichier}
+ 
+ \chapter{Implémentation de l'infrastructure}\label{chap:2}
+ \input{2-partie/1-fichier}
+ 
 \chapter{Présentation de la solution}\label{chap:3}
-\input{3-partie/1-fichier}
-
+ \input{3-partie/1-fichier}
+ 
+% \include{perspectives}
+%%conclusion
 \input{4-conclusion}
+% 
+\lhead[]{} \rhead[]{} \chead[]{}
 
-% Bibliographie
+
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliographie}
 \printbibliography[title={Bibliographie}, keyword=biblio]
-\newpage
+\newpage 
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{Webographie}
+\addcontentsline{toc}{chapter}{Bibliographie}
 \printbibliography[title={Webographie}, keyword=webl]
+\newpage
+\tableofcontents
+\newpage
 
 \end{document}

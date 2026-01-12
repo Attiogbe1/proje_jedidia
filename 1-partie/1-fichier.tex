@@ -2,7 +2,7 @@
 \addcontentsline{toc}{section}{Introduction}
 \section*{Introduction}
 Cette section présente les bases des réseaux informatiques et le fonctionnement de \gls{RouterOS} de \textbf{MikroTik}. Elle explore les technologies d’optimisation réseau existantes, les compare, puis analyse le réseau actuel de la \gls{CMMB} afin de proposer une solution adaptée reposant sur \gls{PPPoE} et \textbf{MikroTik}.
-\section{ Généralités sur les réseaux informatiques  }
+\section{ Généralités sur les réseaux informatiques \cite{reseaux-info}  }
 \subsection{Définition }
 Un réseau informatique est un ensemble d'ordinateurs et d'autres périphériques 
 interconnectés, permettant la communication et le partage de ressources.  
@@ -42,7 +42,7 @@ Les protocoles réseau définissent les règles et les formats de communication 
 
 
 
-\section{Présentation du ROUTEROS MIKROTIK}
+\section{Présentation du ROUTEROS MIKROTIK \cite{mikrotik-docs}}
 MikroTik \gls{RouterOS} est un puissant système d'exploitation réseau polyvalent, 
 capable de transformer un simple ordinateur en un routeur complet. Allons explorer 
 ses principales fonctionnalités:
@@ -170,14 +170,14 @@ d'établir des connexions point-à-point sur un réseau Ethernet. Utilisée prin
 par les FAI, elle permet l’authentification des utilisateurs via un identifiant et un mot 
 de passe, tout en supportant la gestion de bande passante et le suivi des sessions. 
 MikroTik offre une implémentation stable de PPPoE, adaptée aux environnements 
-clients-serveurs.
+clients-serveurs\cite{mikrotik-pppoe}.
 
 \subsection{Présentation du protocole SSTP}
 Le Secure Socket Tunneling Protocol (\gls{SSTP}) est un protocole VPN développé par 
 Microsoft. Il utilise \gls{SSL}/\gls{TLS} (port 443), ce qui lui permet de passer facilement à 
 travers les pare-feux et les proxys. Son principal avantage est la sécurité accrue grâce 
 au chiffrement natif SSL. MikroTik intègre SSTP comme solution VPN, idéale dans 
-des environnements fortement filtrés ou nécessitant un haut niveau de confidentialité.
+des environnements fortement filtrés ou nécessitant un haut niveau de confidentialité\cite{mikrotik-sstp}.
 
 \subsection{Autres solutions courantes (\gls{VPN}, \gls{VLAN}, \gls{QoS}, etc.)}
 Outre \gls{PPPoE} et \gls{SSTP}, MikroTik prend en charge : 
@@ -234,7 +234,7 @@ central.
     \centering
     \includegraphics[scale=0.8]{images/1.png} % Remplace par le nom de ton image
     \caption{ Représentation du réseau actuel de la CMMB }
-    \label{fig:reseau_cmmb}
+    \label{fig:reseau_cmmbn}
 \end{figure}
 
 

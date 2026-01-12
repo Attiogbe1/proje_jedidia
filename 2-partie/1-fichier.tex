@@ -13,7 +13,7 @@ configuration cohérente et maîtrisée. Enfin, ce chapitre détaille les diffé
 des mesures de sécurité et les tests réalisés pour valider le bon fonctionnement de
 l’infrastructure déployée.
 
-\section{Architecture réseau proposée pour la \gls{CMMB}}
+\section{Architecture réseau proposée pour la \texorpdfstring{\gls{CMMB}}{CMMB}}
 \subsection{Schéma global d’interconnexion des agences }
 La \gls{CMMB} dispose de plusieurs agences réparties dans différentes villes du pays.
 Le réseau proposé repose sur une architecture en étoile, avec un siège central jouant
@@ -34,8 +34,8 @@ MikroTik, garantissant une gestion fine des utilisateurs et une meilleure traça
     \label{fig:reseau-cmmb}
 \end{figure}
 
-\subsection{Rôle des protocoles \gls{PPPoE} et \gls{SSTP} dans l’architecture}
-   \subsubsection*{ \gls{PPPoE} (Point-to-Point Protocol over Ethernet)}
+\subsection{Rôle des protocoles \texorpdfstring{\gls{PPPoE}}{PPPoE} et \texorpdfstring{\gls{SSTP}}{SSTP} dans l’architecture}
+\subsubsection*{\texorpdfstring{\gls{PPPoE}}{PPPoE} (Point-to-Point Protocol over Ethernet)}
     \begin{itemize}
     \item Fournit un accès Internet contrôlé à chaque utilisateur interne.
     \item Permet une authentification par identifiant/mot de passe.
@@ -43,7 +43,8 @@ MikroTik, garantissant une gestion fine des utilisateurs et une meilleure traça
     \item Intégré au serveur MikroTik pour une administration centralisée des comptes utilisateurs.
 \end{itemize}
 
-   \subsubsection*{ \gls{SSTP} (Secure Socket Tunneling Protocol)}
+   \subsubsection*{\texorpdfstring{\gls{SSTP}}{SSTP} (Secure Socket Tunneling Protocol)}
+
 \begin{itemize}
     \item Assure la connexion sécurisée entre les agences et le siège.
     \item Utilise \gls{SSL}\//\gls{TLS} (port 443), donc fonctionne même à travers les pare-feux restrictifs.
@@ -57,7 +58,7 @@ virtuels et réels.
 \subsubsection*{• Outils de Simulation et Virtualisation}
 \begin{table}[H]
 \centering
-\caption{Tableau : Présentation des outils}
+\caption{Présentation des outils}
 \label{tab:outils}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|p{3cm}|p{5cm}|p{7cm}|}
@@ -224,7 +225,7 @@ Adresse distante du tunnel (Pool attribué). \\
 \begin{itemize}
 \item \textbf{Winbox :}
 \end{itemize}
-\section{Configuration du serveur PPPoE avec MikroTik}
+\section{Configuration du serveur PPPoE avec MikroTik \cite{mikrotik-pppoe}}
 
 Essayons avec le routeur de \textbf{AKPAKPA}.
 
@@ -247,7 +248,7 @@ Essayons avec le routeur de \textbf{AKPAKPA}.
     \centering
     \includegraphics[width=0.99\textwidth]{images/3.png}
     \caption{Création du pool akpakpa }
-    \label{fig:reseau_cmmb}
+    \label{fig:reseau_cmmb2}
 \end{figure}
  \item \textbf{Création du profil PPP :} \\
   Le profil lie l'adresse de la passerelle du routeur (local-address) au pool 
@@ -265,8 +266,8 @@ akpakpa \dns-server=8.8.8.8
     \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/4.png}
-    \caption{Création du profil PPP }
-    \label{fig:reseau_cmmb}
+    \caption{Création du profil client }
+    \label{fig:reseau_cmmb1}
 \end{figure}
 \item \textbf{Activation du serveur PPPoE sur l’interface \gls{LAN} : } \\
 On active le service \gls{PPPoE} sur l'interface du \gls{LAN} (ether1) pour qu'il 
@@ -320,7 +321,7 @@ Ceci est la base de données d'authentification pour le contrôle d'accès.
  \end{figure}
 \end{enumerate}
 
-\section{Configuration du tunnel \gls{SSTP} avec MikroTik }
+\section{Configuration du tunnel \gls{SSTP} avec MikroTik \cite{mikrotik-sstp}}
 
 Le \gls{SSTP} est utilisé pour établir un VPN chiffré 
 entre le RT-SIEGE (Serveur) et les routeurs d'agences (Clients), en utilisant le bloc 
@@ -366,7 +367,7 @@ address=sstp-poo
         \centering
         \includegraphics[width=0.5\textwidth]{images/8.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb3}
        \end{figure}
 \end{enumerate}
 
@@ -384,7 +385,7 @@ profile=sstp-profile
         \centering
         \includegraphics[width=0.5\textwidth]{images/9.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb4}
        \end{figure}
 
     \item \textbf{ Activer le serveur SSTP sans certificat (très important pour contourner l'étape SSL) }
@@ -396,7 +397,7 @@ profile=sstp-profile
         \centering
         \includegraphics[width=0.5\textwidth]{images/10.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb5}
        \end{figure}
 
 \end{enumerate}
@@ -416,7 +417,7 @@ route statique est nécessaire après l'établissement du tunnel.
         \centering
         \includegraphics[width=0.5\textwidth]{images/11.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb6}
        \end{figure}
 \end{enumerate}
 \item \textbf{Configuration du RT-AKASSATO (Client SSTP)} \\[0.2cm]
@@ -444,7 +445,7 @@ encryption \ verify-server-certificate=no
         \centering
         \includegraphics[width=0.5\textwidth]{images/12.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb7}
        \end{figure}
 \end{enumerate}
 \item \textbf{ Vérification } \\
@@ -463,7 +464,7 @@ active pour akassato-vpn-user avec l'adresse \gls{VPN} 172.16.0.X
         \centering
         \includegraphics[width=0.5\textwidth]{images/13.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb8}
        \end{figure}
 
 
@@ -483,7 +484,7 @@ comment="Bloquer PPTP obsolète"
         \centering
         \includegraphics[width=0.5\textwidth]{images/14.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb9}
        \end{figure}
        \item Authentification centralisée par identifiants \gls{PPPoE}. 
        \item Limitation d’accès aux seules IP internes autorisées. 
@@ -499,7 +500,7 @@ comment="Bloquer PPTP obsolète"
         \centering
         \includegraphics[width=0.5\textwidth]{images/15.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb10}
        \end{figure}
        \item Export périodique des logs vers un serveur syslog pour suivi et audit. 
          \begin{verbatim}
@@ -511,7 +512,7 @@ comment="Bloquer PPTP obsolète"
         \centering
         \includegraphics[width=0.5\textwidth]{images/16.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb11}
        \end{figure}
     \end{itemize}
 
@@ -522,7 +523,7 @@ comment="Bloquer PPTP obsolète"
         \centering
         \includegraphics[width=0.5\textwidth]{images/17.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb12}
        \end{figure}
        \item \textbf{Vérification des IP attribuées : } /ppp active print . 
         
@@ -530,7 +531,7 @@ comment="Bloquer PPTP obsolète"
         \centering
         \includegraphics[width=0.5\textwidth]{images/18.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb14}
        \end{figure}
        \item \textbf{Suivi du trafic : } /tool graphing interface (outil MikroTik). 
 
@@ -539,13 +540,13 @@ comment="Bloquer PPTP obsolète"
         \centering
         \includegraphics[width=0.5\textwidth]{images/19.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb15}
        \end{figure}
        \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{images/20.png}
         \caption{PPP profil configuration  }
-        \label{fig:reseau_cmmb}
+        \label{fig:reseau_cmmb16}
        \end{figure}
     \end{itemize}
 

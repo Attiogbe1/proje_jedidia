@@ -1,6 +1,5 @@
 \babel@toc {english}{}\relax 
 \babel@toc {french}{}\relax 
-\ttl@starttoc {default@1}
 \contentsline {chapter}{Dédicace}{ii}{chapter*.2}%
 \contentsline {chapter}{Remerciements}{iii}{chapter*.3}%
 \contentsline {chapter}{Résumé}{iv}{chapter*.4}%
