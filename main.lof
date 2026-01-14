@@ -14,26 +14,26 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Création du PPPoE service}}{19}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Création des PPP secrets}}{20}{figure.caption.24}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces SSTP pool configuration }}{20}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces PPP profil configuration }}{21}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces PPP profil configuration }}{22}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces PPP profil configuration }}{22}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces PPP profil configuration }}{23}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces PPP profil configuration }}{23}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces PPP profil configuration }}{24}{figure.caption.31}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces PPP profil configuration }}{24}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces PPP profil configuration }}{25}{figure.caption.33}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces PPP profil configuration }}{25}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces PPP profil configuration }}{25}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces PPP profil configuration }}{25}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces PPP profil configuration }}{26}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces PPP profil configuration }}{26}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces création du profil SSTP }}{21}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Création du secret pour l’agence }}{22}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Activation du serveur SSTP sans certificat }}{23}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Création de la route vers le LAN de l’agence AKPAKPA}}{23}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Création de l'interface client SSTP }}{24}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Vérification }}{25}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Règles de pare-feu }}{25}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Activation de la journalisation }}{26}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Exportation périodique des logs vers un serveur syslog pour suivi et audit.}}{26}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Test des tunnels SSTP }}{27}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Vérification des IP attribuées }}{27}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Observation du débit et de la stabilité }}{27}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Observation du débit et de la stabilité }}{27}{figure.caption.38}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Présentation de la solution}{27}{chapter.3}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces PPP profil configuration }}{28}{figure.caption.40}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces PPP profil configuration }}{28}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces PPP profil configuration }}{28}{figure.caption.42}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces PPP profil configuration }}{28}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces PPP profil configuration }}{28}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces PPP profil configuration }}{29}{figure.caption.45}%
+\contentsline {xchapter}{Présentation de la solution}{29}{chapter.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Connectivité réseau (Ping) }}{30}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Latence et chemin réseau (Traceroute)}}{30}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Bande passante (Bandwidth Test)}}{30}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Connectivité réseau (Ping)}}{30}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Latence et chemin réseau (Traceroute) }}{30}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Bande passante (Bandwidth Test) }}{31}{figure.caption.45}%
 \contentsfinish 
 \contentsfinish 

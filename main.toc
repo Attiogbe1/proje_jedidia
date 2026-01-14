@@ -45,24 +45,24 @@
 \contentsline {section}{\numberline {2.3}Plan d’adressage et schéma logique du réseau}{14}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Configuration du serveur PPPoE avec MikroTik \blx@tocontentsinit {0}\cite {mikrotik-pppoe}}{16}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Configuration du tunnel \gls {SSTP} avec MikroTik \blx@tocontentsinit {0}\cite {mikrotik-sstp}}{20}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Intégration des mesures de sécurité réseau }{24}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Filtres d’accès et contrôle par identifiants }{24}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Journalisation et gestion des logs }{24}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Tests de connectivité, d’allocation IP et suivi du trafic }{25}{subsection.2.6.3}%
-\contentsline {section}{Conclusion}{26}{figure.caption.38}%
-\contentsline {chapter}{\numberline {3}Présentation de la solution}{27}{chapter.3}%
-\contentsline {section}{Introduction}{27}{section*.39}%
-\contentsline {section}{\numberline {3.1}Résultats des tests de performance du réseau }{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Test et validation du serveur PPPoE }{27}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Mesure de la latence, du ping et de la bande passante sur le protocole SSTP}{27}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Résilience de la connexion via SSTP et PPPoE }{29}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Évaluation de la fiabilité du réseau après implémentation }{29}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Améliorations observées dans la gestion des utilisateurs}{29}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Apport de PPPoE et SSTP en matière de sécurité et de contrôle}{30}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Difficultés rencontrées et limites de la solution}{30}{subsection.3.2.3}%
-\contentsline {section}{Conclusion}{30}{section*.46}%
-\contentsline {section}{Conclusion générale}{30}{section*.47}%
-\contentsline {chapter}{Bibliographie}{32}{section*.48}%
-\contentsline {chapter}{Bibliographie}{32}{section*.49}%
-\contentsline {chapter}{Table des mati\`eres}{33}{section*.51}%
+\contentsline {section}{\numberline {2.6}Intégration des mesures de sécurité réseau }{25}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Filtres d’accès et contrôle par identifiants }{25}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Journalisation et gestion des logs }{25}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Tests de connectivité, d’allocation IP et suivi du trafic }{26}{section.2.7}%
+\contentsline {section}{Conclusion}{27}{figure.caption.38}%
+\contentsline {chapter}{\numberline {3}Présentation de la solution}{29}{chapter.3}%
+\contentsline {section}{Introduction}{29}{section*.39}%
+\contentsline {section}{\numberline {3.1}Résultats des tests de performance du réseau }{29}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Test et validation du serveur PPPoE }{29}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Mesure de la latence, du ping et de la bande passante sur le protocole SSTP}{29}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Résilience de la connexion via SSTP et PPPoE }{31}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Évaluation de la fiabilité du réseau après implémentation }{31}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Améliorations observées dans la gestion des utilisateurs}{31}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Apport de PPPoE et SSTP en matière de sécurité et de contrôle}{32}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Difficultés rencontrées et limites de la solution}{32}{subsection.3.2.3}%
+\contentsline {section}{Conclusion}{32}{section*.46}%
+\contentsline {section}{Conclusion générale}{32}{section*.47}%
+\contentsline {chapter}{Bibliographie}{34}{section*.48}%
+\contentsline {chapter}{Bibliographie}{34}{section*.49}%
+\contentsline {chapter}{Table des mati\`eres}{35}{section*.51}%
 \contentsfinish 

@@ -237,11 +237,10 @@ Essayons avec le routeur de \textbf{AKPAKPA}.
     leur authentification.
     
     \begin{itemize}
-        \item \textbf{Invite de commande :}
-        \begin{verbatim}
-/ip pool add name=pool-akpakpa ranges=10.1.1.100-10.1.1.200
-        \end{verbatim}
-
+    \item \textbf{Invite de commande :}
+   \begin{lstlisting}[numbers=none]
+    /ip pool add name=pool-akpakpa ranges=10.1.1.100-10.1.1.200
+  \end{lstlisting}
         \item \textbf{Winbox} \\
     \end{itemize}
     \begin{figure}[H]
@@ -256,11 +255,9 @@ d'adresses pour les clients (remote-address).
     
     \begin{itemize}
         \item \textbf{ Invite de commande :}
-        \begin{verbatim}
-/ppp profile add name=profil-clients \ local-address=10.1.1.1 \remote-address=pool
-akpakpa \dns-server=8.8.8.8 
-        \end{verbatim}
-
+        \begin{lstlisting}[numbers=none]
+         /ppp profile add name=profil-clients \ local-address=10.1.1.1 \remote-address=pool akpakpa \dns-server=8.8.8.8 
+       \end{lstlisting}
         \item \textbf{Winbox} \\
     \end{itemize}
     \begin{figure}[H]
@@ -275,11 +272,9 @@ On active le service \gls{PPPoE} sur l'interface du \gls{LAN} (ether1) pour qu'i
     
     \begin{itemize}
         \item \textbf{ Invite de commande :}
-        \begin{verbatim}
-/interface pppoe-server server add \ service-name =PPPoE-LAN-AKPAKPA 
-interface=ether1 \ default-profile=profil-clients \ enabled=yes
-        \end{verbatim}
-
+        \begin{lstlisting}[numbers=none]
+       /interface pppoe-server server add \ service-name =PPPoE-LAN-AKPAKPA interface=ether1 \ default-profile=profil-clients \ enabled=yes
+       \end{lstlisting}
         \item \textbf{Winbox} \\
     \end{itemize}
 \begin{figure}[H]
@@ -303,15 +298,12 @@ Ceci est la base de données d'authentification pour le contrôle d'accès.
         \end{table}
    \begin{itemize}
         \item \textbf{ Invite de commande :}
-        \begin{verbatim}
-
-       - /ppp secret add name=PC1 password=     service=pppoe profile=profil
-        clients 
-       - /ppp secret add name=PC2 password=     service=pppoe profile=profil
-        clients
-        \end{verbatim}
-
-        \item \textbf{Winbox} \\
+      
+    \begin{lstlisting}[numbers=none]
+     -/ppp secret add name=PC1 password= service=pppoe profile=profil clients 
+     -/ppp secret add name=PC2 password= service=pppoe profile=profil clients
+    \end{lstlisting}
+    \item \textbf{Winbox} \\
     \end{itemize}
 \begin{figure}[H]
     \centering
@@ -343,14 +335,14 @@ siège lui-même utilise 172.16.0.1/24).
 
 \begin{enumerate}[label=\arabic*.]
     \item \textbf{Adressage de l’interface LAN du siège (vers le réseau de transport)}
-    \begin{verbatim}
+    \begin{lstlisting}[numbers=none]
     /ip address add address=10.0.0.1/24 interface=ether2
-    \end{verbatim}
-
+    \end{lstlisting}
     \item \textbf{Définition du pool d’adresses pour les clients SSTP}
-    \begin{verbatim}
-    /ip pool add name=sstp-pool ranges=172.16.0.10-172.16.0.50
-    \end{verbatim}
+   
+       \begin{lstlisting}[numbers=none]
+      /ip pool add name=sstp-pool ranges=172.16.0.10-172.16.0.50
+    \end{lstlisting}
      \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{images/7.png}
@@ -359,14 +351,14 @@ siège lui-même utilise 172.16.0.1/24).
       \end{figure}
 
     \item \textbf{. Créer le profil SSTP qui attribue les adresses du pool}
-    \begin{verbatim}
-   /ppp profile add name=default-encryption \ local-address=172.16.0.1 \ remote
-address=sstp-poo
-    \end{verbatim}
+  
+      \begin{lstlisting}[numbers=none]
+   /ppp profile add name=default-encryption \ local-address=172.16.0.1 \ remote address=sstp-poo
+    \end{lstlisting}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{images/8.png}
-        \caption{PPP profil configuration  }
+        \caption{création du profil SSTP  }
         \label{fig:reseau_cmmb3}
        \end{figure}
 \end{enumerate}
@@ -377,26 +369,25 @@ Nous créons un secret pour l'agence et activons le service sans certificat.
 
 \begin{enumerate}[label=\arabic*.]
     \item \textbf{ Créer le secret pour l'agence}
-    \begin{verbatim}
-   /ppp secret add name=akassato-vpn-user password=secure-pass service=sstp 
-profile=sstp-profile 
-    \end{verbatim}
+     \begin{lstlisting}[numbers=none]
+     /ppp secret add name=akassato-vpn-user password=secure-pass service=sstp profile=sstp-profile 
+    \end{lstlisting}
        \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/9.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/9.png}
+        \caption{Création du secret pour l’agence  }
         \label{fig:reseau_cmmb4}
        \end{figure}
 
     \item \textbf{ Activer le serveur SSTP sans certificat (très important pour contourner l'étape SSL) }
-    \begin{verbatim}
-    /interface sstp-server server set enabled=yes \ default-profile= default-encryption 
-    \verify-client-certificate=no \ certificate=none
-    \end{verbatim}
+
+    \begin{lstlisting}[numbers=none]
+    /interface sstp-server server set enabled=yes \ default-profile= default-encryption\verify-client-certificate=no \ certificate=none
+    \end{lstlisting}
       \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/10.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/10.png}
+        \caption{Activation du serveur SSTP sans certificat }
         \label{fig:reseau_cmmb5}
        \end{figure}
 
@@ -407,16 +398,16 @@ route statique est nécessaire après l'établissement du tunnel.
 
 \begin{itemize}[leftmargin=*]
     \item \textbf{Créer la route vers le LAN de l’agence AKASSATO (via son IP VPN)}
-    \begin{verbatim}
-    /ip route add dst-address=10.1.1.0/24 \
-    gateway=172.16.0.10 \
-    comment="Route vers LAN AKASSATO via SSTP"
-    \end{verbatim}
+  
+\begin{lstlisting}[numbers=none]
+/ip route add dst-address=10.1.1.0/24 \ gateway=172.16.0.10 \comment="Route vers LAN AKASSATO via SSTP" 
+\end{lstlisting}
+
 \end{itemize}
        \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/11.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/11.png}
+        \caption{Création de la route vers le LAN de l’agence  AKPAKPA}
         \label{fig:reseau_cmmb6}
        \end{figure}
 \end{enumerate}
@@ -427,13 +418,13 @@ L'agence doit initier la connexion vers l'adresse WAN du siège (192.168.254.2).
 \item \textbf{Création de l'Interface Client SSTP } \\
 Nous utilisons le même nom d'utilisateur et mot de passe définis dans les secrets du 
 siège. 
- \textbf{CLI}
+\medskip
+\noindent\textbf{CLI :}
+ \begin{lstlisting}[numbers=none]
+/interface sstp-client add name=sstp-out-sieges \connect to=192.168.254.2\ 
+user=akassato-vpn-user password= \add-default-route=yes \profile=default,encryption \ verify-server-certificate=no 
+\end{lstlisting}
 
-\begin{verbatim}
-    /interface sstp-client add name=sstp-out-sieges \connect to=192.168.254.2\ 
-user=akassato-vpn-user password=     \add-default-route=yes \profile=default
-encryption \ verify-server-certificate=no 
-\end{verbatim}
 \begin{itemize}
     \item \textbf{connect-to=192.168.254.2} : Adresse WAN du RT-SIÈGE.
     \item \textbf{add-default-route=yes} : Permet au trafic non local
@@ -443,47 +434,42 @@ encryption \ verify-server-certificate=no
 \end{itemize}
   \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/12.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/12.png}
+        \caption{Création de l'interface client SSTP  }
         \label{fig:reseau_cmmb7}
        \end{figure}
-\end{enumerate}
-\item \textbf{ Vérification } \\
-\begin{itemize}
+   \item \textbf{ Vérification } \\
+   \begin{itemize}
     \item \textbf{Sur RT-AKASSATO :}  
     Exécutez /interface print. L'interface sstp-out-sieges 
-devrait afficher l'état \textbf{R} (Running) et \textbf{D} (Dynamic).
-
-
+    devrait afficher l'état \textbf{R} (Running) et \textbf{D} (Dynamic).
     \item \textbf{Sur RT-SIÈGE :}  
     Exécutez /ppp active print. Vous devriez voir une session 
-active pour akassato-vpn-user avec l'adresse \gls{VPN} 172.16.0.X
-    
-\end{itemize}
- \begin{figure}[H]
+   active pour akassato-vpn-user avec l'adresse \gls{VPN} 172.16.0.X
+    \end{itemize}
+   \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/13.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/17.png}
+        \caption{Vérification }
         \label{fig:reseau_cmmb8}
        \end{figure}
 
-
+\end{enumerate}
 \end{enumerate}
 \section{Intégration des mesures de sécurité réseau  }
 
 \subsection{Filtres d’accès et contrôle par identifiants }
 \begin{itemize}
     \item  \textbf{Règles de pare-feu: }
-     \begin{verbatim}
-    /ip firewall filter add chain=input protocol=tcp port=443 action=accept 
-    comment="Autoriser SSTP" 
-    /ip firewall filter add chain=input protocol=tcp port=1723 action=drop 
-comment="Bloquer PPTP obsolète" 
-    \end{verbatim}
+    \begin{lstlisting}[numbers=none]
+    /ip firewall filter add chain=input protocol=tcp port=443 action=accept comment="Autoriser SSTP" 
+    /ip firewall filter add chain=input protocol=tcp port=1723 action=drop comment="Bloquer PPTP obsolete" 
+     \end{lstlisting}
+
      \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/14.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/13.png}
+        \caption{Règles de pare-feu  }
         \label{fig:reseau_cmmb9}
        \end{figure}
        \item Authentification centralisée par identifiants \gls{PPPoE}. 
@@ -492,45 +478,45 @@ comment="Bloquer PPTP obsolète"
 \subsection{Journalisation et gestion des logs  }
 \begin{itemize}
     \item  \textbf{Activation de la journalisation : }
-     \begin{verbatim}
-     /system logging add topics=ppp,info action=disk 
-     /system logging add topics=firewall action=disk 
-    \end{verbatim}
+     \begin{lstlisting}[numbers=none]
+    /system logging add topics=ppp,info action=disk 
+     /system logging add topics=firewall action=disk  
+     \end{lstlisting}
      \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/15.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/14.png}
+        \caption{Activation de la journalisation }
         \label{fig:reseau_cmmb10}
        \end{figure}
        \item Export périodique des logs vers un serveur syslog pour suivi et audit. 
-         \begin{verbatim}
-        /system logging action add name=syslog target=remote remote=192.168.254.20 
-        /system logging add topics=ppp action=syslog 
-        /system logging add topics=firewall action=syslog
-    \end{verbatim}
+    \begin{lstlisting}[numbers=none]
+     /system logging action add name=syslog target=remote remote=192.168.254.20 
+     /system logging add topics=ppp action=syslog 
+    /system logging add topics=firewall action=syslog  
+     \end{lstlisting}
      \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/16.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/15.png}
+        \caption{Exportation périodique des logs vers un serveur syslog pour suivi et audit.}
         \label{fig:reseau_cmmb11}
        \end{figure}
     \end{itemize}
 
-\subsection{Tests de connectivité, d’allocation IP et suivi du trafic }
+\section{Tests de connectivité, d’allocation IP et suivi du trafic }
 \begin{itemize}
-    \item  \textbf{Test des tunnels SSTP : }ping 10.0.0.1 depuis une agence. 
+    \item  \textbf{Test des tunnels \gls{SSTP}: }ping 10.0.0.1 depuis une agence. 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/17.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/16.png}
+        \caption{Test des tunnels SSTP  }
         \label{fig:reseau_cmmb12}
        \end{figure}
        \item \textbf{Vérification des IP attribuées : } /ppp active print . 
         
      \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/18.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/17.png}
+        \caption{Vérification des IP attribuées   }
         \label{fig:reseau_cmmb14}
        \end{figure}
        \item \textbf{Suivi du trafic : } /tool graphing interface (outil MikroTik). 
@@ -538,14 +524,14 @@ comment="Bloquer PPTP obsolète"
       \item Observation du débit et de la stabilité pour confirmer la bonne interconnexion. 
       \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/19.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.8\textwidth]{images/18.png}
+        \caption{Observation du débit et de la stabilité }
         \label{fig:reseau_cmmb15}
        \end{figure}
        \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/20.png}
-        \caption{PPP profil configuration  }
+        \includegraphics[width=0.5\textwidth]{images/19.png}
+        \caption{Observation du débit et de la stabilité }
         \label{fig:reseau_cmmb16}
        \end{figure}
     \end{itemize}

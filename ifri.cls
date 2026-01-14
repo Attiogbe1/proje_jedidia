@@ -324,6 +324,9 @@ frame=leftline
 \renewcommand*{\glspostdescription}{}
 % mettre deux points apres les titres
 \renewcommand{\glsnamefont}[1]{\textbf{#1 :  }}
+%\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%ù

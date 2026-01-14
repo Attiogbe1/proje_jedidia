@@ -2387,8 +2387,9 @@
     <bcf:citekey order="13" intorder="1">mikrotik-sstp</bcf:citekey>
     <bcf:citekey order="14" intorder="1">mikrotik-sstp</bcf:citekey>
     <bcf:citekey order="15" intorder="1">mikrotik-sstp</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">mikrotik\unhbox \voidb@x \kern \z@ \char `\-sstp</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">mikrotik-sstp</bcf:citekey>
     <bcf:citekey order="17" intorder="1">mikrotik-sstp</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">mikrotik-sstp</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
