@@ -9,11 +9,10 @@
 \contentsline {chapter}{Abstract}{v}{chapter*.4}%
 \contentsline {chapter}{Liste des figures}{vi}{section*.5}%
 \contentsline {chapter}{Liste des tableaux}{vii}{section*.6}%
-\contentsline {chapter}{Liste des sigles et acronymes}{viii}{section*.7}%
-\contentsline {chapter}{Introduction}{1}{chapter*.9}%
+\contentsline {chapter}{Introduction}{1}{chapter*.7}%
 \babel@toc {french}{}\relax 
 \contentsline {chapter}{\numberline {1}Revue de Littérature}{3}{chapter.1}%
-\contentsline {section}{Introduction}{3}{section*.10}%
+\contentsline {section}{Introduction}{3}{section*.8}%
 \contentsline {section}{\numberline {1.1} Généralités sur les réseaux informatiques \blx@tocontentsinit {0}\cite {reseaux-info} }{3}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Définition }{3}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Objectifs des réseaux informatiques}{3}{subsection.1.1.2}%
@@ -37,8 +36,8 @@
 \contentsline {subsection}{\numberline {1.5.4}Limites fonctionnelles et besoins d’amélioration}{9}{subsection.1.5.4}%
 \contentsline {subsection}{\numberline {1.5.5}Proposition d’une solution basée sur \gls {PPPoE} et \gls {SSTP}}{10}{subsection.1.5.5}%
 \contentsline {section}{Conclusion}{10}{subsection.1.5.5}%
-\contentsline {chapter}{\numberline {2}Implémentation de l'infrastructure}{11}{chapter.2}%
-\contentsline {section}{Introduction}{11}{section*.13}%
+\contentsline {chapter}{\numberline {2}Recherche préliminaire}{11}{chapter.2}%
+\contentsline {section}{Introduction}{11}{section*.11}%
 \contentsline {section}{\numberline {2.1}Architecture réseau proposée pour la \gls {CMMB}}{11}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Schéma global d’interconnexion des agences }{11}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Rôle des protocoles \gls {PPPoE} et \gls {SSTP} dans l’architecture}{12}{subsection.2.1.2}%
@@ -50,9 +49,9 @@
 \contentsline {subsection}{\numberline {2.6.1}Filtres d’accès et contrôle par identifiants }{25}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Journalisation et gestion des logs }{25}{subsection.2.6.2}%
 \contentsline {section}{\numberline {2.7}Tests de connectivité, d’allocation IP et suivi du trafic }{26}{section.2.7}%
-\contentsline {section}{Conclusion}{27}{figure.caption.38}%
-\contentsline {chapter}{\numberline {3}Présentation de la solution}{29}{chapter.3}%
-\contentsline {section}{Introduction}{29}{section*.39}%
+\contentsline {section}{Conclusion}{27}{figure.caption.36}%
+\contentsline {chapter}{\numberline {3}Mise en place du réseau expérimental de CMMB}{29}{chapter.3}%
+\contentsline {section}{Introduction}{29}{section*.37}%
 \contentsline {section}{\numberline {3.1}Résultats des tests de performance du réseau }{29}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Test et validation du serveur PPPoE }{29}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Mesure de la latence, du ping et de la bande passante sur le protocole SSTP}{29}{subsection.3.1.2}%
@@ -61,9 +60,9 @@
 \contentsline {subsection}{\numberline {3.2.1}Améliorations observées dans la gestion des utilisateurs}{31}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Apport de PPPoE et SSTP en matière de sécurité et de contrôle}{32}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Difficultés rencontrées et limites de la solution}{32}{subsection.3.2.3}%
-\contentsline {section}{Conclusion}{32}{section*.46}%
-\contentsline {section}{Conclusion générale}{32}{section*.47}%
-\contentsline {chapter}{Bibliographie}{34}{section*.48}%
-\contentsline {chapter}{Bibliographie}{34}{section*.49}%
-\contentsline {chapter}{Table des mati\`eres}{35}{section*.51}%
+\contentsline {section}{Conclusion}{32}{section*.44}%
+\contentsline {section}{Conclusion générale}{32}{section*.45}%
+\contentsline {chapter}{Bibliographie}{34}{section*.46}%
+\contentsline {chapter}{Bibliographie}{34}{section*.47}%
+\contentsline {chapter}{Table des mati\`eres}{35}{section*.49}%
 \contentsfinish 
